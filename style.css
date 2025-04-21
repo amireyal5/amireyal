@@ -1,0 +1,520 @@
+/* כלליים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    direction: rtl;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* הדר */
+#main-header {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    transition: top 0.3s ease;
+    z-index: 100;
+}
+
+.logo {
+    order: 1;
+    max-width: 200px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 110px;
+    }
+}
+
+nav {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 1em;
+}
+
+.menu a {
+    color: #1f628e;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    font-family: 'Assistant', sans-serif;
+}
+
+.menu a:hover {
+    color: #ffa500;
+}
+
+.hamburger {
+    order: 3;
+    display: none;
+    font-size: 2rem;
+    color: #1f628e;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto 1em;
+}
+
+.about-content h2 {
+    font-size: 1.5em;
+    color: #1f628e;
+    margin-bottom: 1.5em; /* הגדלת הרווח מתחת לכותרת */
+    font-family: 'Assistant', sans-serif;
+    font-weight: normal;
+}
+
+.inspiration-text {
+    font-size: 2.16em;
+    color: #1f628e;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto 1em;
+}
+
+.about-me-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+    min-height: 400px;
+}
+
+.about-me-image {
+    order: 1;
+    text-align: center;
+}
+
+.about-me-image img {
+    max-width: 100%;
+    max-height: 720px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-text {
+    order: 2;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-me-text p {
+    font-size: 1.1rem;
+    color: #000;
+    line-height: 1.7;
+    margin-bottom: 1em;
+}
+
+.read-more-button {
+    background-color: #0b639d;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Assistant', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    text-align: center;
+}
+
+.read-more-button:hover {
+    background-color: #1a85cf;
+}
+
+/* פוטר */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 2em;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    border-radius: 0;
+}
+
+.footer-content {
+    max-width: 800px;
+}
+
+.footer-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.footer-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* צור קשר */
+#contact {
+    padding: 2em;
+    text-align: center;
+    background-color: #008080;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 0;
+}
+
+#contact h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 0.5em;
+    font-family: 'Assistant', sans-serif;
+}
+
+#contact .subtitle {
+    font-size: 1.1em;
+    color: #f0f0f0;
+    margin-bottom: 1em;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8em;
+    margin: 0.5em 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    flex: 1;
+}
+
+.contact-form button {
+    background-color: #0b639d;
+    color: white;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Assistant', sans-serif;
+    margin-right: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1a85cf;
+}
+
+.form-message {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+/* אייקונים מרחפים ליצירת קשר */
+.floating-contact-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floating-contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #457b9d;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.floating-contact-icons a:hover {
+    transform: scale(1.2);
+    color: #a8dadc;
+}
+
+.floating-contact-icons a i {
+    /* אין צורך בסגנון נוסף לאייקון */
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+    /* המבורגר */
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+
+    /* תפריט במובייל */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 1em 0;
+    }
+
+    .menu a {
+        color: #1f628e;
+        font-size: 1.2rem;
+    }
+
+    .menu a:hover {
+        color: #ffa500;
+    }
+
+    /* Hero */
+    .hero img {
+        height: auto;
+    }
+
+    /* About Us */
+    .about-us {
+        padding: 1em;
+    }
+
+    .about-content {
+        margin-bottom: 1em;
+    }
+
+    .about-content h2 {
+        font-size: 1.3em;
+        color: #1f628e;
+    }
+
+    .inspiration-text {
+        font-size: 1.68em;
+        line-height: 1.6;
+        color: #1f628e;
+    }
+
+    .about-me-container {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .about-me-text {
+        text-align: justify;
+        margin-bottom: 1em;
+    }
+
+    .about-me-image img {
+        max-width: 250px;
+        max-height: none;
+        border-radius: 8px;
+    }
+
+    .read-more-button {
+        align-self: center;
+    }
+
+    /* צור קשר - רספונסיביות */
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-form button {
+        margin-right: 0;
+        margin-bottom: 0.5em;
+    }
+
+    /* אייקונים מרחפים - רספונסיביות */
+    .floating-contact-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-contact-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero {
+        margin-top: 0;
+    }
+}
+
+/* סקציית שירותים */
+.services {
+    padding: 2em;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.services-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.services-content h2 {
+    font-size: 2em;
+    color: #1f628e;
+    margin-bottom: 0.5em;
+    font-family: 'Assistant', sans-serif;
+}
+
+.services-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 2em;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+}
+
+.service-box {
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+/* צבעים אינדיבידואליים לכל קופסה */
+.service-box:nth-child(1) {
+    background-color: #293462;
+}
+
+.service-box:nth-child(2) {
+    background-color: #80B8BD;
+}
+
+.service-box:nth-child(3) {
+    background-color: #68A2B9;
+}
+
+.service-box:nth-child(4) {
+    background-color: #6189B0;
+}
+
+.service-box:nth-child(5) {
+    background-color: #696E9D;
+}
+
+.service-box:nth-child(6) {
+    background-color: #735280;
+}
+
+.service-box i {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+.service-box h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    font-family: 'Assistant', sans-serif;
+}
+
+.service-box p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ddd;
+}
