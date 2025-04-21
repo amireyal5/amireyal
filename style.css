@@ -158,7 +158,7 @@ nav {
 
 .about-me-text {
     order: 2;
-    text-align: justify;
+    text-align:  right;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
