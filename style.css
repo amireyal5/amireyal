@@ -96,8 +96,8 @@ nav {
 
 .hero img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 50vh; /* משנה את גובה התמונה לפי גובה החלון */
+    object-fit: contain; /* שומר על פרופורציות התמונה מבלי לחתוך אותה */
     display: block;
 }
 
