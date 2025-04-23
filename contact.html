@@ -36,19 +36,20 @@
         <img src="images/hero3.jpg" alt="תמונת גיבור">
     </section>
 
-    <section id="contact" class="section">
-        <h2>צור קשר</h2>
-        <p class="subtitle">השאירו פרטים ואחזור אליכם בהקדם</p>
-        <form action="https://formspree.io/f/xyzwyevy" method="POST" class="contact-form" id="contactForm">
-            <input type="text" name="שם מלא" placeholder="שם מלא" required>
-            <input type="tel" name="טלפון" placeholder="טלפון" required>
-            <input type="email" name="אימייל" placeholder="אימייל" required>
-            <input type="text" name="נושא" placeholder="נושא הפנייה" required>
-            <textarea name="הודעה" rows="6" placeholder="הודעה" required></textarea>
-            <button type="submit">שלח הודעה</button>
-        </form>
-        <div id="form-message" class="form-message"></div>
-    </section>
+   <section id="contact" class="section">
+    <h2>צור קשר</h2>
+    <p class="subtitle">השאירו פרטים ואחזור אליכם בהקדם</p>
+    <form action="/.netlify/functions/contact-form" method="POST" class="contact-form" id="contactForm">
+        <input type="text" name="שם מלא" placeholder="שם מלא" required>
+        <input type="tel" name="טלפון" placeholder="טלפון" required>
+        <input type="email" name="אימייל" placeholder="אימייל" required>
+        <input type="text" name="נושא" placeholder="נושא הפנייה" required>
+        <textarea name="הודעה" rows="6" placeholder="הודעה" required></textarea>
+        <button type="submit">שלח הודעה</button>
+    </form>
+    <div id="form-message" class="form-message"></div>
+</section>
+
 
     <footer class="main-footer">
         <div class="footer-content">
