@@ -1,0 +1,131 @@
+/* Welcome Section (במקום About Us בדף הבית) */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.welcome .about-content { /* שימוש בקלאס about-content הקיים */
+    max-width: 1000px;
+    margin: 0 auto 1em;
+}
+
+.welcome .about-content h2 { /* שימוש בקלאס about-content h2 הקיים */
+    font-size: 1.5em;
+    color: #1f628e;
+    margin-bottom: 1.5em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: normal;
+}
+
+.welcome .inspiration-text { /* שימוש בקלאס inspiration-text הקיים */
+    font-size: 2.16em;
+    color: #1f628e;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto 1em;
+}
+
+.welcome .about-me-container { /* שימוש בקלאס about-me-container הקיים */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+    min-height: 400px;
+}
+
+.welcome .about-me-image { /* שימוש בקלאס about-me-image הקיים */
+    order: 1;
+    text-align: center;
+}
+
+.welcome .about-me-image img { /* שימוש בקלאס about-me-image img הקיים */
+    max-width: 100%;
+    max-height: 720px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome .about-me-text { /* שימוש בקלאס about-me-text הקיים */
+    order: 2;
+    text-align:  right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcome .about-me-text p { /* שימוש בקלאס about-me-text p הקיים */
+    font-size: 1.1rem;
+    color: #000;
+    line-height: 1.7;
+    margin-bottom: 1em;
+}
+
+.welcome .read-more-button { /* שימוש בקלאס read-more-button הקיים */
+    background-color: #0b639d;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Assistant', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    text-align: center;
+}
+
+.welcome .read-more-button:hover { /* שימוש בקלאס read-more-button:hover הקיים */
+    background-color: #1a85cf;
+}
+
+/* רספונסיביות עבור Welcome Section */
+@media (max-width: 768px) {
+    .welcome {
+        padding: 1em;
+    }
+
+    .welcome .about-content {
+        margin-bottom: 1em;
+    }
+
+    .welcome .about-content h2 {
+        font-size: 1.3em;
+        color: #1f628e;
+    }
+
+    .welcome .inspiration-text {
+        font-size: 1.68em;
+        line-height: 1.6;
+        color: #1f628e;
+    }
+
+    .welcome .about-me-container {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .welcome .about-me-text {
+        text-align: justify;
+        margin-bottom: 1em;
+    }
+
+    .welcome .about-me-image img {
+        max-width: 250px;
+        max-height: none;
+        border-radius: 8px;
+    }
+
+    .welcome .read-more-button {
+        align-self: center;
+    }
+}
