@@ -99,23 +99,32 @@ function sendEmail(name, email, message) {
   };
 
   //  שליחת המייל ישירות
-  sgMail.send(msg)
-    .then(() => {
-      console.log('ההודעה נשלחה בהצלחה!');
-    })
-    .catch((error) => {
-      console.error('שגיאה בשליחת המייל:', error);
-    });
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
 
-// שמירה על טופס לשליחה
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // מונע שליחה מחדש של הטופס
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  const name = event.target.name.value;
-  const email = event.target.email.value;
-  const message = event.target.message.value;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-  // קריאה לפונקציה לשליחת המייל
-  sendEmail(name, email, message);
+    try {
+      const response = await fetch("/.netlify/functions/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert("ההודעה נשלחה בהצלחה!");
+        form.reset();
+      } else {
+        const result = await response.json();
+        alert("שליחה נכשלה: " + (result.error || "נסה שוב מאוחר יותר"));
+      }
+    } catch (error) {
+      console.error("שגיאה:", error);
+      alert("התרחשה שגיאה. נסה שוב מאוחר יותר.");
+    }
+  });
 });
