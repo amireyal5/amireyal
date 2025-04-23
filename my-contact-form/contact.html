@@ -1,154 +1,121 @@
 <!DOCTYPE html>
 <html lang="he">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>עמיר אייל פסיכותרפיסט CBT, כרמיאל והסביבה ואונליין</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&family=Open+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>צור קשר</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 40px;
+      direction: rtl;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    .status {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
 </head>
-
 <body>
-    <header id="main-header">
-        <div class="logo">
-            <img src="images/logo.png" alt="לוגו">
-        </div>
-        <nav>
-            <ul class="menu" id="mobile-menu">
-                <li><a href="index.html">בית</a></li>
-                <li><a href="about.html">אודות</a></li>
-                <li><a href="#">שירותים</a></li>
-                <li><a href="#">יצירת קשר</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                &#9776;
-            </div>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <img src="images/hero3.jpg" alt="Hero Image">
-    </section>
+  <h1>צור קשר</h1>
+  <form id="contact-form">
+    <label for="name">שם מלא:</label>
+    <input type="text" id="name" name="name" required />
 
-    <section class="about-us">
-        <div class="about-content">
-            <h2>עמיר אייל, פסיכותרפיסט</h2>
-            <p class="inspiration-text">
-                להסכים לראות את עצמך באור חדש – זה לרוב הצעד הראשון לקראת החיים שתמיד רצית.
-            </p>
-            <div class="about-me-container">
-                <div class="about-me-image">
-                    <img src="images/amireyal.jpg" alt="עמיר אייל, פסיכותרפיסט">
-                </div>
-                <div class="about-me-text">
-                    <p>
-                        שלום, אני עמיר – פסיכותרפיסט מומחה בליווי מתבגרים, מבוגרים והורים בהתמודדות עם קשיים רגשיים כמו חרדה, דיכאון, התמכרויות ויחסים מורכבים.<br>
-                        <b>אם אתם מרגישים תקועים בתוך מעגל שחוזר על עצמו – אני כאן כדי לעזור.</b><br>
-                        לאורך השנים ליוויתי אנשים רבים במצבים מאתגרים, שלמדו להתמודד, להתחזק ולצמוח בעזרת שיטות טיפול מוכחות.<br>
-                        אני עובד בגישה אינטגרטיבית, המשלבת טיפול קוגניטיבי-התנהגותי (CBT), טיפול דינמי וגישות הומניסטיות – מתוך התאמה אישית לכל אחד ואחת.<br>
-                        נמצא יחד את הדרך שמתאימה לכם – בקצב שלכם, ובמרחב בטוח, ותומך.
-                    </p>
-                    <a href="about.html" class="read-more-button">המשך לקרוא</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <label for="email">דוא"ל:</label>
+    <input type="email" id="email" name="email" required />
 
-    <section id="services" class="services">
-        <div class="services-content">
-            <h2>השירותים שלי</h2>
-            <p class="services-subtitle">אני מציע מגוון שירותים טיפוליים מותאמים אישית לצרכים שלך</p>
-            <div class="services-grid">
-                <div class="service-box">
-                    <i class="fas fa-heartbeat"></i>
-                    <h3>חרדה, לחץ ודיכאון</h3>
-                    <p>אם אתם חווים חרדה, פחד, רגשות מתמשכים, מצבי רוח ירודים או חוסר אנרגיה, אני כאן כדי לעזור לכם להבין את הגורמים ולפתח דרכי התמודדות בריאות.</p>
-                </div>
-                <div class="service-box">
-                    <i class="fas fa-users"></i>
-                    <h3>משברים ושינויי חיים</h3>
-                    <p>תמיכה וליווי בתקופות של מעבר משמעותי, אובדן, גירושין או כל שינוי אחר המערער את תחושת היציבות.</p>
-                </div>
-                <div class="service-box">
-                    <i class="fas fa-handshake"></i>
-                    <h3>קשיים במערכות יחסים</h3>
-                    <p>שיפור התקשורת הבין-אישית, פתרון קונפליקטים, חיזוק הקשרים וטיפול בקשיים בזוגיות או ביחסים משפחתיים.</p>
-                </div>
-                <div class="service-box">
-                    <i class="fas fa-hands-helping"></i>
-                    <h3>הדרכת הורים</h3>
-                    <p>הנחיה וכלים להתמודדות עם אתגרי גידול ילדים, שיפור התקשורת ההורית ויצירת אווירה משפחתית תומכת ומכילה.</p>
-                </div>
-                <div class="service-box">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>גירושים סוערים</h3>
-                    <p>סיוע רגשי בגירושים מורכבים וסוערים, כלים להורה להתמודדות אישית, והגנה על הילדים.</p>
-                </div>
-                <div class="service-box">
-                    <i class="fas fa-user-md"></i>
-                    <h3>התמודדות עם התמכרויות</h3>
-                    <p>טיפול רגשי, ייעוץ והכוונה בהתמודדות עם התמכרויות שונות, במטרה להחזיר את השליטה למתמודד בדרך להחלמה.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <label for="message">הודעה:</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
 
- <form id="contact-form">
-  <input type="text" name="name" placeholder="השם שלך" required />
-  <input type="email" name="email" placeholder="האימייל שלך" required />
-  <textarea name="message" placeholder="ההודעה שלך" required></textarea>
-  <button type="submit">שלח</button>
-</form>
+    <button type="submit">שלח</button>
 
-<script>
-  const form = document.getElementById("contact-form");
+    <div class="status" id="status"></div>
+  </form>
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
+  <script>
+    const form = document.getElementById("contact-form");
+    const statusDiv = document.getElementById("status");
 
-    const res = await fetch("/.netlify/functions/sendmail", {
-      method: "POST",
-      body: JSON.stringify(data),
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusDiv.textContent = "שולח...";
+
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+      };
+
+      try {
+        const res = await fetch("/.netlify/functions/sendmail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+        if (result.success) {
+          statusDiv.textContent = "ההודעה נשלחה בהצלחה!";
+          form.reset();
+        } else {
+          statusDiv.textContent = "שגיאה בשליחה. נסה שוב.";
+        }
+      } catch (err) {
+        statusDiv.textContent = "תקלה בשרת. נסה שוב.";
+        console.error(err);
+      }
     });
+  </script>
 
-    const result = await res.json();
-    alert(result.success ? "ההודעה נשלחה!" : "שגיאה בשליחה");
-  });
-</script>
-
-    </section>
-
-    <footer class="main-footer">
-        <div class="footer-content">
-            <h2>הפוטר שלי</h2>
-            <p>מידע נוסף יופיע כאן...</p>
-        </div>
-    </footer>
-
-    <div class="floating-contact-icons">
-        <a href="tel:+972547509962" title="התקשר אלי">
-            <i class="fas fa-phone"></i>
-        </a>
-        <a href="mailto:amirher@gmail.com" title="שלח מייל">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/972547509962" title="שלח לי הודעה בוואטסאפ">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
-    <script src="script.js"></script>
 </body>
-
 </html>
