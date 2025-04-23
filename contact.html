@@ -67,44 +67,49 @@
 <body>
 
   <h1>צור קשר</h1>
-  <form id="contact-form">
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- מפתח ה-API שלך -->
+    <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
+
+    <!-- שדות הטופס -->
     <label for="name">שם מלא:</label>
-    <input type="text" id="name" name="name" required />
+    <input type="text" name="name" placeholder="שם מלא" required>
 
     <label for="email">דוא"ל:</label>
-    <input type="email" id="email" name="email" required />
+    <input type="email" name="email" placeholder="דוא"ל" required>
 
     <label for="message">הודעה:</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+    <textarea name="message" placeholder="הודעה" required></textarea>
 
-    <button type="submit">שלח</button>
+    <!-- הגנה על ספאם -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-    <div class="status" id="status"></div>
+    <!-- הפניה לדף תודה (החלף בכתובת שלך) -->
+    <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html">
+
+    <button type="submit">שלח טופס</button>
+
   </form>
 
   <script>
-    const form = document.getElementById("contact-form");
-    const statusDiv = document.getElementById("status");
+    const form = document.querySelector("form");
+    const statusDiv = document.createElement('div');
+    form.appendChild(statusDiv);
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       statusDiv.textContent = "שולח...";
 
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value,
-      };
+      const formData = new FormData(form);
 
       try {
-        const res = await fetch("/.netlify/functions/sendmail", {
+        const res = await fetch(form.action, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
+          body: formData,
         });
 
-        const result = await res.json();
-        if (result.success) {
+        if (res.ok) {
           statusDiv.textContent = "ההודעה נשלחה בהצלחה!";
           form.reset();
         } else {
