@@ -1,7 +1,0 @@
-{
-  "name": "your-website-name",
-  "version": "1.0.0",
-  "dependencies": {
-    "@sendgrid/mail": "^7.7.0"
-  }
-}
