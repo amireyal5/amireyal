@@ -21,14 +21,12 @@
     margin-bottom: 1em;
 }
 
-/* עיצוב הטופס */
 .contact-form {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
-    flex-wrap: wrap; /* מאפשר למנוע צפיפות במסכים קטנים */
 }
 
 .contact-form input,
@@ -40,7 +38,6 @@
     font-size: 1em;
     font-family: 'Open Sans', sans-serif;
     flex: 1;
-    min-width: 250px; /* הגדרה מינימלית לרוחב */
 }
 
 .contact-form button {
