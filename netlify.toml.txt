@@ -1,0 +1,3 @@
+[build]
+  publish = "."  # מאחר והקבצים שלך נמצאים בתיקיית השורש
+  functions = "netlify/functions"
