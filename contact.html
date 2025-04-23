@@ -67,35 +67,30 @@
 <body>
 
   <h1>צור קשר</h1>
-  <form action="https://api.web3forms.com/submit" method="POST">
-
-    <!-- מפתח ה-API שלך -->
+  <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <!-- המפתח שלך כאן -->
     <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
 
-    <!-- שדות הטופס -->
     <label for="name">שם מלא:</label>
-    <input type="text" name="name" placeholder="שם מלא" required>
+    <input type="text" id="name" name="name" required />
 
     <label for="email">דוא"ל:</label>
-    <input type="email" name="email" placeholder="דוא"ל" required>
+    <input type="email" id="email" name="email" required />
 
     <label for="message">הודעה:</label>
-    <textarea name="message" placeholder="הודעה" required></textarea>
+    <textarea id="message" name="message" rows="6" required></textarea>
 
-    <!-- הגנה על ספאם -->
+    <!-- Honeypot Spam Protection -->
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-    <!-- הפניה לדף תודה (החלף בכתובת שלך) -->
-    <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html">
+    <button type="submit">שלח</button>
 
-    <button type="submit">שלח טופס</button>
-
+    <div class="status" id="status"></div>
   </form>
 
   <script>
-    const form = document.querySelector("form");
-    const statusDiv = document.createElement('div');
-    form.appendChild(statusDiv);
+    const form = document.getElementById("contact-form");
+    const statusDiv = document.getElementById("status");
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -108,6 +103,9 @@
           method: "POST",
           body: formData,
         });
+
+        const responseText = await res.text(); // קבל את התשובה כטקסט
+        console.log("Response from server:", responseText); // הצג את התשובה בקונסול
 
         if (res.ok) {
           statusDiv.textContent = "ההודעה נשלחה בהצלחה!";
