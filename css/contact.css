@@ -1,0 +1,75 @@
+/* צור קשר */
+#contact {
+    padding: 2em;
+    text-align: center;
+    background-color: #008080;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 0;
+}
+
+#contact h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 0.5em;
+    font-family: 'Assistant', sans-serif;
+}
+
+#contact .subtitle {
+    font-size: 1.1em;
+    color: #f0f0f0;
+    margin-bottom: 1em;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8em;
+    margin: 0.5em 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    flex: 1;
+}
+
+.contact-form button {
+    background-color: #0b639d;
+    color: white;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Assistant', sans-serif;
+    margin-right: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1a85cf;
+}
+
+.form-message {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+/* רספונסיביות עבור צור קשר */
+@media (max-width: 768px) {
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-form button {
+        margin-right: 0;
+        margin-bottom: 0.5em;
+    }
+}

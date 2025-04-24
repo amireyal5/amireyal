@@ -1,0 +1,203 @@
+/* כלליים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    direction: rtl;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* הדר */
+#main-header {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    transition: top 0.3s ease;
+    z-index: 100;
+}
+
+.logo {
+    order: 1;
+    max-width: 200px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 110px;
+    }
+}
+
+nav {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 1em;
+}
+
+.menu a {
+    color: #1f628e;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    font-family: 'Assistant', sans-serif;
+}
+
+.menu a:hover {
+    color: #ffa500;
+}
+
+.hamburger {
+    order: 3;
+    display: none;
+    font-size: 2rem;
+    color: #1f628e;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* פוטר */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 2em;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    border-radius: 0;
+}
+
+.footer-content {
+    max-width: 800px;
+}
+
+.footer-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.footer-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* אייקונים מרחפים ליצירת קשר */
+.floating-contact-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floating-contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #457b9d;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.floating-contact-icons a:hover {
+    transform: scale(1.2);
+    color: #a8dadc;
+}
+
+.floating-contact-icons a i {
+    /* אין צורך בסגנון נוסף לאייקון */
+}
+
+/* רספונסיביות - חלקים גלובליים */
+@media (max-width: 768px) {
+    /* המבורגר */
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+
+    /* תפריט במובייל */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 1em 0;
+    }
+
+    .menu a {
+        color: #1f628e;
+        font-size: 1.2rem;
+    }
+
+    .menu a:hover {
+        color: #ffa500;
+    }
+
+    /* אייקונים מרחפים - רספונסיביות */
+    .floating-contact-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-contact-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
