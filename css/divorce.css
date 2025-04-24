@@ -225,12 +225,6 @@ nav ul li a:hover {
 }
 
 
-.main-footer {
-    background-color: #333;
-    color: #eee;
-    padding: 1em 0;
-    text-align: center;
-}
 
 .floating-contact-icons {
     position: fixed;
@@ -269,6 +263,7 @@ nav ul li a:hover {
         font-size: 1.2em;
     }
 }
+
 
 
 @media (max-width: 768px) {
@@ -314,6 +309,19 @@ nav ul li a:hover {
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
+}
+.center-titles h2{
+    font-size: 1.8em;
+        margin-bottom: 0.5em;
+        line-height: 1.3;
+}
+.center-titles h1{
+    font-size: 2.2em;
+        color: #0c4a6e;
+        margin-bottom: 0.75em;
+        font-family: 'Assistant', sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.02em;
 }
 
 .grid-section {
@@ -415,5 +423,11 @@ nav ul li a:hover {
     }
     .section-full-width{
         text-align: center;
+    }
+    .center-titles h2{
+        font-size: 1.5em;
+    }
+    .center-titles h1{
+        font-size: 1.8em;
     }
 }
