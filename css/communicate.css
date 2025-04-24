@@ -48,7 +48,7 @@
     width: 80%; /* רוחב הטופס בתוך הבלוק הימני */
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* יישור השדות לימין */
+    align-items: stretch; /* מתיחת השדות לאותו רוחב */
 }
 
 .form-group {
@@ -58,6 +58,7 @@
 
 .form-group input[type="text"],
 .form-group input[type="email"],
+.form-group input[type="tel"],
 .form-group textarea {
     width: 100%;
     padding: 0.7em;
@@ -76,20 +77,25 @@
     overflow-y: auto; /* אפשור גלילה אנכית כשתוכן גולש */
 }
 
-.phone-group {
-    display: flex;
-    flex-direction: row-reverse; /* קידומת משמאל */
-    width: 100%;
-    margin-bottom: 1.5em;
-    align-items: center;
+.contact-form button[type="submit"] {
+    background-color: #1f628e; /* כחול כמו קישורי התפריט */
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    align-self: flex-start; /* יישור הכפתור לימין */
 }
 
-.phone-group input[type="tel"] {
-    padding: 0.7em;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    border-radius: 0;
-    font-size: 1rem;
-    text-align: right;
-    font-family: 'Open Sans', sans-serif;
-    outline: none;
+.contact-form button[type="submit"]:hover {
+    background-color: #154a6a; /* גוון כהה יותר של הכחול */
+}
+
+.form-message {
+    margin-top: 1em;
+    padding: 0.8em;
