@@ -41,7 +41,6 @@
 
 .form-group input[type="text"],
 .form-group input[type="email"],
-.form-group input[type="tel"],
 .form-group textarea {
     width: 100%;
     padding: 0.7em;
@@ -58,6 +57,29 @@
     min-height: 100px;
     resize: none; /* מניעת שינוי גודל ידני */
     overflow-y: auto; /* אפשור גלילה אנכית כשתוכן גולש */
+}
+
+.phone-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.phone-group input[type="tel"] {
+    width: 50%;
+    padding: 0.7em;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 1rem;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+}
+
+.phone-group input[type="tel"]:first-child {
+    margin-left: 1em; /* רווח בין הקידומת למספר */
 }
 
 .contact-form button[type="submit"] {
