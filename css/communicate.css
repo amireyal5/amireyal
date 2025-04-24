@@ -36,3 +36,84 @@
 .communicate-right {
     width: 55%; /* רוחב הבלוק הימני (הטופס) */
     padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* מרכוז הטופס בתוך הבלוק */
+}
+
+.contact-form {
+    width: 80%; /* רוחב הטופס בתוך הבלוק הימני */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* מתיחת השדות לאותו רוחב */
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.7em;
+    border: none;
+    border-bottom: 1px solid #ccc; /* קו תחתון עדין */
+    border-radius: 0;
+    font-size: 1rem;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    outline: none; /* הסרת קו מתאר ברירת מחדל בפוקוס */
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: none; /* מניעת שינוי גודל ידני */
+    overflow-y: auto; /* אפשור גלילה אנכית כשתוכן גולש */
+}
+
+.contact-form button[type="submit"] {
+    background-color: #1f628e; /* כחול כמו קישורי התפריט */
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    align-self: flex-start; /* יישור הכפתור לימין */
+    width: auto; /* התאמת רוחב הכפתור לתוכן */
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #154a6a; /* גוון כהה יותר של הכחול */
+}
+
+.form-message {
+    margin-top: 1em;
+    padding: 0.8em;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
