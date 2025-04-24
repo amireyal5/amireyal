@@ -1,156 +1,129 @@
 <!DOCTYPE html>
 <html lang="he">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>צור קשר</title>
-  <style>
-    /* עיצוב הטופס */
-    #contact-form-section {
-      padding: 2em;
-      text-align: center;
-      background-color: #008cba;
-      max-width: 800px;
-      margin: 0 auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    #contact-form-section h2 {
-      font-size: 2.5em;
-      color: white;
-      margin-bottom: 0.5em;
-      font-family: 'Assistant', sans-serif;
-    }
-
-    #contact-form-section .subtitle {
-      font-size: 1.2em;
-      color: #f0f0f0;
-      margin-bottom: 1em;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contact-form label {
-      margin-top: 0.5em;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      padding: 0.8em;
-      margin: 0.5em 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-      font-family: 'Open Sans', sans-serif;
-      width: 100%;
-      max-width: 500px;
-    }
-
-    .contact-form button {
-      background-color: #0b639d;
-      color: white;
-      padding: 0.8em 1.2em;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      font-family: 'Assistant', sans-serif;
-      margin-top: 1em;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact-form button:hover {
-      background-color: #1a85cf;
-    }
-
-    .status {
-      margin-top: 1em;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    @media (max-width: 768px) {
-      .contact-form {
-        flex-direction: column;
-      }
-      .contact-form button {
-        margin-right: 0;
-        margin-bottom: 0.5em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/communicate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html" aria-label="מעבר לדף הבית">
+                <img src="images/logo.png" alt="לוגו של עמיר אייל">
+            </a>
+        </div>
 
-  <section id="contact-form-section">
-    <h2>צור קשר</h2>
-    <p class="subtitle">לפעמים הצעד הראשון הוא פשוט ליצור קשר. כתבו לי ואחזור אליכם בהקדם</p>
+        <nav>
+            <ul class="menu" id="mobile-menu">
+                <li><a href="index.html">בית</a></li>
+                <li><a href="#">שירותים</a></li>
+                <li><a href="#">יצירת קשר</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+        </nav>
+    </header>
 
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
+    <section class="hero">
+        <img src="images/heroabout.jpg" alt="Hero Image">
+    </section>
 
-      <label for="name">שם מלא:</label>
-      <input type="text" id="name" name="name" required>
+    <section id="communicate" class="communicate">
+        <div class="communicate-content">
+            <h2>יצירת קשר</h2>
+            <p class="subtitle">נשמח לשמוע מכם! מלאו את הטופס ונחזור אליכם בהקדם.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
+                <div class="form-group">
+                    <label for="name">שם מלא:</label>
+                    <input type="text" id="name" name="שם מלא" placeholder="הכנס את שמך המלא" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">מייל:</label>
+                    <input type="email" id="email" name="מייל" placeholder="הכנס את כתובת המייל שלך" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">טלפון:</label>
+                    <input type="tel" id="phone" name="טלפון" placeholder="הכנס את מספר הטלפון שלך" required autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <label for="content">תוכן הפניה:</label>
+                    <textarea id="content" name="תוכן הפניה" placeholder="כתבו את תוכן הפנייה שלכם כאן" required></textarea>
+                </div>
+                <button type="submit">שלח פנייה</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </section>
 
-      <label for="email">דוא"ל:</label>
-      <input type="email" id="email" name="email" required>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h2>הפוטר שלי</h2>
+            <p>מידע נוסף יופיע כאן...</p>
+        </div>
+    </footer>
 
-      <label for="phone">טלפון:</label>
-      <input type="tel" id="phone" name="phone" required>
+    <div class="floating-contact-icons">
+        <a href="tel:+972547509962" title="התקשר אלי">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:amir@amireyal.co.il" title="שלח מייל">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/972547509962" title="שלח לי הודעה בוואטסאפ">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
-      <label for="message">הודעה:</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const formMessage = document.getElementById('form-message');
 
-      <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
 
-      <button type="submit">שלח</button>
+                const formData = new FormData(form);
 
-      <div class="status" id="status"></div>
-    </form>
-  </section>
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
 
-  <script>
-    const form = document.querySelector(".contact-form");
-    const statusDiv = document.getElementById("status");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      statusDiv.textContent = "שולח...";
-
-      const formData = new FormData(form);
-      try {
-        const res = await fetch(form.action, {
-          method: "POST",
-          body: formData,
+                    if (response.ok) {
+                        formMessage.className = 'form-message success';
+                        formMessage.textContent = 'הודעה נשלחה בהצלחה! ניצור קשר בהקדם.';
+                        form.reset();
+                    } else {
+                        const errorData = await response.json();
+                        console.error('שגיאה בשליחת הטופס:', errorData);
+                        formMessage.className = 'form-message error';
+                        formMessage.textContent = 'אירעה שגיאה בשליחת ההודעה. אנא נסו שוב מאוחר יותר.';
+                    }
+                } catch (error) {
+                    console.error('שגיאה כללית:', error);
+                    formMessage.className = 'form-message error';
+                    formMessage.textContent = 'אירעה שגיאה כללית. אנא נסו שוב מאוחר יותר.';
+                }
+            });
         });
-
-        const responseText = await res.text();
-        console.log("Response from server:", responseText);
-
-        if (res.ok) {
-          statusDiv.textContent = "ההודעה נשלחה בהצלחה!";
-          statusDiv.classList.add("success");
-          form.reset();
-        } else {
-          statusDiv.textContent = "שגיאה בשליחה. נסה שוב.";
-          statusDiv.classList.add("error");
-        }
-      } catch (err) {
-        statusDiv.textContent = "תקלה בשרת. נסה שוב.";
-        statusDiv.classList.add("error");
-        console.error(err);
-      }
-    });
-  </script>
-
+    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
