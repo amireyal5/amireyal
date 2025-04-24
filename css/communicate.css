@@ -121,7 +121,7 @@
 /* תצוגה למובייל */
 @media (max-width: 768px) {
     .communicate-container {
-        flex-direction: column-reverse; /* הטופס ראשון ואז הטקסט (אם זה הסדר הרצוי) */
+        flex-direction: column; /* הטופס ראשון ואז הטקסט (אם זה הסדר הרצוי) */
         gap: 0; /* הסרת הרווח בין הבלוקים במובייל */
     }
 
