@@ -1,74 +1,141 @@
-<section id="communicate" class="communicate">
-    <div class="communicate-container">
-        <div class="communicate-left">
-            <h2>צרו קשר</h2>
-            <p class="contact-text">
-                אני כאן כדי להקשיב ולעזור. אם יש לכם שאלות, בקשות או שאתם מעוניינים לקבוע פגישה,
-                אל תהססו ליצור איתי קשר. אני משתדל להשיב לכל פנייה בהקדם האפשרי.
-                ניתן לפנות אלי באמצעות הטופס המצורף או דרך פרטי הקשר הנוספים המופיעים באתר.
-                אני מצפה לשמוע מכם!
-            </p>
-            </div>
-        <div class="communicate-right">
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
-                <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
-                <div class="form-group">
-                    <input type="text" id="name" name="שם מלא" placeholder="שם מלא" required autocomplete="name">
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="מייל" placeholder="מייל" required autocomplete="email">
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="טלפון" placeholder="טלפון" required autocomplete="tel">
-                </div>
-                <div class="form-group">
-                    <textarea id="content" name="תוכן הפניה" placeholder="תוכן הפניה" required style="overflow-y: auto;"></textarea>
-                </div>
-                <button type="submit">שליחה</button>
-                <div id="form-message" class="form-message"></div>
-            </form>
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/communicate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html" aria-label="מעבר לדף הבית">
+                <img src="images/logo.png" alt="לוגו של עמיר אייל">
+            </a>
         </div>
+
+        <nav>
+            <ul class="menu" id="mobile-menu">
+                <li><a href="index.html">בית</a></li>
+                <li><a href="#">שירותים</a></li>
+                <li><a href="contact.html">יצירת קשר</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="images/heromail.jpg" alt="Hero Image">
+    </section>
+
+    <section id="communicate" class="communicate">
+        <div class="communicate-container">
+            <div class="communicate-left">
+                <h2>צרו קשר</h2>
+                <p class="contact-text">
+                    אני כאן כדי להקשיב ולעזור. אם יש לכם שאלות, בקשות או שאתם מעוניינים לקבוע פגישה,
+                    אל תהססו ליצור איתי קשר. אני משתדל להשיב לכל פנייה בהקדם האפשרי.
+                    ניתן לפנות אלי באמצעות הטופס המצורף או דרך פרטי הקשר הנוספים המופיעים באתר.
+                    אני מצפה לשמוע מכם!
+                </p>
+                </div>
+            <div class="communicate-right">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                    <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
+                    <div class="form-group">
+                        <input type="text" id="name" name="שם מלא" placeholder="שם מלא" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="מייל" placeholder="מייל" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="טלפון" placeholder="טלפון" required autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="content" name="תוכן הפניה" placeholder="תוכן הפניה" required style="overflow-y: auto;"></textarea>
+                    </div>
+                    <button type="submit">שליחה</button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h2>הפוטר שלי</h2>
+            <p>מידע נוסף יופיע כאן...</p>
+        </div>
+    </footer>
+
+    <div class="floating-contact-icons">
+        <a href="tel:+972547509962" title="התקשר אלי">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:amir@amireyal.co.il" title="שלח מייל">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/972547509962" title="שלח לי הודעה בוואטסאפ">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
-</section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('contactForm');
-        const formMessage = document.getElementById('form-message');
-        const textarea = document.getElementById('content');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const formMessage = document.getElementById('form-message');
+            const textarea = document.getElementById('content');
 
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
 
-            const formData = new FormData(form);
+                const formData = new FormData(form);
 
-            try {
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                });
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
 
-                if (response.ok) {
-                    formMessage.className = 'form-message success';
-                    formMessage.textContent = 'הודעה נשלחה בהצלחה! ניצור קשר בהקדם.';
-                    form.reset();
-                } else {
-                    const errorData = await response.json();
-                    console.error('שגיאה בשליחת הטופס:', errorData);
+                    if (response.ok) {
+                        formMessage.className = 'form-message success';
+                        formMessage.textContent = 'הודעה נשלחה בהצלחה! ניצור קשר בהקדם.';
+                        form.reset();
+                    } else {
+                        const errorData = await response.json();
+                        console.error('שגיאה בשליחת הטופס:', errorData);
+                        formMessage.className = 'form-message error';
+                        formMessage.textContent = 'אירעה שגיאה בשליחת ההודעה. אנא נסו שוב מאוחר יותר.';
+                    }
+                } catch (error) {
+                    console.error('שגיאה כללית:', error);
                     formMessage.className = 'form-message error';
-                    formMessage.textContent = 'אירעה שגיאה בשליחת ההודעה. אנא נסו שוב מאוחר יותר.';
+                    formMessage.textContent = 'אירעה שגיאה כללית. אנא נסו שוב מאוחר יותר.';
                 }
-            } catch (error) {
-                console.error('שגיאה כללית:', error);
-                formMessage.className = 'form-message error';
-                formMessage.textContent = 'אירעה שגיאה כללית. אנא נסו שוב מאוחר יותר.';
-            }
-        });
+            });
 
-        // אפשור גדילה אוטומטית של שדה הטקסט
-        textarea.addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = (this.scrollHeight) + 'px';
+            // אפשור גדילה אוטומטית של שדה הטקסט
+            textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
         });
-    });
-</script>
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
