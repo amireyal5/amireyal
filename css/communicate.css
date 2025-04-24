@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row-reverse; /* בלוק ימני ראשון */
     align-items: flex-start; /* יישור אנכי של הבלוקים */
-    gap: 20px; /* הוספת רווח של 20 פיקסלים בין הפריטים */
+    gap: 40px; /* הוספת רווח של 20 פיקסלים בין הפריטים */
 }
 
 .communicate-left {
