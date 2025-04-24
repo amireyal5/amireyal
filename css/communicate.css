@@ -5,17 +5,18 @@
 }
 
 .communicate-container {
-    max-width: 960px; /* רוחב מקסימלי של הקונטיינר */
+    max-width: 960px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row-reverse; /* בלוק ימני ראשון */
-    align-items: flex-start; /* יישור אנכי של הבלוקים */
-    gap: 40px; /* הוספת רווח של 40 פיקסלים בין הפריטים */
+    flex-direction: row-reverse; /* בלוק ימני ראשון בשולחן העבודה */
+    align-items: flex-start;
+    gap: 40px; /* רווח בין הבלוקים בתצוגת שולחן עבודה */
 }
 
 .communicate-left {
-    width: 45%; /* רוחב הבלוק השמאלי */
+    width: 45%;
     padding: 20px;
+    text-align: right; /* יישור טקסט לימין בשולחן העבודה */
 }
 
 .communicate-left h2 {
@@ -24,32 +25,30 @@
     margin-bottom: 1em;
     font-family: 'Assistant', sans-serif;
     font-weight: 700;
-    text-align: right; /* יישור הכותרת לימין */
 }
 
 .communicate-left .contact-text {
     color: #555;
     line-height: 1.6;
-    text-align: right; /* יישור הטקסט לימין */
     margin-bottom: 1em;
 }
 
 .communicate-right {
-    width: 55%; /* רוחב הבלוק הימני (הטופס) */
+    width: 55%;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* מרכוז הטופס בתוך הבלוק */
+    align-items: stretch; /* מתיחת הטופס */
 }
 
 .contact-form {
-    width: 80%; /* רוחב הטופס בתוך הבלוק הימני */
+    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* מתיחת השדות לאותו רוחב */
+    align-items: stretch;
 }
 
 .form-group {
@@ -64,22 +63,22 @@
     width: 100%;
     padding: 0.7em;
     border: none;
-    border-bottom: 1px solid #ccc; /* קו תחתון עדין */
+    border-bottom: 1px solid #ccc;
     border-radius: 0;
     font-size: 1rem;
     text-align: right;
     font-family: 'Open Sans', sans-serif;
-    outline: none; /* הסרת קו מתאר ברירת מחדל בפוקוס */
+    outline: none;
 }
 
 .form-group textarea {
     min-height: 100px;
-    resize: none; /* מניעת שינוי גודל ידני */
-    overflow-y: auto; /* אפשור גלילה אנכית כשתוכן גולש */
+    resize: none;
+    overflow-y: auto;
 }
 
 .contact-form button[type="submit"] {
-    background-color: #1f628e; /* כחול כמו קישורי התפריט */
+    background-color: #1f628e;
     color: white;
     padding: 0.8em 1.5em;
     border: none;
@@ -90,12 +89,12 @@
     margin-top: 1.5em;
     font-family: 'Assistant', sans-serif;
     font-weight: 700;
-    align-self: flex-start; /* יישור הכפתור לימין */
-    width: auto; /* התאמת רוחב הכפתור לתוכן */
+    align-self: flex-start;
+    width: auto;
 }
 
 .contact-form button[type="submit"]:hover {
-    background-color: #154a6a; /* גוון כהה יותר של הכחול */
+    background-color: #154a6a;
 }
 
 .form-message {
@@ -117,4 +116,34 @@
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+}
+
+/* תצוגה למובייל */
+@media (max-width: 768px) {
+    .communicate-container {
+        flex-direction: column-reverse; /* הטופס ראשון ואז הטקסט (אם זה הסדר הרצוי) */
+        gap: 0; /* הסרת הרווח בין הבלוקים במובייל */
+    }
+
+    .communicate-left {
+        width: 100%;
+        padding: 20px;
+        text-align: right; /* שמירה על יישור הטקסט לימין גם במובייל */
+    }
+
+    .communicate-right {
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 20px; /* הוספת רווח בין הטקסט לטופס */
+    }
+
+    .contact-form {
+        width: 100%; /* טופס ברוחב מלא במובייל */
+    }
 }
