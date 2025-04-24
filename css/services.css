@@ -10,7 +10,9 @@
     max-width: 1000px;
     margin: 0 auto;
 }
-
+.no-underline {
+  text-decoration: none;
+}
 .services-content h2 {
     font-size: 2em;
     color: #1f628e;
@@ -36,6 +38,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     color: white;
+    text-decoration: none; /* הסרת קו תחתון */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .service-box:hover {
@@ -84,3 +91,4 @@
     line-height: 1.6;
     color: white;
 }
+
