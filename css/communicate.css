@@ -1,4 +1,3 @@
-
 /* css/communicate.css */
 .communicate {
     padding: 60px 20px;
@@ -26,7 +25,7 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* יישור מימין לשמאל */
+    align-items: flex-start; /* יישור משמאל לימין */
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -35,18 +34,19 @@
 
 .form-group {
     display: flex;
-    flex-direction: row-reverse; /* כיתוב מימין לשמאל */
+    flex-direction: row; /* כותרת מצד ימין */
     margin-bottom: 20px;
     width: 100%;
 }
 
 .form-group label {
     text-align: right;
-    padding-left: 15px;
+    padding-right: 15px;
     width: 30%;
     color: #555;
     font-weight: bold;
     line-height: 2.5em; /* התאמת גובה הטקסט לשדה */
+    order: 1; /* הצבת הכותרת אחרי השדה */
 }
 
 .form-group input[type="text"],
@@ -59,6 +59,7 @@
     border-radius: 4px;
     font-size: 1em;
     text-align: right; /* יישור טקסט מימין לשמאל בתוך השדה */
+    order: 2; /* הצבת השדה לפני הכותרת */
 }
 
 .form-group textarea {
