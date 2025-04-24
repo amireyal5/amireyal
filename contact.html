@@ -43,26 +43,38 @@
     </section>
 
     <section id="communicate" class="communicate">
-        <div class="communicate-content">
-            <h2>יצירת קשר</h2>
-            <p class="subtitle">נשמח לשמוע מכם! מלאו את הטופס ונחזור אליכם בהקדם.</p>
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
-                <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
-                <div class="form-group">
-                    <input type="text" id="name" name="שם מלא" placeholder="שם מלא" required autocomplete="name">
+        <div class="communicate-container">
+            <div class="communicate-left">
+                <h2>צרו קשר</h2>
+                <p class="contact-text">
+                    אני כאן כדי להקשיב ולעזור. אם יש לכם שאלות, בקשות או שאתם מעוניינים לקבוע פגישה,
+                    אל תהססו ליצור איתי קשר. אני משתדל להשיב לכל פנייה בהקדם האפשרי.
+                    ניתן לפנות אלי באמצעות הטופס המצורף או דרך פרטי הקשר הנוספים המופיעים באתר.
+                    אני מצפה לשמוע מכם!
+                </p>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="מייל" placeholder="מייל" required autocomplete="email">
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="טלפון" placeholder="טלפון" required autocomplete="tel">
-                </div>
-                <div class="form-group">
-                    <textarea id="content" name="תוכן הפניה" placeholder="תוכן הפניה" required style="overflow-y: auto;"></textarea>
-                </div>
-                <button type="submit">שליחה</button>
-                <div id="form-message" class="form-message"></div>
-            </form>
+            <div class="communicate-right">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                    <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
+                    <div class="form-group">
+                        <input type="text" id="name" name="שם מלא" placeholder="שם מלא" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="מייל" placeholder="מייל" required autocomplete="email">
+                    </div>
+                    <div class="form-group phone-group">
+                        <input type="tel" id="phoneNumber" name="מספר טלפון" placeholder="מספר טלפון" required pattern="[0-9]{7}" title="יש להזין 7 ספרות בדיוק">
+                        <div class="phone-prefix-container">
+                            <input type="tel" id="phonePrefix" name="קידומת" placeholder="קידומת" required pattern="[0-9]{3}" title="יש להזין 3 ספרות בדיוק">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="content" name="תוכן הפניה" placeholder="תוכן הפניה" required style="overflow-y: auto;"></textarea>
+                    </div>
+                    <button type="submit">שלח פנייה</button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -95,6 +107,9 @@
                 event.preventDefault();
 
                 const formData = new FormData(form);
+                const prefix = document.getElementById('phonePrefix').value;
+                const number = document.getElementById('phoneNumber').value;
+                formData.set('טלפון', prefix + number); // איחוד הקידומת והמספר לשדה 'טלפון'
 
                 try {
                     const response = await fetch('https://api.web3forms.com/submit', {
