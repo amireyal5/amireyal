@@ -1,7 +1,7 @@
 /* css/communicate.css */
 .communicate {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+    padding: 40px 20px; /* פחות ריווח מלמעלה ומלמטה כדי להתאים */
+    background-color: #f9f9f9; /* רקע אפור בהיר כמו ה-body */
     text-align: center;
 }
 
@@ -11,42 +11,45 @@
 }
 
 .communicate-content h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 15px;
+    font-size: 2.2em; /* קצת יותר קטן מהכותרת בפוטר */
+    color: #1f628e; /* כחול כמו קישורי התפריט */
+    margin-bottom: 1em;
+    font-family: 'Assistant', sans-serif; /* גופן כמו התפריט */
+    font-weight: 700; /* משקל גופן כמו התפריט */
 }
 
 .communicate-content .subtitle {
     color: #777;
-    margin-bottom: 30px;
-    font-size: 1.1em;
+    margin-bottom: 2em;
+    font-size: 1rem; /* גודל גופן בסיסי כמו ה-body */
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* יישור משמאל לימין */
+    align-items: flex-start; /* יישור משמאל לימין כמו שהגדרנו קודם */
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* רקע לבן כמו ההדר */
+    border-radius: 5px; /* מעט מעוגל */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* צל עדין */
 }
 
 .form-group {
     display: flex;
-    flex-direction: row; /* כותרת מצד ימין */
-    margin-bottom: 20px;
+    flex-direction: row; /* כותרת מימין לשדה */
+    margin-bottom: 1.5em;
     width: 100%;
 }
 
 .form-group label {
     text-align: right;
-    padding-right: 15px;
+    padding-right: 1em;
     width: 30%;
     color: #555;
     font-weight: bold;
-    line-height: 2.5em; /* התאמת גובה הטקסט לשדה */
-    order: 1; /* הצבת הכותרת אחרי השדה */
+    line-height: 2.2em; /* התאמת גובה הטקסט לשדה */
+    font-size: 1rem;
+    order: 1;
 }
 
 .form-group input[type="text"],
@@ -54,12 +57,13 @@
 .form-group input[type="tel"],
 .form-group textarea {
     width: 70%;
-    padding: 10px;
+    padding: 0.7em;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1em;
-    text-align: right; /* יישור טקסט מימין לשמאל בתוך השדה */
-    order: 2; /* הצבת השדה לפני הכותרת */
+    font-size: 1rem;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif; /* גופן כמו ה-body */
+    order: 2;
 }
 
 .form-group textarea {
@@ -67,28 +71,31 @@
 }
 
 .contact-form button[type="submit"] {
-    background-color: #1f628e;
+    background-color: #1f628e; /* כחול כמו קישורי התפריט */
     color: white;
-    padding: 10px 20px;
+    padding: 0.8em 1.5em;
     border: none;
-    border-radius: 4px;
-    font-size: 1.1em;
+    border-radius: 5px; /* מעוגל כמו המסגרת של הטופס */
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    align-self: center; /* מרכוז הכפתור */
-    margin-top: 20px;
+    align-self: center;
+    margin-top: 1.5em;
+    font-family: 'Assistant', sans-serif; /* גופן כמו התפריט */
+    font-weight: 700; /* משקל גופן כמו התפריט */
 }
 
 .contact-form button[type="submit"]:hover {
-    background-color: #154a6a;
+    background-color: #154a6a; /* גוון כהה יותר של הכחול */
 }
 
 .form-message {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 4px;
+    margin-top: 1em;
+    padding: 0.8em;
+    border-radius: 5px;
     text-align: center;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .form-message.success {
