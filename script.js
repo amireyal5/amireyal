@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = mobileMenu.querySelectorAll('a');
     let prevScrollPos = window.pageYOffset; // מיקום הגלילה הקודם
 
-    // פונקציה להתאמת המיקום של התפריט
     function adjustMenuPosition() {
         if (window.innerWidth <= 768) {
             const headerHeight = header.offsetHeight;
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // הוספת אירועים לאייקון המבורגר ולתפריט
     if (hamburgerIcon && mobileMenu && menuLinks && header) {
         hamburgerIcon.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
