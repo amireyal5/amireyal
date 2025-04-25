@@ -62,6 +62,7 @@ nav {
 
 .menu li {
     margin: 0 1em;
+    position: relative;
 }
 
 .menu a {
@@ -77,6 +78,27 @@ nav {
     color: #ffa500;
 }
 
+/* תפריט משנה (Submenu) */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    right: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
 .hamburger {
     order: 3;
     display: none;
@@ -84,49 +106,6 @@ nav {
     color: #1f628e;
     cursor: pointer;
     margin-left: auto;
-}
-
-/* תפריט עם תת-תפריט */
-.has-submenu {
-    position: relative;
-}
-
-.has-submenu > a::after {
-    content: " ▼";
-    font-size: 0.7em;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    list-style: none;
-    padding: 0.5em 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    min-width: 180px;
-}
-
-.submenu li {
-    padding: 0.5em 1em;
-    text-align: right;
-}
-
-.submenu li a {
-    color: #1f628e;
-    text-decoration: none;
-    display: block;
-}
-
-.submenu li a:hover {
-    color: #ffa500;
-    background-color: #f1f1f1;
-}
-
-.has-submenu:hover .submenu {
-    display: block;
 }
 
 /* פוטר */
@@ -230,23 +209,6 @@ nav {
 
     .menu a:hover {
         color: #ffa500;
-    }
-
-    /* תפריט משנה במובייל */
-    .submenu {
-        display: none;
-        position: static;
-        background: #f9f9f9;
-        box-shadow: none;
-        padding: 0;
-    }
-
-    .submenu li {
-        padding: 10px;
-    }
-
-    .has-submenu.active .submenu {
-        display: block;
     }
 
     /* אייקונים מרחפים - רספונסיביות */
