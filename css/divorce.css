@@ -16,14 +16,25 @@ body {
     line-height: 1.6;
     color: #222;
     background-color: #fff;
+    margin: 0; /* הוספה כדי למנוע מרווחים לא רצויים */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* הוספת פונט גנרי לסקציה החדשה */
+    background-color: #285f65; /* הוספת צבע רקע גנרי לסקציה החדשה */
+    color: #ffffff; /* הוספת צבע טקסט גנרי לסקציה החדשה */
+}
+.treatment-area {
+    color: #2f4858; /* דוגמה לצבע כחול - שנה לפי הצורך */
 }
 
+.key-phrase {
+    color: #2f4858; /* דוגמה לצבע כתום - שנה לפי הצורך */
+}
 /* --- Layout containers --- */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
     padding: 0 20px; /* הוספת פאדינג צדדי גנרי */
+    max-width: 1000px; /* התאמה לסקציה החדשה */
 }
 
 .content-section {
@@ -78,6 +89,10 @@ body {
         max-width: 250px;
         max-height: none;
         border-radius: 8px;
+    }
+
+    .treatment-grid {
+        grid-template-columns: 1fr; /* רספונסיביות לסקציה החדשה */
     }
 }
 
@@ -200,4 +215,43 @@ body {
     color: #d0d3d4;
     line-height: 1.6;
     text-align: right; /* יישור הפיסקה לימין */
+}
+
+/* --- Treatment Included Section --- */
+.treatment-section {
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.main-title {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.treatment-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px 40px;
+    align-items: start;
+}
+
+.item-title {
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: regular;
+    font-size: 2em;
+}
+
+.item-text {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.0em;
+    line-height: 1.6;
+}
+
+.divider {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
 }
