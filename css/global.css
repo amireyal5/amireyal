@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    direction: rtl;
+    direction: rtl;   
     background-color: #f9f9f9;
     color: #333;
     font-size: 1rem;
@@ -99,6 +99,7 @@ nav {
     display: block;
 }
 
+/* המבורגר */
 .hamburger {
     order: 3;
     display: none;
@@ -106,6 +107,85 @@ nav {
     color: #1f628e;
     cursor: pointer;
     margin-left: auto;
+    position: relative;
+    z-index: 1000;
+}
+
+.hamburger:before, .hamburger:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.hamburger:before {
+    top: 8px;
+}
+
+.hamburger:after {
+    bottom: 8px;
+}
+
+/* תפריט ניווט במובייל */
+#mobile-menu {
+    display: none;
+}
+
+#mobile-menu.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    /* המבורגר במובייל */
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+
+    /* תפריט במובייל */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 1em 0;
+    }
+
+    .menu a {
+        color: #1f628e;
+        font-size: 1.2rem;
+    }
+
+    .menu a:hover {
+        color: #ffa500;
+    }
+
+    /* אייקונים מרחפים - רספונסיביות */
+    .floating-contact-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-contact-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
 }
 
 /* פוטר */
@@ -167,59 +247,4 @@ nav {
 .floating-contact-icons a:hover {
     transform: scale(1.2);
     color: #a8dadc;
-}
-
-.floating-contact-icons a i {
-    /* אין צורך בסגנון נוסף לאייקון */
-}
-
-/* רספונסיביות - חלקים גלובליים */
-@media (max-width: 768px) {
-    /* המבורגר */
-    .hamburger {
-        display: block;
-        position: absolute;
-        left: 20px;
-    }
-
-    /* תפריט במובייל */
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        right: 0;
-        left: 0;
-        background-color: #fff;
-        text-align: center;
-        z-index: 999;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu li {
-        margin: 1em 0;
-    }
-
-    .menu a {
-        color: #1f628e;
-        font-size: 1.2rem;
-    }
-
-    .menu a:hover {
-        color: #ffa500;
-    }
-
-    /* אייקונים מרחפים - רספונסיביות */
-    .floating-contact-icons {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .floating-contact-icons a {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
 }
