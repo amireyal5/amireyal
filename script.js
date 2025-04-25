@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuLinks.forEach(function (link) {
             link.addEventListener('click', function () {
                 // סוגר את התפריט אחרי לחיצה על פריט בתפריט (גם ראשי וגם משנה)
-                if (link !== servicesLink) { // אם לא על הלינק "שירותים", סוגר את התפריט
+                if (link !== servicesLink && !link.classList.contains('has-submenu')) { // אם לא על הלינק "שירותים" ולא לינק בתפריט משנה, סוגר את התפריט
                     mobileMenu.classList.remove('active');
                 }
             });
@@ -37,21 +37,23 @@ document.addEventListener('DOMContentLoaded', function () {
         // הוספת אירועים לפריטים בתפריט משנה
         menuItemsWithSubmenu.forEach(function (menuItem) {
             menuItem.addEventListener('click', function () {
-                // אם נבחר פריט מתוך תפריט משנה, נסגור את התפריט
-                mobileMenu.classList.remove('active');
-                // חיפוש אחר תפריט משנה פעיל ונסגור אותו
-                submenus.forEach(function (submenu) {
-                    submenu.classList.remove('open');
-                });
-            });
-
-            // הצגת תפריט משנה לאחר לחיצה על שירותים (תמיכה במובייל)
-            menuItem.addEventListener('click', function (event) {
+                // הצגת תפריט משנה לאחר לחיצה על שירותים (תמיכה במובייל)
                 const submenu = menuItem.nextElementSibling;
                 if (submenu && submenu.classList.contains('submenu')) {
                     submenu.classList.toggle('open');
                     event.stopPropagation(); // מונע את סגירת התפריט הראשי
                 }
+            });
+        });
+
+        // הוספת אירועים לסגירת התפריט אחרי בחירת פריט מתפריט משנה
+        submenus.forEach(function (submenu) {
+            const submenuLinks = submenu.querySelectorAll('a');
+            submenuLinks.forEach(function (submenuLink) {
+                submenuLink.addEventListener('click', function () {
+                    // סוגר את התפריט אחרי בחירת פריט בתפריט משנה
+                    mobileMenu.classList.remove('active');
+                });
             });
         });
 
