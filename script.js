@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuLinks = mobileMenu.querySelectorAll('a');
     const servicesLink = document.querySelector('.services-link'); // הוסף את הלינק "שירותים"
     const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu > a');
+    const submenus = document.querySelectorAll('.submenu'); // כל התפריטי משנה
     let prevScrollPos = window.pageYOffset; // מיקום הגלילה הקודם
 
     // פונקציה להתאמת המיקום של התפריט
@@ -36,7 +37,21 @@ document.addEventListener('DOMContentLoaded', function () {
         // הוספת אירועים לפריטים בתפריט משנה
         menuItemsWithSubmenu.forEach(function (menuItem) {
             menuItem.addEventListener('click', function () {
-                mobileMenu.classList.remove('active'); // סוגר את התפריט אחרי בחירה של פריט
+                // אם נבחר פריט מתוך תפריט משנה, נסגור את התפריט
+                mobileMenu.classList.remove('active');
+                // חיפוש אחר תפריט משנה פעיל ונסגור אותו
+                submenus.forEach(function (submenu) {
+                    submenu.classList.remove('open');
+                });
+            });
+
+            // הצגת תפריט משנה לאחר לחיצה על שירותים (תמיכה במובייל)
+            menuItem.addEventListener('click', function (event) {
+                const submenu = menuItem.nextElementSibling;
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.toggle('open');
+                    event.stopPropagation(); // מונע את סגירת התפריט הראשי
+                }
             });
         });
 
