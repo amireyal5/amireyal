@@ -83,3 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
         prevScrollPos = currentScrollPos;
     }
 });
+
+// JS - ניהול תפריט ההמבורגר
+document.getElementById('hamburger').addEventListener('click', function () {
+    var menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('active');  // הוספת/הסרת class שמראה/מסתיר את התפריט
+});
