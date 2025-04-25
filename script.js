@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const header = document.getElementById('main-header');
     const hamburgerIcon = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuLinks = mobileMenu.querySelectorAll('a');
-    let prevScrollPos = window.pageYOffset; // מיקום הגלילה הקודם
+    let prevScrollPos = window.pageYOffset;
 
     // פונקציה להתאמת המיקום של התפריט
     function adjustMenuPosition() {
@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // הוספת אירועים לאייקון המבורגר ולתפריט
+    // פתיחה וסגירה של התפריט הראשי
     if (hamburgerIcon && mobileMenu && menuLinks && header) {
-        hamburgerIcon.addEventListener('click', function() {
+        hamburgerIcon.addEventListener('click', function () {
             mobileMenu.classList.toggle('active');
             adjustMenuPosition();
         });
 
-        menuLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
                 mobileMenu.classList.remove('active');
             });
         });
@@ -32,12 +32,45 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', adjustMenuPosition);
     }
 
+    // פתיחת תפריט משנה בלחיצה במובייל
+    function handleSubmenuToggleOnMobile() {
+        const isMobile = window.innerWidth <= 768;
+        const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu > a');
+
+        menuItemsWithSubmenu.forEach(function (menuItem) {
+            menuItem.removeEventListener('click', menuItem._submenuHandler); // מנקה מאזין קודם אם קיים
+
+            if (isMobile) {
+                const handler = function (e) {
+                    e.preventDefault();
+                    const submenu = this.nextElementSibling;
+
+                    // סוגר תפריטים אחרים
+                    document.querySelectorAll('.has-submenu .submenu').forEach(function (el) {
+                        if (el !== submenu) {
+                            el.classList.remove('open');
+                        }
+                    });
+
+                    // פותח/סוגר את התפריט הנוכחי
+                    submenu.classList.toggle('open');
+                };
+
+                menuItem._submenuHandler = handler;
+                menuItem.addEventListener('click', handler);
+            }
+        });
+    }
+
+    window.addEventListener('load', handleSubmenuToggleOnMobile);
+    window.addEventListener('resize', handleSubmenuToggleOnMobile);
+
     // קוד טופס צור קשר
     const form = document.getElementById('contactForm');
     const messageBox = document.getElementById('form-message');
 
     if (form && messageBox) {
-        form.addEventListener('submit', async function(e) {
+        form.addEventListener('submit', async function (e) {
             e.preventDefault();
 
             const formData = new FormData(form);
@@ -63,8 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // קוד התאמת גובה תמונה
-    window.onload = function() {
+    // התאמת גובה תמונה
+    window.onload = function () {
         const aboutMeImage = document.getElementById('about-me-image');
         const aboutMeText = document.getElementById('about-me-text');
 
@@ -74,13 +107,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // קוד אנימציית הדר
-    window.onscroll = function() {
+    // אנימציית הופעת הדר בגלילה
+    window.onscroll = function () {
         const currentScrollPos = window.pageYOffset;
         if (prevScrollPos > currentScrollPos) {
-            header.style.top = "0"; // הדר מופיע
+            header.style.top = "0";
         } else {
-            header.style.top = "-80px"; // הדר נעלם (הנחתי שהגובה הוא 80px)
+            header.style.top = "-80px";
         }
         prevScrollPos = currentScrollPos;
     }
