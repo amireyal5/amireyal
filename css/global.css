@@ -261,3 +261,11 @@ nav {
         font-size: 20px;
     }
 }
+.submenu {
+    display: none;
+}
+
+.submenu.open {
+    display: block;
+}
+
