@@ -1,323 +1,203 @@
-/* עיצוב ספציפי לדף */
-body {
+/* --- Reset basic elements --- */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    direction: rtl;
+    font-family: 'Assistant', sans-serif;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
 
+body {
+    line-height: 1.6;
+    color: #222;
+    background-color: #fff;
+}
+
+/* --- Layout containers --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px; /* הוספת פאדינג צדדי גנרי */
+}
 
 .content-section {
-    padding: 2em 0;
-    text-align: center;
+    padding: 60px 0;
+    background-color: #8c9eba; /* צבע טורקיז-כחול - לפי התמונה */
 }
 
-.content-section .container {
-    max-width: 1000px;
-    margin: 0 auto;
+/* --- השינוי האלגנטי והנקי --- */
+.content-section.intro-section {
+    background-color: white;
 }
-
-
-.text-content {
-    max-width: 1000px;
-    margin: 0 auto 2em;
-    padding: 2em;
-    background-color: #f9f9f9;
-    text-align: right;
-}
-
-.text-content h1, .text-content h2, .text-content h3 {
-    color: #1f628e;
-    margin-bottom: 1.5em;
-    font-family: 'Assistant', sans-serif;
-    font-weight: normal;
-    line-height: 1.2;
-}
-
-.text-content h1 {
-    font-size: 2em;
-    margin-top: 0;
-}
-
-.text-content h2 {
-    font-size: 1.5em;
-    margin-top: 1.5em;
-}
-
-.text-content p {
-    font-size: 1.1rem;
-    color: #000;
-    line-height: 1.7;
-    margin-bottom: 1em;
-}
-
-.text-content ul {
-    list-style-type: disc;
-    margin-right: 1.5em;
-    margin-bottom: 1em;
-    padding-right: 0;
-}
-
-.text-content li {
-    margin-bottom: 0.5em;
-}
-
-
-.call-to-action {
-    background-color: #e0f7fa;
-    width: 100%;
-    padding: 2.5em 0;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    border-top: 1px solid #b2ebf2;
-    border-bottom: 1px solid #b2ebf2;
-}
-
-.call-to-action:hover {
-    background-color: #d1f4f9;
-}
-
-.call-to-action .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.call-to-action h2 {
-    font-size: 2.2em;
-    color: #0c4a6e;
-    margin-bottom: 0.75em;
-    font-family: 'Assistant', sans-serif;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: -0.02em;
-}
-
-.call-to-action .button {
-    display: inline-block;
-    background-color: #1a85cf;
-    color: white;
-    padding: 0.8em 2.2em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-family: 'Assistant', sans-serif;
-    text-decoration: none;
-    transition:
-        background-color 0.3s ease,
-        box-shadow 0.3s ease,
-        transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 0.5em;
-    white-space: nowrap;
-}
-
-.call-to-action .button:hover {
-    background-color: #0b639d;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    transform: scale(1.04);
-}
-
-.call-to-action .button:active {
-    transform: scale(1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-
-
-.floating-contact-icons {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    z-index: 1000;
-}
-
-
-
-@media (max-width: 768px) {
-    .floating-contact-icons {
-        gap: 0.3em;
-    }
-    .floating-contact-icons a {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2em;
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    .call-to-action {
-        padding: 2em 0;
-    }
-
-    .call-to-action h2 {
-        font-size: 1.8em;
-        margin-bottom: 0.5em;
-        line-height: 1.3;
-    }
-
-    .call-to-action .button {
-        font-size: 1rem;
-        padding: 0.8em 2em;
-    }
-}
-
-@media (max-width: 480px) {
-    .call-to-action h2 {
-        font-size: 1.6em;
-    }
-
-    .call-to-action .button {
-        width: 100%;
-        text-align: center;
-    }
-}
-
 
 .center-titles {
     text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-.center-titles h2{
-    font-size: 1.5em;
-        margin-bottom: 0.5em;
-        line-height: 1.3;
-}
-.center-titles h1{
-    font-size: 1.8em;
-        color: #0c4a6e;
-        margin-bottom: 0.75em;
-        font-family: 'Assistant', sans-serif;
-        font-weight: 600;
-        letter-spacing: -0.02em;
+    margin-bottom: 40px;
 }
 
 .grid-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
     align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.left-block {
-    text-align: center;
-}
-.left-block img{
-    max-width: 100%;
-        border-radius: 8px;
+/* רספונסיביות עבור About Us */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 1em;
+    }
+
+    .about-content {
         margin-bottom: 1em;
+    }
+
+    .about-content h2 {
+        font-size: 1.3em;
+        color: #1f628e;
+    }
+
+    .about-me-container {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .about-me-text {
+        text-align: justify;
+        margin-bottom: 1em;
+    }
+
+    .about-me-image img {
+        max-width: 250px;
+        max-height: none;
+        border-radius: 8px;
+    }
 }
 
-.right-block {
-    text-align: right;
-}
-
-
-.profile-image {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.section-title {
-    font-size: 2em;
-    color: #1f628e;
-    margin-bottom: 1em;
-    font-family: 'Assistant', sans-serif;
-    font-weight: normal;
-}
-
-.section-full-width{
-    width: 100%;
+.profile-caption {
     text-align: center;
-    margin: 2em 0;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 1.1em;
+    color: #333;
 }
 
-
+/* --- Bullet lists --- */
 .bullet-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: right;
+    list-style: none;
+    padding-right: 0;
 }
 
 .bullet-list li {
-    margin-bottom: 1em;
-    padding-right: 1.5em;
     position: relative;
+    padding-right: 25px;
+    margin-bottom: 10px;
 }
 
 .bullet-list li::before {
-    content: '•';
+    content: "•";
     position: absolute;
     right: 0;
-    top: 0;
-    color: #1f628e;
+    color: #0077cc;
+    font-weight: bold;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .grid-section {
+        flex-direction: column;
+    }
+}
+
+/* --- Buttons --- */
+.button {
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005fa3;
+}
+.fixed-consultation-button {
+    display: inline-block; /* חשוב להתאמה אוטומטית לרוחב התוכן */
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    width: auto; /* ודא שהרוחב מוגדר כ-auto */
+}
+
+.fixed-consultation-button:hover {
+    background-color: #1e7e34; /* גוון ירוק כהה יותר במעבר עכבר */
+}
+
+/* --- Full Width Section (טכניקות טיפוליות) --- */
+.full-width-section {
+    padding: 60px 0;
+    background-color: #2c3e50; /* רקע כחול-טורקיז כהה */
+    color: #ecf0f1; /* צבע טקסט בהיר */
+    text-align: center; /* מרכוז גנרי של התוכן */
+}
+
+.full-width-section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.full-width-section .section-title {
+    font-size: 2.5em;
+    color: #ffffff;
+    text-align: center; /* מרכוז הכותרת של הסקציה */
+    margin-bottom: 40px;
+    border-bottom: 1px solid #bdc3c7; /* קו הפרדה מתחת לכותרת */
+    padding-bottom: 20px;
 }
 
 .techniques-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-    max-width: 1000px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* פריסה גמישה של קופסאות */
+    gap: 30px;
 }
 
-.technique-name {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #1f628e;
-    margin-bottom: 0.5em;
-    text-align: right;
+.service-box {
+    background-color: rgba(255, 255, 255, 0.05); /* רקע שקוף מעט לבן */
+    border: 1px solid #bdc3c7;
+    padding: 25px;
+    border-radius: 5px;
+    text-align: right; /* יישור הטקסט בתוך הקוביות לימין */
 }
 
-.technique-description {
-    text-align: right;
+.service-box h3 {
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bdc3c7; /* קו הפרדה מתחת לכותרת הטכניקה */
+    padding-bottom: 10px;
+    text-align: right; /* יישור כותרת הטכניקה לימין */
 }
 
-
-@media (max-width: 768px) {
-    .grid-section {
-        grid-template-columns: 1fr;
-    }
-
-    .left-block, .right-block {
-        text-align: center;
-    }
-
-    .profile-image {
-        max-width: 80%;
-        margin-bottom: 1em;
-    }
-
-    .techniques-grid {
-        grid-template-columns: 1fr;
-    }
-    .section-full-width{
-        text-align: center;
-    }
-    .center-titles h2{
-        font-size: 1.5em;
-    }
-    .center-titles h1{
-        font-size: 1.8em;
-    }
+.service-box p {
+    font-size: 1em;
+    color: #d0d3d4;
+    line-height: 1.6;
+    text-align: right; /* יישור הפיסקה לימין */
 }
