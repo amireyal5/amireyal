@@ -25,14 +25,15 @@ document.addEventListener('DOMContentLoaded', function () {
             adjustMenuPosition();
         });
 
-        menuLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                // סוגר את התפריט אחרי לחיצה על פריט בתפריט (גם ראשי וגם משנה)
-                if (link !== servicesLink && !link.classList.contains('has-submenu')) { // אם לא על הלינק "שירותים" ולא לינק בתפריט משנה, סוגר את התפריט
-                    mobileMenu.classList.remove('active');
-                }
-            });
-        });
+       menuLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+        // סוגר את התפריט אחרי לחיצה על פריט בתפריט (גם ראשי וגם משנה)
+        if (!link.closest('.has-submenu') && link !== servicesLink) { // אם הלינק לא בתוך תפריט משנה ולא הלינק "שירותים", סוגר את התפריט
+            mobileMenu.classList.remove('active');
+        }
+    });
+});
+
 
         // הוספת אירועים לפריטים בתפריט משנה
         menuItemsWithSubmenu.forEach(function (menuItem) {
