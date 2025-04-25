@@ -1,97 +1,270 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const header = document.getElementById('main-header');
-    const hamburgerIcon = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuLinks = mobileMenu.querySelectorAll('a');
-    const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu > a');
-    let prevScrollPos = window.pageYOffset; // מיקום הגלילה הקודם
+/* כלליים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    // פונקציה להתאמת המיקום של התפריט
-    function adjustMenuPosition() {
-        if (window.innerWidth <= 768) {
-            const headerHeight = header.offsetHeight;
-            mobileMenu.style.top = headerHeight + 'px';
-        } else {
-            mobileMenu.style.top = '60px';
-        }
+body {
+    font-family: 'Open Sans', sans-serif;
+    direction: rtl;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* הדר */
+#main-header {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    transition: top 0.3s ease;
+    z-index: 100;
+}
+
+.logo {
+    order: 1;
+    max-width: 200px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 110px;
+    }
+}
+
+nav {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 1em;
+}
+
+.menu a {
+    color: #1f628e;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    font-family: 'Assistant', sans-serif;
+}
+
+.menu a:hover {
+    color: #ffa500;
+}
+
+.hamburger {
+    order: 3;
+    display: none;
+    font-size: 2rem;
+    color: #1f628e;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* תפריט עם תת-תפריט */
+.has-submenu {
+    position: relative;
+}
+
+.has-submenu > a::after {
+    content: " ▼";
+    font-size: 0.7em;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0.5em 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 180px;
+}
+
+.submenu li {
+    padding: 0.5em 1em;
+    text-align: right;
+}
+
+.submenu li a {
+    color: #1f628e;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    color: #ffa500;
+    background-color: #f1f1f1;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* פוטר */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 2em;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    border-radius: 0;
+}
+
+.footer-content {
+    max-width: 800px;
+}
+
+.footer-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.footer-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* אייקונים מרחפים ליצירת קשר */
+.floating-contact-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floating-contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #457b9d;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.floating-contact-icons a:hover {
+    transform: scale(1.2);
+    color: #a8dadc;
+}
+
+.floating-contact-icons a i {
+    /* אין צורך בסגנון נוסף לאייקון */
+}
+
+/* רספונסיביות - חלקים גלובליים */
+@media (max-width: 768px) {
+    /* המבורגר */
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
     }
 
-    // הוספת אירועים לאייקון המבורגר ולתפריט
-    if (hamburgerIcon && mobileMenu && menuLinks && header) {
-        hamburgerIcon.addEventListener('click', function () {
-            mobileMenu.classList.toggle('active');
-            adjustMenuPosition();
-        });
-
-        menuLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                // סוגר את התפריט רק אחרי לחיצה על פריט בתפריט (גם ראשי וגם משנה)
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        // הוספת אירועים לפריטים בתפריט משנה
-        menuItemsWithSubmenu.forEach(function (menuItem) {
-            menuItem.addEventListener('click', function () {
-                // נשאר פתוח עד שלחצנו על פריט בתפריט המשני או הראשי
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        window.addEventListener('load', adjustMenuPosition);
-        window.addEventListener('resize', adjustMenuPosition);
+    /* תפריט במובייל */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        z-index: 999;
     }
 
-    // קוד טופס צור קשר
-    const form = document.getElementById('contactForm');
-    const messageBox = document.getElementById('form-message');
-
-    if (form && messageBox) {
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                    messageBox.textContent = "ההודעה נשלחה בהצלחה!";
-                    messageBox.style.color = "green";
-                    form.reset();
-                } else {
-                    messageBox.textContent = "אירעה שגיאה בשליחה. נסו שוב.";
-                    messageBox.style.color = "red";
-                }
-            } catch (error) {
-                messageBox.textContent = "השליחה נכשלה. ייתכן שיש בעיית רשת.";
-                messageBox.style.color = "red";
-            }
-        });
+    .menu.active {
+        display: flex;
     }
 
-    // קוד התאמת גובה תמונה
-    window.onload = function () {
-        const aboutMeImage = document.getElementById('about-me-image');
-        const aboutMeText = document.getElementById('about-me-text');
-
-        if (aboutMeImage && aboutMeText) {
-            const imageHeight = aboutMeImage.offsetHeight;
-            aboutMeText.style.height = imageHeight + 'px';
-        }
-    };
-
-    // קוד אנימציית הדר
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
-        if (prevScrollPos > currentScrollPos) {
-            header.style.top = "0"; // הדר מופיע
-        } else {
-            header.style.top = "-80px"; // הדר נעלם (הנחתי שהגובה הוא 80px)
-        }
-        prevScrollPos = currentScrollPos;
+    .menu li {
+        margin: 1em 0;
     }
-});
+
+    .menu a {
+        color: #1f628e;
+        font-size: 1.2rem;
+    }
+
+    .menu a:hover {
+        color: #ffa500;
+    }
+
+    /* תפריט משנה במובייל */
+    .submenu {
+        display: none;
+        position: static;
+        background: #f9f9f9;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .submenu li {
+        padding: 10px;
+    }
+
+    .has-submenu.active .submenu {
+        display: block;
+    }
+
+    /* אייקונים מרחפים - רספונסיביות */
+    .floating-contact-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-contact-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+.submenu {
+    display: none;
+}
+
+.submenu.open {
+    display: block;
+}
