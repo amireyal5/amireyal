@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburgerIcon = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuLinks = mobileMenu.querySelectorAll('a');
+    const servicesLink = document.querySelector('.services-link'); // הוסף את הלינק "שירותים"
     const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu > a');
     let prevScrollPos = window.pageYOffset; // מיקום הגלילה הקודם
 
@@ -25,16 +26,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         menuLinks.forEach(function (link) {
             link.addEventListener('click', function () {
-                // סוגר את התפריט רק אחרי לחיצה על פריט בתפריט (גם ראשי וגם משנה)
-                mobileMenu.classList.remove('active');
+                // סוגר את התפריט אחרי לחיצה על פריט בתפריט (גם ראשי וגם משנה)
+                if (link !== servicesLink) { // אם לא על הלינק "שירותים", סוגר את התפריט
+                    mobileMenu.classList.remove('active');
+                }
             });
         });
 
         // הוספת אירועים לפריטים בתפריט משנה
         menuItemsWithSubmenu.forEach(function (menuItem) {
             menuItem.addEventListener('click', function () {
-                // נשאר פתוח עד שלחצנו על פריט בתפריט המשני או הראשי
-                mobileMenu.classList.remove('active');
+                mobileMenu.classList.remove('active'); // סוגר את התפריט אחרי בחירה של פריט
             });
         });
 
