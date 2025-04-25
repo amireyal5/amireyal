@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburgerIcon = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuLinks = mobileMenu.querySelectorAll('a');
-    let prevScrollPos = window.pageYOffset;
+    const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu > a');
+    let prevScrollPos = window.pageYOffset; // מיקום הגלילה הקודם
 
     // פונקציה להתאמת המיקום של התפריט
     function adjustMenuPosition() {
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // פתיחה וסגירה של התפריט הראשי
+    // הוספת אירועים לאייקון המבורגר ולתפריט
     if (hamburgerIcon && mobileMenu && menuLinks && header) {
         hamburgerIcon.addEventListener('click', function () {
             mobileMenu.classList.toggle('active');
@@ -24,6 +25,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         menuLinks.forEach(function (link) {
             link.addEventListener('click', function () {
+                // סוגר את התפריט רק אחרי לחיצה על פריט בתפריט (גם ראשי וגם משנה)
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // הוספת אירועים לפריטים בתפריט משנה
+        menuItemsWithSubmenu.forEach(function (menuItem) {
+            menuItem.addEventListener('click', function () {
+                // נשאר פתוח עד שלחצנו על פריט בתפריט המשני או הראשי
                 mobileMenu.classList.remove('active');
             });
         });
@@ -31,39 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('load', adjustMenuPosition);
         window.addEventListener('resize', adjustMenuPosition);
     }
-
-    // פתיחת תפריט משנה בלחיצה במובייל
-    function handleSubmenuToggleOnMobile() {
-        const isMobile = window.innerWidth <= 768;
-        const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu > a');
-
-        menuItemsWithSubmenu.forEach(function (menuItem) {
-            menuItem.removeEventListener('click', menuItem._submenuHandler); // מנקה מאזין קודם אם קיים
-
-            if (isMobile) {
-                const handler = function (e) {
-                    e.preventDefault();
-                    const submenu = this.nextElementSibling;
-
-                    // סוגר תפריטים אחרים
-                    document.querySelectorAll('.has-submenu .submenu').forEach(function (el) {
-                        if (el !== submenu) {
-                            el.classList.remove('open');
-                        }
-                    });
-
-                    // פותח/סוגר את התפריט הנוכחי
-                    submenu.classList.toggle('open');
-                };
-
-                menuItem._submenuHandler = handler;
-                menuItem.addEventListener('click', handler);
-            }
-        });
-    }
-
-    window.addEventListener('load', handleSubmenuToggleOnMobile);
-    window.addEventListener('resize', handleSubmenuToggleOnMobile);
 
     // קוד טופס צור קשר
     const form = document.getElementById('contactForm');
@@ -96,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // התאמת גובה תמונה
+    // קוד התאמת גובה תמונה
     window.onload = function () {
         const aboutMeImage = document.getElementById('about-me-image');
         const aboutMeText = document.getElementById('about-me-text');
@@ -107,13 +84,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    // אנימציית הופעת הדר בגלילה
+    // קוד אנימציית הדר
     window.onscroll = function () {
         const currentScrollPos = window.pageYOffset;
         if (prevScrollPos > currentScrollPos) {
-            header.style.top = "0";
+            header.style.top = "0"; // הדר מופיע
         } else {
-            header.style.top = "-80px";
+            header.style.top = "-80px"; // הדר נעלם (הנחתי שהגובה הוא 80px)
         }
         prevScrollPos = currentScrollPos;
     }
