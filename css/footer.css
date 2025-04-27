@@ -94,5 +94,18 @@
     
     .footer-logo img {
         max-width: 150px;
-    }
+    }    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s;
 }
+
+.contact-info a:hover {
+    opacity: 0.8;
+}
+
+/* סגנון לקישור בכותרת */
+.footer-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+ }
