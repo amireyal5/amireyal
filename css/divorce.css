@@ -1,19 +1,18 @@
-/* --- פלטת צבעים אלטרנטיבית --- */
+/* --- פלטת צבעים מותאמת --- */
 :root {
-  --primary-color: #3a6b7e; /* כחול-אפור מרגיע */
-  --secondary-color: #5d8b9f; /* גוון משנה */
-  --accent-color: #d4b483; /* גוון עץ חם */
-  --text-color: #2d3748; /* צבע טקסט כהה */
-  --light-text: #f7fafc; /* טקסט בהיר */
-  --background-light: #f8f5f2; /* רקע בז' עדין */
-  --background-dark: #2d3748; /* רקע כהה */
-  --border-radius: 6px; /* עיגול פינות עדין */
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --primary-color: #285f65; /* צבע ראשי - כחול ירוק מרגיע */
+  --secondary-color: #3a7d88; /* גוון משני */
+  --accent-color: #8c9eba; /* צבע דגש - אפור כחלחל */
+  --text-color: #333333; /* צבע טקסט ראשי */
+  --light-text: #f8f9fa; /* טקסט בהיר */
+  --background-light: #ffffff; /* רקע בהיר */
+  --background-dark: #2c3e50; /* רקע כהה */
+  --border-color: rgba(0, 0, 0, 0.08); /* צבע גבול עדין */
+  --border-radius: 6px; /* עיגול פינות */
 }
 
-/* --- גופנים אלגנטיים --- */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+/* --- גופנים --- */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap');
 
 * {
   margin: 0;
@@ -23,197 +22,122 @@
 
 html {
   direction: rtl;
-  font-family: 'Rubik', sans-serif;
-  font-size: 17px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
   scroll-behavior: smooth;
-  line-height: 1.7;
-  background-color: var(--background-light);
+  line-height: 1.6;
 }
 
 body {
   color: var(--text-color);
   background-color: var(--background-light);
+  margin: 0;
   font-weight: 400;
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 
-/* --- אנימציות עדינות --- */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- מיכל ראשי עם הגבלה אלגנטית --- */
+/* --- מיכל ראשי --- */
 .container {
-  width: 92%;
+  width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
-  animation: fadeIn 0.6s ease-out;
 }
 
-/* --- סעיפים עם מרקם עדין --- */
+/* --- סעיפים כלליים --- */
 .content-section {
   padding: 60px 0;
-  position: relative;
 }
 
-.content-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+.center-titles {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* --- סעיף מבוא מיוחד --- */
-.intro-section {
-  background-color: var(--background-light);
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.intro-section .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* --- כותרות עם דגש עדין --- */
-h1, h2, h3, h4 {
-  font-weight: 500;
-  line-height: 1.3;
+.center-titles h2 {
+  font-weight: 600;
   color: var(--primary-color);
-  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
 }
 
-h1 {
-  font-size: 2.4rem;
-  letter-spacing: -0.5px;
+/* --- פריסת טיפולים - גריד דו-טורי עם קווים מפרידים --- */
+.treatment-section {
+  padding: 60px 0;
 }
 
-h2 {
-  font-size: 1.9rem;
-  position: relative;
-  display: inline-block;
+.treatment-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0; /* אין רווח בין השורות - הקווים יבצעו את ההפרדה */
 }
 
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  right: 0;
-  width: 50%;
-  height: 3px;
-  background: var(--accent-color);
-  border-radius: 3px;
+.treatment-item {
+  display: contents; /* מאפשר לאלמנטים הילדים להיות חלק מהגריד */
 }
 
-/* --- כרטיסי שירות עם עומק --- */
-.service-card {
-  background: white;
+.item-title, .item-text {
+  padding: 20px;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  background-color: rgba(40, 95, 101, 0.05);
+  border-right: 3px solid var(--accent-color);
+}
+
+.item-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* קו מפריד בין פריטים */
+.treatment-item:not(:last-child) .item-text {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* --- כרטיסי שירות --- */
+.service-box {
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+  padding: 25px;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
-  padding: 30px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  height: 100%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(0, 0, 0, 0.05);
+.service-box:hover {
+  transform: translateY(-3px);
 }
 
-.service-card h3 {
+.service-box h3 {
+  font-size: 1.2rem;
   color: var(--primary-color);
   margin-bottom: 15px;
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.service-card h3::before {
-  content: '○';
-  color: var(--accent-color);
-  margin-left: 8px;
-  font-size: 1.1rem;
-}
-
-/* --- כפתורים מינימליסטיים --- */
+/* --- כפתורים --- */
 .button {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-weight: 500;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  display: inline-block;
+  font-weight: 600;
   transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .button:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--secondary-color);
   transform: translateY(-2px);
-}
-
-.button-accent {
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  border: 2px solid var(--accent-color);
-}
-
-.button-accent:hover {
-  background-color: transparent;
-  color: var(--text-color);
-}
-
-/* --- רשימות עם אייקונים --- */
-.icon-list {
-  list-style: none;
-}
-
-.icon-list li {
-  position: relative;
-  padding-right: 30px;
-  margin-bottom: 12px;
-}
-
-.icon-list li::before {
-  content: '→';
-  position: absolute;
-  right: 0;
-  color: var(--accent-color);
-  font-weight: bold;
-}
-
-/* --- סעיף עם רקע גרדי עדין --- */
-.pattern-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.pattern-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
-  background-size: 15px 15px;
-  z-index: 0;
-}
-
-.pattern-section .container {
-  position: relative;
-  z-index: 1;
 }
 
 /* --- רספונסיביות --- */
@@ -222,30 +146,97 @@ h2::after {
     font-size: 15px;
   }
   
+  .container {
+    width: 95%;
+    padding: 0 15px;
+  }
+  
   .content-section {
     padding: 50px 0;
   }
   
-  h1 {
-    font-size: 2rem;
+  /* פריסת טיפולים למובייל - עמודה אחת */
+  .treatment-grid {
+    grid-template-columns: 1fr;
   }
   
-  h2 {
-    font-size: 1.6rem;
+  .item-title {
+    border-right: none;
+    border-bottom: 3px solid var(--accent-color);
   }
   
-  .service-card {
-    padding: 20px;
+  .item-text {
+    border-bottom: none;
+  }
+  
+  .treatment-item:not(:last-child) .item-text {
+    border-bottom: 1px solid var(--border-color);
   }
 }
 
 @media (max-width: 480px) {
   .button {
-    padding: 8px 20px;
+    padding: 10px 20px;
     font-size: 0.9rem;
   }
   
-  h2::after {
-    width: 40%;
+  .item-title, .item-text {
+    padding: 15px;
   }
+}
+
+/* --- אלמנטים נוספים --- */
+.profile-caption {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.bullet-list {
+  list-style: none;
+  padding-right: 0;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-right: 25px;
+  margin-bottom: 10px;
+}
+
+.bullet-list li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* --- סעיף רוחב מלא --- */
+.full-width-section {
+  padding: 60px 0;
+  background-color: var(--background-dark);
+  color: var(--light-text);
+}
+
+.full-width-section .section-title {
+  font-size: 1.8rem;
+  color: var(--light-text);
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- אפקטים מיוחדים --- */
+.treatment-area {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.key-phrase {
+  color: var(--accent-color);
+  font-weight: 600;
 }
