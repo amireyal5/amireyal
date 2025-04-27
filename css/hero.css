@@ -1,20 +1,77 @@
-/* Hero */
+/* Hero - גרסה ויזואלית טהורה */
 .hero {
+    --overlay-color: rgba(31, 98, 142, 0.15); /* צבע כיסוי עדין */
+    
     width: 100%;
-    overflow: hidden;
+    height: 100vh;
     position: relative;
-    background-color: #f0f0f0;
+    overflow: hidden;
+    background: #f9f9f9;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        var(--overlay-color),
+        rgba(0,0,0,0.05)
+    );
+    z-index: 1;
 }
 
 .hero img {
+    position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    display: block;
+    object-position: center;
+    z-index: 0;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
 }
 
-@media (min-width: 769px) {
+/* אנימציה עדינה לתמונה */
+@media (prefers-reduced-motion: no-preference) {
+    .hero img {
+        animation: subtleZoom 25s linear infinite alternate;
+    }
+}
+
+@keyframes subtleZoom {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.03) rotate(0.3deg); }
+}
+
+/* מסגרת עדינה */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
     .hero {
-        margin-top: 0;
+        height: 70vh;
+    }
+    
+    .hero::after {
+        inset: 10px;
+    }
+    
+    @keyframes subtleZoom {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.02); }
     }
 }
