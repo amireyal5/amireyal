@@ -102,6 +102,9 @@
 .contact-info a:hover {
     opacity: 0.8;
 }
+.footer-section .contact-info {
+    color: white !important;
+}
 
 /* סגנון לקישור בכותרת */
 .footer-title a {
