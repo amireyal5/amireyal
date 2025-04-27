@@ -1,4 +1,7 @@
 /* styles/footer.css */
+.white-text {
+    color: white !important;
+}
 .therapy-footer {
     background-color: #006064;
     padding: 40px 20px;
