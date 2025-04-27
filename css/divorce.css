@@ -1,17 +1,19 @@
-/* --- גופן וטיפוגרפיה --- */
+/* --- פלטת צבעים אלטרנטיבית --- */
 :root {
-  --primary-color: #285f65; /* צבע ראשי */
-  --secondary-color: #3a7d88; /* גוון משני */
-  --accent-color: #8c9eba; /* צבע דגש */
-  --text-color: #333333; /* צבע טקסט ראשי */
-  --light-text: #f8f9fa; /* טקסט בהיר */
-  --background-light: #ffffff; /* רקע בהיר */
-  --background-dark: #2c3e50; /* רקע כהה */
-  --border-radius: 8px; /* עיגול פינות */
+  --primary-color: #3a6b7e; /* כחול-אפור מרגיע */
+  --secondary-color: #5d8b9f; /* גוון משנה */
+  --accent-color: #d4b483; /* גוון עץ חם */
+  --text-color: #2d3748; /* צבע טקסט כהה */
+  --light-text: #f7fafc; /* טקסט בהיר */
+  --background-light: #f8f5f2; /* רקע בז' עדין */
+  --background-dark: #2d3748; /* רקע כהה */
+  --border-radius: 6px; /* עיגול פינות עדין */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* --- גופנים מודרניים --- */
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap');
+/* --- גופנים אלגנטיים --- */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -21,248 +23,197 @@
 
 html {
   direction: rtl;
-  font-family: 'Assistant', sans-serif;
-  font-size: 16px; /* גודל גופן בסיסי קטן יותר */
+  font-family: 'Rubik', sans-serif;
+  font-size: 17px;
   scroll-behavior: smooth;
-  line-height: 1.6;
+  line-height: 1.7;
+  background-color: var(--background-light);
 }
 
 body {
   color: var(--text-color);
   background-color: var(--background-light);
-  margin: 0;
   font-weight: 400;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* --- מיכל ראשי --- */
+/* --- אנימציות עדינות --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- מיכל ראשי עם הגבלה אלגנטית --- */
 .container {
-  width: 90%;
-  max-width: 1100px; /* רוחב מקסימלי מצומצם יותר */
+  width: 92%;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
+  animation: fadeIn 0.6s ease-out;
 }
 
-/* --- סעיפים --- */
+/* --- סעיפים עם מרקם עדין --- */
 .content-section {
-  padding: 50px 0;
+  padding: 60px 0;
+  position: relative;
 }
 
-/* --- סעיף מבוא --- */
-.content-section.intro-section {
+.content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+}
+
+/* --- סעיף מבוא מיוחד --- */
+.intro-section {
   background-color: var(--background-light);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-.center-titles {
-  text-align: center;
-  margin-bottom: 30px;
+.intro-section .container {
+  position: relative;
+  z-index: 1;
 }
 
-.center-titles h2 {
-  font-weight: 600;
+/* --- כותרות עם דגש עדין --- */
+h1, h2, h3, h4 {
+  font-weight: 500;
+  line-height: 1.3;
   color: var(--primary-color);
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  margin-bottom: 1.2rem;
 }
 
-/* --- רשת גריד --- */
-.grid-section {
+h1 {
+  font-size: 2.4rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.9rem;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  width: 50%;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 3px;
+}
+
+/* --- כרטיסי שירות עם עומק --- */
+.service-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  padding: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  align-items: center;
+}
+
+.service-card h3::before {
+  content: '○';
+  color: var(--accent-color);
+  margin-left: 8px;
+  font-size: 1.1rem;
+}
+
+/* --- כפתורים מינימליסטיים --- */
+.button {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-/* --- כותרות --- */
-h1, h2, h3, h4 {
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--primary-color);
+.button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
 }
 
-h1 {
-  font-size: 2.2rem;
+.button-accent {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
 }
 
-h2 {
-  font-size: 1.8rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-/* --- פרופיל ותמונות --- */
-.profile-caption {
-  text-align: center;
-  font-weight: 600;
-  margin-top: 12px;
-  font-size: 1rem;
+.button-accent:hover {
+  background-color: transparent;
   color: var(--text-color);
 }
 
-/* --- רשימות --- */
-.bullet-list {
+/* --- רשימות עם אייקונים --- */
+.icon-list {
   list-style: none;
-  padding-right: 0;
 }
 
-.bullet-list li {
+.icon-list li {
   position: relative;
-  padding-right: 25px;
-  margin-bottom: 10px;
+  padding-right: 30px;
+  margin-bottom: 12px;
 }
 
-.bullet-list li::before {
-  content: "•";
+.icon-list li::before {
+  content: '→';
   position: absolute;
   right: 0;
   color: var(--accent-color);
   font-weight: bold;
-  font-size: 1.2rem;
 }
 
-/* --- כפתורים --- */
-.button {
-  background-color: var(--primary-color);
-  color: var(--light-text);
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: var(--border-radius);
-  display: inline-block;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
+/* --- סעיף עם רקע גרדי עדין --- */
+.pattern-section {
+  position: relative;
+  overflow: hidden;
 }
 
-.button:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-2px);
+.pattern-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 15px 15px;
+  z-index: 0;
 }
 
-.fixed-consultation-button {
-  display: inline-block;
-  background-color: var(--accent-color);
-  color: var(--light-text);
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.fixed-consultation-button:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-2px);
-}
-
-/* --- סעיף רוחב מלא --- */
-.full-width-section {
-  padding: 50px 0;
-  background-color: var(--background-dark);
-  color: var(--light-text);
-}
-
-.full-width-section .section-title {
-  font-size: 2rem;
-  color: var(--light-text);
-  text-align: center;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.techniques-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.service-box {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: var(--border-radius);
-  text-align: right;
-  transition: transform 0.3s ease;
-}
-
-.service-box:hover {
-  transform: translateY(-5px);
-}
-
-.service-box h3 {
-  font-size: 1.2rem;
-  color: var(--light-text);
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.service-box p {
-  font-size: 0.95rem;
-  color: #d0d3d4;
-  line-height: 1.6;
-}
-
-/* --- סעיף טיפולים --- */
-.treatment-section {
-  padding: 50px 0;
-}
-
-.main-title {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 30px;
-  color: var(--primary-color);
-}
-
-.treatment-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 15px 30px;
-  align-items: start;
-}
-
-.item-title {
-  padding: 12px;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: var(--primary-color);
-}
-
-.item-text {
-  padding: 12px;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.divider {
-  grid-column: 1 / -1;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  margin: 10px 0;
-}
-
-/* --- אפקטים עדינים --- */
-.treatment-area {
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-.key-phrase {
-  color: var(--accent-color);
-  font-weight: 600;
+.pattern-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* --- רספונסיביות --- */
@@ -271,37 +222,30 @@ h4 {
     font-size: 15px;
   }
   
-  .container {
-    width: 95%;
-    padding: 0 15px;
-  }
-  
   .content-section {
-    padding: 40px 0;
+    padding: 50px 0;
   }
   
-  .treatment-grid,
-  .about-me-container {
-    grid-template-columns: 1fr;
+  h1 {
+    font-size: 2rem;
   }
   
-  .main-title {
-    font-size: 1.8rem;
+  h2 {
+    font-size: 1.6rem;
   }
   
-  .center-titles h2 {
-    font-size: 1.5rem;
+  .service-card {
+    padding: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .button,
-  .fixed-consultation-button {
-    padding: 10px 20px;
+  .button {
+    padding: 8px 20px;
     font-size: 0.9rem;
   }
   
-  .techniques-grid {
-    grid-template-columns: 1fr;
+  h2::after {
+    width: 40%;
   }
 }
