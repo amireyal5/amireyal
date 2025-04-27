@@ -1,281 +1,307 @@
-/* --- Reset basic elements --- */
+/* --- גופן וטיפוגרפיה --- */
+:root {
+  --primary-color: #285f65; /* צבע ראשי */
+  --secondary-color: #3a7d88; /* גוון משני */
+  --accent-color: #8c9eba; /* צבע דגש */
+  --text-color: #333333; /* צבע טקסט ראשי */
+  --light-text: #f8f9fa; /* טקסט בהיר */
+  --background-light: #ffffff; /* רקע בהיר */
+  --background-dark: #2c3e50; /* רקע כהה */
+  --border-radius: 8px; /* עיגול פינות */
+}
+
+/* --- גופנים מודרניים --- */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    direction: rtl;
-    font-family: 'Assistant', sans-serif;
-    font-size: 18px;
-    scroll-behavior: smooth;
+  direction: rtl;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px; /* גודל גופן בסיסי קטן יותר */
+  scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
 body {
-    line-height: 1.6;
-    color: #222;
-    background-color: #fff;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #285f65;
-    color: #ffffff;
+  color: var(--text-color);
+  background-color: var(--background-light);
+  margin: 0;
+  font-weight: 400;
+  min-height: 100vh;
 }
 
-/* --- Layout containers --- */
+/* --- מיכל ראשי --- */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-    max-width: 1000px;
+  width: 90%;
+  max-width: 1100px; /* רוחב מקסימלי מצומצם יותר */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+/* --- סעיפים --- */
 .content-section {
-    padding: 60px 0;
-    background-color: #8c9eba;
+  padding: 50px 0;
 }
 
-/* --- השינוי האלגנטי והנקי --- */
+/* --- סעיף מבוא --- */
 .content-section.intro-section {
-    background-color: white;
+  background-color: var(--background-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .center-titles {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
+.center-titles h2 {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* --- רשת גריד --- */
 .grid-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
-/* רספונסיביות עבור About Us */
-@media (max-width: 768px) {
-    .about-us {
-        padding: 1em;
-    }
-
-    .about-content {
-        margin-bottom: 1em;
-    }
-
-    .about-content h2 {
-        font-size: 1.3em;
-        color: #1f628e;
-    }
-
-    .about-me-container {
-        grid-template-columns: 1fr;
-        gap: 1em;
-    }
-
-    .about-me-text {
-        text-align: justify;
-        margin-bottom: 1em;
-    }
-
-    .about-me-image img {
-        max-width: 250px;
-        max-height: none;
-        border-radius: 8px;
-    }
-
-    .treatment-grid {
-        grid-template-columns: 1fr;
-    }
+/* --- כותרות --- */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--primary-color);
 }
 
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+/* --- פרופיל ותמונות --- */
 .profile-caption {
-    text-align: center;
-    font-weight: 600;
-    margin-top: 12px;
-    font-size: 1.1em;
-    color: #333;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
-/* --- Bullet lists --- */
+/* --- רשימות --- */
 .bullet-list {
-    list-style: none;
-    padding-right: 0;
+  list-style: none;
+  padding-right: 0;
 }
 
 .bullet-list li {
-    position: relative;
-    padding-right: 25px;
-    margin-bottom: 10px;
+  position: relative;
+  padding-right: 25px;
+  margin-bottom: 10px;
 }
 
 .bullet-list li::before {
-    content: "•";
-    position: absolute;
-    right: 0;
-    color: #0077cc;
-    font-weight: bold;
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    .grid-section {
-        flex-direction: column;
-    }
-}
-
-/* --- Buttons --- */
+/* --- כפתורים --- */
 .button {
-    background-color: #0077cc;
-    color: white;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 5px;
-    display: inline-block;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .button:hover {
-    background-color: #005fa3;
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
 }
+
 .fixed-consultation-button {
-    display: inline-block;
-    background-color: #28a745;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    font-size: 1em;
-    width: auto;
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--light-text);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .fixed-consultation-button:hover {
-    background-color: #1e7e34;
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
 }
 
-/* --- Full Width Section (טכניקות טיפוליות) --- */
+/* --- סעיף רוחב מלא --- */
 .full-width-section {
-    padding: 60px 0;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-}
-
-.full-width-section .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px;
+  padding: 50px 0;
+  background-color: var(--background-dark);
+  color: var(--light-text);
 }
 
 .full-width-section .section-title {
-    font-size: 2.5em;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #bdc3c7;
-    padding-bottom: 20px;
+  font-size: 2rem;
+  color: var(--light-text);
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .techniques-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
 .service-box {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid #bdc3c7;
-    padding: 25px;
-    border-radius: 5px;
-    text-align: right;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  text-align: right;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
 }
 
 .service-box h3 {
-    font-size: 1.3em;
-    color: #ffffff;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #bdc3c7;
-    padding-bottom: 10px;
-    text-align: right;
+  font-size: 1.2rem;
+  color: var(--light-text);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .service-box p {
-    font-size: 1em;
-    color: #d0d3d4;
-    line-height: 1.6;
-    text-align: right;
+  font-size: 0.95rem;
+  color: #d0d3d4;
+  line-height: 1.6;
 }
 
-/* --- Treatment Included Section --- */
+/* --- סעיף טיפולים --- */
 .treatment-section {
-    padding: 60px 20px;
-    box-sizing: border-box;
+  padding: 50px 0;
 }
 
 .main-title {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 40px;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
 }
 
 .treatment-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px 40px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px 30px;
+  align-items: start;
 }
 
 .item-title {
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.5em;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-color);
 }
 
 .item-text {
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1.2em;
-    line-height: 1.6;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .divider {
-    grid-column: 1 / -1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    margin: 10px 0;
+  grid-column: 1 / -1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 10px 0;
 }
 
-/* --- Responsive for Treatment Included Section --- */
-@media (max-width: 768px) {
-    .treatment-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .main-title {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-    }
-
-    .item-title {
-        font-size: 1.3em;
-    }
-
-    .item-text {
-        font-size: 1.1em;
-    }
-}
-
-/* --- Unique Styling for Intro Section Titles --- */
+/* --- אפקטים עדינים --- */
 .treatment-area {
-    color: #1a73e8; /* צבע כחול */
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 .key-phrase {
-    color: #e44d26; /* צבע כתום */
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* --- רספונסיביות --- */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    width: 95%;
+    padding: 0 15px;
+  }
+  
+  .content-section {
+    padding: 40px 0;
+  }
+  
+  .treatment-grid,
+  .about-me-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .center-titles h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .button,
+  .fixed-consultation-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .techniques-grid {
+    grid-template-columns: 1fr;
+  }
 }
