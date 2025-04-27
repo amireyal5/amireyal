@@ -1,4 +1,4 @@
-/* Welcome Section (במקום About Us בדף הבית) */
+/* Welcome Section */
 .welcome {
     display: flex;
     flex-direction: column;
