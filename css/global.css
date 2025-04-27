@@ -127,6 +127,23 @@ nav {
 
 .has-submenu:hover .submenu {
     display: block;
+
+}
+.fixed-consultation-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    width: auto;
+}
+
+.fixed-consultation-button:hover {
+    background-color: #1e7e34;
 }
 
 /* פוטר */
