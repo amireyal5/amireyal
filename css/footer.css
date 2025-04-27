@@ -1,0 +1,98 @@
+/* styles/footer.css */
+.therapy-footer {
+    background-color: #006064;
+    padding: 40px 20px;
+    border-top: 1px solid #1565C0;
+}
+
+.footer-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.footer-title-main {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    text-align: right;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-list a:hover {
+    opacity: 0.8;
+}
+
+.contact-info {
+    margin-bottom: 5px;
+}
+
+.footer-divider {
+    border-top: 1px solid #ffff;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 100%;
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
+    }
+}
