@@ -72,29 +72,25 @@
     margin-bottom: 1em;
 }
 
-.welcome .read-more-button { /* שימוש בקלאס read-more-button הקיים */
-    background-color: #0b639d;
-    color: white;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: 'Assistant', sans-serif;
-    display: inline-block;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    width: 150px;
-    text-align: center;
-    display: inline-block;
-    width: auto; /* הרוחב יתאים את עצמו לתוכן */
-    display: inline-block; /* גורם לכפתור לתפוס רק את רוחב התוכן שלו */
-  white-space: nowrap; /* מונע שבירת שורה בתוך הכפתור */
+.welcome .read-more-button {
+  background-color: #0b639d;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Assistant', sans-serif;
+  display: inline-block; /* גורם לכפתור לתפוס רק את רוחב התוכן */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: auto; /* מתאים את הרוחב לתוכן */
+  text-align: center; /* מיישר את הטקסט בתוך הכפתור למרכז */
+  white-space: nowrap; /* מונע שבירת שורה */
 }
 
-    
-.welcome .read-more-button:hover { /* שימוש בקלאס read-more-button:hover הקיים */
-    background-color: #1a85cf;
+.welcome .read-more-button:hover {
+  background-color: #1a85cf;
 }
 
 /* רספונסיביות עבור Welcome Section */
