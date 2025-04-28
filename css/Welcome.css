@@ -88,10 +88,11 @@
     text-align: center;
     display: inline-block;
     width: auto; /* הרוחב יתאים את עצמו לתוכן */
-
-    
+    display: inline-block; /* גורם לכפתור לתפוס רק את רוחב התוכן שלו */
+  white-space: nowrap; /* מונע שבירת שורה בתוך הכפתור */
 }
 
+    
 .welcome .read-more-button:hover { /* שימוש בקלאס read-more-button:hover הקיים */
     background-color: #1a85cf;
 }
