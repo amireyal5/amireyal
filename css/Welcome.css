@@ -86,6 +86,10 @@
     transition: background-color 0.3s ease;
     width: 150px;
     text-align: center;
+    display: inline-block;
+    width: auto; /* הרוחב יתאים את עצמו לתוכן */
+
+    
 }
 
 .welcome .read-more-button:hover { /* שימוש בקלאס read-more-button:hover הקיים */
