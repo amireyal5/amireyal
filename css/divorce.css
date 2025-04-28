@@ -221,21 +221,21 @@ body {
   font-size: 1.2rem;
 }
 
-/* --- סעיף רוחב מלא --- */
-.full-width-section {
-  padding: 60px 0;
-  background-color: var(--background-dark);
-  color: var(--light-text);
+
+/* עיצוב רספונסיבי למסכים קטנים  טכניקות  טיפול*/
+@media (max-width: 900px) {
+  .techniques-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 כרטיסיות בשורה */
+  }
 }
 
-.full-width-section .section-title {
-  font-size: 1.8rem;
-  color: var(--light-text);
-  text-align: center;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+@media (max-width: 600px) {
+  .techniques-grid {
+    grid-template-columns: 1fr; /* כרטיסיה אחת */
+  }
+  .technique-name {
+    aspect-ratio: auto; /* מבטל את הריבועיות בנייד */
+  }
 
 /* --- אפקטים מיוחדים --- */
 .treatment-area {
