@@ -60,42 +60,50 @@ body {
   margin-bottom: 15px;
 }
 
-/* --- פריסת טיפולים - גריד דו-טורי עם קווים מפרידים --- */
+/* --- פריסת טיפולים - גריד דו-טורי עם קווים מפרידים בלבן --- */
 .treatment-section {
   padding: 60px 0;
+  background-color: #1a1a1a; /* רקע כהה לסקציה (לניגודיות עם הטקסט הלבן) */
+  color: white; /* צבע גופן כללי ללבן */
 }
 
 .treatment-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 0; /* אין רווח בין השורות - הקווים יבצעו את ההפרדה */
+  gap: 0;
 }
 
 .treatment-item {
-  display: contents; /* מאפשר לאלמנטים הילדים להיות חלק מהגריד */
+  display: contents;
 }
 
 .item-title, .item-text {
   padding: 20px;
+  color: white; /* צבע גופן לבן (גיבוי לצבע הכללי) */
 }
 
 .item-title {
   font-weight: 600;
   font-size: 1.2rem;
-  color: var(--primary-color);
-  background-color: rgba(40, 95, 101, 0.05);
-  border-right: 3px solid var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.05); /* רקע לבן שקוף */
+  border-right: 3px solid white; /* קו הפרדה לבן */
 }
 
 .item-text {
   font-size: 1rem;
   line-height: 1.7;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* קו תחתון לבן עם שקיפות */
 }
 
 /* קו מפריד בין פריטים */
 .treatment-item:not(:last-child) .item-text {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* סגנון לאייקונים (אם יש) */
+.treatment-section svg, 
+.treatment-section img[src*="icon"] {
+  filter: brightness(0) invert(1); /* הפיכת אייקונים ללבנים */
 }
 
 /* --- כרטיסי שירות --- */
