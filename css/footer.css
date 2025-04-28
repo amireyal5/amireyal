@@ -7,6 +7,9 @@
     background-color: #006064;
     padding: 40px 20px;
     border-top: 1px solid #006064;
+    display: flex;
+    flex-direction: column; /* כדי למרכז את הלוגו והכותרת */
+    align-items: center;
 }
 
 .footer-header {
@@ -35,7 +38,8 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* ברירת מחדל למובייל */
+    align-items: flex-start; /* יישור אנכי מלמעלה עבור כל הגדלים */
 }
 
 .footer-section {
@@ -43,7 +47,7 @@
     min-width: 250px;
     margin-bottom: 30px;
     padding: 0 15px;
-    text-align: right;
+    text-align: center; /* מרכז טקסט כברירת מחדל */
 }
 
 .footer-title {
@@ -59,6 +63,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: center; /* מרכז רשימה כברירת מחדל */
 }
 
 .footer-list li {
@@ -80,6 +85,7 @@
 .contact-info {
     margin-bottom: 5px;
     color: white;
+    text-align: center; /* מרכז מידע ליצירת קשר כברירת מחדל */
 }
 
 .footer-divider {
@@ -106,34 +112,55 @@
         flex: 100%;
         text-align: center !important; /* Force center alignment on mobile */
     }
-    
+
     .footer-logo img {
         max-width: 150px;
     }
-    
+
     .footer-title {
         text-align: center;
     }
-    
+
     .footer-list {
         text-align: center;
     }
-/* Center content on desktop only */
+
+    .contact-info {
+        text-align: center; /* ודא שגם במובייל ממורכז */
+    }
+}
+
+/* Desktop styles */
 @media (min-width: 769px) {
     .therapy-footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items: center; /* מרכז את כל תוכן הפוטר אופקית */
+        flex-direction: column; /* סדר אנכי של אלמנטים בתוך הפוטר */
     }
-    
+
     .footer-container {
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between; /* מפזר את הסקציות עם רווח שווה ביניהן */
+        flex-wrap: nowrap; /* מונע מעבר לשורה חדשה בדסקטופ */
     }
-    
+
     .footer-section {
-        flex: none;
-        width: auto;
-        max-width: 300px;
+        flex: 0 1 auto; /* אל תאפשר גדילה לא פרופורציונלית, בסיס אוטומטי */
+        min-width: auto; /* אפשר רוחב קטן יותר אם התוכן מצריך */
+        margin-bottom: 0; /* הסר מרווח אנכי בין הסקציות בדסקטופ */
+        text-align: center !important; /* מרכז את הטקסט בתוך כל סקציה */
+    }
+
+    .footer-header {
+        text-align: center; /* ודא שהכותרת נשארת ממורכזת */
+        margin-bottom: 30px;
+        width: 100%; /* תפוס את כל הרוחב הזמין */
+    }
+
+    .footer-logo {
+        margin-bottom: 15px;
+    }
+
+    .footer-title-main {
+        text-align: center; /* ודא שהכותרת הראשית נשארת ממורכזת */
     }
 }
