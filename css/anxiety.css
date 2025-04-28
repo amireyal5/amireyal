@@ -242,7 +242,7 @@ body {
 
 .fixed-consultation-button {
     display: inline-block;
-    background-color: #1565C0;
+    background-color: #478575;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -254,7 +254,7 @@ body {
 }
 
 .fixed-consultation-button:hover {
-    background-color: #1e7e34;
+    background-color: #8bc1b3;
 }
 
 /* --- Bullet Lists --- */
