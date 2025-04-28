@@ -146,32 +146,7 @@ nav {
     background-color: #1e7e34;
 }
 
-/* פוטר */
-.main-footer {
-    background-color: #333;
-    color: white;
-    padding: 2em;
-    text-align: center;
-    min-height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
-    border-radius: 0;
-}
 
-.footer-content {
-    max-width: 800px;
-}
-
-.footer-content h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-}
-
-.footer-content p {
-    font-size: 1.1em;
-    line-height: 1.6;
 }
 
 /* אייקונים מרחפים ליצירת קשר */
@@ -276,7 +251,7 @@ nav {
         width: 40px;
         height: 40px;
         font-size: 20px;
-    }
+  
 }
 .submenu {
     display: none;
