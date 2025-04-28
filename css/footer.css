@@ -2,10 +2,11 @@
 .white-text {
     color: white !important;
 }
+
 .therapy-footer {
     background-color: #006064;
     padding: 40px 20px;
-    border-top: 1px solid  #006064;
+    border-top: 1px solid #006064;
 }
 
 .footer-header {
@@ -64,18 +65,21 @@
     margin-bottom: 10px;
 }
 
-.footer-list a {
+.footer-list a,
+.contact-info a {
     color: #ffffff;
     text-decoration: none;
     transition: opacity 0.3s;
 }
 
-.footer-list a:hover {
+.footer-list a:hover,
+.contact-info a:hover {
     opacity: 0.8;
 }
 
 .contact-info {
     margin-bottom: 5px;
+    color: white;
 }
 
 .footer-divider {
@@ -90,29 +94,28 @@
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    .footer-section {
-        flex: 100%;
-    }
-    
-    .footer-logo img {
-        max-width: 150px;
-    }    color: #ffffff;
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-.contact-info a:hover {
-    opacity: 0.8;
-}
-.footer-section .contact-info span,
-.footer-section .contact-info a {
-    color: white;
-}
-
 /* סגנון לקישור בכותרת */
 .footer-title a {
     color: #ffffff;
     text-decoration: none;
 }
- }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 100%;
+        text-align: center !important; /* Force center alignment on mobile */
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
+    }
+    
+    .footer-title {
+        text-align: center;
+    }
+    
+    .footer-list {
+        text-align: center;
+    }
+}
