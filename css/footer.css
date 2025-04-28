@@ -118,4 +118,22 @@
     .footer-list {
         text-align: center;
     }
+/* Center content on desktop only */
+@media (min-width: 769px) {
+    .therapy-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-container {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .footer-section {
+        flex: none;
+        width: auto;
+        max-width: 300px;
+    }
 }
