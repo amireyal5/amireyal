@@ -1,23 +1,4 @@
-/* ============ משתנים גלובליים ============ */
-:root {
-    --primary-color: #1f628e;
-    --secondary-color: #ffa500;
-    --success-color: #28a745;
-    --success-hover: #1e7e34;
-    --text-color: #333;
-    --bg-color: #f9f9f9;
-    --white: #fff;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    --font-main: 'Open Sans', sans-serif;
-    --font-heading: 'Assistant', sans-serif;
-    --header-height: 80px;
-    --header-height-md: 70px;
-    --header-height-sm: 60px;
-    --header-height-xs: 50px;
-}
-
-/* ============ איפוס ועיצוב כללי ============ */
+/* כלליים */
 * {
     margin: 0;
     padding: 0;
@@ -25,51 +6,53 @@
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: 'Open Sans', sans-serif;
     direction: rtl;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: #f9f9f9;
+    color: #333;
     font-size: 1rem;
-    line-height: 1.6;
-    padding-top: var(--header-height);
 }
 
-/* ============ כותרת ראשית ============ */
+/* הדר */
 #main-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    background-color: var(--white);
-    position: fixed;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    height: var(--header-height);
-    transition: var(--transition);
-    z-index: 1000;
-    box-shadow: var(--shadow);
-}
-
-/* ============ לוגו ============ */
-.logo-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
+    transition: top 0.3s ease;
+    z-index: 100;
 }
 
 .logo {
-    height: 60%;
-    max-height: 60px;
-    width: auto;
-    object-fit: contain;
-    transition: var(--transition);
+    order: 1;
+    max-width: 200px;
 }
 
-/* ============ ניווט ראשי ============ */
-.main-nav {
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 140px;
+    }
+}
+
+nav {
+    order: 2;
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .menu {
@@ -78,130 +61,98 @@ body {
 }
 
 .menu li {
-    margin: 0 1rem;
-    position: relative;
+    margin: 0 1em;
 }
 
 .menu a {
-    color: var(--primary-color);
+    color: #1f628e;
     text-decoration: none;
     font-weight: 700;
-    transition: var(--transition);
+    transition: color 0.3s ease;
     font-size: 1.1rem;
-    font-family: var(--font-heading);
-    padding: 0.5rem 0;
-    display: block;
+    font-family: 'Assistant', sans-serif;
 }
 
-.menu a:hover,
-.menu a:focus {
-    color: var(--secondary-color);
+.menu a:hover {
+    color: #ffa500;
 }
 
-.menu a:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 4px;
-    border-radius: 2px;
+.hamburger {
+    order: 3;
+    display: none;
+    font-size: 2rem;
+    color: #1f628e;
+    cursor: pointer;
+    margin-left: auto;
 }
 
-/* ============ תפריטים נפתחים ============ */
+/* תפריט עם תת-תפריט */
+.has-submenu {
+    position: relative;
+}
+
 .has-submenu > a::after {
     content: " ▼";
     font-size: 0.7em;
 }
 
 .submenu {
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--white);
+    background-color: #fff;
     list-style: none;
-    padding: 0.5rem 0;
-    box-shadow: var(--shadow);
-    z-index: 1001;
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-    transform: translateY(10px);
-    border-radius: 4px;
+    padding: 0.5em 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 180px;
 }
 
 .submenu li {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5em 1em;
+    text-align: right;
 }
 
 .submenu li a {
-    font-size: 1rem;
-    white-space: nowrap;
+    color: #1f628e;
+    text-decoration: none;
+    display: block;
 }
 
-.submenu li a:hover,
-.submenu li a:focus {
+.submenu li a:hover {
+    color: #ffa500;
     background-color: #f1f1f1;
 }
 
-.has-submenu:hover .submenu,
-.has-submenu:focus-within .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
+.has-submenu:hover .submenu {
+    display: block;
 
-/* ============ כפתור המבורגר ============ */
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 0.5rem;
 }
-
-.hamburger:hover,
-.hamburger:focus {
-    color: var(--secondary-color);
-    outline: none;
-}
-
-/* ============ כפתור ייעוץ קבוע ============ */
 .fixed-consultation-button {
     display: inline-block;
-    background-color: var(--success-color);
-    color: var(--white);
-    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: var(--transition);
-    font-size: 1rem;
-    position: fixed;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    z-index: 999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    width: auto;
 }
 
-.fixed-consultation-button:hover,
-.fixed-consultation-button:focus {
-    background-color: var(--success-hover);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+.fixed-consultation-button:hover {
+    background-color: #1e7e34;
 }
 
-.fixed-consultation-button:focus {
-    outline: 2px solid var(--white);
-    outline-offset: 2px;
-}
 
-/* ============ אייקונים מרחפים ============ */
+/* אייקונים מרחפים ליצירת קשר */
 .floating-contact-icons {
     position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    z-index: 1000;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -211,172 +162,99 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.95);
-    color: var(--primary-color);
-    width: 3.5rem;
-    height: 3.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #457b9d;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-bottom: 0.75rem;
-    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-size: 24px;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: var(--transition);
-    will-change: transform;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out,
+        color 0.2s ease-in-out;
 }
 
-.floating-contact-icons a:hover,
-.floating-contact-icons a:focus {
-    transform: scale(1.15);
-    color: var(--secondary-color);
-    background-color: var(--white);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.floating-contact-icons a:hover {
+    transform: scale(1.2);
+    color: #a8dadc;
 }
 
-.floating-contact-icons a:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
+.floating-contact-icons a i {
+    /* אין צורך בסגנון נוסף לאייקון */
 }
 
-/* ============ רספונסיביות ============ */
-@media (max-width: 1200px) {
-    .menu li {
-        margin: 0 0.75rem;
-    }
-}
-
-@media (max-width: 992px) {
-    #main-header {
-        height: var(--header-height-md);
-        padding: 0 1.25rem;
-    }
-    
-    .logo {
-        height: 65%;
-        max-height: 55px;
-    }
-    
-    .menu a {
-        font-size: 1.05rem;
-    }
-}
-
+/* רספונסיביות - חלקים גלובליים */
 @media (max-width: 768px) {
-    #main-header {
-        height: var(--header-height-sm);
-        padding: 0 1rem;
-    }
-    
-    .logo {
-        height: 70%;
-        max-height: 50px;
-    }
-    
+    /* המבורגר */
     .hamburger {
         display: block;
+        position: absolute;
+        left: 20px;
     }
-    
-    .main-nav {
-        position: fixed;
-        top: var(--header-height-sm);
-        left: 0;
+
+    /* תפריט במובייל */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
         right: 0;
-        background-color: var(--white);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        height: calc(100vh - var(--header-height-sm));
-        overflow-y: auto;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
         z-index: 999;
     }
-    
-    .main-nav.active {
-        transform: translateX(0);
-    }
-    
-    .menu {
-        flex-direction: column;
-        width: 100%;
-        padding: 1rem 0;
-    }
-    
-    .menu li {
-        margin: 0;
-        width: 100%;
-    }
-    
-    .menu a {
-        padding: 1rem 1.5rem;
-        font-size: 1.1rem;
-    }
-    
-    .submenu {
-        position: static;
-        box-shadow: none;
-        background-color: #f8f8f8;
-        width: 100%;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-    
-    .has-submenu.active .submenu {
-        max-height: 500px;
-    }
-    
-    .submenu li {
-        padding: 0.75rem 2rem;
-    }
-    
-    .fixed-consultation-button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.95rem;
-    }
-    
-    .floating-contact-icons a {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.3rem;
-    }
-}
 
-@media (max-width: 576px) {
-    #main-header {
-        height: var(--header-height-xs);
-        padding: 0 0.75rem;
+    .menu.active {
+        display: flex;
     }
-    
-    .logo {
-        height: 75%;
-        max-height: 45px;
+
+    .menu li {
+        margin: 1em 0;
     }
-    
-    .fixed-consultation-button {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-        bottom: 1rem;
-        left: 1rem;
-    }
-    
-    .floating-contact-icons {
-        bottom: 1rem;
-        right: 1rem;
-    }
-    
-    .floating-contact-icons a {
-        width: 2.75rem;
-        height: 2.75rem;
+
+    .menu a {
+        color: #1f628e;
         font-size: 1.2rem;
     }
+
+    .menu a:hover {
+        color: #ffa500;
+    }
+
+    /* תפריט משנה במובייל */
+    .submenu {
+        display: none;
+        position: static;
+        background: #f9f9f9;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .submenu li {
+        padding: 10px;
+    }
+
+    .has-submenu.active .submenu {
+        display: block;
+    }
+
+    /* אייקונים מרחפים - רספונסיביות */
+    .floating-contact-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-contact-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+  
+}
+.submenu {
+    display: none;
 }
 
-/* מניעת zoom בשדות קלט במובייל */
-@media (max-width: 768px) {
-    input,
-    select,
-    textarea {
-        font-size: 16px;
-    }
+.submenu.open {
+    display: block;
 }
