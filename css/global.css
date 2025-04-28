@@ -1,4 +1,19 @@
-/* כלליים */
+/* ============ משתנים גלובליים ============ */
+:root {
+    --primary-color: #1f628e;
+    --secondary-color: #ffa500;
+    --success-color: #28a745;
+    --success-hover: #1e7e34;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --white: #fff;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    --font-main: 'Open Sans', sans-serif;
+    --font-heading: 'Assistant', sans-serif;
+}
+
+/* ============ איפוס ועיצוב כללי ============ */
 * {
     margin: 0;
     padding: 0;
@@ -6,45 +21,37 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-main);
     direction: rtl;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-size: 1rem;
+    line-height: 1.6;
 }
 
-/* הדר */
+/* ============ כותרת ראשית וניווט ============ */
 #main-header {
     display: flex;
     align-items: center;
     padding: 0.5em 1em;
-    background-color: #fff;
+    background-color: var(--white);
     position: sticky;
     top: 0;
     transition: top 0.3s ease;
     z-index: 100;
+    box-shadow: var(--shadow);
 }
 
 .logo {
     order: 1;
-    max-width: 200px;
+    max-height: 60px;
+    width: auto;
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    .logo {
-        max-width: 130px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        max-width: 140px;
-    }
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 nav {
@@ -62,51 +69,53 @@ nav {
 
 .menu li {
     margin: 0 1em;
-}
-
-.menu a {
-    color: #1f628e;
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s ease;
-    font-size: 1.1rem;
-    font-family: 'Assistant', sans-serif;
-}
-
-.menu a:hover {
-    color: #ffa500;
-}
-
-.hamburger {
-    order: 3;
-    display: none;
-    font-size: 2rem;
-    color: #1f628e;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-/* תפריט עם תת-תפריט */
-.has-submenu {
     position: relative;
 }
 
+.menu a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    padding: 0.5em 0;
+    position: relative;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: var(--secondary-color);
+    outline: none;
+}
+
+.menu a:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* ============ תפריטים נפתחים ============ */
 .has-submenu > a::after {
     content: " ▼";
     font-size: 0.7em;
 }
 
 .submenu {
-    display: none;
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #fff;
+    background-color: var(--white);
     list-style: none;
     padding: 0.5em 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     z-index: 1000;
     min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    transform: translateY(10px);
+    border-radius: 4px;
 }
 
 .submenu li {
@@ -115,39 +124,56 @@ nav {
 }
 
 .submenu li a {
-    color: #1f628e;
+    color: var(--primary-color);
     text-decoration: none;
     display: block;
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
-.submenu li a:hover {
-    color: #ffa500;
+.submenu li a:hover,
+.submenu li a:focus {
+    color: var(--secondary-color);
     background-color: #f1f1f1;
 }
 
-.has-submenu:hover .submenu {
-    display: block;
-
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
+
+/* ============ כפתור ייעוץ קבוע ============ */
 .fixed-consultation-button {
     display: inline-block;
-    background-color: #28a745;
-    color: white;
+    background-color: var(--success-color);
+    color: var(--white);
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
     font-size: 1em;
-    width: auto;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 998;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.fixed-consultation-button:hover {
-    background-color: #1e7e34;
+.fixed-consultation-button:hover,
+.fixed-consultation-button:focus {
+    background-color: var(--success-hover);
+    transform: translateY(-2px);
 }
 
+.fixed-consultation-button:focus {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
+}
 
-/* אייקונים מרחפים ליצירת קשר */
+/* ============ אייקונים מרחפים ============ */
 .floating-contact-icons {
     position: fixed;
     bottom: 20px;
@@ -162,8 +188,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #457b9d;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -171,26 +197,43 @@ nav {
     font-size: 24px;
     text-decoration: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out,
-        color 0.2s ease-in-out;
+    transition: var(--transition);
+    will-change: transform;
 }
 
-.floating-contact-icons a:hover {
+.floating-contact-icons a:hover,
+.floating-contact-icons a:focus {
     transform: scale(1.2);
-    color: #a8dadc;
+    color: var(--secondary-color);
+    background-color: var(--white);
 }
 
-.floating-contact-icons a i {
-    /* אין צורך בסגנון נוסף לאייקון */
+.floating-contact-icons a:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 
-/* רספונסיביות - חלקים גלובליים */
+/* ============ רספונסיביות ============ */
+@media (max-width: 992px) {
+    /* סגנונות ל-tablets */
+}
+
 @media (max-width: 768px) {
     /* המבורגר */
     .hamburger {
         display: block;
         position: absolute;
         left: 20px;
+        font-size: 2rem;
+        color: var(--primary-color);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .hamburger:hover,
+    .hamburger:focus {
+        color: var(--secondary-color);
+        transform: scale(1.1);
     }
 
     /* תפריט במובייל */
@@ -198,11 +241,14 @@ nav {
         display: none;
         flex-direction: column;
         position: absolute;
+        top: 100%;
         right: 0;
         left: 0;
-        background-color: #fff;
+        background-color: var(--white);
         text-align: center;
         z-index: 999;
+        padding: 1em 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .menu.active {
@@ -210,52 +256,81 @@ nav {
     }
 
     .menu li {
-        margin: 1em 0;
+        margin: 0.5em 0;
+        padding: 0 1em;
     }
 
     .menu a {
-        color: #1f628e;
         font-size: 1.2rem;
-    }
-
-    .menu a:hover {
-        color: #ffa500;
+        padding: 0.5em;
+        display: block;
     }
 
     /* תפריט משנה במובייל */
     .submenu {
-        display: none;
         position: static;
-        background: #f9f9f9;
+        background: #f1f1f1;
         box-shadow: none;
         padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        width: 100%;
+        margin-top: 0.5em;
     }
 
     .submenu li {
-        padding: 10px;
+        padding: 0.5em;
     }
 
     .has-submenu.active .submenu {
         display: block;
     }
 
+    .logo {
+        max-height: 50px;
+    }
+
     /* אייקונים מרחפים - רספונסיביות */
     .floating-contact-icons {
-        bottom: 10px;
-        right: 10px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .floating-contact-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .fixed-consultation-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-height: 40px;
     }
 
     .floating-contact-icons a {
         width: 40px;
         height: 40px;
-        font-size: 20px;
-  
-}
-.submenu {
-    display: none;
+        font-size: 18px;
+    }
+
+    .fixed-consultation-button {
+        bottom: 15px;
+        left: 15px;
+        padding: 8px 16px;
+    }
 }
 
-.submenu.open {
-    display: block;
+/* מניעת zoom בשדות קלט במובייל */
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px;
+    }
 }
-
