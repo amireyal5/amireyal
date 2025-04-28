@@ -92,6 +92,13 @@
 .welcome .read-more-button:hover {
   background-color: #1a85cf;
 }
+@media (min-width: 769px) { /* או רוחב מסך אחר שמתאים למחשב */
+  .welcome .read-more-button {
+    display: inline-block !important;
+    width: auto !important;
+    white-space: nowrap !important; /* ודא שזה קיים */
+  }
+}
 
 /* רספונסיביות עבור Welcome Section */
 @media (max-width: 768px) {
