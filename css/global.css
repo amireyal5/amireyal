@@ -1,144 +1,3 @@
-@media (max-width: 768px) {
-    /* המבורגר */
-    .hamburger {
-        display: block;
-        position: absolute;
-        left: 20px;
-        font-size: 1.5rem; /* הקטנת גודל האייקון */
-    }
-
-    .hamburger::before,
-    .hamburger::after,
-    .hamburger span {
-        display: block;
-        width: 22px; /* הקטנת רוחב הקווים */
-        height: 2px; /* הפיכת הקווים לדקים יותר */
-        background-color: #1f628e;
-        margin: 6px 0;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .hamburger.active span {
-        background-color: transparent;
-    }
-
-    .hamburger.active::before {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active::after {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    /* תפריט במובייל */
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background-color: #036a74;
-        text-align: right;
-        padding: 0.5em 1em;
-        z-index: 999;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu li {
-        margin: 0.5em 0;
-        padding: 0.5em 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .menu li:last-child {
-        border-bottom: none;
-    }
-
-    .menu a {
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 300;
-        transition: background-color 0.3s ease;
-        padding: 0.5em;
-        display: block;
-    }
-
-    .menu a:hover {
-        color: #f0f8ff;
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    /* הסרת חץ מפריטים רגילים */
-    .menu li:not(.has-submenu) > a::after {
-        content: none;
-    }
-
-    /* הוספת חץ רק לפריטים עם תת-תפריט */
-    .has-submenu > a::after {
-        content: " ◄";
-        font-size: 0.8em;
-        position: absolute;
-        left: 0.5em;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    /* עיצוב כללי לפריטים עם תת-תפריט */
-    .has-submenu > a {
-        position: relative;
-        padding-right: 1em;
-    }
-
-    /* תפריט משנה במובייל - השינויים העיקריים כאן! */
-    .submenu {
-        display: none;
-        position: static;
-        background: transparent !important; /* רקע שקוף */
-        box-shadow: none !important;
-        padding: 0 0 0 1em;
-        animation: none;
-        margin-top: 0.5em;
-        border-right: 3px solid rgba(255, 255, 255, 0.3); /* קו אנכי עדין */
-        margin-right: 10px; /* הזחה ימינה */
-    }
-
-    .submenu li {
-        padding: 0.5em 0;
-        border-bottom: none;
-    }
-
-    .submenu li a {
-        color: rgba(255, 255, 255, 0.9);
-        font-weight: 300;
-    }
-
-    .submenu li a:hover {
-        color: #f0f8ff;
-    }
-
-    .has-submenu.active .submenu {
-        display: block;
-        animation: slideDown 0.3s ease-in-out forwards;
-    }
-
-    /* אייקונים מרחפים - רספונסיביות */
-    .floating-contact-icons {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .floating-contact-icons a {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-}
-
 /* כלליים */
 * {
     margin: 0;
@@ -208,15 +67,14 @@ nav {
 .menu a {
     color: #1f628e;
     text-decoration: none;
-    font-weight: 300;
-    transition: color 0.3s ease, transform 0.3s ease-in-out;
-    font-size: 0.9rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
     font-family: 'Assistant', sans-serif;
 }
 
 .menu a:hover {
-    color: #1565C0;
-    transform: scale(1.05);
+    color: #ffa500;
 }
 
 .hamburger {
@@ -243,14 +101,12 @@ nav {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #036a74;
+    background-color: #fff;
     list-style: none;
     padding: 0.5em 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     min-width: 180px;
-    transform-origin: top right;
-    animation: growDown 0.3s ease-in-out forwards;
 }
 
 .submenu li {
@@ -259,21 +115,20 @@ nav {
 }
 
 .submenu li a {
-    color: #fff;
+    color: #1f628e;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s ease;
 }
 
 .submenu li a:hover {
-    color: #f0f8ff;
-    background-color: rgba(0, 0, 0, 0.1);
+    color: #ffa500;
+    background-color: #f1f1f1;
 }
 
 .has-submenu:hover .submenu {
     display: block;
-}
 
+}
 .fixed-consultation-button {
     display: inline-block;
     background-color: #28a745;
@@ -289,6 +144,34 @@ nav {
 
 .fixed-consultation-button:hover {
     background-color: #1e7e34;
+}
+
+/* פוטר */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 2em;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    border-radius: 0;
+}
+
+.footer-content {
+    max-width: 800px;
+}
+
+.footer-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.footer-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
 /* אייקונים מרחפים ליצירת קשר */
@@ -316,7 +199,7 @@ nav {
     text-decoration: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out,
-                color 0.2s ease-in-out;
+        color 0.2s ease-in-out;
 }
 
 .floating-contact-icons a:hover {
@@ -324,36 +207,81 @@ nav {
     color: #a8dadc;
 }
 
+.floating-contact-icons a i {
+    /* אין צורך בסגנון נוסף לאייקון */
+}
+
+/* רספונסיביות - חלקים גלובליים */
+@media (max-width: 768px) {
+    /* המבורגר */
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+
+    /* תפריט במובייל */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 1em 0;
+    }
+
+    .menu a {
+        color: #1f628e;
+        font-size: 1.2rem;
+    }
+
+    .menu a:hover {
+        color: #ffa500;
+    }
+
+    /* תפריט משנה במובייל */
+    .submenu {
+        display: none;
+        position: static;
+        background: #f9f9f9;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .submenu li {
+        padding: 10px;
+    }
+
+    .has-submenu.active .submenu {
+        display: block;
+    }
+
+    /* אייקונים מרחפים - רספונסיביות */
+    .floating-contact-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-contact-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
 .submenu {
     display: none;
 }
 
 .submenu.open {
     display: block;
-}
-
-/* אנימציות */
-@keyframes growDown {
-    0% {
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    80% {
-        transform: scaleY(1.1);
-    }
-    100% {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
