@@ -67,15 +67,15 @@ nav {
 .menu a {
     color: #1f628e;
     text-decoration: none;
-    font-weight: 300; /* פונט דק */
-    transition: color 0.3s ease, transform 0.3s ease-in-out; /* הוספת טרנזישן לאנימציה */
-    font-size: 0.9rem; /* גודל פונט קטן יותר */
+    font-weight: 300;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+    font-size: 0.9rem;
     font-family: 'Assistant', sans-serif;
 }
 
 .menu a:hover {
-    color: #1565C0; /* שינוי לצבע כחול */
-    transform: scale(1.05); /* אנימציית ריחוף קלה */
+    color: #1565C0;
+    transform: scale(1.05);
 }
 
 .hamburger {
@@ -102,14 +102,14 @@ nav {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #036a74; /* שינוי לצבע כחול-ירקרק */
+    background-color: #036a74;
     list-style: none;
     padding: 0.5em 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     min-width: 180px;
-    transform-origin: top right; /* נקודת התחלה לאנימציה */
-    animation: growDown 0.3s ease-in-out forwards; /* הוספת אנימציה */
+    transform-origin: top right;
+    animation: growDown 0.3s ease-in-out forwards;
 }
 
 .submenu li {
@@ -118,7 +118,7 @@ nav {
 }
 
 .submenu li a {
-    color: #fff; /* פונט לבן */
+    color: #fff;
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
@@ -131,8 +131,8 @@ nav {
 
 .has-submenu:hover .submenu {
     display: block;
-
 }
+
 .fixed-consultation-button {
     display: inline-block;
     background-color: #28a745;
@@ -149,7 +149,6 @@ nav {
 .fixed-consultation-button:hover {
     background-color: #1e7e34;
 }
-
 
 /* אייקונים מרחפים ליצירת קשר */
 .floating-contact-icons {
@@ -184,10 +183,6 @@ nav {
     color: #a8dadc;
 }
 
-.floating-contact-icons a i {
-    /* אין צורך בסגנון נוסף לאייקון */
-}
-
 /* רספונסיביות - חלקים גלובליים */
 @media (max-width: 768px) {
     /* המבורגר */
@@ -219,23 +214,23 @@ nav {
 
     .menu a {
         color: #1f628e;
-        font-size: 1rem; /* גודל פונט קטן יותר במובייל */
-        font-weight: 300; /* פונט דק יותר במובייל */
-        transition: color 0.3s ease; /* הסרת טרנספורמציה במובייל */
+        font-size: 1rem;
+        font-weight: 300;
+        transition: color 0.3s ease;
     }
 
     .menu a:hover {
-        color: #1565C0; /* שינוי לצבע כחול במובייל */
+        color: #1565C0;
     }
 
     /* תפריט משנה במובייל */
     .submenu {
         display: none;
         position: static;
-        background: #036a74; /* שינוי לצבע כחול-ירקרק במובייל */
+        background: #036a74;
         box-shadow: none;
         padding: 0;
-        animation: none; /* הסרת אנימציה במובייל */
+        animation: none;
     }
 
     .submenu li {
@@ -243,7 +238,7 @@ nav {
     }
 
     .submenu li a {
-        color: #fff; /* פונט לבן במובייל */
+        color: #fff;
         transition: background-color 0.3s ease;
     }
 
@@ -254,8 +249,8 @@ nav {
 
     .has-submenu.active .submenu {
         display: block;
-        animation: slideDown 0.3s ease-in-out forwards; /* הוספת אנימציה למובייל */
-        transform-origin: top center; /* נקודת התחלה לאנימציה במובייל */
+        animation: slideDown 0.3s ease-in-out forwards;
+        transform-origin: top center;
     }
 
     /* אייקונים מרחפים - רספונסיביות */
@@ -268,8 +263,9 @@ nav {
         width: 40px;
         height: 40px;
         font-size: 20px;
-
+    }
 }
+
 .submenu {
     display: none;
 }
