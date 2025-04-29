@@ -15,6 +15,8 @@
     max-width: 1000px;
     margin: 0 auto 2em;
     position: relative;
+text-align: center;
+
 }
 
 .about-content h2 {
@@ -25,7 +27,6 @@
     font-weight: 600;
     position: relative;
     display: inline-block;
-text-align: center;
 
 }
 
