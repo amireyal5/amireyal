@@ -1,73 +1,103 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
+    // -----------------------------
+    // רכיבי תפריט והמבורגר
+    // -----------------------------
     const header = document.getElementById('main-header');
-    const hamburgerIcon = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuLinks = mobileMenu.querySelectorAll('a');
-    const servicesLink = document.querySelector('.services-link'); // הוסף את הלינק "שירותים"
-    const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu > a');
-    const submenus = document.querySelectorAll('.submenu'); // כל התפריטי משנה
-    let prevScrollPos = window.pageYOffset; // מיקום הגלילה הקודם
+    const hamburgerIcon = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.menu');
+    const menuLinks = document.querySelectorAll('.menu a');
+    const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+    let prevScrollPos = window.pageYOffset;
 
-    // פונקציה להתאמת המיקום של התפריט
-    function adjustMenuPosition() {
-        if (window.innerWidth <= 768) {
-            const headerHeight = header.offsetHeight;
-            mobileMenu.style.top = headerHeight + 'px';
-        } else {
-            mobileMenu.style.top = '60px';
-        }
-    }
-
-    // הוספת אירועים לאייקון המבורגר ולתפריט
-    if (hamburgerIcon && mobileMenu && menuLinks && header) {
-        hamburgerIcon.addEventListener('click', function () {
+    // טיפול בהמבורגר ובתפריט ניווט
+    if (hamburgerIcon && mobileMenu) {
+        hamburgerIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
             mobileMenu.classList.toggle('active');
             adjustMenuPosition();
+            
+            // סגירת תפריטי משנה כשפותחים תפריט ראשי
+            if (mobileMenu.classList.contains('active')) {
+                closeAllSubmenus();
+            }
         });
-
-       menuLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-        // סוגר את התפריט אחרי לחיצה על פריט בתפריט (גם ראשי וגם משנה)
-        if (!link.closest('.has-submenu') && link !== servicesLink) { // אם הלינק לא בתוך תפריט משנה ולא הלינק "שירותים", סוגר את התפריט
-            mobileMenu.classList.remove('active');
-        }
-    });
-});
-
-
-        // הוספת אירועים לפריטים בתפריט משנה
-        menuItemsWithSubmenu.forEach(function (menuItem) {
-            menuItem.addEventListener('click', function () {
-                // הצגת תפריט משנה לאחר לחיצה על שירותים (תמיכה במובייל)
-                const submenu = menuItem.nextElementSibling;
-                if (submenu && submenu.classList.contains('submenu')) {
-                    submenu.classList.toggle('open');
-                    event.stopPropagation(); // מונע את סגירת התפריט הראשי
-                }
-            });
-        });
-
-        // הוספת אירועים לסגירת התפריט אחרי בחירת פריט מתפריט משנה
-        submenus.forEach(function (submenu) {
-            const submenuLinks = submenu.querySelectorAll('a');
-            submenuLinks.forEach(function (submenuLink) {
-                submenuLink.addEventListener('click', function () {
-                    // סוגר את התפריט אחרי בחירת פריט בתפריט משנה
-                    mobileMenu.classList.remove('active');
-                });
-            });
-        });
-
-        window.addEventListener('load', adjustMenuPosition);
-        window.addEventListener('resize', adjustMenuPosition);
     }
 
-    // קוד טופס צור קשר
+    // טיפול בתפריטי משנה
+    hasSubmenuItems.forEach(item => {
+        const link = item.querySelector('> a');
+        
+        if (link) {
+            link.addEventListener('click', function(e) {
+                // בדסקטופ - מתנהג כרגיל (פתיחת תת-תפריט בריחוף)
+                if (window.innerWidth > 768) return;
+                
+                // במובייל - טיפול בתפריט משנה
+                e.preventDefault();
+                e.stopPropagation();
+                
+                closeAllSubmenusExcept(item);
+                
+                item.classList.toggle('active');
+                const submenu = item.querySelector('.submenu');
+                if (submenu) submenu.classList.toggle('open');
+            });
+        }
+    });
+
+    // סגירת תפריטים בלחיצה בחוץ
+    document.addEventListener('click', function() {
+        if (mobileMenu) mobileMenu.classList.remove('active');
+        closeAllSubmenus();
+    });
+
+    // סגירת תפריט בלחיצה על פריט (לא כולל תפריטי משנה)
+    menuLinks.forEach(link => {
+        if (!link.parentElement.classList.contains('has-submenu')) {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768 && mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
+    });
+
+    // -----------------------------
+    // פונקציות עזר לניווט
+    // -----------------------------
+    function adjustMenuPosition() {
+        if (window.innerWidth <= 768 && mobileMenu && header) {
+            const headerHeight = header.offsetHeight;
+            mobileMenu.style.top = headerHeight + 'px';
+        }
+    }
+
+    function closeAllSubmenus() {
+        hasSubmenuItems.forEach(item => {
+            item.classList.remove('active');
+            const submenu = item.querySelector('.submenu');
+            if (submenu) submenu.classList.remove('open');
+        });
+    }
+
+    function closeAllSubmenusExcept(exceptItem) {
+        hasSubmenuItems.forEach(item => {
+            if (item !== exceptItem) {
+                item.classList.remove('active');
+                const submenu = item.querySelector('.submenu');
+                if (submenu) submenu.classList.remove('open');
+            }
+        });
+    }
+
+    // -----------------------------
+    // טופס יצירת קשר
+    // -----------------------------
     const form = document.getElementById('contactForm');
     const messageBox = document.getElementById('form-message');
 
     if (form && messageBox) {
-        form.addEventListener('submit', async function (e) {
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             const formData = new FormData(form);
@@ -93,25 +123,51 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // קוד התאמת גובה תמונה
-    window.onload = function () {
-        const aboutMeImage = document.getElementById('about-me-image');
-        const aboutMeText = document.getElementById('about-me-text');
+    // -----------------------------
+    // התאמת גובה תמונה
+    // -----------------------------
+    const aboutMeImage = document.getElementById('about-me-image');
+    const aboutMeText = document.getElementById('about-me-text');
 
-        if (aboutMeImage && aboutMeText) {
+    if (aboutMeImage && aboutMeText) {
+        const adjustTextHeight = () => {
             const imageHeight = aboutMeImage.offsetHeight;
             aboutMeText.style.height = imageHeight + 'px';
-        }
-    };
+        };
 
-    // קוד אנימציית הדר
-    window.onscroll = function () {
+        window.addEventListener('load', adjustTextHeight);
+        window.addEventListener('resize', adjustTextHeight);
+    }
+
+    // -----------------------------
+    // אנימציית הדר
+    // -----------------------------
+    window.onscroll = function() {
+        if (!header) return;
+        
         const currentScrollPos = window.pageYOffset;
         if (prevScrollPos > currentScrollPos) {
-            header.style.top = "0"; // הדר מופיע
+            header.style.top = "0";
         } else {
-            header.style.top = "-80px"; // הדר נעלם (הנחתי שהגובה הוא 80px)
+            header.style.top = "-80px";
         }
         prevScrollPos = currentScrollPos;
-    }
+    };
+
+    // -----------------------------
+    // אירועי רספונסיביות
+    // -----------------------------
+    window.addEventListener('resize', function() {
+        adjustMenuPosition();
+        
+        // סגירת תפריטים בעת מעבר לדסקטופ
+        if (window.innerWidth > 768 && mobileMenu) {
+            mobileMenu.classList.remove('active');
+            closeAllSubmenus();
+        }
+    });
+
+    window.addEventListener('load', function() {
+        adjustMenuPosition();
+    });
 });
