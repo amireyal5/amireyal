@@ -235,8 +235,8 @@ nav {
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-    /* הסרת חצים מכל הפריטים */
-    .menu li a::after {
+    /* הסרת חץ מפריטים רגילים */
+    .menu li:not(.has-submenu) > a::after {
         content: none;
     }
 
