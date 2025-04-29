@@ -1,4 +1,4 @@
-/* About Us Section - Enhanced */
+0/* About Us Section - Enhanced */
 .about-us {
     display: flex;
     flex-direction: column;
@@ -134,10 +134,13 @@
     .about-me-image h3 {
         font-size: 1.1em;
         margin-bottom: 1em;
-text-align: center; 
 
     }
+
+    .about-me-image {
+text-align: center; 
     
+}
     .about-me-text p {
         font-size: 1rem;
         line-height: 1.6;
