@@ -192,7 +192,7 @@ nav {
         left: 20px;
     }
 
-    /* תפריט במובייל - עיצוב זהה לתפריט משני */
+    /* תפריט במובייל */
     .menu {
         display: none;
         flex-direction: column;
@@ -235,13 +235,13 @@ nav {
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-    /* סימון פריטים ראשיים */
-    .menu > li > a {
-        font-weight: 600;
-        position: relative;
+    /* הסרת חצים מכל הפריטים */
+    .menu li a::after {
+        content: none;
     }
 
-    .menu > li > a::after {
+    /* הוספת חץ רק לפריטים עם תת-תפריט */
+    .has-submenu > a::after {
         content: " ◄";
         font-size: 0.8em;
         position: absolute;
@@ -250,7 +250,13 @@ nav {
         transform: translateY(-50%);
     }
 
-    /* תפריט משנה במובייל - עיצוב זהה לתפריט ראשי */
+    /* עיצוב כללי לפריטים עם תת-תפריט */
+    .has-submenu > a {
+        position: relative;
+        padding-right: 1em;
+    }
+
+    /* תפריט משנה במובייל */
     .submenu {
         display: none;
         position: static;
