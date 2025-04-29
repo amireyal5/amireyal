@@ -192,16 +192,19 @@ nav {
         left: 20px;
     }
 
-    /* תפריט במובייל */
+    /* תפריט במובייל - עיצוב זהה לתפריט משני */
     .menu {
         display: none;
         flex-direction: column;
         position: absolute;
+        top: 100%;
         right: 0;
         left: 0;
-        background-color: #fff;
-        text-align: center;
+        background-color: #036a74;
+        text-align: right;
+        padding: 0.5em 1em;
         z-index: 999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .menu.active {
@@ -209,48 +212,72 @@ nav {
     }
 
     .menu li {
-        margin: 1em 0;
+        margin: 0.5em 0;
+        padding: 0.5em 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
     }
 
     .menu a {
-        color: #1f628e;
+        color: #fff;
         font-size: 1rem;
         font-weight: 300;
-        transition: color 0.3s ease;
+        transition: background-color 0.3s ease;
+        padding: 0.5em;
+        display: block;
     }
 
     .menu a:hover {
-        color: #1565C0;
+        color: #f0f8ff;
+        background-color: rgba(0, 0, 0, 0.1);
     }
 
-    /* תפריט משנה במובייל */
+    /* סימון פריטים ראשיים */
+    .menu > li > a {
+        font-weight: 600;
+        position: relative;
+    }
+
+    .menu > li > a::after {
+        content: " ◄";
+        font-size: 0.8em;
+        position: absolute;
+        left: 0.5em;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* תפריט משנה במובייל - עיצוב זהה לתפריט ראשי */
     .submenu {
         display: none;
         position: static;
-        background: #036a74;
+        background: rgba(0, 0, 0, 0.1);
         box-shadow: none;
-        padding: 0;
+        padding: 0 0 0 1em;
         animation: none;
+        margin-top: 0.5em;
     }
 
     .submenu li {
-        padding: 10px;
+        padding: 0.5em 0;
+        border-bottom: none;
     }
 
     .submenu li a {
-        color: #fff;
-        transition: background-color 0.3s ease;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 300;
     }
 
     .submenu li a:hover {
         color: #f0f8ff;
-        background-color: rgba(0, 0, 0, 0.1);
     }
 
     .has-submenu.active .submenu {
         display: block;
         animation: slideDown 0.3s ease-in-out forwards;
-        transform-origin: top center;
     }
 
     /* אייקונים מרחפים - רספונסיביות */
