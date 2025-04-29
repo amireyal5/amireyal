@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // אלמנטים DOM
-    const hamburger = document.querySelector('.hamburger');
+    const hamburger = document.querySelector('#hamburger'); // שינוי הסלקטור ל-ID
     const menu = document.querySelector('.menu');
     const menuItems = document.querySelectorAll('.menu > li');
     const submenuParents = document.querySelectorAll('.has-submenu');
     const consultationButton = document.querySelector('.fixed-consultation-button');
-    
+
     // מצב אתחול
     let isMobile = window.innerWidth <= 768;
-    
+
     // פונקציות עזר
     function closeAllSubmenus() {
         submenuParents.forEach(parent => {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (submenu) submenu.classList.remove('open');
         });
     }
-    
+
     function adjustSubmenuPositions() {
         if (!isMobile) {
             document.querySelectorAll('.submenu').forEach(submenu => {
@@ -32,19 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-    
+
     // טיפול בהמבורגר ובתפריט ראשי
     hamburger.addEventListener('click', function(e) {
         e.stopPropagation();
         menu.classList.toggle('active');
         hamburger.classList.toggle('active');
         closeAllSubmenus();
-        
+
         // הוספת/הסרת aria-expanded
         const isExpanded = hamburger.classList.contains('active');
         hamburger.setAttribute('aria-expanded', isExpanded);
     });
-    
+
     // סגירת תפריט בלחיצה בחוץ
     document.addEventListener('click', function(e) {
         if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
@@ -54,22 +54,22 @@ document.addEventListener('DOMContentLoaded', function() {
             closeAllSubmenus();
         }
     });
-    
+
     // טיפול בתתי תפריטים במובייל
     submenuParents.forEach(parent => {
         const link = parent.querySelector('a');
         const submenu = parent.querySelector('.submenu');
-        
+
         // הוספת תכונות נגישות
         parent.setAttribute('aria-haspopup', 'true');
-        
+
         // טיפול בלחיצה במובייל
         link.addEventListener('click', function(e) {
             if (isMobile) {
                 e.preventDefault();
                 parent.classList.toggle('active');
                 submenu.classList.toggle('open');
-                
+
                 // סגירת תתי תפריטים אחרים
                 submenuParents.forEach(otherParent => {
                     if (otherParent !== parent) {
@@ -77,13 +77,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         otherParent.querySelector('.submenu')?.classList.remove('open');
                     }
                 });
-                
+
                 // עדכון aria-expanded
                 const isExpanded = parent.classList.contains('active');
                 parent.setAttribute('aria-expanded', isExpanded);
             }
         });
-        
+
         // טיפול בריחוף במסך גדול
         if (!isMobile) {
             parent.addEventListener('mouseenter', function() {
@@ -91,19 +91,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 submenu.classList.add('open');
                 adjustSubmenuPositions();
             });
-            
+
             parent.addEventListener('mouseleave', function() {
                 parent.classList.remove('active');
                 submenu.classList.remove('open');
             });
-            
+
             // נגישות מקלדת
             link.addEventListener('focus', function() {
                 parent.classList.add('active');
                 submenu.classList.add('open');
                 adjustSubmenuPositions();
             });
-            
+
             parent.addEventListener('focusout', function(e) {
                 if (!parent.contains(e.relatedTarget)) {
                     parent.classList.remove('active');
@@ -112,14 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-    
+
     // טיפול בשינוי גודל מסך
     window.addEventListener('resize', function() {
         const newIsMobile = window.innerWidth <= 768;
-        
+
         if (isMobile !== newIsMobile) {
             isMobile = newIsMobile;
-            
+
             // איפוס מצבים בעת מעבר בין מובייל לדסקטופ
             if (!isMobile) {
                 menu.classList.remove('active');
@@ -128,16 +128,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeAllSubmenus();
             }
         }
-        
+
         adjustSubmenuPositions();
     });
-    
+
     // אתחול נגישות
     function initAccessibility() {
         hamburger.setAttribute('aria-label', 'תפריט ניווט');
         hamburger.setAttribute('aria-expanded', 'false');
         hamburger.setAttribute('role', 'button');
-        
+
         menuItems.forEach(item => {
             item.setAttribute('role', 'none');
             const link = item.querySelector('a');
@@ -145,15 +145,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.setAttribute('role', 'menuitem');
             }
         });
-        
+
         submenuParents.forEach(parent => {
             parent.setAttribute('aria-haspopup', 'true');
             parent.setAttribute('aria-expanded', 'false');
         });
     }
-    
+
     initAccessibility();
-    
+
     // אנימציה לחיצה לכפתור ייעוץ
     if (consultationButton) {
         consultationButton.addEventListener('click', function(e) {
