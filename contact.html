@@ -1,213 +1,258 @@
-<!DOCTYPE html>
-<html lang="he">
+/* כלליים */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צור קשר</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&family=Open+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/global.css">
-      <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/communicate.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="favicon.ico">
-</head>
+body {
+    font-family: 'Open Sans', sans-serif;
+    direction: rtl;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+}
 
-<body>
-    <header id="main-header">
-        <div class="logo">
-            <a href="index.html" aria-label="מעבר לדף הבית">
-                <img src="images/logo.png" alt="לוגו של עמיר אייל">
-            </a>
-        </div>
+/* הדר */
+#main-header {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    transition: top 0.3s ease;
+    z-index: 100;
+}
 
-        <nav>
-         <ul class="menu" id="mobile-menu">
-    <li><a href="index.html">בית</a></li>
-    <li><a href="about.html">אודות</a></li>
-    <li class="has-submenu">
-      <a href="#">שירותים</a>
-      <ul class="submenu">
-        <li><a href="anxiety.html">חרדה ודיכאון</a></li>
-        <li><a href="crisis.html">משברי חיים</a></li>
-        <li><a href="relationships.html">מערכות יחסים</a></li>
-        <li><a href="parenting.html">הדרכת הורים</a></li>
-        <li><a href="divorce.html">גירושים</a></li>
-        <li><a href="addiction.html">התמכרויות</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">יצירת קשר</a></li>
-  </ul>
-            <button class="hamburger" id="hamburger">
-  <span class="line"></span>
-  <span class="line"></span>
-  <span class="line"></span>
-</button>
-        </nav>
-    </header>
+.logo {
+    order: 1;
+    max-width: 200px;
+}
 
-    <section class="hero">
-        <img src="images/heromail.jpg" alt="Hero Image">
-    </section>
+.logo img {
+    width: 100%;
+    height: auto;
+}
 
-    <section id="communicate" class="communicate">
-        <div class="communicate-container">
-            <div class="communicate-left">
-                <h2>צרו קשר</h2>
-                <p class="contact-text">
-                    אם יש לכם שאלות, בקשות או שאתם מעוניינים לקבוע פגישה.
-                    אל תהססו ליצור איתי קשר. אני משתדל להשיב לכל פנייה בהקדם האפשרי.
-                    ניתן לפנות אלי באמצעות הטופס המצורף או דרך פרטי הקשר הנוספים המופיעים באתר.
-                    אני מצפה לשמוע מכם!
-                </p>
-                </div>
-            <div class="communicate-right">
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
-                    <input type="hidden" name="access_key" value="1ada2139-5fca-4a88-8c40-08e4e8633996">
-                    <div class="form-group">
-                        <input type="text" id="name" name="שם מלא" placeholder="שם מלא" required autocomplete="name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="מייל" placeholder="מייל" required autocomplete="email">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="טלפון" placeholder="טלפון" required autocomplete="tel">
-                    </div>
-                    <div class="form-group">
-                        <textarea id="content" name="תוכן הפניה" placeholder="תוכן הפניה" required style="overflow-y: auto;"></textarea>
-                    </div>
-                    <button type="submit">שליחה</button>
-                    <div id="form-message" class="form-message"></div>
-                    <input type="hidden" name="subject" id="subject">
+@media (max-width: 768px) {
+    .logo {
+        max-width: 130px;
+    }
+}
 
-                </form>
-            </div>
-        </div>
-    </section>
+@media (max-width: 480px) {
+    .logo {
+        max-width: 140px;
+    }
+}
 
-<!-- FOOTER -->
-    <footer class="therapy-footer">
-        <div class="footer-header">
-            <div class="footer-logo">
-                <img src="images/logobig.png" alt="לוגו עמיר אייל פסיכותרפיה">
-            </div>
-            <div class="footer-title-main">עמיר אייל, פסיכותרפיה</div>
-        </div>
-        
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3 class="footer-title">מידע נוסף</h3>
-                <ul class="footer-list">
-                    <li><a href="#">שאלות נפוצות</a></li>
-                    <li><a href="#">פרטים</a></li>
-                    <li><a href="#">מדיניות פרטיות</a></li>
-                </ul>
-            </div>
-            
-<div class="footer-section">
-    <h3 class="footer-title">צרו קשר</h3>
-    <div class="contact-info">
-        <a href="tel:0547509962"><i class="fas fa-phone"></i> 054-7509962</a>
-    </div>
-    <div class="contact-info">
-        <a href="mailto:amir@amireyal.co.il"><i class="fas fa-envelope"></i> amir@amireyal.co.il</a>
-    </div>
-    <div class="contact-info">
-        <i class="fas fa-map-marker-alt"></i> כרמיאל והסביבה | אונליין
-    </div>
-</div>
-          
-            
-            <div class="footer-section">
-                <h3 class="footer-title">שירותי טיפול</h3>
-                <ul class="footer-list">
-                    <li><a href="#">טיפול פרטני</a></li>
-                    <li><a href="#">טיפול זוגי</a></li>
-                    <li><a href="#">חרדה ודיכאון</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-divider"></div>
-                <div class="footer-bottom">
-            © עמיר אייל פסיכותרפיה, 2023. כל הזכויות שמורות.
-        </div>
-    </footer>
+nav {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
 
+.menu {
+    display: flex;
+    list-style: none;
+}
 
-    <div class="floating-contact-icons">
-        <a href="tel:+972547509962" title="התקשר אלי">
-            <i class="fas fa-phone"></i>
-        </a>
-        <a href="mailto:amir@amireyal.co.il" title="שלח מייל">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/972547509962" title="שלח לי הודעה בוואטסאפ">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+.menu li {
+    margin: 0 1em;
+}
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const form = document.getElementById('contactForm');
-        const formMessage = document.getElementById('form-message');
-        const textarea = document.getElementById('content');
-        const nameInput = document.getElementById('name');
-        
-        // יצירת subject דינמי לפי שם ממלא הטופס
-        const subjectInput = document.createElement('input');
-        subjectInput.type = 'hidden';
-        subjectInput.name = 'subject';
-        subjectInput.id = 'subject';
-        form.appendChild(subjectInput);
+.menu a {
+    color: #1f628e;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+    font-size: 0.9rem;
+    font-family: 'Assistant', sans-serif;
+}
 
-        nameInput.addEventListener('input', function () {
-            subjectInput.value = `פנייה חדשה מהאתר שלך-${nameInput.value}`;
-        });
+.menu a:hover {
+    color: #1565C0;
+    transform: scale(1.05);
+}
 
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
+.hamburger {
+    order: 3;
+    display: none;
+    font-size: 2rem;
+    color: #1f628e;
+    cursor: pointer;
+    margin-left: auto;
+}
 
-            const formData = new FormData(form);
+/* תפריט עם תת-תפריט */
+.has-submenu {
+    position: relative;
+}
 
-            try {
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                });
+.has-submenu > a::after {
+    content: " ▼";
+    font-size: 0.7em;
+}
 
-                if (response.ok) {
-                    formMessage.className = 'form-message success';
-                    formMessage.textContent = 'הודעה נשלחה בהצלחה! ניצור קשר בהקדם.';
-                    form.reset();
-                } else {
-                    const errorData = await response.json();
-                    console.error('שגיאה בשליחת הטופס:', errorData);
-                    formMessage.className = 'form-message error';
-                    formMessage.textContent = 'אירעה שגיאה בשליחת ההודעה. אנא נסו שוב מאוחר יותר.';
-                }
-            } catch (error) {
-                console.error('שגיאה כללית:', error);
-                formMessage.className = 'form-message error';
-                formMessage.textContent = 'אירעה שגיאה כללית. אנא נסו שוב מאוחר יותר.';
-            }
-        });
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #036a74;
+    list-style: none;
+    padding: 0.5em 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 180px;
+    transform-origin: top right;
+    animation: growDown 0.3s ease-in-out forwards;
+}
 
-        // אפשור גדילה אוטומטית של שדה הטקסט
-        textarea.addEventListener('input', function () {
-            this.style.height = 'auto';
-            this.style.height = (this.scrollHeight) + 'px';
-        });
-    });
-</script>
+.submenu li {
+    padding: 0.5em 1em;
+    text-align: right;
+}
 
-    <script src="script.js"></script>
-</body>
+.submenu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
 
-</html>
+.submenu li a:hover {
+    color: #f0f8ff;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.fixed-consultation-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    width: auto;
+}
+
+.fixed-consultation-button:hover {
+    background-color: #1e7e34;
+}
+
+/* אייקונים מרחפים ליצירת קשר */
+.floating-contact-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floating-contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #457b9d;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out,
+                color 0.2s ease-in-out;
+}
+
+.floating-contact-icons a:hover {
+    transform: scale(1.2);
+    color: #a8dadc;
+}
+
+/* רספונסיביות - חלקים גלובליים */
+@media (max-width: 768px) {
+    /* המבורגר */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        z-index: 101; /* כדי שיהיה מעל התפריט */
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .hamburger .line {
+        width: 100%;
+        height: 3px;
+        background-color: #1f628e; /* זה הצבע הנוכחי שלך, השאר אותו */
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .hamburger.active .line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* תפריט במובייל */
+    .menu#mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* התאם לגובה ההדר שלך */
+        right: 0;
+        left: 0;
+        background-color: #036a74;
+        text-align: right;
+        padding: 0.5em 1em;
+        z-index: 999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu#mobile-menu.active {
+        display: flex;
+    }
+
+    .menu#mobile-menu li {
+        margin: 0.5em 0;
+        padding: 0.5em 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu#mobile-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu#mobile-menu a {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 300;
+        transition: background-color 0.3s ease;
+        padding: 0.5em;
+        display: block;
