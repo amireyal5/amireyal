@@ -191,7 +191,7 @@ nav {
         position: absolute;
         left: 20px;
         font-size: 1.5rem; /* הקטנת גודל הפונט */
-        font-weight: 100; /* הפיכת הפונט לדק יותר */
+        font-weight: 80; /* הפיכת הפונט לדק יותר */
     }
 
     /* תפריט במובייל */
