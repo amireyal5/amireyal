@@ -325,14 +325,17 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contactForm');
-            const formMessage = document.getElementById('form-message');
-            const textarea = document.getElementById('content');
-            const nameInput = document.getElementById('name');
 
-            // יצירת subject דינמי לפי שם ממלא הטופס
-            const subjectInput = document.createElement('input');
-            subjectInput.type = 'hidden';
-            subjectInput.name = 'subject';
-            subjectInput.id = 'subject';Enter file contents here
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>  
