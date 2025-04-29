@@ -256,15 +256,17 @@ nav {
         padding-right: 1em;
     }
 
-    /* תפריט משנה במובייל */
+    /* תפריט משנה במובייל - השינויים העיקריים כאן! */
     .submenu {
         display: none;
         position: static;
-        background: rgba(0, 0, 0, 0.1);
-        box-shadow: none;
+        background: transparent !important; /* רקע שקוף */
+        box-shadow: none !important;
         padding: 0 0 0 1em;
         animation: none;
         margin-top: 0.5em;
+        border-right: 3px solid rgba(255, 255, 255, 0.3); /* קו אנכי עדין */
+        margin-right: 10px; /* הזחה ימינה */
     }
 
     .submenu li {
