@@ -254,8 +254,10 @@ nav {
         font-size: 1rem;
         font-weight: 300;
         transition: background-color 0.3s ease;
-        padding: 0.5
-     display: block;
+        padding: 0.5em;
+        display: block;
+        padding-right: 1em; /* הוסף ריווח ימני */
+        padding-left: 0.5em; /* הוסף ריווח שמאלי */
     }
 
     .menu#mobile-menu a:hover {
@@ -273,7 +275,7 @@ nav {
         content: " ◄";
         font-size: 0.8em;
         position: absolute;
-        left: 0.5em;
+        left: 0.2em; /* הקטן את הערך כדי להזיז את החץ שמאלה */
         top: 50%;
         transform: translateY(-50%);
     }
@@ -281,10 +283,10 @@ nav {
     /* עיצוב כללי לפריטים עם תת-תפריט */
     .has-submenu > a {
         position: relative;
-        padding-right: 1em;
+        padding-right: 1.8em; /* הגדל עוד יותר את הריווח כדי לפנות מקום לחץ */
     }
 
-    /* תפריט משנה במובייל - השינויים העיקריים כאן! */
+    /* תפריט משנה במובייל */
     .submenu {
         display: none;
         position: static;
@@ -305,6 +307,7 @@ nav {
     .submenu li a {
         color: rgba(255, 255, 255, 0.9);
         font-weight: 300;
+        padding-right: 0.5em; /* הוסף ריווח ימני */
     }
 
     .submenu li a:hover {
@@ -345,6 +348,7 @@ nav {
     }
     80% {
         transform: scaleY(1.1);
+        opacity: 1;
     }
     100% {
         transform: scaleY(1);
