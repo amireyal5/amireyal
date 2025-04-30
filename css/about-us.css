@@ -1,6 +1,6 @@
 0/* About Us Section - Enhanced */
 .about-us {
-    display: flex;
+    display: flex start;
     flex-direction: column;
     justify-content: center;
     align-items: center;
