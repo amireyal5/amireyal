@@ -82,7 +82,7 @@ text-align: center;
 .about-me-text {
     order: 2;
     text-align: center;
-    display: flex;flex start;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
