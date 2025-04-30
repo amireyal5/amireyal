@@ -316,6 +316,7 @@ body {
     width: 100vw; /* רוחב מלא של אזור התצוגה */
     height: 100vh; /* גובה מלא של אזור התצוגה */
     gap: 0; /* אין רווח בין הפריטים */
+margin-bottom:4em;
 }
 
 .service-box {
