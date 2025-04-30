@@ -152,7 +152,7 @@ text-align: center;
 text-align: center; 
     }
  }
-/* עיצוב כללי לסעיף השירותים (ללא שינוי) */
+/* עיצוב כללי לסעיף השירותים */
 .services {
   padding: 50px 20px;
   background-color: #f7f7f7;
@@ -166,117 +166,66 @@ text-align: center;
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* פריסה מגיבה */
   gap: 30px;
   margin-top: 30px;
 }
 
-/* עיצוב תיבת שירות בודדת (עם שינויים קלים) */
+/* עיצוב תיבת שירות בודדת */
 .service-box {
-  background: linear-gradient(135deg, #e0f7fa 0%, #c5e1e6 100%);
+  background: linear-gradient(135deg, #e0f7fa 0%, #c5e1e6 100%); /* מעבר צבע עדין */
   border-radius: 10px;
+  padding: 30px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  text-decoration: none;
+  text-decoration: none; /* הסרת קו תחתון מקישורים */
   color: #333;
-  display: flex; /* שימוש ב-Flexbox */
-  flex-direction: column; /* סידור אנכי של התוכן */
-  justify-content: center; /* מרכוז אנכי של התוכן */
-  align-items: center; /* מרכוז אופקי של התוכן */
-  padding: 20px; /* הקטנת הריפוד כדי לפנות מקום */
-}
-
-.service-box:before {
-  content: "";
-  display: block;
-  padding-top: 100%; /* יוצר יחס גובה-רוחב של 1:1 */
-}
-
-.service-box > * {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .service-box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* הזזה קלה למעלה במעבר עכבר */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service-box i {
-  font-size: 2em; /* התאמת גודל אייקון */
-  margin-bottom: 10px;
-  color: #00bcd4;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #00bcd4; /* צבע אייקונים */
 }
 
 .service-box h3 {
-  font-size: 1.2em; /* התאמת גודל כותרת */
-  margin-bottom: 5px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
   color: #212121;
 }
 
 .service-box p {
-  font-size: 0.9em; /* התאמת גודל פסקאות */
-  line-height: 1.4;
+  font-size: 1em;
+  line-height: 1.6;
   color: #555;
-  padding: 0 10px; /* הוספת ריפוד צדדי לטקסט */
 }
 
-/* התאמות ספציפיות לתצוגת מובייל */
-@media (max-width: 600px) {
+/* התאמות למסכים קטנים יותר */
+@media (max-width: 768px) {
   .services {
     padding: 30px 10px;
   }
 
   .services-grid {
     grid-template-columns: 1fr; /* עמודה אחת במכשירים קטנים */
-    gap: 15px;
+    gap: 20px;
   }
 
   .service-box {
-    padding: 15px;
-    display: block; /* חזרה לתצוגת בלוק רגילה */
-    position: relative; /* כדי שהצאצאים המוחלטים יהיו ביחס אליו */
-    height: auto; /* איפוס גובה אוטומטי */
-  }
-
-  .service-box:before {
-    padding-top: 100%; /* עדיין שומר על יחס 1:1 */
-  }
-
-  .service-box > * {
-    position: static; /* החזרת המיקום לסטטי */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    height: 100%; /* מילוי הגובה המוגדר על ידי :before */
-    width: 100%; /* מילוי הרוחב */
-  }
-
-  .service-box i {
-    font-size: 1.8em;
-    margin-bottom: 8px;
+    padding: 20px;
   }
 
   .service-box h3 {
-    font-size: 1.1em;
-    margin-bottom: 3px;
+    font-size: 1.3em;
   }
 
   .service-box p {
-    font-size: 0.85em;
-    padding: 0;
+    font-size: 0.9em;
   }
 }
