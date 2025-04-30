@@ -1,4 +1,4 @@
-0/* About Us Section - Enhanced */
+/* About Us Section - Enhanced */
 .about-us {
     display: flex start;
     flex-direction: column;
@@ -15,9 +15,8 @@
     max-width: 1000px;
     margin: 0 auto 2em;
     position: relative;
-text-align: center;
+    text-align: center;
     MARGIN-TOP: 2EM;
-
 }
 
 .about-content h2 {
@@ -28,7 +27,6 @@ text-align: center;
     font-weight: 600;
     position: relative;
     display: inline-block;
-
 }
 
 .about-content h2::after {
@@ -138,221 +136,214 @@ text-align: center;
     .about-me-image h3 {
         font-size: 1.1em;
         margin-bottom: 1em;
-text-align: center;
-
+        text-align: center;
     }
 
     .about-me-image {
-text-align: center; 
+        text-align: center; 
+    }
     
-}
     .about-me-text p {
         font-size: 1rem;
         line-height: 1.6;
-text-align: center; 
+        text-align: center; 
     }
 }
 
-/* עיצוב כללי */
-:root {
-  --primary-color: #4361ee;
-  --secondary-color: #3f37c9;
-  --accent-color: #4895ef;
-  --light-color: #f8f9fa;
-  --dark-color: #212529;
-}
-
-.services-section {
-  padding: 5rem 1rem;
-  background-color: var(--light-color);
+/* ====================== */
+/* Services Section - REDESIGNED */
+/* ====================== */
+.services {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.container {
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #1f628e, #00bcd4);
+}
+
+.services-content {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
 }
 
-/* כותרת */
-.section-title {
-  font-size: 2.5rem;
-  color: var(--dark-color);
-  text-align: center;
-  margin-bottom: 1rem;
+.services-content h2 {
+  font-size: 2.5em;
+  color: #1f628e;
+  margin-bottom: 1em;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 700;
   position: relative;
   display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-.section-title::after {
+.services-content h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-  border-radius: 3px;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #00bcd4;
+  border-radius: 2px;
 }
 
-.section-subtitle {
-  text-align: center;
-  color: #6c757d;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
+.services-content p.subtitle {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 3em;
+  line-height: 1.6;
 }
 
-/* רשת השירותים */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 40px;
+  margin-top: 50px;
 }
 
-/* כרטיס שירות */
-.service-card {
+.service-box {
   background: white;
   border-radius: 15px;
-  padding: 2rem;
+  padding: 40px 30px;
+  text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0, 188, 212, 0.1);
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
-.service-card::before {
+.service-box::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(90deg, #1f628e, #00bcd4);
   transition: height 0.3s ease;
+  z-index: -1;
 }
 
-.service-card:hover {
+.service-box:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.service-card:hover::before {
-  height: 10px;
+.service-box:hover::before {
+  height: 100%;
 }
 
-.service-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(72, 149, 239, 0.2));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-  transform: rotateY(180deg);
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-}
-
-.service-icon i {
-  font-size: 2rem;
-  color: var(--primary-color);
-  transition: all 0.3s ease;
-}
-
-.service-card:hover .service-icon i {
+.service-box:hover .service-icon {
   color: white;
 }
 
-.service-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--dark-color);
-  text-align: center;
+.service-box:hover h3,
+.service-box:hover p {
+  color: white;
 }
 
-.service-card p {
-  color: #6c757d;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  text-align: center;
+.service-icon {
+  font-size: 3em;
+  margin-bottom: 25px;
+  color: #00bcd4;
+  transition: color 0.3s ease;
 }
 
-.service-link {
-  display: inline-flex;
-  align-items: center;
-  color: var(--primary-color);
+.service-box h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #212121;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.service-box p {
+  font-size: 1em;
+  line-height: 1.7;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.service-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background-color: transparent;
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
+  border-radius: 30px;
   font-weight: 500;
-  text-decoration: none;
   transition: all 0.3s ease;
-  margin: 0 auto;
-  position: relative;
 }
 
-.service-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  right: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-color);
-  transition: width 0.3s ease;
+.service-box:hover .service-cta {
+  background-color: white;
+  color: #1f628e;
+  border-color: white;
 }
 
-.service-link:hover {
-  color: var(--secondary-color);
-}
-
-.service-link:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-.service-link i {
-  margin-right: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.service-link:hover i {
-  transform: translateX(-5px);
-}
-
-/* התאמות למובייל */
-@media (max-width: 768px) {
-  .services-section {
-    padding: 3rem 1rem;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .services {
+    padding: 60px 20px;
   }
   
-  .section-title {
-    font-size: 2rem;
+  .services-content h2 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 50px 15px;
+  }
+  
+  .services-content h2 {
+    font-size: 2em;
   }
   
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 30px;
+    margin-top: 30px;
   }
   
-  .service-card {
-    padding: 1.5rem;
+  .service-box {
+    padding: 30px 25px;
   }
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 1.8rem;
+  .services-content h2 {
+    font-size: 1.8em;
   }
   
-  .section-subtitle {
-    font-size: 1rem;
+  .services-content p.subtitle {
+    font-size: 1em;
+    margin-bottom: 2em;
+  }
+  
+  .service-icon {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .service-box h3 {
+    font-size: 1.3em;
   }
 }
-
