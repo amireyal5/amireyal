@@ -81,8 +81,8 @@ text-align: center;
 
 .about-me-text {
     order: 2;
-    text-align: right;
-    display: flex;
+    text-align: center;
+    display: flex;flex start;
     flex-direction: column;
     justify-content: center;
 }
