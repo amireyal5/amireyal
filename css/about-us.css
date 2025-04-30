@@ -153,6 +153,15 @@ text-align: center;
     }
 }
 
+/* עיצוב כללי */
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4895ef;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
 .services-section {
   padding: 5rem 1rem;
   background-color: var(--light-color);
@@ -346,3 +355,4 @@ text-align: center;
     font-size: 1rem;
   }
 }
+
