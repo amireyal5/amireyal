@@ -282,6 +282,7 @@
 @media (max-width: 480px) {
     .about-content h2 {
         font-size: 1.3em;
+      text-align: center;
     }
     
     .about-me-image h3 {
