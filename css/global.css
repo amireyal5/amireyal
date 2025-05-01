@@ -144,7 +144,9 @@ nav {
     transition: background-color 0.3s ease;
     font-size: 1em;
     width: auto;
-text-align: center;
+    text-align: center;
+    margin-top: 3em; /* רווח עליון */
+    margin-bottom: 3em; /* רווח תחתון */
 
 }
 
