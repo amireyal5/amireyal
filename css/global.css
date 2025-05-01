@@ -367,4 +367,23 @@ text-align: center;
         transform: translateY(0);
         opacity: 1;
     }
-}
+   @media (max-width: 768px) { /* מגדיר כללים שחלים רק על מסכים קטנים (מובייל) */
+  .fixed-consultation-button {
+    display: block; /* כדי שהכפתור יתפוס שורה שלמה וניתן יהיה למרכז אותו */
+    background-color: #2f80d6;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    width: auto; /* מאפשר לרוחב הכפתור להתאים לתוכן */
+    text-align: center; /* מרכז את הטקסט בתוך הכפתור */
+    margin-top: 3em; /* רווח עליון */
+    margin-bottom: 3em; /* רווח תחתון */
+    margin-left: auto; /* גורם לשוליים השמאליים להיות אוטומטיים */
+    margin-right: auto; /* גורם לשוליים הימניים להיות אוטומטיים, ובכך מרכז את הכפתור */
+  }
+} 
+
