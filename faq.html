@@ -19,6 +19,40 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="favicon.ico">
     <style>
+  
+ @media (min-width: 769px) {
+   .appointment-button-container {
+     display: flex;
+     justify-content: center; /* מרכוז אופקי של התוכן (הכפתור) */
+     width: 100%; /* כדי שה-container יתפוס את כל הרוחב הזמין */
+     margin-top: 2em; /* אם אתה רוצה רווח עליון */
+     margin-bottom: 2em; /* אם אתה רוצה רווח תחתון */
+   }
+ 
+   /* אם אתה רוצה שהכפתור עצמו יהיה block עם רוחב מוגבל ומרכוז: */
+   /* .fixed-consultation-button {
+   /* display: block;
+   /* max-width: 300px; /* הגדר רוחב מקסימלי */
+   /* margin-left: auto;
+   /* margin-right: auto;
+   /* } */
+ }
+ 
+ /* סגנון למובייל */
+ @media (max-width: 768px) {
+   .appointment-button-container {
+     display: flex;
+     justify-content: center; /* מרכז גם במובייל */
+     width: 100%;
+   }
+ 
+   .fixed-consultation-button {
+     display: block; /* כדי שיתפוס שורה מלאה במובייל */
+     width: auto; /* או רוחב ספציפי אם תרצה */
+     margin-left: auto;
+     margin-right: auto; /* מרכז את הכפתור עצמו אם הוא block */
+   }
+ }
         .faq-container {
             max-width: 800px;
             margin: 40px auto;
