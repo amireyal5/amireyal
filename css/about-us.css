@@ -1,11 +1,11 @@
 /* About Us Section - Enhanced */
 .about-us {
-    display: flex start;
+    display: flex; /* תיקון תחביר */
+    align-items: center; /* תיקון תחביר - הנחתי ש-center התכוון ליישור אופקי בתוך פלקס עמודה */
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 3em 2em;
-    background-color: #ffff;
+    background-color: #FFFFFF; /* רקע לבן */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -20,11 +20,12 @@
 }
 
 .about-content h2 {
-    font-size: 2em;
-    color: #1f628e;
+    font-size: 2em; /* כלל 6: גודל פונט H2 - שונה ל-2em */
+    color: #55828B; /* כלל 7: צבע H2 */
     margin-bottom: 1.5em;
-    font-family: 'Assistant', sans-serif;
-    font-weight: 600;
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+    font-weight: normal; /* כלל 7: משקל פונט H2 (400) */
+    text-align: center;
     position: relative;
     display: inline-block;
 }
@@ -37,17 +38,17 @@
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: #1f628e;
+    background-color: #55828B; /* צבע קו תחתון H2 */
     border-radius: 3px;
 }
 
 .about-me-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: grid; /* הגדרת Grid בדסקטופ */
+    grid-template-columns: 1fr 1fr; /* שתי עמודות בדסקטופ */
     gap: 3em;
     max-width: 1000px;
     margin: 0 auto;
-    align-items: stsrt;
+    align-items: start; /* תיקון תחביר */
     min-height: 400px;
 }
 
@@ -58,10 +59,11 @@
 }
 
 .about-me-image h3 {
-    font-size: 1.3em;
-    color: #1f628e;
+    font-size: 1.3em; /* !!! גודל H3 - נא לאשר שזה הגודל הקבוע הרצוי ל-H3+ !!! */
+    color: #55828B; /* כלל 7: צבע H3 (כללי) */
     margin-bottom: 1.5em;
-    font-weight: 600;
+    font-weight: normal; /* !!! משקל H3 - נא לאשר שזה המשקל הקבוע הרצוי ל-H3+ !!! */
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
 }
 
 .about-me-image img {
@@ -80,253 +82,59 @@
 
 .about-me-text {
     order: 2;
-    text-align: center;
+    text-align: center; /* במקור היה center, במובייל justify. יש ליישר קו? השארתי מקורי בינתיים */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .about-me-text p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.8;
+    font-size: 1.1em; /* כלל 5: גודל פונט טקסט רגיל */
+    color: #514b4b; /* כלל 5: צבע טקסט רגיל */
+    line-height: 2.0; /* כלל 5: Line height טקסט רגיל */
     margin-bottom: 1.5em;
-    text-align: justify;
+    text-align: justify; /* במקור היה justify */
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+    font-weight: 200; /* כלל 5: משקל פונט טקסט רגיל */
 }
 
 .about-me-text p:last-child {
     margin-bottom: 0;
 }
 
-/* רספונסיביות עבור About Us */
-@media (max-width: 768px) {
-    .about-us {
-        padding: 2em 1em;
-    }
-
-    .about-content {
-        margin-bottom: 1.5em;
-    }
-
-    .about-content h2 {
-        font-size: 1.5em;
-    }
-
-    .about-me-container {
-        grid-template-columns: 1fr;
-        gap: 2em;
-    }
-
-    .about-me-text {
-        text-align: justify;
-        margin-bottom: 0;
-    }
-
-    .about-me-image img {
-        max-width: 280px;
-        border-radius: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-content h2 {
-        font-size: 1.3em;
-    }
-    
-    .about-me-image h3 {
-        font-size: 1.1em;
-        margin-bottom: 1em;
-        text-align: center;
-    }
-
-    .about-me-image {
-        text-align: center; 
-    }
-    
-    .about-me-text p {
-        font-size: 1rem;
-        line-height: 1.6;
-        text-align: center; 
-    }
-}
-/* About Us Section - Enhanced */
-.about-us {
-    display: flex start;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3em 2em;
-    background-color: #ffff;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.about-content {
-    max-width: 1000px;
-    margin: 0 auto 2em;
-    position: relative;
-    text-align: center;
-    MARGIN-TOP: 2EM;
-}
-
-.about-content h2 {
-    font-size: 2em;
-    color: #1f628e;
-    margin-bottom: 1.5em;
-    font-family: 'Assistant', sans-serif;
-    font-weight: 600;
-    position: relative;
-    display: inline-block;
-}
-
-.about-content h2::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5em;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #1f628e;
-    border-radius: 3px;
-}
-
-.about-me-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3em;
-    max-width: 1000px;
-    margin: 0 auto;
-    align-items: stsrt;
-    min-height: 400px;
-}
-
-.about-me-image {
-    order: 1;
-    text-align: start;
-    position: relative;
-}
-
-.about-me-image h3 {
-    font-size: 1.3em;
-    color: #1f628e;
-    margin-bottom: 1.5em;
-    font-weight: 600;
-}
-
-.about-me-image img {
-    max-width: 100%;
-    max-height: 720px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-me-image img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.about-me-text {
-    order: 2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.about-me-text p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 1.5em;
-    text-align: justify;
-}
-
-.about-me-text p:last-child {
-    margin-bottom: 0;
-}
-
-/* רספונסיביות עבור About Us */
-@media (max-width: 768px) {
-    .about-us {
-        padding: 2em 1em;
-    }
-
-    .about-content {
-        margin-bottom: 1.5em;
-    }
-
-    .about-content h2 {
-        font-size: 1.5em;
-    }
-
-    .about-me-container {
-        grid-template-columns: 1fr;
-        gap: 2em;
-    }
-
-    .about-me-text {
-        text-align: justify;
-        margin-bottom: 0;
-    }
-
-    .about-me-image img {
-        max-width: 280px;
-        border-radius: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-content h2 {
-        font-size: 1.3em;
-      text-align: center;
-    }
-    
-    .about-me-image h3 {
-        font-size: 1.1em;
-        margin-bottom: 1em;
-        text-align: center;
-    }
-
-    .about-me-image {
-        text-align: center; 
-    }
-    
-    .about-me-text p {
-        font-size: 1rem;
-        line-height: 1.6;
-        text-align: center; 
-    }
 /* סקציית שירותים */
 .services {
     padding: 2em;
     text-align: center;
-    background-color: #ffff;
+    background-color: #FFFFFF; /* רקע לבן */
     border-radius: 10px;
- margin-bottom: 4ex;
+    margin-bottom: 4ex;
 }
 
 .services-content {
     max-width: 1000px;
     margin: 0 auto;
 }
+
 .no-underline {
-  text-decoration: none;
+    text-decoration: none; /* נשאר כפי שהיה */
 }
+
 .services-content h2 {
-    font-size: 2em;
-    color: #1f628e;
+    font-size: 2em; /* כלל 6: גודל פונט H2 - שונה ל-2em */
+    color: #55828B; /* כלל 7: צבע H2 */
     margin-bottom: 0.5em;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+    font-weight: normal; /* כלל 7: משקל H2 (400) */
 }
 
 .services-subtitle {
-    font-size: 1.1em;
-    color: #666;
+    font-size: 1.1em; /* כלל 5: גודל פונט טקסט רגיל */
+    color: #514b4b; /* כלל 5: צבע טקסט רגיל */
     margin-bottom: 2em;
+    font-family: 'Assistant', sans-serif; /* גופן Assistant (אם לא יורש) */
+    font-weight: 200; /* כלל 5: משקל פונט טקסט רגיל */
+    line-height: 2.0; /* כלל 5: Line height טקסט רגיל */
 }
 
 .services-grid {
@@ -340,59 +148,117 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    color: white;
-    text-decoration: none; /* הסרת קו תחתון */
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון גם כאן */
+    /* צבע טקסט ואיקונים בקופסה - יש להחליט האם נשאר לבן או משתנה */
+    color: white; /* !!! נא לאשר צבע כללי בתוך הקופסה (לטקסט ואיקון) או לבחור אחר מהמניפות (למשל שחור או צבע מניפה מתאים) !!! */
 }
 
 .service-box:hover {
     transform: translateY(-5px);
 }
 
-/* צבעים אינדיבידואליים לכל קופסה */
-.service-box:nth-child(1) {
-    background-color: #293462;
-}
+/* צבעים אינדיבידואליים לכל קופסת שירות - *** נשארים כפי שהיו במקור לפי בקשתך (חריגה מהכלל) *** */
+.service-box:nth-child(1) { background-color: #293462; /* נשאר מקורי */ }
+.service-box:nth-child(2) { background-color: #80B8BD; /* נשאר מקורי */ }
+.service-box:nth-child(3) { background-color: #68A2B9; /* נשאר מקורי */ }
+.service-box:nth-child(4) { background-color: #6189B0; /* נשאר מקורי */ }
+.service-box:nth-child(5) { background-color: #696E9D; /* נשאר מקורי */ }
+.service-box:nth-child(6) { background-color: #735280; /* נשאר מקורי */ }
 
-.service-box:nth-child(2) {
-    background-color: #80B8BD;
-}
-
-.service-box:nth-child(3) {
-    background-color: #68A2B9;
-}
-
-.service-box:nth-child(4) {
-    background-color: #6189B0;
-}
-
-.service-box:nth-child(5) {
-    background-color: #696E9D;
-}
-
-.service-box:nth-child(6) {
-    background-color: #735280;
-}
 
 .service-box i {
-    font-size: 2em;
-    color: white;
+    font-size: 2em; /* גודל איקון - האם צריך להתאים לגודל פונט אחיד? */
+    /* !!! נדרשת החלטה לגבי צבע האיקון בתוך הקופסה (האם לבן או אחר) !!! */
+    /* color: white; - הצבע יירש כרגע מהכלל הכללי של .service-box למעלה */
     margin-bottom: 0.5em;
+    /* הוסר font-family: 'Assistant', sans-serif; כדי לתקן בעיית ריבועים */
 }
 
 .service-box h3 {
-    font-size: 1.3em;
+    font-size: 1.3em; /* !!! גודל H3 - נא לאשר שזה הגודל הקבוע הרצוי ל-H3+ !!! */
     margin-bottom: 0.5em;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Assistant', sans-serif; /* גופן Assistant */
+    color: #FFFFFF; /* *** צבע H3 בתוך קופסאות שירות - שונה ללבן *** */
+    font-weight: normal; /* !!! משקל H3 - נא לאשר שזה המשקל הקבוע הרצוי ל-H3+ !!! */
 }
 
 .service-box p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: white;
+    font-size: 1.1em; /* כלל 5: גודל פונט טקסט רגיל */
+    line-height: 2.0; /* כלל 5: Line height טקסט רגיל */
+    /* !!! נדרשת החלטה לגבי צבע הטקסט בתוך הקופסה (האם לבן או אחר) !!! */
+    /* color: white; - הצבע יירש כרגע מהכלל הכללי של .service-box למעלה */
+    font-family: 'Assistant', sans-serif; /* גופן Assistant */
+    font-weight: 200; /* משקל פונט טקסט רגיל */
 }
 
+/* רספונסיביות עבור About Us */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 2em 1em;
+    }
 
+    .about-content {
+        margin-bottom: 1.5em;
+    }
+
+    .about-content h2 {
+        font-size: 2em; /* גודל H2 אחיד */
+        color: #55828B; /* צבע H2 */
+        /* שאר הגדרות H2 מיורשות מהכלל הראשי */
+    }
+
+    .about-me-container {
+        display: grid; /* *** תיקון: וידוא הגדרת Grid גם במובייל *** */
+        grid-template-columns: 1fr; /* עמודה אחת במובייל */
+        gap: 2em;
+    }
+
+    .about-me-text {
+        text-align: justify; /* במקור היה justify */
+        margin-bottom: 0;
+        /* שאר הגדרות הטקסט מיורשות מהכלל הראשי */
+    }
+
+    .about-me-image img {
+        max-width: 280px;
+        border-radius: 10px;
+        /* שאר הגדרות התמונה מיורשות */
+    }
+
+    /* הגדרות רספונסיביות לאלמנטים בתוך קופסאות שירות (מיורשות מהכללים הראשיים של הקופסה/טקסט/כותרת) */
+    .service-box h3 { /* גודל ומשקל H3 - נא לאשר */ }
+    .service-box p { /* גודל, משקל, Line height, צבע טקסט - נא לאשר */ }
+    .service-box i { /* גודל וצבע - נא לאשר */ }
+}
+
+@media (max-width: 480px) {
+    .about-content h2 {
+        font-size: 2em; /* גודל H2 אחיד */
+        /* שאר הגדרות H2 מיורשות */
+    }
+
+    .about-me-image h3 {
+        font-size: 1.3em; /* !!! גודל H3 אחיד גם במובייל - נא לאשר !!! */
+        margin-bottom: 1em;
+        text-align: center;
+        /* שאר הגדרות H3 מיורשות */
+    }
+
+    .about-me-image {
+        text-align: center;
+        /* שאר הגדרות מיורשות */
+    }
+
+    .about-me-text p {
+        font-size: 1.1em; /* גודל טקסט רגיל אחיד */
+        line-height: 2.0; /* Line height טקסט רגיל אחיד */
+        text-align: center; /* במקור היה center */
+        /* שאר הגדרות הטקסט מיורשות */
+    }
+    /* שאר הגדרות במובייל יורשות מהכללים הראשיים או מה-768px */
+}
