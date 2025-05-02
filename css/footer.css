@@ -22,13 +22,13 @@
 }
 
 .footer-logo img {
-    max-width: 200px;
+    max-width: 150px;
     height: auto;
 }
 
 .footer-title-main {
     color: #ffffff;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin-bottom: 30px;
     font-weight: 600;
 }
@@ -138,9 +138,12 @@
     }
 
     .footer-container {
-        width: 100%;
-        justify-content: space-between; /* מפזר את הסקציות עם רווח שווה ביניהן */
+        width: 80%; /* הקטנת הרוחב של הקונטיינר כדי שהטורים יהיו יותר במרכז */
+        max-width: 800px; /* שמירה על מקסימום רוחב סביר */
+        display: flex;
+        justify-content: space-around; /* שימוש ב-space-around כדי ליצור רווח קטן יותר בין הטורים */
         flex-wrap: nowrap; /* מונע מעבר לשורה חדשה בדסקטופ */
+        margin: 0 auto; /* מרכוז אופקי של הקונטיינר */
     }
 
     .footer-section {
