@@ -1,22 +1,50 @@
+/* סגנונות עבור מקטע ההקדמה */
+.intro-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4; /* צבע רקע אופציונלי */
+}
+
+.intro-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+}
+
+.intro-section .subtitle {
+    font-size: 1.2em;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 2em;
+}
+
 /* css/communicate.css */
+
+/* סגנונות עבור מקטע "צור קשר" */
 .communicate {
     padding: 40px 20px;
-    background-color: #fffff;
+    background-color: #f9f9f9;
 }
 
 .communicate-container {
     max-width: 960px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row-reverse; /* בלוק ימני ראשון בשולחן העבודה */
-    align-items: flex-start;
-    gap: 40px; /* רווח בין הבלוקים בתצוגת שולחן עבודה */
+    flex-direction: column; /* שינוי לפריסה אנכית כדי שהכרטיסיות יהיו מעל הטופס */
+    align-items: center;
+    gap: 40px; /* רווח בין הכרטיסיות לטופס */
 }
-
 .communicate-left {
-    width: 45%;
+    width: 100%; /* תופס את כל הרוחב כשהפריסה אנכית */
     padding: 20px;
-    text-align: right; /* יישור טקסט לימין בשולחן העבודה */
+    text-align: center; /* מרכוז הטקסט כשהפריסה אנכית */
 }
 
 .communicate-left h2 {
@@ -34,14 +62,14 @@
 }
 
 .communicate-right {
-    width: 55%;
+    width: 100%; /* תופס את כל הרוחב כשהפריסה אנכית */
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* מתיחת הטופס */
+    align-items: stretch;
 }
 
 .contact-form {
@@ -49,6 +77,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    margin: 0 auto; /* מרכוז הטופס */
 }
 
 .form-group {
@@ -118,32 +147,110 @@
     border: 1px solid #f5c6cb;
 }
 
-/* תצוגה למובייל */
-@media (max-width: 768px) {
+/* סגנונות עבור הכרטיסיות (נוספו לכאן) */
+.services-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0;
+    width: 100%;
+    margin-bottom: 20px; /* רווח בין הכרטיסיות לטופס */
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 250px; /* גובה מינימלי בסיסי */
+    padding-top: 2em;
+    padding-bottom: 2em;
+    color: #fff;
+    margin-bottom: 4em;
+    box-sizing: border-box;
+}
+
+.service-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.service-card .highlight {
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-card .learn-more {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.service-card .learn-more:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.service-blue1 { background-color: #2c5b7d; }
+.service-blue2 { background-color: #357f84; }
+.service-blue3 { background-color: #5a9fb2; }
+.service-blue4 { background-color: #9dc4c3; color: #333; }
+
+.service-card.service-blue4,
+.service-card.service-blue4 h2,
+.service-card.service-blue4 p,
+.service-card.service-blue4 .highlight {
+    color: #333;
+}
+
+.service-card.service-blue4 .learn-more {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.service-card.service-blue4 .learn-more:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* שינויים לתצוגת מחשב - הכפלת גובה */
+@media (min-width: 768px) {
+    .service-card {
+        min-height: 500px;
+    }
+
     .communicate-container {
-        flex-direction: column; /* הטופס ראשון ואז הטקסט (אם זה הסדר הרצוי) */
-        gap: 0; /* הסרת הרווח בין הבלוקים במובייל */
+        flex-direction: column; /* שמירה על פריסה אנכ
+}
+    }
+
+
+/* שינויים לתצוגת מובייל - אנכי וללא רווחים */
+@media (max-width: 600px) {
+    .services-grid-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+
+    .service-card {
+        margin-bottom: 0; /* הסרת הרווח התחתון במובייל */
+        min-height: auto; /* גובה אוטומטי כדי להתאים לתוכן */
+    }
+
+    .communicate-container {
+        flex-direction: column; /* הכרטיסיות מעל הטופס במובייל */
     }
 
     .communicate-left {
-        width: 100%;
-        padding: 20px;
-        text-align: right; /* שמירה על יישור הטקסט לימין גם במובייל */
-    }
-
-    .communicate-right {
-        width: 100%;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        margin-top: 20px; /* הוספת רווח בין הטקסט לטופס */
-    }
-
-    .contact-form {
-        width: 100%; /* טופס ברוחב מלא במובייל */
+        text-align: center; /* מרכוז הטקסט במובייל */
     }
 }
