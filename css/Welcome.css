@@ -1,40 +1,41 @@
 /* Welcome Section */
 .welcome {
-    display: flex;
+    display: flex; /* תיקון תחביר */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2em;
-    background-color: #ffff;
+    background-color: #FFFFFF; /* כלל 1: רקע לבן */
     text-align: center;
 }
 
-.welcome .about-content { /* שימוש בקלאס about-content הקיים */
+.welcome .about-content {
     max-width: 1000px;
     margin: 0 auto 1em;
 }
 
-.welcome .about-content h2 { /* שימוש בקלאס about-content h2 הקיים */
-    font-size: 1.5em;
-    color: #1f628e;
-    margin-bottom: 1em; /* הוספת מרווח תחתון כדי להפריד מהטקסט שמתחתיו */
-    font-family: 'Assistant', sans-serif;
-    font-weight: normal;
-    text-align: center; /* מרכוז הכותרת */
+.welcome .about-content h2 {
+    font-size: 2em; /* כלל 6: גודל פונט H2 - שונה ל-2em */
+    color: #55828B; /* כלל 7: צבע H2 */
+    margin-bottom: 1em;
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+    font-weight: normal; /* כלל 7: משקל פונט H2 (400) */
+    text-align: center;
 }
 
-.welcome .inspiration-text { /* שימוש בקלאס inspiration-text הקיים */
-    font-size: 2.16em;
-    color: #1f628e;
-    line-height: 1.8;
+.welcome .inspiration-text {
+    font-size: 2.16em; /* כלל 11: גודל פונט Inspiration text - לא משתנה */
+    color: #133C55; /* כלל 11: צבע Inspiration text */
+    line-height: 1.8; /* Line height מקורי - האם לשנות גם כאן? */
     max-width: 1000px;
     margin: 0 auto 1em;
-    text-align: center; /* מרכוז הטקסט */
-    font-weight: normal; /* הסרת הדגשה (bold) */
-    letter-spacing: normal; /* איפוס ריווח האותיות עבור תצוגה רגילה */
+    text-align: center;
+    font-weight: normal; /* כלל 11: משקל פונט Inspiration text - לא משתנה */
+    letter-spacing: normal;
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant (אם לא יורש מ-body) */
 }
 
-.welcome .about-me-container { /* שימוש בקלאס about-me-container הקיים */
+.welcome .about-me-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
@@ -44,12 +45,12 @@
     min-height: 400px;
 }
 
-.welcome .about-me-image { /* שימוש בקלאס about-me-image הקיים */
+.welcome .about-me-image {
     order: 1;
-    text-align: center;
+    text-align: start;
 }
 
-.welcome .about-me-image img { /* שימוש בקלאס about-me-image img הקיים */
+.welcome .about-me-image img {
     max-width: 100%;
     max-height: 720px;
     height: auto;
@@ -57,30 +58,32 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.welcome .about-me-text { /* שימוש בקלאס about-me-text הקיים */
+.welcome .about-me-text {
     order: 2;
-    text-align:  right;
+    text-align: right;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.welcome .about-me-text p { /* שימוש בקלאס about-me-text p הקיים */
-    font-size: 1.1rem;
-    color: #000;
-    line-height: 1.7;
+.welcome .about-me-text p {
+    font-size: 1.1em; /* כלל 5: גודל פונט טקסט רגיל */
+    color: #514b4b; /* *** כלל 5: צבע טקסט רגיל - שונה ל-#514b4b *** */
+    line-height: 2.0; /* כלל 5: Line height טקסט רגיל */
     margin-bottom: 1em;
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant (אם לא יורש מ-body) */
+    font-weight: 200; /* כלל 5: משקל פונט טקסט רגיל - 200 */
 }
 
-.welcome .read-more-button { /* שימוש בקלאס read-more-button הקיים */
-    background-color: #0b639d;
-    color: white;
+.welcome .read-more-button {
+    background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
+    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
     padding: 0.5em 1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    font-family: 'Assistant', sans-serif;
+    font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
     display: inline-block;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -88,10 +91,9 @@
     text-align: center;
 }
 
-.welcome .read-more-button:hover { /* שימוש בקלאס read-more-button:hover הקיים */
-    background-color: #1a85cf;
+.welcome .read-more-button:hover {
+    background-color: #55828B; /* כלל 3: רקע כפתור בריחוף */
 }
-
 
 /* רספונסיביות עבור Welcome Section */
 @media (max-width: 768px) {
@@ -104,21 +106,24 @@
     }
 
     .welcome .about-content h2 {
-        font-size: 1.3em;
-        color: #1f628e;
+        font-size: 2em; /* כלל 6: גודל פונט H2 - שונה ל-2em (עקבי גם במובייל) */
+        color: #55828B; /* כלל 7: צבע H2 (עקבי גם במובייל) */
         margin-bottom: 1em;
         text-align: center;
+        font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+        font-weight: normal; /* כלל 7: משקל פונט H2 (400) */
     }
 
     .welcome .inspiration-text {
-        font-size: 1.8em;
-        line-height: 1.4;
-        color: #4a5568;
+        font-size: 1.8em; /* כלל 11: גודל פונט Inspiration text במובייל - לא משתנה */
+        line-height: 1.4; /* Line height מקורי במובייל - האם לשנות גם כאן? */
+        color: #133C55; /* כלל 11: צבע Inspiration text במובייל */
         text-align: center;
         margin: 0 auto 1.5em;
-        font-weight: normal;
+        font-weight: normal; /* כלל 11: משקל פונט Inspiration text - לא משתנה */
         max-width: 60%;
-        letter-spacing: 0.1em; /* הגדלת רווח בין מילים */
+        letter-spacing: 0.1em;
+        font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant (אם לא יורש מ-body) */
     }
 
     .welcome .about-me-container {
@@ -126,26 +131,29 @@
         gap: 1em;
     }
 
-    .welcome .about-me-text {
-        text-align: center; /* מרכוז הטקסט */
+    .about-me-text {
+        text-align: center;
         margin-bottom: 1em;
     }
 
-    .welcome .about-me-text p {
-        font-size: 1.1rem;
-        color: #000;
-        line-height: 1.8; /* הגדלת רווח בין שורות */
+    .about-me-text p {
+        font-size: 1.1em; /* כלל 5: גודל פונט טקסט רגיל (עקבי גם במובייל) */
+        color: #514b4b; /* *** כלל 5: צבע טקסט רגיל במובייל - שונה ל-#514b4b *** */
+        line-height: 2.0; /* כלל 5: Line height טקסט רגיל (עקבי גם במובייל) */
         margin-bottom: 1em;
+        font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant (אם לא יורש מ-body) */
+        font-weight: 200; /* כלל 5: משקל פונט טקסט רגיל במובייל - 200 */
     }
 
-    .welcome .about-me-image img {
+    .about-me-image img {
         max-width: 250px;
         max-height: none;
         border-radius: 8px;
     }
 
-    .welcome .read-more-button {
+    .read-more-button {
         align-self: center;
         margin-top: 3ex;
+        font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
     }
 }
