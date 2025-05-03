@@ -6,7 +6,7 @@
     justify-content: center;
     padding: 3em 2em;
     background-color: #FFFFFF; /* רקע לבן */
-    text-align: center; /* יישור כללי לתוכן בתוך הסקציה */
+    text-align: center;
     position: relative;
     overflow: hidden;
 }
@@ -15,7 +15,7 @@
     max-width: 1000px;
     margin: 0 auto 2em;
     position: relative;
-    text-align: center; /* יישור כללי לתוכן בתוך הדיב */
+    text-align: center;
     MARGIN-TOP: 2EM;
 }
 
@@ -25,7 +25,7 @@
     margin-bottom: 1.5em;
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
     font-weight: normal; /* כלל 7: משקל פונט H2 (400) */
-    text-align: center; /* יישור הכותרת למרכז */
+    text-align: center;
     position: relative;
     display: inline-block;
 }
@@ -54,7 +54,7 @@
 
 .about-me-image {
     order: 1;
-    text-align: start; /* בדסקטופ - יישור ימין (start ב-RTL) */
+    text-align: start;
     position: relative;
 }
 
@@ -82,7 +82,7 @@
 
 .about-me-text {
     order: 2;
-    text-align: center; /* בדסקטופ - יישור למרכז */
+    text-align: center; /* במקור היה center, במובייל justify. יש ליישר קו? השארתי מקורי בינתיים */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +93,7 @@
     color: #514b4b; /* כלל 5: צבע טקסט רגיל */
     line-height: 2.0; /* כלל 5: Line height טקסט רגיל */
     margin-bottom: 1.5em;
-    text-align: justify; /* בדסקטופ - יישור לצדדים */
+    text-align: justify; /* במקור היה justify */
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
     font-weight: 200; /* כלל 5: משקל פונט טקסט רגיל */
 }
@@ -209,56 +209,26 @@
     .about-content h2 {
         font-size: 2em; /* גודל H2 אחיד */
         color: #55828B; /* צבע H2 */
-        text-align: center; /* ודא שכותרת ממורכזת גם במובייל */
         /* שאר הגדרות H2 מיורשות מהכלל הראשי */
     }
 
     .about-me-container {
-        display: grid; /* וידוא הגדרת Grid גם במובייל */
+        display: grid; /* *** תיקון: וידוא הגדרת Grid גם במובייל *** */
         grid-template-columns: 1fr; /* עמודה אחת במובייל */
         gap: 2em;
-        /* Optional: Center grid items within their cell if they have less than 100% width */
-        /* justify-items: center; */
-    }
-
-    /* ** הוספת מרכוז לתמונה ולטקסט בחלק אודותי ** */
-    .about-me-image {
-        text-align: center; /* מרכז את התמונה בתוך הדיב שלה */
-    }
-
-    .about-me-image img {
-        max-width: 280px; /* שומר על הגודל המקורי או מגביל אותו */
-        border-radius: 10px; /* שומר על פינות מעוגלות */
-        margin: 0 auto; /* מרכז את אלמנט התמונה אם הוא בלוק או בעל רוחב מוגדר */
-        display: block; /* ודא שהוא בלוק כדי ש-margin auto יעבוד */
     }
 
     .about-me-text {
-        text-align: center; /* ** מרכז את כל הטקסט בתוך הדיב הזה במובייל ** */
-        margin-bottom: 0; /* שאר מיורש */
-        /* הסרת text-align: justify; מטווח זה */
+        text-align: justify; /* במקור היה justify */
+        margin-bottom: 0;
+        /* שאר הגדרות הטקסט מיורשות מהכלל הראשי */
     }
 
-    .about-me-text p {
-         /* כבר לא צריך להגדיר text-align: center; ספציפית על p כאן, כי ההורה ממורכז */
-         /* אם אתה רוצה לדרוס יישור כלשהו על p שעלול להגיע ממקום אחר, אפשר להוסיף: */
-         text-align: center;
-         font-size: 1.1em; /* גודל טקסט רגיל אחיד */
-         line-height: 2.0; /* Line height טקסט רגיל אחיד */
-         font-weight: 200;
-         color: #514b4b;
-         font-family: 'Assistant', sans-serif;
+    .about-me-image img {
+        max-width: 280px;
+        border-radius: 10px;
+        /* שאר הגדרות התמונה מיורשות */
     }
-
-
-     /* ודא שכפתור הייעוץ גם ממורכז (בתוך הדיב .about-me-text) */
-     .about-me-text .fixed-consultation-button {
-         display: block; /* ודא שהוא בלוק כדי ש-margin auto יעבוד */
-         margin: 1em auto; /* ממקם במרכז (עם רווח של 1em למעלה ולמטה) */
-         /* אופציונלי: הגבל רוחב אם לא רוצה שהכפתור יתפרס על כל הרוחב */
-         max-width: fit-content; /* או הגדר רוחב ספציפי */
-     }
-
 
     /* הגדרות רספונסיביות לאלמנטים בתוך קופסאות שירות (מיורשות מהכללים הראשיים של הקופסה/טקסט/כותרת) */
     .service-box h3 { /* גודל ומשקל H3 - נא לאשר */ }
@@ -269,38 +239,26 @@
 @media (max-width: 480px) {
     .about-content h2 {
         font-size: 2em; /* גודל H2 אחיד */
-        text-align: center; /* ודא שכותרת ממורכזת גם כאן */
         /* שאר הגדרות H2 מיורשות */
     }
 
     .about-me-image h3 {
         font-size: 1.3em; /* !!! גודל H3 אחיד גם במובייל - נא לאשר !!! */
         margin-bottom: 1em;
-        text-align: center; /* מרכז את H3 בתמונה */
+        text-align: center;
         /* שאר הגדרות H3 מיורשות */
     }
 
     .about-me-image {
-        text-align: center; /* מרכז תמונה גם ב-480px */
+        text-align: center;
         /* שאר הגדרות מיורשות */
-    }
-
-    .about-me-text {
-         text-align: center; /* ודא שהדיב של הטקסט ממורכז גם ב-480px */
     }
 
     .about-me-text p {
         font-size: 1.1em; /* גודל טקסט רגיל אחיד */
         line-height: 2.0; /* Line height טקסט רגיל אחיד */
-        text-align: center; /* ** ודא שפסקאות ממורכזות גם כאן ** */
+        text-align: center; /* במקור היה center */
         /* שאר הגדרות הטקסט מיורשות */
     }
-
-    /* ודא שכפתור הייעוץ גם ממורכז (יורש מ-768px אך כדאי לוודא) */
-    .about-me-text .fixed-consultation-button {
-         display: block;
-         margin: 1em auto;
-         max-width: fit-content;
-     }
     /* שאר הגדרות במובייל יורשות מהכללים הראשיים או מה-768px */
 }
