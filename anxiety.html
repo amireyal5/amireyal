@@ -264,7 +264,21 @@
     flex: 1 1 45%;
     min-width: 120px;
     text-align: center;
-  }
+    /* הגדרות אלו מבטלות את עיצוב הלינק הדיפולטיבי גם כשהאלמנט הוא A */
+    text-decoration: none; /* מסיר קו תחתון */
+    color: inherit; /* שומר על הצבע המוגדר בקלאס עצמו (לבן) */
+    display: inline-block; /* מבטיח שהריפוד (padding) והרוחב יעבדו כמו שצריך על לינקים */
+}
+
+/* כללים נוספים כדי לוודא שהעיצוב נשאר אחיד במצבי לינק שונים */
+.btn:link,
+.btn:visited,
+.btn:hover,
+.btn:active {
+    text-decoration: none; /* מוודא שאין קו תחתון במצבים אלו */
+    color: inherit; /* מוודא שהצבע נשאר קבוע במצבים אלו */
+}
+
 
 
   .btn:hover {
