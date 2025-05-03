@@ -251,20 +251,23 @@
     margin: 0 auto;
   }
 
-  .btn {
-    background-color: #2e7d81;
-    color: white;
-    border: none;
-    padding: 14px 24px;
-    font-size: 0.9em;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    flex: 1 1 45%;
-    min-width: 120px;
-    text-align: center;
-text-decoration:none 
-  }
+  .btn a {
+    text-decoration: none; /* מסיר קו תחתון */
+    color: inherit;      /* גורם לטקסט לרשת את צבע הטקסט מהכפתור (שאמור להיות לבן) */
+    /* או אם הצבע הלבן מוגדר ישירות על הלינק */
+    /* color: white; */
+    display: block;      /* גורם ללינק למלא את שטח הכפתור כולו ללחיצה נוחה */
+    padding: 0;          /* מאפס ריפוד פנימי דיפולטיבי של הלינק */
+    margin: 0;           /* מאפס שוליים דיפולטיביים של הלינק */
+}
+
+/* וודא שהצבע הלבן מוגדר על הכפתור עצמו או על הלינק */
+.btn {
+    color: white; /* הגדרת הצבע הלבן על הכפתור אם עדיין לא מוגדר */
+    /* ייתכן שתצטרך להוסיף כאן גם את הגדרת הפונט המקורית אם היא אבדה */
+    /* font-family: 'YourFont', sans-serif; */
+}
+
 
   .btn:hover {
     background-color: #265e63;
