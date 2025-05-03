@@ -140,30 +140,28 @@ nav {
     display: block;
 }
 
-
-/* CSS עבור הכפתור עצמו - העיצוב וההתנהגות שלו */
+/* כפתורים - Button styles */
 .fixed-consultation-button {
-    display: inline-block; /* קריטי למרכוז עם text-align על האב */
-    background-color: #3B6064; /* רקע כפתור רגיל */
-    color: #FFFFFF; /* צבע טקסט כפתור */
+    display: inline-block;
+    background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
+    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
     padding: 12px 24px;
-    text-decoration: none; /* מסיר קו תחתון מקישורים */
+    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease; /* אנימציה קטנה לשינוי צבע בריחוף */
-    font-size: 1em; /* גודל פונט עצמאי לכפתור */
-    font-family: 'Assistant', sans-serif; /* גופן Assistant */
-    width: auto; /* מאפשר רוחב לפי תוכן */
-    text-align: center; /* ממזכז את הטקסט *בתוך* הכפתור */
-    margin-top: 3em; /* מרווח עליון */
-    margin-bottom: 3em; /* מרווח תחתון */
-    /* Margin left/right יהיו שווים אוטומטית בגלל text-align: center; על האב */
+    transition: background-color 0.3s ease;
+    font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+    width: auto;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
-/* CSS למצב ריחוף מעל הכפתור */
 .fixed-consultation-button:hover {
-    background-color: #55828B; /* רקע כפתור בריחוף */
+    background-color: #55828B; /* כלל 3: רקע כפתור בריחוף */
 }
+
 /* אייקונים מרחפים ליצירת קשר - Floating contact icons styles */
 .floating-contact-icons {
     position: fixed;
