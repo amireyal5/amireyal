@@ -103,7 +103,7 @@ body {
 }
 
 /* סגנון לאייקונים (אם יש) */
-.treatment-section svg,
+.treatment-section svg, 
 .treatment-section img[src*="icon"] {
     filter: brightness(0) invert(1); /* הופך לשחור ואז הופך ללבן */
     /* צבע אייקון - האם נשאר לבן על רקע צבעוני? */
@@ -192,11 +192,6 @@ body {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
     }
     /* סגנון אייקונים רספונסיבי מיורש */
-
-    /* --- Removed About Us Centering/Layout Rules from here --- */
-    /* These rules belong in about.css */
-
-
 }
 
 @media (max-width: 480px) {
@@ -211,10 +206,6 @@ body {
         /* שאר הגדרות מיורשות */
     }
     /* שאר הגדרות במובייל יורשות */
-
-    /* --- Removed About Us Centering/Layout Rules from here --- */
-    /* These rules belong in about.css */
-
 }
 
 /* --- Additional Elements --- */
@@ -366,26 +357,20 @@ body {
     /* שאר הגדרות מיורשות */
 }
 
-/* רספונסיביות נוספת לחלקים ספציפיים כמו .section ו-.box */
+/* רספונסיביות עבור About Us - חלקים שכבר טופלו בבלוק הראשון */
 @media (max-width: 768px) {
-   #anxiety-section .section {
-       flex-direction: column; /* Stack boxes in columns */
-   }
-   #anxiety-section .box {
-       width: 100%; /* Allow boxes to take full width */
-   }
-   #anxiety-section .buttons {
-       flex-direction: column; /* Stack buttons */
-       align-items: center; /* Center buttons */
-   }
-    #anxiety-section .btn {
-        width: 100%; /* Allow buttons to take full width (optional) */
-        max-width: 300px; /* Limit button width if needed */
-        margin-bottom: 10px; /* Add space between stacked buttons */
-    }
+    .about-us { /* מיורש */ padding: 2em 1em; }
+    .about-content { /* מיורש */ margin-bottom: 1.5em; }
+    .about-content h2 { font-size: 2em; /* גודל H2 אחיד */ color: #55828B; /* צבע H2 */ /* שאר מיורש */ }
+    .about-me-container { /* מיורש */ grid-template-columns: 1fr; gap: 2em; }
+    .about-me-text { /* מיורש */ text-align: justify; margin-bottom: 0; /* שאר מיורש */ }
+    .about-me-image img { /* מיורש */ max-width: 280px; border-radius: 10px; /* שאר מיורש */ }
 }
 
-
 @media (max-width: 480px) {
-   /* הגדרות ל-480px שאינן מכוסות על ידי 768px אם יש */
+    .about-content h2 { font-size: 2em; /* גודל H2 אחיד */ /* שאר מיורש */ }
+    .about-me-image h3 { font-size: 1.3em; /* !!! גודל H3 אחיד גם במובייל - נא לאשר !!! */ margin-bottom: 1em; text-align: center; /* שאר מיורש */ }
+    .about-me-image { text-align: center; /* שאר מיורש */ }
+    .about-me-text p { font-size: 1.1em; /* גודל טקסט רגיל אחיד */ line-height: 2.0; /* Line height טקסט רגיל אחיד */ text-align: center; /* שאר מיורש */ }
+    /* שאר הגדרות במובייל יורשות מהכללים הראשיים או מה-768px */
 }
