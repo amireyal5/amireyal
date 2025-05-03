@@ -219,7 +219,7 @@
     }
 
     .about-me-text {
-        text-align: justify; /* במקור היה justify */
+        text-align: center; /* במקור היה justify */
         margin-bottom: 0;
         /* שאר הגדרות הטקסט מיורשות מהכלל הראשי */
     }
