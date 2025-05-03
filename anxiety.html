@@ -255,7 +255,7 @@
   
   .btn {
     background-color: #2e7d81;
-    color: white;
+    color: white; /* הגדרת צבע לבן בסיסית */
     border: none;
     padding: 14px 24px;
     font-size: 0.9em;
@@ -265,19 +265,18 @@
     flex: 1 1 45%;
     min-width: 120px;
     text-align: center;
-    /* הגדרות אלו מבטלות את עיצוב הלינק הדיפולטיבי גם כשהאלמנט הוא A */
-    text-decoration: none; /* מסיר קו תחתון */
-    color: inherit; /* שומר על הצבע המוגדר בקלאס עצמו (לבן) */
-    display: inline-block; /* מבטיח שהריפוד (padding) והרוחב יעבדו כמו שצריך על לינקים */
+    text-decoration: none;
+    display: inline-block;
 }
 
 /* כללים נוספים כדי לוודא שהעיצוב נשאר אחיד במצבי לינק שונים */
+/* כאן מוודאים שהצבע נשאר לבן באופן מפורש */
 .btn:link,
 .btn:visited,
 .btn:hover,
 .btn:active {
-    text-decoration: none; /* מוודא שאין קו תחתון במצבים אלו */
-    color: inherit; /* מוודא שהצבע נשאר קבוע במצבים אלו */
+    text-decoration: none; /* מוודא שאין קו תחתון */
+    color: white; /* **מוודא שהצבע הוא לבן בכל מצבי הלינק** */
 }
 
 
