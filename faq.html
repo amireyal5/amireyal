@@ -19,7 +19,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="favicon.ico">
     <style>
-  
+
  @media (min-width: 769px) {
    .appointment-button-container {
      display: flex;
@@ -28,7 +28,7 @@
      margin-top: 2em; /* אם אתה רוצה רווח עליון */
      margin-bottom: 2em; /* אם אתה רוצה רווח תחתון */
    }
- 
+
    /* אם אתה רוצה שהכפתור עצמו יהיה block עם רוחב מוגבל ומרכוז: */
    /* .fixed-consultation-button {
    /* display: block;
@@ -37,7 +37,7 @@
    /* margin-right: auto;
    /* } */
  }
- 
+
  /* סגנון למובייל */
  @media (max-width: 768px) {
    .appointment-button-container {
@@ -45,7 +45,7 @@
      justify-content: center; /* מרכז גם במובייל */
      width: 100%;
    }
- 
+
    .fixed-consultation-button {
      display: block; /* כדי שיתפוס שורה מלאה במובייל */
      width: auto; /* או רוחב ספציפי אם תרצה */
@@ -84,14 +84,27 @@
         }
 
         .faq-icon {
-            transition: transform 0.3s ease;
+            /* Removed transition and rotation as we are using plus/minus icons */
             font-size: 1.5em;
             color: #0078D7;
+            /* Added margin for spacing */
+            margin-left: 10px;
         }
 
-        .faq-item.active .faq-icon {
-            transform: rotate(90deg);
+        /* Hide the minus icon by default */
+        .faq-item .faq-icon .fa-minus {
+            display: none;
         }
+
+        /* Show the minus icon and hide the plus icon when active */
+        .faq-item.active .faq-icon .fa-minus {
+            display: inline-block;
+        }
+
+        .faq-item.active .faq-icon .fa-plus {
+            display: none;
+        }
+
 
         .faq-answer {
             max-height: 0;
@@ -106,7 +119,7 @@
         }
 
         .faq-item.active .faq-answer {
-            max-height: 1000px;
+            max-height: 1000px; /* Sufficiently large value */
             padding: 20px;
         }
 
@@ -164,8 +177,8 @@
 
     <section class="hero">
         <img src="images/hero_faq.webp" alt="Hero Image">
-     </section>   
-    
+     </section>
+
 <section class="about-us">
     <div class="about-content">
         <h2 style="margin-bottom: 0;">שאלות נפוצות</h2>
@@ -174,14 +187,17 @@
 
 <div class="faq-container">
     </div>
-  
-  </section> 
+
+  </section>
     <div class="faq-container">
 
         <div class="faq-item">
             <div class="faq-question">
                 האם טיפול מתאים לי?
-                <span class="faq-icon">➤</span>
+                <span class="faq-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
             </div>
             <div class="faq-answer">
                 פנייה לטיפול היא בחירה אישית ואמיצה, המתאימה לכל מי שמבקש לשפר את איכות חייו, לחוות צמיחה אישית או
@@ -194,7 +210,10 @@
         <div class="faq-item">
             <div class="faq-question">
                 איך נראה טיפול?
-                <span class="faq-icon">➤</span>
+                <span class="faq-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
             </div>
             <div class="faq-answer">
                 הטיפול מתקיים במפגשים אישיים בקליניקה, בדרך כלל אחת לשבוע. כל מפגש אורך כ-50 דקות ומותאם אישית
@@ -207,7 +226,10 @@
         <div class="faq-item">
             <div class="faq-question">
                 האם תרופות הן תחליף לטיפול?
-                <span class="faq-icon">➤</span>
+                <span class="faq-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
             </div>
             <div class="faq-answer">
                 תרופות יכולות להוות חלק מתהליך ההתמודדות עם קשיים רגשיים, אך הן אינן מהוות תחליף מלא לטיפול רגשי.
@@ -222,7 +244,10 @@
         <div class="faq-item">
             <div class="faq-question">
                 האם טיפול הוא סודי?
-                <span class="faq-icon">➤</span>
+                <span class="faq-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
             </div>
             <div class="faq-answer">
                 כן, טיפול רגשי מתקיים תחת כללי חיסיון מחמירים. כל מה שנאמר במסגרת הטיפול נשמר בסודיות ואינו מועבר
@@ -242,7 +267,10 @@
         <div class="faq-item">
             <div class="faq-question">
                 האם אני באמת זקוק לטיפול?
-                <span class="faq-icon">➤</span>
+                <span class="faq-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
             </div>
             <div class="faq-answer">
                 כל אדם חווה משברים ואתגרים לאורך חייו. גם אם הצלחת להתמודד בעצמך, אין בכך פסול בבקשת עזרה נוספת.
@@ -254,7 +282,10 @@
         <div class="faq-item">
             <div class="faq-question">
                 איך טיפול יכול לעזור לי?
-                <span class="faq-icon">➤</span>
+                <span class="faq-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
             </div>
             <div class="faq-answer">
                 היתרונות הרבים של טיפול כוללים:
@@ -268,9 +299,9 @@
                     <li>שיפור תקשורת בין-אישית</li>
                     <li>פתרון קונפליקטים משפחתיים או זוגיים</li>
                 </ul>
-        
+
             </div>
-            
+
         </div>
 
     </div>
@@ -279,7 +310,7 @@
     <a href="contact.html" class="fixed-consultation-button">קבע 15 דקות ייעוץ טלפוני ללא עלות</a>
 </div>
 
-      
+
     <footer class="therapy-footer">
         <div class="footer-header">
             <div class="footer-logo">
