@@ -2,13 +2,11 @@
 .about-us {
     display: flex; /* תיקון תחביר */
     align-items: center; /* תיקון תחביר - הנחתי ש-center התכוון ליישור אופקי בתוך פלקס עמודה */
-    flex-direction: column;
     justify-content: center;
     padding: 3em 2em;
     background-color: #FFFFFF; /* רקע לבן */
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .about-content {
