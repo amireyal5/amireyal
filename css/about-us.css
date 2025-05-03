@@ -48,13 +48,13 @@
     gap: 3em;
     max-width: 1000px;
     margin: 0 auto;
-    align-items: start; /* תיקון תחביר */
+    align-items: center; /* תיקון תחביר */
     min-height: 400px;
 }
 
 .about-me-image {
     order: 1;
-    text-align: start;
+    text-align: center;
     position: relative;
 }
 
