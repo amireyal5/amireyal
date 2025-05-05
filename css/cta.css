@@ -18,15 +18,6 @@ body {
   font-family: 'Assistant', sans-serif;
 }
 
-.cta-image {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid #4ba69d;
-  margin-left: 24px; /* דחיפה של התמונה לשמאל כדי שתופיע ראשונה מימין */
-}
 
 .cta-text {
   flex: 1;
