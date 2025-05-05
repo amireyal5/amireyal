@@ -7,8 +7,15 @@
     background-color: #FFFFFF; /* רקע לבן */
     text-align: center;
     position: relative;
-}
 
+}
+.location-banner {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 .about-content {
     max-width: 1000px;
     margin: 0 auto 2em;
