@@ -1,68 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  background-color: #e8f5f1;
+}
+
 .cta-container {
   max-width: 700px;
   margin: 60px auto;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 24px 32px;
+  padding: 32px;
   display: flex;
   align-items: center;
   gap: 24px;
   direction: rtl;
-  font-family: 'Arial', sans-serif;
-  background-color: #e8f5f1;
+}
+
+.cta-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4ba69d;
+  flex-shrink: 0;
 }
 
 .cta-text {
   flex: 1;
-  text-align: center;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
 }
 
 .cta-text h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.4em;
+  font-size: 1.6em;
   color: #2d4a45;
+  margin: 0;
 }
 
 .cta-text p {
   font-size: 1em;
-  margin-bottom: 1em;
   color: #4a6b66;
+  margin: 0;
 }
 
 .cta-button {
   background-color: #4ba69d;
   color: white;
   text-decoration: none;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
   font-size: 1em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s;
-  display: inline-block;
-  margin-top: 12px;
+  align-self: flex-start; /* מיישר לשמאל בעברית */
 }
 
 .cta-button:hover {
   background-color: #3d958c;
 }
 
-.cta-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid #4ba69d;
-}
-
 @media (max-width: 600px) {
   .cta-container {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
-  .cta-image {
-    margin-bottom: 16px;
+  .cta-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .cta-button {
+    align-self: center;
   }
 }
