@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Assistant', sans-serif;
   background-color: #e8f5f1;
+  direction: rtl; /* כיוון כללי מימין לשמאל */
 }
 
 .cta-container {
@@ -14,7 +15,6 @@ body {
   display: flex;
   align-items: center;
   gap: 24px;
-  direction: rtl; /* כיוון כללי מימין לשמאל */
   font-family: 'Assistant', sans-serif;
 }
 
@@ -25,6 +25,7 @@ body {
   object-fit: cover;
   flex-shrink: 0;
   border: 2px solid #4ba69d;
+  margin-left: 24px; /* דחיפה של התמונה לשמאל כדי שתופיע ראשונה מימין */
 }
 
 .cta-text {
@@ -61,6 +62,7 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: background-color 0.3s;
   margin-top: 16px; /* הוספת מרווח מהטקסט */
+  align-self: flex-start; /* יישור הכפתור לשמאל */
 }
 
 .cta-button:hover {
@@ -76,6 +78,7 @@ body {
 
   .cta-image {
     margin-bottom: 16px;
+    margin-left: 0; /* הסרת הדחיפה לשמאל בתצוגה קטנה */
   }
 
   .cta-text {
@@ -92,3 +95,4 @@ body {
     margin-top: 16px;
   }
 }
+
