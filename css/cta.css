@@ -1,16 +1,20 @@
-body {
+/* איפוס רקע וגלילה */
+html, body {
   margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow: hidden;
   font-family: 'Assistant', sans-serif;
-  background-color: #e8f5f1;
 }
 
+/* שאר הסגנון נשאר כמו קודם */
 .cta-container {
   max-width: 700px;
-  margin: 60px auto;
+  margin: 0 auto;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 32px;
+  padding: 24px;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -56,18 +60,20 @@ body {
   font-size: 1em;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s;
-  align-self: flex-end; /* מיישר לשמאל בעברית */
+  align-self: flex-start;
 }
 
 .cta-button:hover {
   background-color: #3d958c;
 }
 
+/* מובייל */
 @media (max-width: 600px) {
   .cta-container {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding: 16px;
   }
 
   .cta-text {
@@ -77,5 +83,18 @@ body {
 
   .cta-button {
     align-self: center;
+  }
+
+  .cta-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cta-text h2 {
+    font-size: 1.2em;
+  }
+
+  .cta-text p {
+    font-size: 0.9em;
   }
 }
