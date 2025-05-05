@@ -1,23 +1,60 @@
-/* איפוס רקע וגלילה */
-html, body {
+body {
   margin: 0;
-  padding: 0;
-  background-color:#fffff;
   font-family: 'Assistant', sans-serif;
+  background-color: #e8f5f1;
 }
 
-/* שאר הסגנון נשאר כמו קודם */
 .cta-container {
   max-width: 700px;
-  margin:0,auto;
-  background-color: #e9f7ea;
+  margin: 60px auto;
+  background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 24px;
+  padding: 24px 32px;
   display: flex;
   align-items: center;
   gap: 24px;
   direction: rtl;
+  font-family: 'Assistant', sans-serif;
+}
+
+.cta-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cta-text-content {
+  text-align: right;
+}
+
+.cta-text-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.4em;
+  color: #2d4a45;
+}
+
+.cta-text-content p {
+  font-size: 1em;
+  margin: 0;
+  color: #4a6b66;
+}
+
+.cta-button {
+  background-color: #4ba69d;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.3s;
+  align-self: flex-start; /* מיקום הכפתור לשמאל */
+}
+
+.cta-button:hover {
+  background-color: #3d958c;
 }
 
 .cta-image {
@@ -25,59 +62,17 @@ html, body {
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #4ba69d;
   flex-shrink: 0;
+  border: 2px solid #4ba69d;
 }
 
-.cta-text {
-  flex: 1;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 12px;
-}
-
-.cta-text h2 {
-  font-size: 1.6em;
-  color: #2d4a45;
-  margin: 0;
-}
-
-.cta-text p {
-  font-size: 1em;
-  color: #4a6b66;
-  margin: 0;
-}
-
-.cta-button {
-  background-color: #4ba69d;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1em;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s;
-  align-self: flex-start;
-}
-
-.cta-button:hover {
-  background-color: #3d958c;
-}
-
-/* מובייל */
 @media (max-width: 600px) {
   .cta-container {
     flex-direction: column;
     text-align: center;
-    align-items: center;
-    padding: 16px;
-      box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   }
 
   .cta-text {
-    text-align: center;
     align-items: center;
   }
 
@@ -86,15 +81,6 @@ html, body {
   }
 
   .cta-image {
-    width: 70px;
-    height: 70px;
-  }
-
-  .cta-text h2 {
-    font-size: 1.2em;
-  }
-
-  .cta-text p {
-    font-size: 0.9em;
+    margin-bottom: 16px;
   }
 }
