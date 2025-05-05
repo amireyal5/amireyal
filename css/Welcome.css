@@ -8,6 +8,14 @@
     background-color: #FFFFFF; /* כלל 1: רקע לבן */
     text-align: center;
 }
+.location-banner {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
 
 .welcome .about-content {
     max-width: 1000px;
