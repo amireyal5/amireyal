@@ -14,8 +14,18 @@ body {
   display: flex;
   align-items: center;
   gap: 24px;
-  direction: rtl;
+  direction: rtl; /* כיוון כללי מימין לשמאל */
   font-family: 'Assistant', sans-serif;
+}
+
+.cta-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #4ba69d;
+  order: 1; /* התמונה ראשונה */
 }
 
 .cta-text {
@@ -23,7 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
+  order: 2; /* הטקסט שני */
 }
 
 .cta-text-content {
@@ -51,21 +61,11 @@ body {
   font-size: 1em;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: background-color 0.3s;
-  align-self: flex-end; /* מיקום הכפתור לשמאל */
+  order: 3; /* הכפתור שלישי */
 }
 
 .cta-button:hover {
   background-color: #3d958c;
-}
-
-.cta-image {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid #4ba69d;
-align-self:flex-end;
 }
 
 @media (max-width: 600px) {
@@ -80,9 +80,11 @@ align-self:flex-end;
 
   .cta-button {
     align-self: center;
+    order: 3; /* הכפתור נשאר אחרון במובייל */
   }
 
   .cta-image {
     margin-bottom: 16px;
+    order: -1; /* התמונה ראשונה במובייל */
   }
 }
