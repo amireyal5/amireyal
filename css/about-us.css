@@ -6,7 +6,6 @@
     padding: 3em 2em;
     background-color: #FFFFFF;
     text-align: center;
-    position: relative;
 }
 
 .location-banner {
@@ -20,7 +19,6 @@
 .about-content {
     max-width: 1000px;
     margin: 0 auto 2em;
-    position: relative;
     text-align: center;
     margin-top: 2em;
 }
@@ -32,20 +30,7 @@
     font-family: 'Assistant', sans-serif;
     font-weight: normal;
     text-align: center;
-    position: relative;
     display: inline-block;
-}
-
-.about-content h2::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5em;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #55828B;
-    border-radius: 3px;
 }
 
 .about-me-container {
@@ -60,7 +45,6 @@
 
 .about-me-image {
     text-align: center;
-    position: relative;
 }
 
 .about-me-image h3 {
