@@ -58,6 +58,7 @@
     align-items: center; /* ממרכז הכל */
     text-align: center; /* ממרכז את הטקסט */
     margin: 20px;
+    margin-bottom: 40px;
   }
 
   .cta-img {
