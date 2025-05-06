@@ -57,6 +57,7 @@
     flex-direction: column; /* סידור אנכי */
     align-items: center; /* ממרכז הכל */
     text-align: center; /* ממרכז את הטקסט */
+    margin: 20px;
   }
 
   .cta-img {
