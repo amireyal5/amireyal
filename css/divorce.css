@@ -1,12 +1,12 @@
 /* --- CSS Variables --- */
 :root {
     --background-light: #FFFFFF; /* רקע בהיר - לבן */
-    --border-radius: 6px; /* עיגול פינות */
+    --border-radius: 6px;        /* עיגול פינות */
     /* צבעים שהיו כאן הועברו לשימוש ישיר או שהוסרו כי אינם תואמים את הפלטות */
 }
 
 /* --- Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700&display=swap'); /* הוספתי משקל 200 */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700&display=swap');
 
 * {
     margin: 0;
@@ -17,16 +17,14 @@
 html {
     direction: rtl;
     font-family: 'Assistant', sans-serif;
-    font-size: 16px; /* גודל בסיס לחישובי rem */
+    font-size: 16px;
     scroll-behavior: smooth;
-    /* line-height: 1.6;  - Line height לטקסט רגיל מוגדר ספציפית ב-p */
 }
 
 body {
-    color: #514b4b; /* כלל 5: צבע טקסט ראשי - שונה לגוון אפור */
-    background-color: var(--background-light); /* רקע לבן */
+    color: #514b4b; /* צבע טקסט ראשי */
+    background-color: var(--background-light);
     margin: 0;
-    /* font-weight: 400; - משקל פונט לטקסט רגיל מוגדר ספציפית ב-p */
 }
 
 /* --- Main Container --- */
@@ -48,18 +46,18 @@ body {
 }
 
 .center-titles h2 {
-    font-weight: normal; /* כלל 7: משקל H2 (400) */
-    color: #55828B; /* כלל 7: צבע H2 */
-    font-size: 2em; /* כלל 6: גודל H2 - שונה ל-2em */
+    font-weight: normal;
+    color: #55828B;
+    font-size: 2em;
     margin-bottom: 15px;
-    font-family: 'Assistant', sans-serif; /* גופן Assistant */
+    font-family: 'Assistant', sans-serif;
 }
 
-/* --- Treatment Layout - Two-column grid with white separators --- */
+/* --- Treatment Layout --- */
 .treatment-section {
     padding: 60px 0;
-    background-color: #00695C; /* !!! צבע רקע - יש לבחור צבע מהמניפות (כחולים/ירוקים) !!! */
-    color: white; /* צבע גופן כללי לסקציה - האם נשאר לבן על רקע צבעוני? */
+    background-color: #00695C; /* נא לבחור צבע מהמניפות */
+    color: white;
 }
 
 .treatment-grid {
@@ -72,54 +70,47 @@ body {
     display: contents;
 }
 
-.item-title, .item-text {
+.item-title,
+.item-text {
     padding: 20px;
-    /* צבע גופן - האם נשאר לבן על רקע צבעוני? */
-    color: white; /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות (למשל צבע כהה מתאים) !!! */
+    color: white;
+    font-family: 'Assistant', sans-serif;
 }
 
 .item-title {
-    font-weight: 600; /* משקל מקורי - האם להתאים למשקל H3? */
-    font-size: 1.2rem; /* גודל מקורי - האם להתאים לגודל H3? */
-    background-color: rgba(255, 255, 255, 0.05); /* רקע לבן שקוף - האם להישאר או לשנות לצבע מניפה שקוף? */
-    /* קו הפרדה - האם נשאר לבן על רקע צבעוני? */
-    border-right: 3px solid white; /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות !!! */
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון גם כאן */
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-right: 3px solid white;
 }
 
 .item-text {
-    font-size: 1.1em; /* כלל 5: גודל טקסט רגיל */
-    line-height: 2.0; /* כלל 5: Line height טקסט רגיל */
-    font-weight: 200; /* כלל 5: משקל טקסט רגיל */
-    /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון גם כאן */
+    font-size: 1.1em;
+    line-height: 2.0;
+    font-weight: 200;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* קו מפריד בין פריטים */
 .treatment-item:not(:last-child) .item-text {
-    /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* סגנון לאייקונים (אם יש) */
-.treatment-section svg, 
+/* --- Icons --- */
+.treatment-section svg,
 .treatment-section img[src*="icon"] {
-    filter: brightness(0) invert(1); /* הופך לשחור ואז הופך ללבן */
-    /* צבע אייקון - האם נשאר לבן על רקע צבעוני? */
-    /* color: white; - ניתן להגדיר גם כאן אם צריך */
+    filter: brightness(0) invert(1);
 }
 
+/* --- Techniques Grid --- */
 .techniques-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 עמודות שוות */
-    gap: 20px; /* רווח בין הכרטיסיות */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin-top: 30px;
 }
 
-/* הופך את הכרטיסיות לריבועיות */
 .technique-name {
-    aspect-ratio: 1/1; /* יחס רוחב/גובה 1:1 */
+    aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,37 +119,34 @@ body {
     padding: 25px;
     border-radius: 10px;
     transition: all 0.3s ease;
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון גם כאן */
-    /* צבע רקע - יש לבחור צבע מהמניפות? כרגע אין לו צבע רקע מוגדר */
-    /* צבע טקסט - כרגע יירש מ-body (#514b4b). האם זה נכון? */
+    font-family: 'Assistant', sans-serif;
 }
-
 
 /* --- Buttons --- */
 .button {
-    background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
-    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
+    background-color: #3B6064;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 12px 24px;
-    border-radius: var(--border-radius); /* שימוש במשתנה */
+    border-radius: var(--border-radius);
     display: inline-block;
-    font-weight: bold; /* כלל 3: משקל פונט כפתור */
+    font-weight: bold;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
-    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+    font-size: 1em;
+    font-family: 'Assistant', sans-serif;
 }
 
 .button:hover {
-    background-color: #55828B; /* כלל 3: רקע כפתור בריחוף */
+    background-color: #55828B;
     transform: translateY(-2px);
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
     html {
-        font-size: 15px; /* גודל בסיס רספונסיבי */
+        font-size: 15px;
     }
 
     .container {
@@ -170,207 +158,41 @@ body {
         padding: 50px 0;
     }
 
-    /* Treatment layout for mobile - one column */
     .treatment-grid {
         grid-template-columns: 1fr;
     }
 
     .item-title {
         border-right: none;
-        /* גבול תחתון במובייל - האם צבע מניפה? */
-        border-bottom: 3px solid var(--accent-color); /* !!! נא לבחור צבע מהמניפות לגבול במובייל !!! */
-        /* שאר הגדרות מיורשות */
+        border-bottom: 3px solid var(--accent-color); /* נא לבחור צבע מהמניפות */
     }
 
     .item-text {
         border-bottom: none;
-        /* שאר הגדרות מיורשות */
     }
 
     .treatment-item:not(:last-child) .item-text {
-        /* קו תחתון במובייל - האם נשאר לבן שקוף על רקע צבעוני? */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-    /* סגנון אייקונים רספונסיבי מיורש */
 }
 
 @media (max-width: 480px) {
     .button {
         padding: 10px 20px;
-        font-size: 0.9em; /* כלל 9: גודל פונט עצמאי לכפתור במובייל */
-        /* שאר הגדרות מיורשות */
+        font-size: 0.9em;
     }
 
-    .item-title, .item-text {
+    .item-title,
+    .item-text {
         padding: 15px;
-        /* שאר הגדרות מיורשות */
     }
-    /* שאר הגדרות במובייל יורשות */
 }
 
 /* --- Additional Elements --- */
 .profile-caption {
     text-align: center;
-    font-weight: 600; /* משקל מקורי - האם לשנות? */
+    font-weight: 600;
     margin-top: 12px;
-    font-size: 1rem; /* גודל מקורי - האם להתאים לגודל פונט אחיד? */
-    color: #514b4b; /* כלל 5: צבע טקסט ראשי - שונה לגוון אפור */
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון */
-}
-
-.bullet-list {
-    list-style: none;
-    padding-right: 0;
-}
-
-.bullet-list li {
-    position: relative;
-    padding-right: 25px;
-    margin-bottom: 10px;
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון */
-    /* צבע טקסט - יירש כרגע מ-body (#514b4b). האם זה נכון? */
-}
-
-.bullet-list li::before {
-    content: "•";
-    position: absolute;
-    right: 0;
-    color: var(--accent-color); /* !!! צבע - יש לבחור צבע מהמניפות !!! */
-    font-weight: bold; /* משקל מקורי */
-    font-size: 1.2rem; /* גודל מקורי */
-    /* font-family יירש */
-}
-
-
-/* עיצוב רספונסיבי למסכים קטנים  טכניקות  טיפול */
-@media (max-width: 900px) {
-    .techniques-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 כרטיסיות בשורה */
-        /* שאר הגדרות מיורשות */
-    }
-}
-
-@media (max-width: 600px) {
-    .techniques-grid {
-        grid-template-columns: 1fr; /* כרטיסיה אחת */
-        /* שאר הגדרות מיורשות */
-    }
-    .technique-name {
-        aspect-ratio: auto; /* מבטל את הריבועיות בנייד */
-        /* שאר הגדרות מיורשות */
-    }
-}
-
-/* --- Special Effects --- */
-.treatment-area {
-    color: var(--primary-color); /* !!! צבע - יש לבחור צבע מהמניפות !!! */
-    font-weight: 600; /* משקל מקורי - האם לשנות? */
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון */
-}
-
-.key-phrase {
-    color: var(--accent-color); /* !!! צבע - יש לבחור צבע מהמניפות !!! */
-    font-weight: 600; /* משקל מקורי - האם לשנות? */
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון */
-}
-
-/* עיצוב כללי של הקונטיינר (אם יש צורך) */
-#anxiety-section.container {
-    /* לדוגמה: */
-    margin-bottom: 30px;
-    padding: 20px;
-    /* גבול - האם יהיה שחור/אפור/צבע מניפה? */
-    border: 1px solid #ccc; /* !!! נא לבחור צבע מהמניפות או שחור/אפור לגבול !!! */
-    border-radius: 5px;
-    /* רקע - כרגע יירש מ-body (לבן). האם זה נכון? */
-}
-
-/* עיצוב ספציפי למקטע בתוך הקונטיינר */
-#anxiety-section .section {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-    /* שאר הגדרות מיורשות */
-}
-
-/* עיצוב ספציפי לתיבה בתוך המקטע */
-#anxiety-section .box {
-    flex: 1;
-    background-color: #f9f9f9; /* !!! צבע רקע - נא לאשר לבן טהור או לבחור צבע בהיר מהמניפות !!! */
-    padding: 15px;
-    /* גבול - האם יהיה שחור/אפור/צבע מניפה? */
-    border: 1px solid #eee; /* !!! נא לבחור צבע מהמניפות או שחור/אפור לגבול !!! */
-    border-radius: 3px;
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון */
-    /* צבע טקסט וכותרות יירש */
-}
-
-/* עיצוב ספציפי לכותרת בתוך התיבה */
-#anxiety-section .box h3 {
-    color: #55828B; /* כלל 7: צבע H3 */
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.3em; /* !!! גודל H3 - נא לאשר !!! */
-    font-weight: normal; /* !!! משקל H3 - נא לאשר !!! */
-    font-family: 'Assistant', sans-serif; /* גופן Assistant */
-}
-
-/* עיצוב ספציפי לפסקאות בתוך התיבה */
-#anxiety-section .box p {
-    line-height: 2.0; /* כלל 5: Line height טקסט רגיל */
-    font-size: 1.1em; /* כלל 5: גודל טקסט רגיל */
-    font-weight: 200; /* כלל 5: משקל טקסט רגיל */
-    color: #514b4b; /* כלל 5: צבע טקסט רגיל */
-    font-family: 'Assistant', sans-serif; /* גופן Assistant */
-}
-
-/* עיצוב ספציפי לקו המפריד */
-#anxiety-section hr {
-    border: 0;
-    border-top: 1px solid #ddd; /* !!! צבע גבול - נא לבחור צבע מהמניפות או שחור/אפור לגבול !!! */
-    margin: 20px 0;
-    /* שאר הגדרות מיורשות */
-}
-
-/* עיצוב ספציפי ללחצנים */
-#anxiety-section .buttons {
-    display: flex;
-    gap: 10px;
-    /* שאר הגדרות מיורשות */
-}
-
-#anxiety-section .btn {
-    background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
-    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
-    border: none;
-    padding: 10px 15px; /* נשאר פדינג מקורי */
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
-    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
-    font-weight: bold; /* כלל 3: משקל פונט כפתור */
-    transition: background-color 0.3s ease; /* הנפקה מקורית */
-}
-
-#anxiety-section .btn:hover {
-    background-color: #55828B; /* כלל 3: רקע כפתור בריחוף */
-    /* שאר הגדרות מיורשות */
-}
-
-/* רספונסיביות עבור About Us - חלקים שכבר טופלו בבלוק הראשון */
-@media (max-width: 768px) {
-    .about-us { /* מיורש */ padding: 2em 1em; }
-    .about-content { /* מיורש */ margin-bottom: 1.5em; }
-    .about-content h2 { font-size: 2em; /* גודל H2 אחיד */ color: #55828B; /* צבע H2 */ /* שאר מיורש */ }
-    .about-me-container { /* מיורש */ grid-template-columns: 1fr; gap: 2em; }
-    .about-me-text { /* מיורש */ text-align: justify; margin-bottom: 0; /* שאר מיורש */ }
-    .about-me-image img { /* מיורש */ max-width: 280px; border-radius: 10px; /* שאר מיורש */ }
-}
-
-@media (max-width: 480px) {
-    .about-content h2 { font-size: 2em; /* גודל H2 אחיד */ /* שאר מיורש */ }
-    .about-me-image h3 { font-size: 1.3em; /* !!! גודל H3 אחיד גם במובייל - נא לאשר !!! */ margin-bottom: 1em; text-align: center; /* שאר מיורש */ }
-    .about-me-image { text-align: center; /* שאר מיורש */ }
-    .about-me-text p { font-size: 1.1em; /* גודל טקסט רגיל אחיד */ line-height: 2.0; /* Line height טקסט רגיל אחיד */ text-align: center; /* שאר מיורש */ }
-    /* שאר הגדרות במובייל יורשות מהכללים הראשיים או מה-768px */
+    font-size: 1rem;
+    color: #514b4b;
 }
