@@ -153,15 +153,15 @@
         font-weight: 200;
     }
 
-    .welcome .about-me-image img {
-        max-width: 250px;
-        border-radius: 8px;
-        text-align:center;
-    }
+    @media (max-width: 768px) {
+  .welcome .about-me-image {
+    text-align: center !important; /* ממרכז את התמונה */
+  }
 
-    .welcome .read-more-button {
-        align-self: center;
-        margin-top: 3ex;
-        font-family: 'Assistant', sans-serif;
-    }
+  .welcome .about-me-image img {
+    display: inline-block; /* מאפשר מרכוז */
+    max-width: 250px;
+    max-height: none;
+    border-radius: 8px;
+  }
 }
