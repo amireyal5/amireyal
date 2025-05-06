@@ -307,6 +307,15 @@
 
     </div>
 
+<style>
+  /* במובייל בלבד */
+  @media (max-width: 768px) {
+    #ctaFrame {
+      height: 600px !important;
+    }
+  }
+</style>
+
 <iframe id="ctaFrame" src="cta.html" scrolling="no" style="width: 100%; border: none;"></iframe>
 
 <script src="https://unpkg.com/iframe-resizer/js/iframeResizer.min.js"></script>
@@ -314,7 +323,7 @@
   iFrameResize({
     log: false,
     checkOrigin: false,
-    heightCalculationMethod: 'max' // מאפשר גובה דינמי גם במובייל
+    heightCalculationMethod: 'max'
   }, '#ctaFrame');
 </script>
 
