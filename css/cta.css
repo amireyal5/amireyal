@@ -65,6 +65,7 @@ html, body {
   .cta-container {
     flex-direction: column;
     text-align: center;
+    align-items: center; /* ממרכז הכל */
   }
 
   .cta-img {
@@ -73,9 +74,13 @@ html, body {
 
   .cta-text {
     text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .cta-button {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 }
+
