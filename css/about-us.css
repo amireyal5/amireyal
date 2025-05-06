@@ -45,20 +45,6 @@
 
 .about-me-image {
     text-align: center;
-    position: relative; /* נדרש עבור ::after */
-    overflow: hidden;   /* מונע חריגה של המעברון */
-}
-
-.about-me-image::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0));
-    border-radius: 12px;
-    pointer-events: none; /* לא חוסם לחיצות על התמונה */
 }
 
 .about-me-image h3 {
