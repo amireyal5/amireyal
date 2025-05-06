@@ -39,8 +39,10 @@
     margin: 0 auto 1em;
     text-align: center;
     font-weight: normal;
-    font-family: 'Assistant', sans-serif;
     letter-spacing: normal;
+    font-family: 'Assistant', sans-serif;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .welcome .about-me-container {
@@ -60,7 +62,7 @@
 
 .welcome .about-me-image img {
     max-width: 100%;
-    max-height: 45em;
+    max-height: 720px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -77,7 +79,7 @@
 .welcome .about-me-text p {
     font-size: 1.1em;
     color: #514b4b;
-    line-height: 2;
+    line-height: 2.0;
     margin-bottom: 1em;
     font-family: 'Assistant', sans-serif;
     font-weight: 200;
@@ -103,7 +105,7 @@
     background-color: #55828B;
 }
 
-/* Responsive */
+/* רספונסיביות */
 @media (max-width: 768px) {
     .welcome {
         padding: 1em;
@@ -113,15 +115,6 @@
         margin-bottom: 1em;
     }
 
-    .welcome .about-content h2 {
-        font-size: 2em;
-        color: #55828B;
-        margin-bottom: 1em;
-        text-align: center;
-        font-family: 'Assistant', sans-serif;
-        font-weight: normal;
-    }
-
     .welcome .inspiration-text {
         font-size: 1.8em;
         line-height: 1.4;
@@ -129,7 +122,7 @@
         text-align: center;
         margin: 0 auto 1.5em;
         font-weight: normal;
-        max-width: 60%;
+        max-width: 90%;
         letter-spacing: 0.1em;
         font-family: 'Assistant', sans-serif;
     }
@@ -139,29 +132,37 @@
         gap: 1em;
     }
 
-    .welcome .about-me-text {
+    .about-me-text {
         text-align: center;
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
     }
 
-    .welcome .about-me-text p {
+    .about-me-text p {
+        text-align: center;
         font-size: 1.1em;
         color: #514b4b;
-        line-height: 2;
+        line-height: 2.0;
         margin-bottom: 1em;
         font-family: 'Assistant', sans-serif;
         font-weight: 200;
     }
 
-    @media (max-width: 768px) {
-  .welcome .about-me-image {
-    text-align: center !important; /* ממרכז את התמונה */
-  }
+    .about-me-image {
+        text-align: center !important;
+    }
 
-  .welcome .about-me-image img {
-    display: inline-block; /* מאפשר מרכוז */
-    max-width: 250px;
-    max-height: none;
-    border-radius: 8px;
-  }
+    .about-me-image img {
+        max-width: 250px;
+        max-height: none;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .read-more-button {
+        align-self: center;
+        margin-top: 3ex;
+        font-family: 'Assistant', sans-serif;
+        min-width: 200px;
+    }
 }
