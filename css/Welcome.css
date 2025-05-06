@@ -156,6 +156,7 @@
     .welcome .about-me-image img {
         max-width: 250px;
         border-radius: 8px;
+        text-align:center;
     }
 
     .welcome .read-more-button {
