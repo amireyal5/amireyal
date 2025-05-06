@@ -1,107 +1,75 @@
-<!DOCTYPE html>
-<html lang="he">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
-    <style>
-        body {
-            font-family: 'Assistant', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
+body {
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
 
-        header {
-            background-color: #0044cc;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-        }
+header {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
 
-        .container {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 1.5rem;
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
 
-        .welcome-section, .cta-section {
-            text-align: center;
-            padding: 2rem;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.welcome-section, .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .cta-button {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #0044cc;
-            color: white;
-            font-size: 1.25rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+.cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0044cc;
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-        .cta-button:hover {
-            background-color: #003399;
-        }
+.cta-button:hover {
+    background-color: #003399;
+}
 
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
 
-        .image-container img:hover {
-            transform: scale(1.05);
-        }
+.image-container img:hover {
+    transform: scale(1.05);
+}
 
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
 
-            .container {
-                padding: 0 1rem;
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>ברוך הבא לאתר שלנו!</h1>
-</header>
-
-<div class="container">
-    <div class="welcome-section">
-        <h2>אודות האתר</h2>
-        <p>ברוך הבא לאתר שלנו! כאן תוכל למצוא את כל המידע שאתה צריך.</p>
-        <div class="image-container">
-            <img src="https://via.placeholder.com/600x400" alt="Image Description">
-        </div>
-    </div>
-
-    <div class="cta-section">
-        <p>רוצה לדעת יותר? לחץ על הכפתור למטה והמשך לקרוא.</p>
-        <a href="#more-info" class="cta-button">למד עוד</a>
-    </div>
-</div>
-
-</body>
-</html>
+    .container {
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
+    }
+}
