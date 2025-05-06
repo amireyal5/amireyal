@@ -1,89 +1,76 @@
-body {
+Enter file contents herebody {
   margin: 0;
-  font-family: 'Assistant', sans-serif;
-  background-color: #e8f5f1;
-  direction: rtl; /* כיוון כללי מימין לשמאל */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: transparent;
+  direction: rtl;
 }
 
 .cta-container {
-  max-width: 700px;
-  margin: 60px auto;
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 24px 32px;
   display: flex;
   align-items: center;
-  gap: 24px;
-  font-family: 'Assistant', sans-serif;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  gap: 20px;
+  flex-direction: row;
 }
 
+.cta-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
 .cta-text {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start; /* יישור הטקסט והכפתור לשמאל בתוך הדיב */
-}
-
-.cta-text-content {
   text-align: right;
 }
 
-.cta-text-content h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.4em;
-  color: #2d4a45;
-}
-
-.cta-text-content p {
-  font-size: 1em;
+.cta-text h2 {
   margin: 0;
-  color: #4a6b66;
+  font-size: 1.6em;
+  color: #333;
 }
 
-.cta-button {
-  background-color: #4ba69d;
-  color: white;
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+.cta-text p {
+  margin: 10px 0;
+  color: #555;
   font-size: 1em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: background-color 0.3s;
-  margin-top: 16px; /* הוספת מרווח מהטקסט */
-  align-self: flex-start; /* יישור הכפתור לשמאל */
 }
 
-.cta-button:hover {
-  background-color: #3d958c;
+.cta-text a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 @media (max-width: 600px) {
   .cta-container {
     flex-direction: column;
     text-align: center;
-    align-items: center; /* מרכוז אנכי ואופקי של כל הפריטים */
   }
 
-  .cta-image {
-    margin-bottom: 16px;
-    margin-left: 0; /* הסרת הדחיפה לשמאל בתצוגה קטנה */
+  .cta-img {
+    margin-bottom: 15px;
   }
 
   .cta-text {
-    align-items: center; /* מרכוז הטקסט והכפתור */
-    text-align: center; /* מרכוז הטקסט בתוך הדיב */
+    text-align: center;
   }
 
-  .cta-text-content {
-    text-align: center; /* מרכוז הטקסט בתוך הקונטיינר שלו */
-  }
-
-  .cta-button {
-    align-self: center; /* מרכוז הכפתור */
-    margin-top: 16px;
+  .cta-text a {
+    margin-top: 10px;
   }
 }
-
