@@ -37,7 +37,22 @@
    /* margin-left: auto;
    /* margin-right: auto;
    /* } */
- 
+ }
+
+ /* סגנון למובייל */
+ @media (max-width: 768px) {
+   .appointment-button-container {
+     display: flex;
+     justify-content: center; /* מרכז גם במובייל */
+     width: 100%;
+   }
+
+   .fixed-consultation-button {
+     display: block; /* כדי שיתפוס שורה מלאה במובייל */
+     width: auto; /* או רוחב ספציפי אם תרצה */
+     margin-left: auto;
+     margin-right: auto; /* מרכז את הכפתור עצמו אם הוא block */
+   }
  }
         .faq-container {
             max-width: 800px;
@@ -292,18 +307,20 @@
 
     </div>
 
-<section class="cta-container">
-    <img src="images/amir_cta.webp" alt="עמיר" class="cta-img" />
-    
-    <div class="cta-text">
-      <h2>רוצה להתייעץ איתי?</h2>
-      <p>השאירו פרטים ואחזור אליכם בהקדם</p>
-    </div>
+<iframe id="ctaFrame" src="cta.html" scrolling="no" style="width: 100%; border: none;"></iframe>
 
-    <a href="contact.html" class="cta-button">צור קשר</a>
-  </section>
+<script src="https://unpkg.com/iframe-resizer/js/iframeResizer.min.js"></script>
+<script>
+  iFrameResize({
+    log: false,
+    checkOrigin: false,
+    heightCalculationMethod: 'max'
+  }, '#ctaFrame');
+</script>
 
-<!-- FOOTER -->
+
+
+
     <footer class="therapy-footer">
         <div class="footer-header">
             <div class="footer-logo">
@@ -311,42 +328,43 @@
             </div>
             <div class="footer-title-main">עמיר אייל, פסיכותרפיה</div>
         </div>
-        
+
         <div class="footer-container">
             <div class="footer-section">
                 <h3 class="footer-title">מידע נוסף</h3>
                 <ul class="footer-list">
-                    <li><a href="faq.html">שאלות נפוצות</a></li>
+                    <li><a href="#">שאלות נפוצות</a></li>
                     <li><a href="#">פרטים</a></li>
-                    <li><a href="privacy-policy.html">מדיניות פרטיות</a></li>
+                    <li><a href="#">מדיניות פרטיות</a></li>
                 </ul>
             </div>
-            
-    <div class="footer-section">
-    <h3 class="footer-title">צרו קשר</h3>
-    <div class="contact-info">
-        <a href="tel:0547509962"><i class="fas fa-phone"></i> 054-7509962</a>
-    </div>
-    <div class="contact-info">
-        <a href="mailto:amir@amireyal.co.il"><i class="fas fa-envelope"></i> amir@amireyal.co.il</a>
-    </div>
-    <div class="contact-info">
-        <i class="fas fa-map-marker-alt"></i> כרמיאל והסביבה | אונליין
-    </div>
-</div>
-            
+
+            <div class="footer-section">
+                <h3 class="footer-title">צרו קשר</h3>
+                <div class="contact-info">
+                    <a href="tel:0547509962"><i class="fas fa-phone"></i> 054-7509962</a>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:amir@amireyal.co.il"><i class="fas fa-envelope"></i> amir@amireyal.co.il</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i> כרמיאל והסביבה | אונליין
+                </div>
+            </div>
+
+
             <div class="footer-section">
                 <h3 class="footer-title">שירותי טיפול</h3>
                 <ul class="footer-list">
-                    <li><a href="crisis.html">טיפול פרטני בעת משבר</a></li>
-                 <li><a href="parenting.html">הדרכת הורים</a></li>
-                   <li><a href="anxiety.html">חרדה ודיכאון</a></li>
+                    <li><a href="#">טיפול פרטני</a></li>
+                    <li><a href="#">טיפול זוגי</a></li>
+                    <li><a href="#">חרדה ודיכאון</a></li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-divider"></div>
-                <div class="footer-bottom">
+        <div class="footer-bottom">
             © עמיר אייל פסיכותרפיה, 2023. כל הזכויות שמורות.
         </div>
     </footer>
@@ -364,6 +382,18 @@
         </a>
     </div>
 
+    <script>
+
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
     <script src="script.js"></script>
 </body>
+
 </html>
