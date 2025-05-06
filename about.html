@@ -1,196 +1,107 @@
-<!DOCTYPE html>
-<html lang="he">
+/* About Us Section */
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 2em;
+    background-color: #FFFFFF;
+    text-align: center;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אודות עמיר אייל, פסיכותרפיסט</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&family=Open+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/cta.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/about-us.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/communicate.css">
-     <link rel="stylesheet" href="css/footer.css">
-     <link rel="stylesheet" href="css/services.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="favicon.ico">
-</head>
+.location-banner {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 
-<body>
-    <header id="main-header">
-        <div class="logo">
-            <a href="index.html" aria-label="מעבר לדף הבית">
-                <img src="images/logo.png" alt="לוגו של עמיר אייל">
-            </a>
-        </div>
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto 2em;
+    text-align: center;
+    margin-top: 2em;
+}
 
-  <nav>
-  <ul class="menu" id="mobile-menu">
-    <li><a href="index.html">בית</a></li>
-    <li><a href="about.html">אודות</a></li>
-    <li><a href="faq.html">שאלות נפוצות </a></li>
-    <li class="has-submenu">
-      <a href="#">שירותים</a>
-      <ul class="submenu">
-        <li><a href="anxiety.html">חרדה ודיכאון</a></li>
-        <li><a href="crisis.html">משברי חיים</a></li>
-        <li><a href="relationships.html">מערכות יחסים</a></li>
-        <li><a href="parenting.html">הדרכת הורים</a></li>
-        <li><a href="divorce.html">גירושים</a></li>
-        <li><a href="addiction.html">התמכרויות</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">יצירת קשר</a></li>
-  </ul>
-         <button class="hamburger" id="hamburger">
-  <span class="line"></span>
-  <span class="line"></span>
-  <span class="line"></span>
-</button>
-</nav>
+.about-content h2 {
+    font-size: 2em;
+    color: #55828B;
+    margin-bottom: 1.5em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    display: inline-block;
+}
 
-    </header>
-<main>
-    <section class="hero">
-        <img src="images/heroabout.webp" alt="Hero Image">
-    </section>
-      
-    <section class="about-us">
-  <div class="location-banner">
-   <p>כרמיאל והסביבה | טיפול אונליין</p>
-        <div class="about-content">
-            <h2>אודות עמיר אייל, פסיכותרפיסט</h2>
-            <div class="about-me-container">
-                <div class="about-me-image">
-                   
-     
-                    </h3>
-                    <img src="images/amireyal.webp" alt="עמיר אייל, פסיכותרפיסט">
-                </div>
-                <div class="about-me-text">
-                  <section>
-<p>נעים להכיר. אני מטפל רגשי מוסמך, בעל ניסיון קליני של מעל שני עשורים בליווי מבוגרים (מעל גיל 21), בהתמודדות עם <strong>חרדה, דיכאון, שינוי הרגלים מזיקים ואתגרי חיים</strong>.
-בעל תואר שני בעבודה סוציאלית קלינית, והכשרה מקיפה בתחום הטיפול הנפשי בפסיכותרפיה קוגניטיבית-התנהגותית <strong>(CBT)</strong>, טיפול בהתמכרויות וטיפול קבוצתי.
-במהלך השנים ליוויתי מאות תהליכים טיפוליים, במסגרות טיפוליות ושיקומיות מגוונות וגם בקליניקה פרטית.
-אני משלב טיפול רגשי דינמי, קוגניטיבי-התנהגותי ואף רוחני (למי שמתאים) – בגישה אינטגרטיבית שמותאמת אישית לכל מטופל.
-&nbsp;המרחב הטיפולי הוא מקום בטוח לצמיחה, ריפוי והתחברות לעצמכם — בקצב שנכון לכם.</p>
+/* Image and Text Side by Side */
+.about-me-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em;
+    flex-wrap: wrap;
+}
 
-</section>
-                </div>
-            </div>
-    
-    </section>
-<section class="services-grid-container">
-        <div class="service-card service-blue1">
-            <h2>כלים יעילים להתגבר על</h2>
-            <div class="highlight">דיכאון</div>
-            <p>אני מלווה אנשים הסובלים מדיכאון על כל סוגיו ורמותיו. בין אם הדיכאון נובע מאירועים טראומטיים, עבר קשה, או ללא סיבה נראית לעין – אפשר למצוא הקלה ותמיכה.</p>
-            <a href="anxiety.html" class="learn-more">למידע נוסף</a>
-        </div>
+.about-me-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
 
-        <div class="service-card service-blue2">
-            <h2>לצמוח ולהתפתח באמצעות</h2>
-            <div class="highlight">הדרכת הורים</div>
-            <p>ליווי הורים בהתמודדות עם קשיים רגשיים והתנהגותיים של ילדיהם. עבודה ממוקדת על הקשבה, גבולות, ויחסים בתוך המשפחה ליצירת אווירה טובה יותר.</p>
-            <a href="parenting.html" class="learn-more">למידע נוסף</a>
-</div>
+.about-me-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        <div class="service-card service-blue3">
-            <h2>ללמוד להרגיע את</h2>
-            <div class="highlight">החרדה</div>
-            <p>אני מציע סיוע מקצועי ויעיל להתמודדות עם מגוון הפרעות חרדה הפוגעות באיכות החיים, באמצעות כלים טיפוליים מוכחים.</p>
-            <a href="anxiety.html" class="learn-more">למידע נוסף</a>
-        </div>
+.about-me-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
 
-        <div class="service-card service-blue4">
-            <h2>בצומת דרכים </h2>
-            <div class="highlight">במערכת יחסים?</div>
-            <p>סיוע עם קושי ביצירת קשרים או אתגרים במערכות יחסים קיימות,  
-                 באמצעות טיפול רגשי-ממוקד לחיזוק הקשר הרגשי, שיפור התקשורת ופיתוח כלים להתמודדות עם קונפליקטים ולבניית אינטימיות.</p>
-            <a href="relationships.html" class="learn-more">למידע נוסף</a>
-        </div>
-       
-    </section>
-    
-  <section class="cta-container">
-    <img src="images/amir_cta.webp" alt="עמיר" class="cta-img" />
+.about-me-text {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
 
-    <div class="cta-text">
-      <h2>רוצה להתייעץ איתי?</h2>
-      <p>השאירו פרטים ואחזור אליכם בהקדם</p>
-    </div>
+.about-me-text p {
+    font-size: 1.1em;
+    color: #514b4b;
+    line-height: 2;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 200;
+    margin-bottom: 1.5em;
+}
 
-    <a href="contact.html" class="cta-button">צור קשר</a>
-  </section>
+.about-me-text p:last-child {
+    margin-bottom: 0;
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 2em 1em;
+    }
 
-         </main>
-  <!-- FOOTER -->
-    <footer class="therapy-footer">
-        <div class="footer-header">
-            <div class="footer-logo">
-                <img src="images/logobig.png" alt="לוגו עמיר אייל פסיכותרפיה">
-            </div>
-            <div class="footer-title-main">עמיר אייל, פסיכותרפיה</div>
-        </div>
-        
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3 class="footer-title">מידע נוסף</h3>
-                <ul class="footer-list">
-                    <li><a href="faq.html">שאלות נפוצות</a></li>
-               <li><a href="privacy-policy.html">מדיניות פרטיות</a></li>
-                </ul>
-            </div>
-          
- <div class="footer-section">
-    <h3 class="footer-title">צרו קשר</h3>
-    <div class="contact-info">
-        <a href="tel:0547509962"><i class="fas fa-phone"></i> 054-7509962</a>
-    </div>
-    <div class="contact-info">
-        <a href="mailto:amir@amireyal.co.il"><i class="fas fa-envelope"></i> amir@amireyal.co.il</a>
-    </div>
-    <div class="contact-info">
-        <i class="fas fa-map-marker-alt"></i> כרמיאל והסביבה | אונליין
-    </div>
-</div>
-            
-             <div class="footer-section">
-            <h3 class="footer-title">שירותי טיפול</h3>
-            <ul class="footer-list">
-                <li><a href="crisis.html"> טיפול פרטני בעת משבר</a></li>
-              <li><a href="parenting.html">הדרכת הורים</a></li>
-                <li><a href="anxiety.html">חרדה ודיכאון</a></li>
-            </ul>
-            </div>
-        </div>
-        
-        <div class="footer-divider"></div>
-        
-        <div class="footer-bottom">
-            © עמיר אייל פסיכותרפיה, 2023. כל הזכויות שמורות.
-        </div>
-    </footer>
-  <div class="floating-contact-icons">
-        <a href="tel:+972547509962" title="התקשר אלי">
-            <i class="fas fa-phone"></i>
-        </a>
-        <a href="mailto:amir@amireyal.co.il" title="שלח מייל">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/972547509962" title="שלח לי הודעה בוואטסאפ">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-    <script src="script.js"></script>
-</body>
+    .about-me-container {
+        flex-direction: column;
+        padding: 1.5em 1em;
+    }
 
-</html>
+    .about-me-image,
+    .about-me-text {
+        flex: 1 1 100%;
+    }
+
+    .about-content h2 {
+        font-size: 1.8em;
+    }
+}
