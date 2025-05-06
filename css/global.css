@@ -4,6 +4,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* עיצוב לכל הכותרות שמעל סקציות */
+.section-title {
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  color: #0077aa;        /* צבע תכלכל לדוגמה - שנה למה שתרצה */
+  font-weight: 300;      /* גופן דק יותר */
+  font-family: 'Heebo', sans-serif; /* דוגמה לפונט עדכני שמתאים לעברית */
+}
 
 body {
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן כללי */
