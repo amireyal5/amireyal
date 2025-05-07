@@ -1,0 +1,168 @@
+/* Welcome Section */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.location-banner {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.welcome .about-content {
+    max-width: 1000px;
+    margin: 0 auto 1em;
+}
+
+.welcome .about-content h2 {
+    font-size: 2em;
+    color: #55828B;
+    margin-bottom: 1em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.welcome .inspiration-text {
+    font-size: 2.16em;
+    color: #133C55;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto 1em;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: normal;
+    font-family: 'Assistant', sans-serif;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.welcome .about-me-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+    min-height: 400px;
+}
+
+.welcome .about-me-image {
+    order: 1;
+    text-align: start;
+}
+
+.welcome .about-me-image img {
+    max-width: 100%;
+    max-height: 720px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome .about-me-text {
+    order: 2;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcome .about-me-text p {
+    font-size: 1.1em;
+    color: #514b4b;
+    line-height: 2.0;
+    margin-bottom: 1em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 200;
+}
+
+.welcome .read-more-button {
+    background-color: #3B6064;
+    color: #FFFFFF;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Assistant', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    text-align: center;
+}
+
+.welcome .read-more-button:hover {
+    background-color: #55828B;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+    .welcome {
+        padding: 1em;
+    }
+
+    .welcome .about-content {
+        margin-bottom: 1em;
+    }
+
+    .welcome .inspiration-text {
+        font-size: 1.8em;
+        line-height: 1.4;
+        color: #133C55;
+        text-align: center;
+        margin: 0 auto 1.5em;
+        font-weight: normal;
+        max-width: 90%;
+        letter-spacing: 0.1em;
+        font-family: 'Assistant', sans-serif;
+    }
+
+    .welcome .about-me-container {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .about-me-text {
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    .about-me-text p {
+        text-align: center;
+        font-size: 1.1em;
+        color: #514b4b;
+        line-height: 2.0;
+        margin-bottom: 1em;
+        font-family: 'Assistant', sans-serif;
+        font-weight: 200;
+    }
+
+    .about-me-image {
+        text-align: center !important;
+    }
+
+    .about-me-image img {
+        max-width: 250px;
+        max-height: none;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .read-more-button {
+        align-self: center;
+        margin-top: 3ex;
+        font-family: 'Assistant', sans-serif;
+        min-width: 200px;
+    }
+}
