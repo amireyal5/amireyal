@@ -1,36 +1,36 @@
-/* === סעיף אודות - מודרני ובהיר יותר === */
+/* === סעיף אודות - סגנון מודרני בהיר (דוגמה 2) === */
 .about-us {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4em 3em; /* הגדלת ריווח */
-    background-color: #F9F9F9; /* רקע בהיר מאוד */
+    padding: 5em 4em; /* ריווח נדיב */
+    background-color: #F5F5F5; /* אפור בהיר מאוד */
     text-align: center;
     position: relative;
 }
 
 .location-banner {
     text-align: center;
-    font-weight: bold;
-    color: #666; /* אפור בהיר */
-    font-size: 1.1em;
-    margin-bottom: 12px;
+    font-weight: 600;
+    color: #555; /* אפור בינוני */
+    font-size: 1.15em;
+    margin-bottom: 15px;
 }
 
 .about-content {
     max-width: 1000px;
-    margin: 0 auto 3em;
+    margin: 0 auto 4em;
     position: relative;
     text-align: center;
-    margin-top: 3em;
+    margin-top: 4em;
 }
 
 .about-content h2 {
-    font-size: 2.1em;
-    color: #4CAF50; /* ירוק רענן */
-    margin-bottom: 0.8em;
-    font-family: 'Montserrat', sans-serif; /* גופן מודרני */
-    font-weight: 500; /* משקל מעט יותר בולט */
+    font-size: 2.3em;
+    color: #2196F3; /* כחול מודרני */
+    margin-bottom: 1em;
+    font-family: 'Roboto', sans-serif; /* גופן מודרני ונפוץ */
+    font-weight: 400;
     text-align: center;
     position: relative;
     display: inline-block;
@@ -39,23 +39,23 @@
 .about-content h2::after {
     content: '';
     position: absolute;
-    bottom: -0.2em;
+    bottom: -0.3em;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
+    width: 70px;
     height: 2px;
-    background-color: #4CAF50; /* ירוק רענן */
-    border-radius: 2px;
+    background-color: #2196F3; /* כחול מודרני */
+    border-radius: 1px;
 }
 
 .about-me-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3em;
+    gap: 4em;
     max-width: 1000px;
     margin: 0 auto;
     align-items: center;
-    min-height: 350px;
+    min-height: 400px;
 }
 
 .about-me-image {
@@ -65,25 +65,25 @@
 }
 
 .about-me-image h3 {
-    font-size: 1.3em;
-    color: #4CAF50; /* ירוק רענן */
-    margin-bottom: 1em;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif; /* גופן מודרני */
+    font-size: 1.4em;
+    color: #2196F3; /* כחול מודרני */
+    margin-bottom: 1.2em;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif; /* גופן מודרני */
 }
 
 .about-me-image img {
     max-width: 100%;
     max-height: 720px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* צללית עדינה מאוד */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* צללית עדינה מאוד */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .about-me-image img:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* צללית עדינה בהhover */
+    transform: scale(1.02); /* אפקט זום קל */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .about-me-text {
@@ -95,25 +95,25 @@
 }
 
 .about-me-text p {
-    font-size: 1em;
-    color: #555; /* אפור בהיר */
-    line-height: 1.7;
-    margin-bottom: 1em;
+    font-size: 1.05em;
+    color: #444; /* אפור כהה */
+    line-height: 1.8;
+    margin-bottom: 1.3em;
     font-family: 'Open Sans', sans-serif; /* גופן קריא ומודרני */
-    font-weight: 400; /* משקל רגיל */
+    font-weight: 300; /* משקל קליל */
 }
 
 .about-me-text p:last-child {
     margin-bottom: 0;
 }
 
-/* === סעיף שירותים - מודרני ובהיר יותר === */
+/* === סעיף שירותים - סגנון מודרני בהיר (דוגמה 2) === */
 .services {
-    padding: 3em 2em;
+    padding: 3.5em 3em;
     text-align: center;
-    background-color: #F9F9F9; /* רקע בהיר מאוד */
-    border-radius: 8px;
-    margin-bottom: 3ex;
+    background-color: #F5F5F5; /* אפור בהיר מאוד */
+    border-radius: 6px;
+    margin-bottom: 4ex;
 }
 
 .services-content {
@@ -126,98 +126,98 @@
 }
 
 .services-content h2 {
-    font-size: 2.1em;
-    color: #4CAF50; /* ירוק רענן */
-    margin-bottom: 0.6em;
-    font-family: 'Montserrat', sans-serif; /* גופן מודרני */
-    font-weight: 500;
+    font-size: 2.3em;
+    color: #2196F3; /* כחול מודרני */
+    margin-bottom: 0.7em;
+    font-family: 'Roboto', sans-serif; /* גופן מודרני */
+    font-weight: 400;
 }
 
 .services-subtitle {
-    font-size: 1em;
-    color: #666; /* אפור בהיר */
-    margin-bottom: 2em;
+    font-size: 1.1em;
+    color: #555; /* אפור בינוני */
+    margin-bottom: 2.2em;
     font-family: 'Open Sans', sans-serif; /* גופן קריא ומודרני */
-    font-weight: 400;
-    line-height: 1.8;
+    font-weight: 300;
+    line-height: 1.9;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8em;
 }
 
 .service-box {
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); /* צללית עדינה מאוד */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 2em;
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05); /* צללית עדינה מאוד */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* יישור מלמעלה */
     height: 100%;
-    color: #333; /* צבע טקסט כהה יותר על רקע בהיר */
+    color: #333; /* טקסט כהה */
     font-family: 'Open Sans', sans-serif; /* גופן קריא ומודרני */
     text-decoration: none;
-    background-color: #E0F7FA; /* רקע בהיר לתיבות */
-    border: 1px solid #B2EBF2; /* גבול בהיר */
+    background-color: #E3F2FD; /* כחול בהיר מאוד */
+    border: 1px solid #BBDEFB; /* גבול כחול בהיר */
 }
 
-/* צבעי תיבות אינדיבידואליים - בהירים יותר */
-.service-box:nth-child(1) { background-color: #BBDEFB; border-color: #64B5F6; color: #1E88E5; } /* כחול בהיר */
-.service-box:nth-child(2) { background-color: #B2EBF2; border-color: #4DD0E1; color: #00ACC1; } /* טורקיז בהיר */
-.service-box:nth-child(3) { background-color: #C8E6C9; border-color: #81C784; color: #388E3C; } /* ירוק בהיר */
-.service-box:nth-child(4) { background-color: #DCE775; border-color: #AED581; color: #9E9D24; } /* צהוב בהיר */
-.service-box:nth-child(5) { background-color: #F0F4C3; border-color: #D4E157; color: #AFB42B; } /* חרדל בהיר */
-.service-box:nth-child(6) { background-color: #F8BBD0; border-color: #F48FB1; color: #C2185B; } /* ורוד בהיר */
+/* צבעי תיבות אינדיבידואליים - גוונים בהירים של כחול ואפור */
+.service-box:nth-child(1) { background-color: #E1F5FE; border-color: #B3E5FC; color: #1976D2; } /* תכלת בהיר מאוד */
+.service-box:nth-child(2) { background-color: #F0F8E0; border-color: #DCEDC8; color: #388E3C; } /* ירוק בהיר מאוד (אלטרנטיבה) */
+.service-box:nth-child(3) { background-color: #FFFDE7; border-color: #FFF9C4; color: #FBC02D; } /* צהוב בהיר מאוד (אלטרנטיבה) */
+.service-box:nth-child(4) { background-color: #FBE9E7; border-color: #FFCCBC; color: #E64A19; } /* כתום בהיר מאוד (אלטרנטיבה) */
+.service-box:nth-child(5) { background-color: #EDE7F6; border-color: #D1C4E9; color: #5E35B1; } /* סגול בהיר מאוד (אלטרנטיבה) */
+.service-box:nth-child(6) { background-color: #ECEFF1; border-color: #CFD8DC; color: #37474F; } /* אפור בהיר מאוד */
 
 .service-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צללית עדינה בהhover */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 .service-box i {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: inherit; /* יורש את צבע הטקסט של התיבה */
+    font-size: 2.2em;
+    margin-bottom: 0.7em;
+    color: inherit;
 }
 
 .service-box h3 {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-    font-family: 'Montserrat', sans-serif; /* גופן מודרני */
-    color: inherit; /* יורש את צבע הטקסט של התיבה */
+    font-size: 1.3em;
+    margin-bottom: 0.6em;
+    font-family: 'Roboto', sans-serif; /* גופן מודרני */
+    color: inherit;
     font-weight: 500;
 }
 
 .service-box p {
-    font-size: 0.95em;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.7;
     font-family: 'Open Sans', sans-serif; /* גופן קריא ומודרני */
-    font-weight: 400;
-    color: inherit; /* יורש את צבע הטקסט של התיבה */
+    font-weight: 300;
+    color: inherit;
 }
 
-/* === רספונסיביות - שינויים קלים להתאמה למובייל === */
+/* === רספונסיביות - התאמות למובייל === */
 @media (max-width: 768px) {
     .about-us {
-        padding: 2em 1em;
+        padding: 3em 2em;
     }
 
     .about-content {
-        margin-bottom: 2em;
-        margin-top: 2em;
+        margin-bottom: 3em;
+        margin-top: 3em;
     }
 
     .about-me-container {
         grid-template-columns: 1fr;
-        gap: 2em;
+        gap: 2.5em;
     }
 
     .about-me-image img {
-        max-width: 280px;
-        border-radius: 6px;
+        max-width: 300px;
+        border-radius: 4px;
     }
 
     .about-me-text {
@@ -225,31 +225,31 @@
     }
 
     .services {
-        padding: 1.5em;
-        margin-bottom: 2ex;
+        padding: 2em;
+        margin-bottom: 3ex;
     }
 
     .services-grid {
-        grid-template-columns: 1fr; /* עמודה אחת במובייל */
-        gap: 1em;
+        grid-template-columns: 1fr;
+        gap: 1.2em;
     }
 
     .service-box {
-        padding: 1em;
+        padding: 1.5em;
     }
 
     .service-box i {
-        font-size: 1.5em;
-        margin-bottom: 0.3em;
+        font-size: 1.8em;
+        margin-bottom: 0.5em;
     }
 
     .service-box h3 {
-        font-size: 1.1em;
-        margin-bottom: 0.3em;
+        font-size: 1.2em;
+        margin-bottom: 0.4em;
     }
 
     .service-box p {
-        font-size: 0.9em;
-        line-height: 1.5;
+        font-size: 0.95em;
+        line-height: 1.6;
     }
 }
