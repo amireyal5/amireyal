@@ -1,62 +1,65 @@
-/* About Us Section */
+/* ===== About Section ===== */
 .about-us {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3em 2em;
+    padding: 3rem 2rem;
     background-color: #FFFFFF;
     text-align: center;
 }
 
-.location-banner {
+.about-location {
     text-align: center;
     font-weight: bold;
     color: #333;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .about-content {
     max-width: 1000px;
-    margin: 0 auto 2em;
+    margin: 0 auto;
+    padding-block: 2rem;
     text-align: center;
-    margin-top: 2em;
 }
 
 .about-content h2 {
-    font-size: 2em;
+    font-size: 2rem;
     color: #55828B;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
     font-family: 'Assistant', sans-serif;
     font-weight: normal;
-    text-align: center;
     display: inline-block;
 }
 
+/* === About Me Section === */
 .about-me-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 2em;
+    justify-content: space-between;
+    gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
     min-height: 400px;
+    flex-wrap: wrap;
 }
 
-.about-me-image {
+.about-image {
+    flex: 1 1 45%;
     text-align: center;
 }
 
-.about-me-image h3 {
-    font-size: 1.3em;
+.about-image h3 {
+    font-size: 1.3rem;
     color: #55828B;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
     font-weight: normal;
     font-family: 'Assistant', sans-serif;
 }
 
-.about-me-image img {
-    max-width: 100%;
+.about-image img {
+    width: 100%;
     max-height: 400px;
     height: auto;
     border-radius: 12px;
@@ -64,45 +67,49 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-me-image img:hover {
+.about-image img:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.about-me-text {
+.about-text {
+    flex: 1 1 45%;
     text-align: right;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
 }
 
-.about-me-text p {
-    font-size: 1.1em;
+.about-text p {
+    font-size: 1.1rem;
     color: #514b4b;
-    line-height: 2.0;
-    margin-bottom: 1.5em;
-    text-align: right;
+    line-height: 2;
+    margin-bottom: 1.5rem;
     font-family: 'Assistant', sans-serif;
     font-weight: 200;
+    text-align: right;
 }
 
-.about-me-text p:last-child {
+.about-text p:last-child {
     margin-bottom: 0;
 }
 
-/* Responsive */
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     .about-us {
-        padding: 2em 1em;
+        padding: 2rem 1rem;
     }
 
-    .about-content {
-        margin-bottom: 1.5em;
+    .about-me-container {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-text {
+        flex: 1 1 100%;
     }
 
     .about-content h2 {
-        font-size: 2em;
-        color: #55828B;
+        font-size: 1.8rem;
     }
 }
