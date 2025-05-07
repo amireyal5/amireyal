@@ -35,7 +35,7 @@
 /* === About Me Section === */
 .about-me-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse; /* תמונה מימין, טקסט משמאל */
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
