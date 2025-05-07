@@ -1,58 +1,54 @@
-// === Variables ===
-$primary-color: #55828B;
-$light-text-color: #514b4b;
-$font-main: 'Assistant', sans-serif;
-$box-radius: 8px;
-$transition: 0.3s ease;
-
-// === Global Styles ===
+/* === About Us Section === */
 .about-us {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3em 2em;
-  background-color: #fff;
-  text-align: center;
-  position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 2em;
+    background-color: #FFFFFF;
+    text-align: center;
+    position: relative;
+}
 
-  .location-banner {
+.location-banner {
     text-align: center;
     font-weight: bold;
     color: #333;
     font-size: 1.2em;
     margin-bottom: 10px;
-  }
+}
 
-  .about-content {
+.about-content {
     max-width: 1000px;
     margin: 0 auto 2em;
+    position: relative;
     text-align: center;
     margin-top: 2em;
+}
 
-    h2 {
-      font-size: 2em;
-      color: $primary-color;
-      margin-bottom: 1.5em;
-      font-family: $font-main;
-      font-weight: 400;
-      display: inline-block;
-      position: relative;
+.about-content h2 {
+    font-size: 2em;
+    color: #55828B;
+    margin-bottom: 1.5em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
 
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -0.5em;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background-color: $primary-color;
-        border-radius: 3px;
-      }
-    }
-  }
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #55828B;
+    border-radius: 3px;
+}
 
-  .about-me-container {
+.about-me-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3em;
@@ -60,165 +56,165 @@ $transition: 0.3s ease;
     margin: 0 auto;
     align-items: center;
     min-height: 400px;
-
-    .about-me-image {
-      order: 1;
-      text-align: center;
-
-      h3 {
-        font-size: 1.3em;
-        color: $primary-color;
-        margin-bottom: 1.5em;
-        font-family: $font-main;
-        font-weight: 400;
-      }
-
-      img {
-        max-width: 100%;
-        max-height: 720px;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-        transition: transform $transition, box-shadow $transition;
-
-        &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-        }
-      }
-    }
-
-    .about-me-text {
-      order: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: justify;
-
-      p {
-        font-size: 1.1em;
-        color: $light-text-color;
-        line-height: 2.0;
-        margin-bottom: 1.5em;
-        font-family: $font-main;
-        font-weight: 200;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
 }
 
-// === Services Section ===
-.services {
-  padding: 2em;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 10px;
-  margin-bottom: 4ex;
+.about-me-image {
+    order: 1;
+    text-align: center;
+    position: relative;
+}
 
-  .services-content {
+.about-me-image h3 {
+    font-size: 1.3em;
+    color: #55828B;
+    margin-bottom: 1.5em;
+    font-weight: 400;
+    font-family: 'Assistant', sans-serif;
+}
+
+.about-me-image img {
+    max-width: 100%;
+    max-height: 720px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.about-me-text {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.about-me-text p {
+    font-size: 1.1em;
+    color: #514b4b;
+    line-height: 2.0;
+    margin-bottom: 1.5em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 200;
+}
+
+.about-me-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* === Services Section === */
+.services {
+    padding: 2em;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-bottom: 4ex;
+}
+
+.services-content {
     max-width: 1000px;
     margin: 0 auto;
-
-    h2 {
-      font-size: 2em;
-      color: $primary-color;
-      margin-bottom: 0.5em;
-      font-family: $font-main;
-      font-weight: 400;
-    }
-
-    .services-subtitle {
-      font-size: 1.1em;
-      color: $light-text-color;
-      margin-bottom: 2em;
-      font-family: $font-main;
-      font-weight: 200;
-      line-height: 2.0;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5em;
-
-      .service-box {
-        padding: 1.5em;
-        border-radius: $box-radius;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform $transition;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        color: white;
-        font-family: $font-main;
-        text-decoration: none;
-
-        &:hover {
-          transform: translateY(-5px);
-        }
-
-        i {
-          font-size: 2em;
-          margin-bottom: 0.5em;
-        }
-
-        h3 {
-          font-size: 1.3em;
-          margin-bottom: 0.5em;
-          font-family: $font-main;
-          color: #fff;
-          font-weight: 400;
-        }
-
-        p {
-          font-size: 1.1em;
-          line-height: 2.0;
-          font-family: $font-main;
-          font-weight: 200;
-        }
-
-        // Specific box colors
-        &:nth-child(1) { background-color: #293462; }
-        &:nth-child(2) { background-color: #80B8BD; }
-        &:nth-child(3) { background-color: #68A2B9; }
-        &:nth-child(4) { background-color: #6189B0; }
-        &:nth-child(5) { background-color: #696E9D; }
-        &:nth-child(6) { background-color: #735280; }
-      }
-    }
-  }
-
-  .no-underline {
-    text-decoration: none;
-  }
 }
 
-// === Responsive ===
+.no-underline {
+    text-decoration: none;
+}
+
+.services-content h2 {
+    font-size: 2em;
+    color: #55828B;
+    margin-bottom: 0.5em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+}
+
+.services-subtitle {
+    font-size: 1.1em;
+    color: #514b4b;
+    margin-bottom: 2em;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 200;
+    line-height: 2.0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+}
+
+.service-box {
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    color: white;
+    font-family: 'Assistant', sans-serif;
+    text-decoration: none;
+}
+
+/* Individual box colors (unchanged) */
+.service-box:nth-child(1) { background-color: #293462; }
+.service-box:nth-child(2) { background-color: #80B8BD; }
+.service-box:nth-child(3) { background-color: #68A2B9; }
+.service-box:nth-child(4) { background-color: #6189B0; }
+.service-box:nth-child(5) { background-color: #696E9D; }
+.service-box:nth-child(6) { background-color: #735280; }
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box i {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.service-box h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    font-family: 'Assistant', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.service-box p {
+    font-size: 1.1em;
+    line-height: 2.0;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 200;
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
-  .about-us {
-    padding: 2em 1em;
+    .about-us {
+        padding: 2em 1em;
+    }
 
     .about-content {
-      margin-bottom: 1.5em;
+        margin-bottom: 1.5em;
     }
 
     .about-me-container {
-      grid-template-columns: 1fr;
-      gap: 2em;
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
 
-      .about-me-image img {
+    .about-me-image img {
         max-width: 280px;
         border-radius: 10px;
-      }
-
-      .about-me-text {
-        text-align: center;
-      }
     }
-  }
+
+    .about-me-text {
+        text-align: center;
+    }
 }
