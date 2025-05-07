@@ -1,3 +1,14 @@
+/* === About Us Section === */
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 2em;
+    background-color: #FFFFFF;
+    text-align: center;
+    position: relative;
+}
+
 .location-banner {
     text-align: center;
     font-weight: bold;
@@ -6,7 +17,7 @@
     margin-bottom: 10px;
 }
 
-.section-content {
+.about-content {
     max-width: 1000px;
     margin: 0 auto 2em;
     position: relative;
@@ -14,7 +25,7 @@
     margin-top: 2em;
 }
 
-.section-content .section-heading {
+.about-content h2 {
     font-size: 2em;
     color: #55828B;
     margin-bottom: 1.5em;
@@ -25,7 +36,7 @@
     display: inline-block;
 }
 
-.section-content .section-heading::after {
+.about-content h2::after {
     content: '';
     position: absolute;
     bottom: -0.5em;
@@ -37,7 +48,7 @@
     border-radius: 3px;
 }
 
-.grid-container {
+.about-me-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3em;
@@ -47,13 +58,13 @@
     min-height: 400px;
 }
 
-.image-container {
+.about-me-image {
     order: 1;
     text-align: center;
     position: relative;
 }
 
-.image-container h3 {
+.about-me-image h3 {
     font-size: 1.3em;
     color: #55828B;
     margin-bottom: 1.5em;
@@ -61,7 +72,7 @@
     font-family: 'Assistant', sans-serif;
 }
 
-.image-container img {
+.about-me-image img {
     max-width: 100%;
     max-height: 720px;
     height: auto;
@@ -70,12 +81,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.image-container img:hover {
+.about-me-image img:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.text-container {
+.about-me-text {
     order: 2;
     display: flex;
     flex-direction: column;
@@ -83,7 +94,7 @@
     text-align: justify;
 }
 
-.text-container .section-paragraph {
+.about-me-text p {
     font-size: 1.1em;
     color: #514b4b;
     line-height: 2.0;
@@ -92,12 +103,12 @@
     font-weight: 200;
 }
 
-.text-container .section-paragraph:last-child {
+.about-me-text p:last-child {
     margin-bottom: 0;
 }
 
 /* === Services Section === */
-.section.treatment-details {
+.services {
     padding: 2em;
     text-align: center;
     background-color: #FFFFFF;
@@ -105,7 +116,7 @@
     margin-bottom: 4ex;
 }
 
-.grid-list {
+.services-content {
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -114,7 +125,7 @@
     text-decoration: none;
 }
 
-.section.treatment-details .section-heading {
+.services-content h2 {
     font-size: 2em;
     color: #55828B;
     margin-bottom: 0.5em;
@@ -122,7 +133,7 @@
     font-weight: 400;
 }
 
-.services-subtitle { /* שם זה נשאר כי הוא ספציפי למקטע הזה */
+.services-subtitle {
     font-size: 1.1em;
     color: #514b4b;
     margin-bottom: 2em;
@@ -131,13 +142,13 @@
     line-height: 2.0;
 }
 
-.grid-list {
+.services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5em;
 }
 
-.grid-item {
+.service-box {
     padding: 1.5em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -146,250 +157,64 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    color: inherit; /* יורש את צבע הטקסט מההורה */
+    color: white;
     font-family: 'Assistant', sans-serif;
     text-decoration: none;
 }
 
-.colored-box {
-    color: white !important;
-}
-
 /* Individual box colors (unchanged) */
-.grid-item:nth-child(1) { background-color: #293462; }
-.grid-item:nth-child(2) { background-color: #80B8BD; }
-.grid-item:nth-child(3) { background-color: #68A2B9; }
-.grid-item:nth-child(4) { background-color: #6189B0; }
-.grid-item:nth-child(5) { background-color: #696E9D; }
-.grid-item:nth-child(6) { background-color: #735280; }
+.service-box:nth-child(1) { background-color: #293462; }
+.service-box:nth-child(2) { background-color: #80B8BD; }
+.service-box:nth-child(3) { background-color: #68A2B9; }
+.service-box:nth-child(4) { background-color: #6189B0; }
+.service-box:nth-child(5) { background-color: #696E9D; }
+.service-box:nth-child(6) { background-color: #735280; }
 
-.grid-item:hover {
+.service-box:hover {
     transform: translateY(-5px);
 }
 
-.grid-item .item-heading {
+.service-box i {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.service-box h3 {
     font-size: 1.3em;
     margin-bottom: 0.5em;
     font-family: 'Assistant', sans-serif;
+    color: #FFFFFF;
     font-weight: 400;
 }
 
-.grid-item .item-description {
+.service-box p {
     font-size: 1.1em;
     line-height: 2.0;
     font-family: 'Assistant', sans-serif;
     font-weight: 200;
 }
 
-/* === Full Width Section === */
-.section.full-width-banner {
-    background-color: #f9f9f9;
-    padding: 2em 0;
-    border-radius: 0px;
-}
-
-.grid-techniques {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5em;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.technique-item {
-    /* סגנונות משותפים לכל פריט טכניקה */
-}
-
-.technique-item .item-title {
-    color: white;
-}
-
-.technique-item .item-paragraph {
-    color: white;
-}
-
-/* === Call to Action Section === */
-.section.call-to-action {
-    background-color: #e9ecef;
-    padding: 3em 0;
-    text-align: center;
-}
-
-.section.call-to-action .action-heading {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 1em;
-    font-family: 'Assistant', sans-serif;
-    font-weight: 400;
-}
-
-.button.fixed-button {
-    display: inline-block;
-    background-color: #55828B;
-    color: white;
-    padding: 1em 2em;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.button.fixed-button:hover {
-    background-color: #426870;
-}
-
-/* === Footer === */
-.main-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 3em 0;
-    text-align: center;
-}
-
-.footer-top {
-    margin-bottom: 2em;
-}
-
-.footer-logo-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1em;
-}
-
-.footer-logo-area img {
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 0.5em;
-}
-
-.footer-title-primary {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.footer-middle {
-    display: flex;
-    justify-content: space-around;
-    max-width: 960px;
-    margin: 0 auto 2em;
-    padding: 0 1em;
-}
-
-.footer-column {
-    flex: 1;
-    margin: 0 1em;
-}
-
-.footer-heading {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-    font-weight: bold;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 0.5em;
-}
-
-.footer-links a {
-    color: #adb5bd;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.footer-bottom-area {
-    border-top: 1px solid #6c757d;
-    padding-top: 2em;
-}
-
-.footer-copyright {
-    font-size: 0.9em;
-}
-
-/* === Floating Contact Icons === */
-.floating-icons {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
-}
-
-.floating-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #007bff;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
-
-.floating-icons a:hover {
-    background-color: #0056b3;
-}
-
-.floating-icons a i {
-    margin: 0;
-}
-
 /* === Responsive === */
 @media (max-width: 768px) {
-    .grid-container {
+    .about-us {
+        padding: 2em 1em;
+    }
+
+    .about-content {
+        margin-bottom: 1.5em;
+    }
+
+    .about-me-container {
         grid-template-columns: 1fr;
         gap: 2em;
     }
 
-    .image-container {
-        order: 0;
+    .about-me-image img {
+        max-width: 280px;
+        border-radius: 10px;
     }
 
-    .text-container {
-        order: 1;
+    .about-me-text {
         text-align: center;
-    }
-
-    .section.treatment-details .grid-list {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-techniques {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-middle {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-column {
-        margin: 1em 0;
-    }
-
-    .floating-icons {
-        bottom: 15px;
-        left: 15px;
-        gap: 8px;
-    }
-
-    .floating-icons a {
-        width: 35px;
-        height: 35px;
-        font-size: 1em;
     }
 }
