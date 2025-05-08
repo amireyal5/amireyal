@@ -60,6 +60,7 @@ body {
     padding: 60px 0;
     background-color: #004869bd; /* !!! צבע רקע - יש לבחור צבע מהמניפות (כחולים/ירוקים) !!! */
     color: white; /* צבע גופן כללי לסקציה - האם נשאר לבן על רקע צבעוני? */
+    margin-bottom: 40px;
 }
 
 .treatment-grid {
