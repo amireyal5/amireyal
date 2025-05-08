@@ -1,20 +1,21 @@
-/* === סעיף אודות - סגנון מודרני בהיר (דוגמה 2) === */
+ /* === סעיף אודות - סגנון מודרני בהיר (דוגמה 2) === */
 .about-us {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 4em 3em; /* הקטנה קלה של ה-padding */
-    background-color: white;
+    background-color: #DCBF85; /* רקע כללי */
     text-align: center;
     position: relative;
     margin-bottom: 1.5em; /* הקטנה נוספת */
     margin-top: 3em; /* הקטנה קלה */
+    color: #60594D; /* צבע טקסט כללי */
 }
 
 .location-banner {
     text-align: center;
     font-weight: 600;
-    color: #555;
+    color: #555; /* נשאר ללא שינוי */
     font-size: 1.15em;
     margin-bottom: 1em; /* הקטנה קלה */
 }
@@ -29,7 +30,7 @@
 
 .about-content h2 {
     font-size: 1.3em;
-    color: #004869bd;
+    color: #8B635C; /* צבע акцент */
     margin-bottom: 0.7em; /* הקטנה קלה */
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -46,7 +47,7 @@
     transform: translateX(-50%);
     width: 50px; /* הקטנת רוחב הפס */
     height: 1px; /* הקטנת גובה הפס */
-    background-color: #2196F3;
+    background-color: #8B635C; /* צבע акцент */
     border-radius: 1px;
 }
 
@@ -69,7 +70,7 @@
 
 .about-me-image h3 {
     font-size: 1.3em; /* הקטנה קלה */
-    color: #2196F3;
+    color: #8B635C; /* צבע акцент */
     margin-bottom: 0.8em; /* הקטנה קלה */
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
@@ -99,7 +100,7 @@
 
 .about-me-text p {
     font-size: 1em; /* הקטנה קלה */
-    color: #444;
+    color: #60594D; /* צבע טקסט כללי */
     line-height: 1.6; /* הקטנה קלה */
     margin-bottom: 0.6em; /* הקטנה משמעותית */
     font-family: 'Open Sans', sans-serif;
@@ -114,7 +115,7 @@
 .services {
     padding: 3em 2.5em; /* הקטנה קלה של ה-padding */
     text-align: center;
-    background-color: #F5F5F5;
+    background-color: #DDD78D; /* רקע משני */
     border-radius: 6px;
     margin-bottom: 1.5em; /* הקטנה נוספת */
     margin-top: 1.5em; /* הקטנה נוספת */
@@ -131,7 +132,7 @@
 
 .services-content h2 {
     font-size: 2.1em; /* הקטנה קלה */
-    color: #2196F3;
+    color: #8B635C; /* צבע акцент */
     margin-bottom: 0.5em; /* הקטנה קלה */
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -139,7 +140,7 @@
 
 .services-subtitle {
     font-size: 1em; /* הקטנה קלה */
-    color: #555;
+    color: #555; /* נשאר ללא שינוי */
     margin-bottom: 1.2em; /* הקטנה משמעותית */
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -161,20 +162,20 @@
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    color: #333;
+    color: #60594D; /* צבע טקסט כללי */
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    background-color: #E3F2FD;
-    border: 1px solid #BBDEFB;
+    background-color: #E0F2F7; /* גוון בהיר יותר עבור תיבות השירות */
+    border: 1px solid #B2EBF2; /* גבול מעט כהה יותר */
 }
 
-/* צבעי תיבות אינדיבידואליים */
-.service-box:nth-child(1) { background-color: #E1F5FE; border-color: #B3E5FC; color: #1976D2; }
-.service-box:nth-child(2) { background-color: #F0F8E0; border-color: #DCEDC8; color: #388E3C; }
-.service-box:nth-child(3) { background-color: #FFFDE7; border-color: #FFF9C4; color: #FBC02D; }
-.service-box:nth-child(4) { background-color: #FBE9E7; border-color: #FFCCBC; color: #E64A19; }
-.service-box:nth-child(5) { background-color: #EDE7F6; border-color: #D1C4E9; color: #5E35B1; }
-.service-box:nth-child(6) { background-color: #ECEFF1; border-color: #CFD8DC; color: #37474F; }
+/* צבעי תיבות אינדיבידואליים - השתמשתי בגוונים מעט שונים כדי לשמור על הרמוניה */
+.service-box:nth-child(1) { background-color: #F1F8E9; border-color: #DCEDC8; color: #388E3C; }
+.service-box:nth-child(2) { background-color: #FFF9C4; border-color: #FFF59D; color: #FBC02D; }
+.service-box:nth-child(3) { background-color: #FFECB3; border-color: #FFE082; color: #F57C00; }
+.service-box:nth-child(4) { background-color: #FBE9E7; border-color: #FFCCBC; color: #D32F2F; }
+.service-box:nth-child(5) { background-color: #E1BEE7; border-color: #CE93D8; color: #8E24AA; }
+.service-box:nth-child(6) { background-color: #D7CCC8; border-color: #BCAAA4; color: #5D4037; }
 
 .service-box:hover {
     transform: translateY(-5px);
