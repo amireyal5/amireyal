@@ -3,47 +3,57 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5em 4em; /* ריווח נדיב */
-    background-color: white; /* אפור בהיר מאוד */
+    padding: 4em 3em; /* הקטנה קלה של ה-padding */
+    background-color: white;
     text-align: center;
     position: relative;
-    margin-bottom: 20px; /* שינוי - הקטנת ה-margin התחתון */
-    margin-top: 40px;
+    margin-bottom: 1.5em; /* הקטנה נוספת */
+    margin-top: 3em; /* הקטנה קלה */
 }
 
 .location-banner {
     text-align: center;
     font-weight: 600;
-    color: #555; /* אפור בינוני */
+    color: #555;
     font-size: 1.15em;
-    margin-bottom: 15px;
+    margin-bottom: 1em; /* הקטנה קלה */
 }
 
 .about-content {
     max-width: 1000px;
-    margin: 0 auto 4em;
+    margin: 0 auto 2em; /* הקטנה משמעותית */
     position: relative;
     text-align: center;
-    margin-top: 4em;
+    margin-top: 2em; /* הקטנה משמעותית */
 }
 
 .about-content h2 {
     font-size: 1.3em;
-    color: #004869bd; /* כחול מודרני */
-    margin-bottom: 1em;
-    font-family: 'Roboto', sans-serif; /* גופן מודרני ונפוץ */
+    color: #004869bd;
+    margin-bottom: 0.7em; /* הקטנה קלה */
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-align: right;
     position: relative;
     display: inline-block;
 }
 
-
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2em; /* קירוב לפס לכותרת */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px; /* הקטנת רוחב הפס */
+    height: 1px; /* הקטנת גובה הפס */
+    background-color: #2196F3;
+    border-radius: 1px;
+}
 
 .about-me-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4em;
+    gap: 2.5em; /* הקטנה קלה */
     max-width: 1000px;
     margin: 0 auto;
     align-items: center;
@@ -58,11 +68,11 @@
 }
 
 .about-me-image h3 {
-    font-size: 1.4em;
-    color: #2196F3; /* כחול מודרני */
-    margin-bottom: 1.2em;
+    font-size: 1.3em; /* הקטנה קלה */
+    color: #2196F3;
+    margin-bottom: 0.8em; /* הקטנה קלה */
     font-weight: 400;
-    font-family: 'Roboto', sans-serif; /* גופן מודרני */
+    font-family: 'Roboto', sans-serif;
 }
 
 .about-me-image img {
@@ -70,12 +80,12 @@
     max-height: 720px;
     height: auto;
     border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* צללית עדינה מאוד */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .about-me-image img:hover {
-    transform: scale(1.02); /* אפקט זום קל */
+    transform: scale(1.02);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
@@ -88,12 +98,12 @@
 }
 
 .about-me-text p {
-    font-size: 1.05em;
-    color: #444; /* אפור כהה */
-    line-height: 1.8;
-    margin-bottom: 1.3em;
-    font-family: 'Open Sans', sans-serif; /* גופן קריא ומודרני */
-    font-weight: 300; /* משקל קליל */
+    font-size: 1em; /* הקטנה קלה */
+    color: #444;
+    line-height: 1.6; /* הקטנה קלה */
+    margin-bottom: 0.6em; /* הקטנה משמעותית */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 .about-me-text p:last-child {
@@ -102,12 +112,12 @@
 
 /* === סעיף שירותים - סגנון מודרני בהיר (דוגמה 2) === */
 .services {
-    padding: 3.5em 3em;
+    padding: 3em 2.5em; /* הקטנה קלה של ה-padding */
     text-align: center;
-    background-color: #F5F5F5; /* אפור בהיר מאוד */
+    background-color: #F5F5F5;
     border-radius: 6px;
-    margin-bottom: 4ex;
-    margin-top: 20px; /* שינוי - הקטנת ה-margin העליון */
+    margin-bottom: 1.5em; /* הקטנה נוספת */
+    margin-top: 1.5em; /* הקטנה נוספת */
 }
 
 .services-content {
@@ -120,51 +130,51 @@
 }
 
 .services-content h2 {
-    font-size: 2.3em;
-    color: #2196F3; /* כחול מודרני */
-    margin-bottom: 0.7em;
-    font-family: 'Roboto', sans-serif; /* גופן מודרני */
+    font-size: 2.1em; /* הקטנה קלה */
+    color: #2196F3;
+    margin-bottom: 0.5em; /* הקטנה קלה */
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
 .services-subtitle {
-    font-size: 1.1em;
-    color: #555; /* אפור בינוני */
-    margin-bottom: 2.2em;
-    font-family: 'Open Sans', sans-serif; /* גופן קריא ומודרני */
+    font-size: 1em; /* הקטנה קלה */
+    color: #555;
+    margin-bottom: 1.2em; /* הקטנה משמעותית */
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    line-height: 1.9;
+    line-height: 1.7; /* הקטנה קלה */
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.8em;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* הקטנה קלה של הרוחב המינימלי */
+    gap: 1.5em; /* הקטנה קלה */
 }
 
 .service-box {
-    padding: 2em;
+    padding: 1.5em; /* הקטנה קלה */
     border-radius: 6px;
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05); /* צללית עדינה מאוד */
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* יישור מלמעלה */
+    justify-content: flex-start;
     height: 100%;
-    color: #333; /* טקסט כהה */
-    font-family: 'Open Sans', sans-serif; /* גופן קריא ומודרני */
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    background-color: #E3F2FD; /* כחול בהיר מאוד */
-    border: 1px solid #BBDEFB; /* גבול כחול בהיר */
+    background-color: #E3F2FD;
+    border: 1px solid #BBDEFB;
 }
 
-/* צבעי תיבות אינדיבידואליים - גוונים בהירים של כחול ואפור */
-.service-box:nth-child(1) { background-color: #E1F5FE; border-color: #B3E5FC; color: #1976D2; } /* תכלת בהיר מאוד */
-.service-box:nth-child(2) { background-color: #F0F8E0; border-color: #DCEDC8; color: #388E3C; } /* ירוק בהיר מאוד (אלטרנטיבה) */
-.service-box:nth-child(3) { background-color: #FFFDE7; border-color: #FFF9C4; color: #FBC02D; } /* צהוב בהיר מאוד (אלטרנטיבה) */
-.service-box:nth-child(4) { background-color: #FBE9E7; border-color: #FFCCBC; color: #E64A19; } /* כתום בהיר מאוד (אלטרנטיבה) */
-.service-box:nth-child(5) { background-color: #EDE7F6; border-color: #D1C4E9; color: #5E35B1; } /* סגול בהיר מאוד (אלטרנטיבה) */
-.service-box:nth-child(6) { background-color: #ECEFF1; border-color: #CFD8DC; color: #37474F; } /* אפור בהיר מאוד */
+/* צבעי תיבות אינדיבידואליים */
+.service-box:nth-child(1) { background-color: #E1F5FE; border-color: #B3E5FC; color: #1976D2; }
+.service-box:nth-child(2) { background-color: #F0F8E0; border-color: #DCEDC8; color: #388E3C; }
+.service-box:nth-child(3) { background-color: #FFFDE7; border-color: #FFF9C4; color: #FBC02D; }
+.service-box:nth-child(4) { background-color: #FBE9E7; border-color: #FFCCBC; color: #E64A19; }
+.service-box:nth-child(5) { background-color: #EDE7F6; border-color: #D1C4E9; color: #5E35B1; }
+.service-box:nth-child(6) { background-color: #ECEFF1; border-color: #CFD8DC; color: #37474F; }
 
 .service-box:hover {
     transform: translateY(-5px);
@@ -172,47 +182,48 @@
 }
 
 .service-box i {
-    font-size: 2.2em;
-    margin-bottom: 0.7em;
+    font-size: 2em; /* הקטנה קלה */
+    margin-bottom: 0.5em; /* הקטנה קלה */
     color: inherit;
 }
 
 .service-box h3 {
-    font-size: 1.3em;
-    margin-bottom: 0.6em;
-    font-family: 'Roboto', sans-serif; /* גופן מודרני */
+    font-size: 1.2em; /* הקטנה קלה */
+    margin-bottom: 0.3em; /* הקטנה קלה */
+    font-family: 'Roboto', sans-serif;
     color: inherit;
     font-weight: 500;
 }
 
 .service-box p {
-    font-size: 1em;
-    line-height: 1.7;
-    font-family: 'Open Sans', sans-serif; /* גופן קריא ומודרני */
+    font-size: 0.9em; /* הקטנה קלה */
+    line-height: 1.5; /* הקטנה קלה */
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: inherit;
+    margin-bottom: 0; /* הסרה של margin תחתון אם קיים */
 }
 
 /* === רספונסיביות - התאמות למובייל === */
 @media (max-width: 768px) {
     .about-us {
-        padding: 3em 2em;
-        margin-bottom: 15px; /* התאמה למובייל */
-        margin-top: 30px; /* התאמה למובייל */
+        padding: 2em 1.5em; /* התאמה למובייל */
+        margin-bottom: 1em; /* התאמה למובייל */
+        margin-top: 2em; /* התאמה למובייל */
     }
 
     .about-content {
-        margin-bottom: 3em;
-        margin-top: 3em;
+        margin-bottom: 2em; /* התאמה למובייל */
+        margin-top: 2em; /* התאמה למובייל */
     }
 
     .about-me-container {
         grid-template-columns: 1fr;
-        gap: 2.5em;
+        gap: 2em; /* התאמה למובייל */
     }
 
     .about-me-image img {
-        max-width: 300px;
+        max-width: 280px; /* התאמה למובייל */
         border-radius: 4px;
     }
 
@@ -220,33 +231,51 @@
         text-align: center;
     }
 
+    .about-me-text p {
+        font-size: 0.95em; /* שמירה על גודל קטן */
+        line-height: 1.5; /* התאמה למובייל */
+        margin-bottom: 0.5em; /* התאמה למובייל */
+    }
+
     .services {
-        padding: 2em;
-        margin-bottom: 3ex;
-        margin-top: 15px; /* התאמה למובייל */
+        padding: 1.5em; /* התאמה למובייל */
+        margin-bottom: 1em; /* התאמה למובייל */
+        margin-top: 1em; /* התאמה למובייל */
+    }
+
+    .services-content h2 {
+        font-size: 2em; /* התאמה למובייל */
+        margin-bottom: 0.4em; /* התאמה למובייל */
+    }
+
+    .services-subtitle {
+        font-size: 0.95em; /* התאמה למובייל */
+        margin-bottom: 1em; /* התאמה למובייל */
+        line-height: 1.6; /* התאמה למובייל */
     }
 
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 1.2em;
+        gap: 1em; /* התאמה למובייל */
     }
 
     .service-box {
-        padding: 1.5em;
+        padding: 1em; /* התאמה למובייל */
     }
 
     .service-box i {
-        font-size: 1.8em;
-        margin-bottom: 0.5em;
+        font-size: 1.6em; /* התאמה למובייל */
+        margin-bottom: 0.4em; /* התאמה למובייל */
     }
 
     .service-box h3 {
-        font-size: 1.2em;
-        margin-bottom: 0.4em;
+        font-size: 1.1em; /* התאמה למובייל */
+        margin-bottom: 0.2em; /* התאמה למובייל */
     }
 
     .service-box p {
-        font-size: 0.95em;
-        line-height: 1.6;
+        font-size: 0.9em; /* התאמה למובייל */
+        line-height: 1.5; /* התאמה למובייל */
+        margin-bottom: 0; /* התאמה למובייל */
     }
 }
