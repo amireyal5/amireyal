@@ -1,171 +1,159 @@
 /* === סעיף אודות - סגנון מודרני בהיר (דוגמה 2) === */
 .about-us {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4em 3em; /* הקטנה קלה של ה-padding */
-    background-color: white;
-    text-align: center;
-    position: relative;
-    margin-bottom: 1.5em; /* הקטנה נוספת */
-    margin-top: 3em; /* הקטנה קלה */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4em 3em; /* הקטנה קלה של ה-padding */
+    background-color: white;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1.5em; /* הקטנה נוספת */
+    margin-top: 3em; /* הקטנה קלה */
 }
 
 .location-banner {
-    text-align: center;
-    font-weight: 600;
-    color: #555;
-    font-size: 1.15em;
-    margin-bottom: 1em; /* הקטנה קלה */
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+    font-size: 1.15em;
+    margin-bottom: 1em; /* הקטנה קלה */
 }
 
 .about-content {
-    max-width: 1000px;
-    margin: 0 auto 2em; /* הקטנה משמעותית */
-    position: relative;
-    text-align: center;
-    margin-top: 2em; /* הקטנה משמעותית */
+    max-width: 1000px;
+    margin: 0 auto 2em; /* הקטנה משמעותית */
+    position: relative;
+    text-align: center;
+    margin-top: 2em; /* הקטנה משמעותית */
 }
 
 .about-content h2 {
-    font-size: 1.3em;
-    color: #004869bd;
-    margin-bottom: 0.7em; /* הקטנה קלה */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    text-align: right;
-    position: relative;
-    display: inline-block;
-}
-
-.about-content h2::after {
-    content: '';
-    position: absolute;
-    bottom: -0.2em; /* קירוב לפס לכותרת */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px; /* הקטנת רוחב הפס */
-    height: 1px; /* הקטנת גובה הפס */
-    background-color: #2196F3;
-    border-radius: 1px;
+    font-size: 1.3em;
+    color: #004869bd;
+    margin-bottom: 0.7em; /* הקטנה קלה */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: right;
+    position: relative;
+    display: inline-block;
 }
 
 .about-me-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5em; /* הקטנה קלה */
-    max-width: 1000px;
-    margin: 0 auto;
-    align-items: center;
-    min-height: 400px;
-    align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5em; /* הקטנה קלה */
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    min-height: 400px;
+    align-items: start;
 }
 
 .about-me-image {
-    order: 1;
-    text-align: center;
-    position: relative;
+    order: 1;
+    text-align: center;
+    position: relative;
 }
 
 .about-me-image h3 {
-    font-size: 1.3em; /* הקטנה קלה */
-    color: #2196F3;
-    margin-bottom: 0.8em; /* הקטנה קלה */
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em; /* הקטנה קלה */
+    color: #2196F3;
+    margin-bottom: 0.8em; /* הקטנה קלה */
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
 }
 
 .about-me-image img {
-    max-width: 100%;
-    max-height: 720px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    max-width: 100%;
+    max-height: 720px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .about-me-image img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .about-me-text {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
 }
 
 .about-me-text p {
-    font-size: 1em; /* הקטנה קלה */
-    color: #444;
-    line-height: 1.6; /* הקטנה קלה */
-    margin-bottom: 0.6em; /* הקטנה משמעותית */
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-size: 1em; /* הקטנה קלה */
+    color: #444;
+    line-height: 1.6; /* הקטנה קלה */
+    margin-bottom: 0.6em; /* הקטנה משמעותית */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 .about-me-text p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 /* === סעיף שירותים - סגנון מודרני בהיר (דוגמה 2) === */
 .services {
-    padding: 3em 2.5em; /* הקטנה קלה של ה-padding */
-    text-align: center;
-    background-color: #F5F5F5;
-    border-radius: 6px;
-    margin-bottom: 1.5em; /* הקטנה נוספת */
-    margin-top: 1.5em; /* הקטנה נוספת */
+    padding: 3em 2.5em; /* הקטנה קלה של ה-padding */
+    text-align: center;
+    background-color: #F5F5F5;
+    border-radius: 6px;
+    margin-bottom: 1.5em; /* הקטנה נוספת */
+    margin-top: 1.5em; /* הקטנה נוספת */
 }
 
 .services-content {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .no-underline {
-    text-decoration: none;
+    text-decoration: none;
 }
 
 .services-content h2 {
-    font-size: 2.1em; /* הקטנה קלה */
-    color: #2196F3;
-    margin-bottom: 0.5em; /* הקטנה קלה */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-size: 2.1em; /* הקטנה קלה */
+    color: #2196F3;
+    margin-bottom: 0.5em; /* הקטנה קלה */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .services-subtitle {
-    font-size: 1em; /* הקטנה קלה */
-    color: #555;
-    margin-bottom: 1.2em; /* הקטנה משמעותית */
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1.7; /* הקטנה קלה */
+    font-size: 1em; /* הקטנה קלה */
+    color: #555;
+    margin-bottom: 1.2em; /* הקטנה משמעותית */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7; /* הקטנה קלה */
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* הקטנה קלה של הרוחב המינימלי */
-    gap: 1.5em; /* הקטנה קלה */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* הקטנה קלה של הרוחב המינימלי */
+    gap: 1.5em; /* הקטנה קלה */
 }
 
 .service-box {
-    padding: 1.5em; /* הקטנה קלה */
-    border-radius: 6px;
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
-    color: #333;
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-    background-color: #E3F2FD;
-    border: 1px solid #BBDEFB;
+    padding: 1.5em; /* הקטנה קלה */
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    background-color: #E3F2FD;
+    border: 1px solid #BBDEFB;
 }
 
 /* צבעי תיבות אינדיבידואליים */
@@ -177,105 +165,105 @@
 .service-box:nth-child(6) { background-color: #ECEFF1; border-color: #CFD8DC; color: #37474F; }
 
 .service-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 .service-box i {
-    font-size: 2em; /* הקטנה קלה */
-    margin-bottom: 0.5em; /* הקטנה קלה */
-    color: inherit;
+    font-size: 2em; /* הקטנה קלה */
+    margin-bottom: 0.5em; /* הקטנה קלה */
+    color: inherit;
 }
 
 .service-box h3 {
-    font-size: 1.2em; /* הקטנה קלה */
-    margin-bottom: 0.3em; /* הקטנה קלה */
-    font-family: 'Roboto', sans-serif;
-    color: inherit;
-    font-weight: 500;
+    font-size: 1.2em; /* הקטנה קלה */
+    margin-bottom: 0.3em; /* הקטנה קלה */
+    font-family: 'Roboto', sans-serif;
+    color: inherit;
+    font-weight: 500;
 }
 
 .service-box p {
-    font-size: 0.9em; /* הקטנה קלה */
-    line-height: 1.5; /* הקטנה קלה */
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    color: inherit;
-    margin-bottom: 0; /* הסרה של margin תחתון אם קיים */
+    font-size: 0.9em; /* הקטנה קלה */
+    line-height: 1.5; /* הקטנה קלה */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: inherit;
+    margin-bottom: 0; /* הסרה של margin תחתון אם קיים */
 }
 
 /* === רספונסיביות - התאמות למובייל === */
 @media (max-width: 768px) {
-    .about-us {
-        padding: 2em 1.5em; /* התאמה למובייל */
-        margin-bottom: 1em; /* התאמה למובייל */
-        margin-top: 2em; /* התאמה למובייל */
-    }
+    .about-us {
+        padding: 2em 1.5em; /* התאמה למובייל */
+        margin-bottom: 1em; /* התאמה למובייל */
+        margin-top: 2em; /* התאמה למובייל */
+    }
 
-    .about-content {
-        margin-bottom: 2em; /* התאמה למובייל */
-        margin-top: 2em; /* התאמה למובייל */
-    }
+    .about-content {
+        margin-bottom: 2em; /* התאמה למובייל */
+        margin-top: 2em; /* התאמה למובייל */
+    }
 
-    .about-me-container {
-        grid-template-columns: 1fr;
-        gap: 2em; /* התאמה למובייל */
-    }
+    .about-me-container {
+        grid-template-columns: 1fr;
+        gap: 2em; /* התאמה למובייל */
+    }
 
-    .about-me-image img {
-        max-width: 280px; /* התאמה למובייל */
-        border-radius: 4px;
-    }
+    .about-me-image img {
+        max-width: 280px; /* התאמה למובייל */
+        border-radius: 4px;
+    }
 
-    .about-me-text {
-        text-align: center;
-    }
+    .about-me-text {
+        text-align: center;
+    }
 
-    .about-me-text p {
-        font-size: 0.95em; /* שמירה על גודל קטן */
-        line-height: 1.5; /* התאמה למובייל */
-        margin-bottom: 0.5em; /* התאמה למובייל */
-    }
+    .about-me-text p {
+        font-size: 0.95em; /* שמירה על גודל קטן */
+        line-height: 1.5; /* התאמה למובייל */
+        margin-bottom: 0.5em; /* התאמה למובייל */
+    }
 
-    .services {
-        padding: 1.5em; /* התאמה למובייל */
-        margin-bottom: 1em; /* התאמה למובייל */
-        margin-top: 1em; /* התאמה למובייל */
-    }
+    .services {
+        padding: 1.5em; /* התאמה למובייל */
+        margin-bottom: 1em; /* התאמה למובייל */
+        margin-top: 1em; /* התאמה למובייל */
+    }
 
-    .services-content h2 {
-        font-size: 2em; /* התאמה למובייל */
-        margin-bottom: 0.4em; /* התאמה למובייל */
-    }
+    .services-content h2 {
+        font-size: 2em; /* התאמה למובייל */
+        margin-bottom: 0.4em; /* התאמה למובייל */
+    }
 
-    .services-subtitle {
-        font-size: 0.95em; /* התאמה למובייל */
-        margin-bottom: 1em; /* התאמה למובייל */
-        line-height: 1.6; /* התאמה למובייל */
-    }
+    .services-subtitle {
+        font-size: 0.95em; /* התאמה למובייל */
+        margin-bottom: 1em; /* התאמה למובייל */
+        line-height: 1.6; /* התאמה למובייל */
+    }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1em; /* התאמה למובייל */
-    }
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1em; /* התאמה למובייל */
+    }
 
-    .service-box {
-        padding: 1em; /* התאמה למובייל */
-    }
+    .service-box {
+        padding: 1em; /* התאמה למובייל */
+    }
 
-    .service-box i {
-        font-size: 1.6em; /* התאמה למובייל */
-        margin-bottom: 0.4em; /* התאמה למובייל */
-    }
+    .service-box i {
+        font-size: 1.6em; /* התאמה למובייל */
+        margin-bottom: 0.4em; /* התאמה למובייל */
+    }
 
-    .service-box h3 {
-        font-size: 1.1em; /* התאמה למובייל */
-        margin-bottom: 0.2em; /* התאמה למובייל */
-    }
+    .service-box h3 {
+        font-size: 1.1em; /* התאמה למובייל */
+        margin-bottom: 0.2em; /* התאמה למובייל */
+    }
 
-    .service-box p {
-        font-size: 0.9em; /* התאמה למובייל */
-        line-height: 1.5; /* התאמה למובייל */
-        margin-bottom: 0; /* התאמה למובייל */
-    }
+    .service-box p {
+        font-size: 0.9em; /* התאמה למובייל */
+        line-height: 1.5; /* התאמה למובייל */
+        margin-bottom: 0; /* התאמה למובייל */
+    }
 }
