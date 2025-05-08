@@ -38,17 +38,7 @@
     display: inline-block;
 }
 
-.about-content h2::after {
-    content: '';
-    position: absolute;
-    bottom: -0.3em;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70px;
-    height: 2px;
-    background-color: #2196F3; /* כחול מודרני */
-    border-radius: 1px;
-}
+
 
 .about-me-container {
     display: grid;
