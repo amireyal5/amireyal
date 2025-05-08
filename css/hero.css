@@ -10,7 +10,7 @@
     --overlay-color: rgba(31, 98, 142, 0.15); /* צבע כיסוי עדין */
 
     width: 100%;
-    height: 80vh; /* גובה ראשוני למחשב */
+    height: 60vh; /* גובה ראשוני למחשב */
     max-height: 800px; /* הגבלת גובה מקסימלי */
     min-height: 500px; /* גובה מינימלי */
     position: relative;
