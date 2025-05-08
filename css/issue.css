@@ -59,6 +59,7 @@
     margin: 0 auto;
     align-items: center;
     min-height: 400px;
+    align-items: start;
 }
 
 .about-me-image {
