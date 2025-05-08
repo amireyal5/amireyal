@@ -10,7 +10,7 @@
   text-align: right;
   margin-bottom: 30px;
   font-size: 1.2em;
-  color: #8B635C;        /* צבע акцент - כותרות סקציות */
+  color: #0077aa;        /* צבע תכלכל לדוגמה - שנה למה שתרצה */
   font-weight: 300;      /* גופן דק יותר */
   font-family: 'Heebo', sans-serif; /* דוגמה לפונט עדכני שמתאים לעברית */
 }
@@ -18,18 +18,18 @@
 body {
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן כללי */
     direction: rtl;
-    background-color: #DCBF85; /* כלל 1: רקע כללי */
-    color: #60594D; /* *** כלל 5: צבע טקסט רגיל *** */
+    background-color: #FFFFFF; /* כלל 1: רקע לבן תמידי */
+    color: #514b4b; /* *** כלל 5: צבע טקסט רגיל - שונה ל-#514b4b *** */
     /* כלל 5: גודל פונט (1.1em), משקל (200) ו-line height (2.0) לטקסט רגיל ייושם על אלמנטים מתאימים כמו <p> בקודים הבאים. */
-    font-size: 1rem; /* גודל בסיס ב-body */
+    font-size: 1rem; /* גודל בסיס ב-body, ניתן להתאים אם יש צורך לגודל טקסט רגיל */
 }
 
 /* הדר - Header styles */
 #main-header {
     display: flex; /* תיקון תחביר */
-    align-items: center; /* תיקון תחביר */
+    align-items: center; /* תיקון תחביר - הנחתי ש-center התכוון ליישור אופקי בתוך פלקס עמודה */
     padding: 0.5em 1em;
-    background-color: #DDD78D; /* כלל 1: רקע הדר - גוון בהיר יותר */
+    background-color: #FFFFFF; /* כלל 1: רקע לבן בהדר */
     position: sticky;
     top: 0;
     transition: top 0.3s ease;
@@ -78,18 +78,18 @@ nav {
 }
 
 .menu a {
-    /* כלל 10: צבע קישורי תפריט ראשי */
-    color: #8B635C; /* צבע акцент - קישורים ראשיים */
+    /* כלל 10: צבע קישורי תפריט ראשי - נשאר מקורי */
+    color: #1f628e; /* נשאר מקורי */
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 300; /* משקל פונט כפי שנקבע לקישורי תפריט */
     transition: color 0.3s ease, transform 0.3s ease-in-out;
-    font-size: 0.9em; /* כלל 9: גודל פונט קישורי תפריט */
+    font-size: 0.9em; /* כלל 9: גודל פונט עצמאי לקישורי תפריט */
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
 }
 
 .menu a:hover {
-    /* כלל 10: צבע ריחוף קישורי תפריט ראשי */
-    color: #60594D; /* צבע טקסט כללי - ריחוף קישורים */
+    /* כלל 10: צבע ריחוף קישורי תפריט ראשי - נשאר מקורי */
+    color: #1565C0; /* נשאר מקורי */
     transform: scale(1.05);
 }
 
@@ -97,7 +97,7 @@ nav {
     order: 3;
     display: none;
     font-size: 2rem;
-    color: #8B635C; /* כלל 8: צבע אייקון המבורגר (כמו כותרת ראשית) */
+    color: #364958; /* כלל 8: צבע אייקון המבורגר (כמו כותרת ראשית) */
     cursor: pointer;
     margin-left: auto;
 }
@@ -117,8 +117,8 @@ nav {
     position: absolute;
     top: 100%;
     right: 0;
-    /* כלל 10: רקע תפריט משנה (דסקטופ) */
-    background-color: #93A29B; /* גוון משני - רקע תפריט משנה */
+    /* כלל 10: רקע תפריט משנה (דסקטופ) - נשאר מקורי */
+    background-color: #036a74; /* נשאר מקורי */
     list-style: none;
     padding: 0.5em 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -134,18 +134,18 @@ nav {
 }
 
 .submenu li a {
-    /* כלל 10: צבע טקסט קישורי תפריט משנה */
-    color: #DCBF85; /* רקע כללי - טקסט קישורי תפריט משנה */
+    /* כלל 10: צבע טקסט קישורי תפריט משנה - נשאר מקורי */
+    color: #fff; /* נשאר מקורי */
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
 }
 
 .submenu li a:hover {
-    /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה */
-    color: #FFFFFF; /* לבן - ריחוף טקסט קישורי תפריט משנה */
-    /* כלל 10: רקע ריחוף קישורי תפריט משנה */
-    background-color: rgba(0, 0, 0, 0.1);
+    /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה - נשאר מקורי */
+    color: #f0f8ff; /* נשאר מקורי */
+    /* כלל 10: רקע ריחוף קישורי תפריט משנה - נשאר מקורי */
+    background-color: rgba(0, 0, 0, 0.1); /* נשאר מקורי */
 }
 
 .has-submenu:hover .submenu {
@@ -155,8 +155,8 @@ nav {
 /* כפתורים - Button styles */
 .fixed-consultation-button {
     display: inline-block;
-    background-color: #8B635C; /* כלל 3: רקע כפתור רגיל - צבע акцент */
-    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור - לבן */
+    background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
+    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
@@ -171,7 +171,7 @@ nav {
 }
 
 .fixed-consultation-button:hover {
-    background-color: #60594D; /* כלל 3: רקע כפתור בריחוף - צבע טקסט כללי */
+    background-color: #55828B; /* כלל 3: רקע כפתור בריחוף */
 }
 
 /* אייקונים מרחפים ליצירת קשר - Floating contact icons styles */
@@ -189,15 +189,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* כלל 10: רקע אייקונים מרחפים */
-    background-color: rgba(139, 99, 92, 0.7); /* צבע акцент עם שקיפות */
-    /* כלל 10: צבע אייקונים מרחפים */
-    color: #FFFFFF; /* לבן */
+    /* כלל 10: רקע אייקונים מרחפים - נשאר מקורי */
+    background-color: rgba(255, 255, 255, 0.7); /* נשאר מקורי */
+    /* כלל 10: צבע אייקונים מרחפים - נשאר מקורי */
+    color: #457b9d; /* נשאר מקורי */
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-bottom: 10px;
-    font-size: 24px; /* כלל 9: גודל פונט אייקונים מרחפים */
+    font-size: 24px; /* כלל 9: גודל פונט אייקונים מרחפים - לא משתנה */
     text-decoration: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out,
@@ -206,8 +206,8 @@ nav {
 
 .floating-contact-icons a:hover {
     transform: scale(1.2);
-    /* כלל 10: צבע ריחוף אייקונים מרחפים */
-    color: #DDD78D; /* רקע הדר - ריחוף אייקונים */
+    /* כלל 10: צבע ריחוף אייקונים מרחפים - נשאר מקורי */
+    color: #a8dadc; /* נשאר מקורי */
 }
 
 /* רספונסיביות - חלקים גלובליים - Responsive global parts */
@@ -231,7 +231,7 @@ nav {
     .hamburger .line {
         width: 100%;
         height: 3px;
-        background-color: #8B635C; /* כלל 8: צבע קווי המבורגר (כמו כותרת ראשית) */
+        background-color: #364958; /* כלל 8: צבע קווי המבורגר (כמו כותרת ראשית) */
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
@@ -255,8 +255,8 @@ nav {
         top: 60px; /* התאם לגובה ההדר שלך */
         right: 0;
         left: 0;
-        /* כלל 10: רקע תפריט במובייל */
-        background-color: #93A29B; /* גוון משני - רקע תפריט מובייל */
+        /* כלל 10: רקע תפריט במובייל - נשאר מקורי */
+        background-color: #036a74; /* נשאר מקורי */
         text-align: right;
         padding: 0.5em 1em;
         z-index: 999;
@@ -270,8 +270,8 @@ nav {
     .menu#mobile-menu li {
         margin: 0.5em 0;
         padding: 0.5em 0;
-        /* כלל 10: גבול תפריט במובייל */
-        border-bottom: 1px solid rgba(220, 191, 133, 0.3); /* רקע כללי - גבול תפריט מובייל */
+        /* כלל 10: גבול תפריט במובייל - נשאר מקורי */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* נשאר מקורי */
     }
 
     .menu#mobile-menu li:last-child {
@@ -279,9 +279,9 @@ nav {
     }
 
     .menu#mobile-menu a {
-        /* כלל 10: צבע טקסט קישורי תפריט במובייל */
-        color: #DCBF85; /* רקע כללי - טקסט קישורי תפריט מובייל */
-        font-size: 1rem;
+        /* כלל 10: צבע טקסט קישורי תפריט במובייל - נשאר מקורי */
+        color: #fff; /* נשאר מקורי */
+        font-size: 1rem; /* כלל 9: גודל פונט קישורי תפריט - כרגע 1rem במובייל, 0.9em בדסקטופ. יש לייחד או ליישר קו? כרגע נשאר מקורי */
         font-weight: 300;
         transition: background-color 0.3s ease;
         padding: 0.5em;
@@ -291,10 +291,10 @@ nav {
     }
 
     .menu#mobile-menu a:hover {
-        /* כלל 10: צבע ריחוף טקסט קישורי תפריט במובייל */
-        color: #FFFFFF; /* לבן - ריחוף טקסט קישורי תפריט מובייל */
-        /* כלל 10: רקע ריחוף קישורי תפריט במובייל */
-        background-color: rgba(0, 0, 0, 0.1);
+        /* כלל 10: צבע ריחוף טקסט קישורי תפריט במובייל - נשאר מקורי */
+        color: #f0f8ff; /* נשאר מקורי */
+        /* כלל 10: רקע ריחוף קישורי תפריט במובייל - נשאר מקורי */
+        background-color: rgba(0, 0, 0, 0.1); /* נשאר מקורי */
     }
 
     /* הסרת חץ מפריטים רגילים במובייל */
@@ -322,13 +322,13 @@ nav {
     .submenu {
         display: none;
         position: static;
-        background: transparent !important;
+        background: transparent !important; /* נשאר מקורי */
         box-shadow: none !important;
         padding: 0 0 0 1em;
         animation: none;
         margin-top: 0.5em;
-        /* כלל 10: גבול תפריט משנה במובייל */
-        border-right: 3px solid rgba(220, 191, 133, 0.3); /* רקע כללי - גבול תפריט משנה מובייל */
+        /* כלל 10: גבול תפריט משנה במובייל - נשאר מקורי */
+        border-right: 3px solid rgba(255, 255, 255, 0.3); /* נשאר מקורי */
         margin-right: 10px;
     }
 
@@ -338,15 +338,15 @@ nav {
     }
 
     .submenu li a {
-        /* כלל 10: צבע טקסט קישורי תפריט משנה במובייל */
-        color: rgba(220, 191, 133, 0.9); /* רקע כללי - טקסט קישורי תפריט משנה מובייל */
+        /* כלל 10: צבע טקסט קישורי תפריט משנה במובייל - נשאר מקורי */
+        color: rgba(255, 255, 255, 0.9); /* נשאר מקורי */
         font-weight: 300;
         padding-right: 0.5em;
     }
 
     .submenu li a:hover {
-        /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה במובייל */
-        color: #FFFFFF; /* לבן - ריחוף טקסט קישורי תפריט משנה מובייל */
+        /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה במובייל - נשאר מקורי */
+        color: #f0f8ff; /* נשאר מקורי */
     }
 
     .has-submenu.active .submenu {
@@ -363,7 +363,7 @@ nav {
     .floating-contact-icons a {
         width: 40px;
         height: 40px;
-        font-size: 20px;
+        font-size: 20px; /* כלל 9: גודל פונט אייקונים מרחפים במובייל - לא משתנה */
     }
 }
 
@@ -407,4 +407,20 @@ nav {
 @media (max-width: 768px) {
     .fixed-consultation-button {
         display: block;
-        background-color: #8B635C; /* כלל 3: רקע כפתור רגיל - צבע
+        background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
+        color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
+        font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+        width: auto;
+        text-align: center;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
