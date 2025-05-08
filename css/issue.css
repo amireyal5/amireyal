@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: center;
     padding: 5em 4em; /* ריווח נדיב */
-    background-color: #F5F5F5; /* אפור בהיר מאוד */
+    background-color: white
+    ; /* אפור בהיר מאוד */
     text-align: center;
     position: relative;
     margin-bottom: 40px;
