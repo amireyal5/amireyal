@@ -58,7 +58,7 @@ body {
 /* --- Treatment Layout - Two-column grid with white separators --- */
 .treatment-section {
     padding: 60px 0;
-    background-color: #00695C; /* !!! צבע רקע - יש לבחור צבע מהמניפות (כחולים/ירוקים) !!! */
+    background-color: #004869bd; /* !!! צבע רקע - יש לבחור צבע מהמניפות (כחולים/ירוקים) !!! */
     color: white; /* צבע גופן כללי לסקציה - האם נשאר לבן על רקע צבעוני? */
 }
 
