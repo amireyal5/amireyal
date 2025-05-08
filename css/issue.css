@@ -4,11 +4,10 @@
     align-items: center;
     justify-content: center;
     padding: 5em 4em; /* ריווח נדיב */
-    background-color: white
-    ; /* אפור בהיר מאוד */
+    background-color: white; /* אפור בהיר מאוד */
     text-align: center;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* שינוי - הקטנת ה-margin התחתון */
     margin-top: 40px;
 }
 
@@ -118,6 +117,7 @@
     background-color: #F5F5F5; /* אפור בהיר מאוד */
     border-radius: 6px;
     margin-bottom: 4ex;
+    margin-top: 20px; /* שינוי - הקטנת ה-margin העליון */
 }
 
 .services-content {
@@ -207,6 +207,8 @@
 @media (max-width: 768px) {
     .about-us {
         padding: 3em 2em;
+        margin-bottom: 15px; /* התאמה למובייל */
+        margin-top: 30px; /* התאמה למובייל */
     }
 
     .about-content {
@@ -231,6 +233,7 @@
     .services {
         padding: 2em;
         margin-bottom: 3ex;
+        margin-top: 15px; /* התאמה למובייל */
     }
 
     .services-grid {
