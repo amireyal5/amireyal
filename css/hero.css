@@ -17,11 +17,19 @@ html, body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('images/Hero3.webp');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden; /* זה ימנע את ההתפשטות של התמונה מעבר לאזור */
   direction: rtl;
+}
+
+/* תמונה ברקע */
+.hero-parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* תמונה ממלאת את כל המרחב */
+  z-index: -1; /* שמים את התמונה מתחת לתוכן */
 }
 
 /* שכבת כהות */
