@@ -1,24 +1,12 @@
-/* RESET בסיסי */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-  scroll-behavior: smooth;
-  background-color: #f5f5f5;
-}
-
 /* פרלקסה */
 .hero-parallax {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden; /* זה ימנע את ההתפשטות של התמונה מעבר לאזור */
+  overflow: hidden;
   direction: rtl;
+  background-size: cover;
+  background-position: center;
 }
 
 /* תמונה ברקע */
@@ -28,8 +16,8 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* תמונה ממלאת את כל המרחב */
-  z-index: -1; /* שמים את התמונה מתחת לתוכן */
+  object-fit: cover;
+  z-index: -1; /* תמונה מתחת */
 }
 
 /* שכבת כהות */
@@ -41,6 +29,10 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* שכבת overlay מעל התמונה */
 }
 
 /* תוכן */
@@ -88,9 +80,4 @@ html, body {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-/* רקע ייחודי לדף הבית */
-.page-home .hero-parallax {
-  background-image: url('images/home-hero.webp');
 }
