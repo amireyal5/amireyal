@@ -1,83 +1,148 @@
-/* פרלקסה */
-.hero-parallax {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  direction: rtl;
-  background-size: cover;
-  background-position: center;
+
+/* אפס סגנונות בסיסיים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* תמונה ברקע */
-.hero-parallax img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* תמונה מתחת */
+/* Hero - מעודכן עם גובה מותאם */
+.hero {
+    --overlay-color: rgba(31, 98, 142, 0.15); /* צבע כיסוי עדין */
+
+    width: 100%;
+    height: 60vh; /* גובה ראשוני למחשב */
+    max-height: 800px; /* הגבלת גובה מקסימלי */
+    min-height: 500px; /* גובה מינימלי */
+    position: relative;
+    overflow: hidden;
+    background: #f9f9f9;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed; /* אפקט פרלקס */
 }
 
-/* שכבת כהות */
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.3); /* כהות מספקת לניגוד */
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* שכבת overlay מעל התמונה */
+/* רקע אפור (שזז יחד עם התמונה) */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.5); /* צבע אפור כהה עם שקיפות */
+    z-index: 1;
+    background-attachment: fixed; /* הרקע ינוע יחד עם התמונה */
 }
 
-/* תוכן */
+/* התמונה זזה עם אפקט פרלקס */
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    background-attachment: fixed; /* הרקע ינוע יחד עם התמונה */
+}
+
+/* אפקט פרלקס לתמונה */
+@media (prefers-reduced-motion: no-preference) {
+    .hero img {
+        animation: subtleZoom 25s linear infinite alternate;
+    }
+}
+
+@keyframes subtleZoom {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.03) rotate(0.3deg); }
+}
+
+/* תוכן ה-Hero (ניתן להתאמה) */
 .hero-content {
-  color: #ffffff;
-  text-align: center;
-  max-width: 800px;
-  animation: fadeInUp 1.2s ease forwards;
-  opacity: 0;
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
 }
 
+/* כותרת */
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5em;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
+/* תיאור */
 .hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5em;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-/* כפתור */
-.hero-button {
-  padding: 0.75em 2em;
-  font-size: 1rem;
-  background-color: #ffffffcc;
-  color: #000;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+/* מדיה קווריז עבור מסכים קטנים */
+@media (max-width: 768px) {
+    .hero {
+        height: 25vh; /* גובה ההירו - רבע מגובה המסך */
+        min-height: auto;
+        max-height: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .hero img {
+        position: relative;
+        width: 100%;
+        height: 100%; /* התמונה תופסת את כל גובה ההירו (25vh) */
+        object-fit: cover; /* או object-fit: contain; */
+    }
+
+    .hero::before {
+        height: 25vh; /* גובה כיסוי תואם */
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        z-index: 3;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    }
+
+    @keyframes subtleZoom {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.02); }
+    }
 }
 
-.hero-button:hover {
-  background-color: #ffffff;
-}
-
-/* אפקט הופעה */
-@keyframes fadeInUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* מדיה קוורי למסכים רחבים מאוד */
+@media (min-width: 1600px) {
+    .hero {
+        height: 70vh;
+        max-height: 900px;
+    }
 }
