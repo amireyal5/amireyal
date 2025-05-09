@@ -82,18 +82,22 @@
   }
 }
 
-/* התאמה למובייל */
 @media (max-width: 768px) {
   .hero-parallax {
-    height: 80vh; /* פחות גובה – ייכנס יותר תוכן */
+    height: 100vh; /* עדיין על כל המסך */
+  }
+
+  .hero-parallax img {
+    object-fit: contain; /* במקום cover – יראה יותר מהתמונה */
+    object-position: center top; /* התמקדות למעלה */
   }
 
   .hero-overlay {
-    padding: 1em; /* פחות רווח */
+    padding: 1em; /* פחות רווח מסביב לטקסט */
   }
 
   .hero-content h1 {
-    font-size: 2rem; /* טקסט קטן יותר */
+    font-size: 2rem;
   }
 
   .hero-content p {
