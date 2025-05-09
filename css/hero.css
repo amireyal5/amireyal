@@ -7,7 +7,7 @@
 
 /* Hero - מעודכן עם גובה מותאם */
 .hero {
-    --overlay-color: rgba(31, 98, 142, 0.15); /* צבע כיסוי עדין */
+    --dark-overlay-color: rgba(50, 50, 50, 0.6); /* צבע אפור כהה עם שקיפות */
 
     width: 100%;
     height: 60vh; /* גובה ראשוני למחשב */
@@ -29,12 +29,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        45deg,
-        var(--overlay-color),
-        rgba(0,0,0,0.05)
-    );
+    background: rgba(0, 0, 0, 0.05); /* שמירה על רקע שקוף עדין */
     z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-overlay-color); /* שכבת צבע אפור כהה */
+    z-index: 2;
 }
 
 .hero img {
@@ -102,6 +109,10 @@
     }
 
     .hero::before {
+        height: 25vh; /* גובה כיסוי תואם */
+    }
+
+    .hero::after {
         height: 25vh; /* גובה כיסוי תואם */
     }
 
