@@ -133,7 +133,9 @@
   }
 
   .hero-parallax img {
-    transform: scale(1.1); /* זום-אין קל בתמונה */
+    object-fit: contain; /* גורם לתמונה להיות מוכלת כולה */
+    width: 100%; /* מוודא שהרוחב נשאר 100% */
+    height: 100%; /* מוודא שהגובה נשאר 100% */
   }
 
   .hero-overlay {
