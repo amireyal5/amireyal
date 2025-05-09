@@ -81,3 +81,27 @@
     opacity: 1;
   }
 }
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+  .hero-parallax {
+    height: 80vh; /* פחות גובה – ייכנס יותר תוכן */
+  }
+
+  .hero-overlay {
+    padding: 1em; /* פחות רווח */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* טקסט קטן יותר */
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    padding: 0.5em 1.5em;
+    font-size: 0.9rem;
+  }
+}
