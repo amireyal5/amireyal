@@ -113,21 +113,28 @@
   .scroll-down-indicator {
     display: block;
   }
+
+  /* התמקדות על החץ במובייל */
+  .scroll-down-indicator span {
+    font-size: 30px;
+    animation: bounce 2s infinite;
+  }
 }
 
-/* עבור מסכים רחבים, הצג טקסט אלגנטי */
+/* עבור מסכים רחבים, הצג טקסט "לגלול למטה" */
 @media (min-width: 769px) {
   .scroll-down-indicator {
-    display: none;
+    display: none; /* החץ לא יוצג במסכים רחבים */
   }
-  
+
   .scroll-down-text {
+    display: block;
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.2rem;
-    color: #ffffff;
+    color: white;
     opacity: 0.7;
     cursor: pointer;
     animation: fadeInUp 1s ease-out;
