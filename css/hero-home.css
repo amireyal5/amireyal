@@ -42,20 +42,17 @@
   max-width: 800px;
   animation: fadeInUp 1.2s ease forwards;
   opacity: 0;
+  position: relative; /* כדי שהחץ יהיה ממוקם ביחס אליו */
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em; /* הקטנה של המרווח מתחת לכותרת */
 }
 
 .hero-content p {
   font-size: 1.5rem;
-  margin-bottom: 1.5em;
-}
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 0.2em; /* הקטנה של המרווח מתחת לכותרת */
+  margin-bottom: 1.5em; /* ברירת מחדל לפסקאות */
 }
 
 .hero-content p:first-of-type { /* פונה לפסקה הראשונה (פסיכותרפיסט CBT) */
@@ -65,7 +62,7 @@
 
 .hero-content p:last-of-type { /* פונה לפסקה השנייה (כרמיאל והסביבה | אונליין) */
   font-size: 1.5rem;
-  margin-bottom: 4.5em; /* יכול להיות שנרצה מרווח קצת יותר גדול לפני הכפתור */
+  margin-bottom: 4.5em; /* מרווח לפני הכפתור - שמרתי על הערך הנוכחי שלך */
 }
 
 /* כפתור */
@@ -78,7 +75,8 @@
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
- 
+  display: inline-block; /* כדי שהחץ יוכל להתמקם מתחתיו במרכז */
+  margin-bottom: 20px; /* מרווח בין הכפתור לחץ הגלילה */
 }
 
 .hero-button:hover {
@@ -97,14 +95,15 @@
   }
 }
 
+/* חץ גלילה */
 .scroll-down-indicator {
-  display: none; /* הסתרה כברירת מחדל */
   position: absolute;
-  bottom: 20px;
+  bottom: -70px; /* התאמת המרחק מהכפתור - התחלתי עם ערך קצת יותר גדול */
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
   z-index: 2;
+  display: block; /* מוודאים שהוא מוצג גם במחשב */
 }
 
 .scroll-icon {
@@ -147,14 +146,29 @@
 
   .hero-content p {
     font-size: 1.1rem;
+    margin-bottom: 1.5em; /* התאמת מרווח במובייל */
   }
 
   .hero-button {
     padding: 1em 1.5em; /* יותר padding */
     font-size: 1.0rem; /* יותר גדול */
+    margin-bottom: 15px; /* התאמת מרווח במובייל */
   }
 
-  .scroll-down-indicator {
-    display: block; /* הצגה במובייל */
+  /* אנחנו כבר מציגים את החץ גם במחשב, אז אין צורך לשנות את ה-display כאן */
+  /* .scroll-down-indicator {
+    display: block;
+  } */
+}
+
+/* אפקט הופעה */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
