@@ -1,4 +1,4 @@
-/* איפוס סגנונות */
+/* אפס סגנונות בסיסיים */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 
 /* Hero - מעודכן עם גובה מותאם */
 .hero {
-    --dark-overlay-color: rgba(150, 150, 150, 0.4); /* צבע אפור בהיר יותר עם שקיפות נמוכה יותר */
+    --overlay-color: rgba(31, 98, 142, 0.15); /* צבע כיסוי עדין */
 
     width: 100%;
     height: 60vh; /* גובה ראשוני למחשב */
@@ -20,8 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-attachment: fixed; /* אפקט פרלקס */
 }
 
+/* רקע אפור (שזז יחד עם התמונה) */
 .hero::before {
     content: '';
     position: absolute;
@@ -29,57 +31,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.05); /* שמירה על רקע שקוף עדין */
+    background: rgba(50, 50, 50, 0.5); /* צבע אפור כהה עם שקיפות */
     z-index: 1;
+    background-attachment: fixed; /* הרקע ינוע יחד עם התמונה */
 }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--dark-overlay-color); /* שכבת צבע אפור בהיר יותר */
-    z-index: 2;
-}
-
-/* תוכן ה-Hero */
-.hero-content {
-    position: relative;
-    z-index: 3;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
-    animation: fadeInUp 1s ease-out; /* הוספת האנימציה של fadeInUp */
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-/* אפקט הופעה */
-@keyframes fadeInUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* אפקט פרלקסה */
+/* התמונה זזה עם אפקט פרלקס */
 .hero img {
     position: absolute;
     width: 100%;
@@ -89,20 +46,43 @@
     z-index: 0;
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: transform;
+    background-attachment: fixed; /* הרקע ינוע יחד עם התמונה */
 }
 
-/* האנימציה של הפרלקסה - תנועה של התמונה ברקע */
-@keyframes parallax {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(10%); /* זוזה של התמונה ב-10% בזמן הגלילה */
+/* אפקט פרלקס לתמונה */
+@media (prefers-reduced-motion: no-preference) {
+    .hero img {
+        animation: subtleZoom 25s linear infinite alternate;
     }
 }
 
-.hero img {
-    animation: parallax 5s infinite alternate;
+@keyframes subtleZoom {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.03) rotate(0.3deg); }
+}
+
+/* תוכן ה-Hero (ניתן להתאמה) */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* כותרת */
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* תיאור */
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 /* מדיה קווריז עבור מסכים קטנים */
@@ -126,11 +106,6 @@
 
     .hero::before {
         height: 25vh; /* גובה כיסוי תואם */
-    }
-
-    .hero::after {
-        border: none; /* הסרת המסגרת */
-        inset: 0;
     }
 
     .hero-content {
