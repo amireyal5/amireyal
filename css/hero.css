@@ -1,159 +1,102 @@
-/* איפוס סגנונות */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Hero - מעודכן עם גובה מותאם */
 .hero {
-    --overlay-color: rgba(31, 98, 142, 0.15); /* צבע כיסוי עדין */
-
-    width: 100%;
-    height: 60vh; /* גובה ראשוני למחשב */
-    max-height: 800px; /* הגבלת גובה מקסימלי */
-    min-height: 500px; /* גובה מינימלי */
     position: relative;
+    width: 100%;
+    height: 100vh; /* תופס את כל גובה המסך */
     overflow: hidden;
-    background: #f9f9f9;
-    isolation: isolate;
     display: flex;
     align-items: center;
     justify-content: center;
+    direction: rtl;
 }
 
-.hero::before {
-    content: '';
+.hero img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        45deg,
-        var(--overlay-color),
-        rgba(0,0,0,0.05)
-    );
+    object-fit: cover; /* ממלא את האזור מבלי לעוות */
     z-index: 1;
+    filter: brightness(0.7); /* מחשיך מעט כדי להבליט את הטקסט */
 }
 
-.hero img {
-    position: absolute;
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4); /* שכבה כהה עם שקיפות */
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
-}
-
-/* אנימציה עדינה לתמונה */
-@media (prefers-reduced-motion: no-preference) {
-    .hero img {
-        animation: subtleZoom 25s linear infinite alternate;
-    }
-}
-
-@keyframes subtleZoom {
-    0% { transform: scale(1) rotate(0deg); }
-    100% { transform: scale(1.03) rotate(0.3deg); }
-}
-
-/* מסגרת עדינה */
-.hero::after {
-    content: '';
-    position: absolute;
-    inset: 20px;
-    border: 1px solid rgba(255,255,255,0.3);
-    z-index: 2;
-    pointer-events: none;
-}
-
-/* תוכן ה-Hero (ניתן להתאמה) */
-.hero-content {
-    position: relative;
-    z-index: 3;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 2em;
+}
+
+.hero-content {
+    color: #fff;
     max-width: 800px;
+    padding: 1em;
+    animation: fadeInUp 1.2s ease forwards;
+    opacity: 0;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0.5em;
+    font-weight: 300;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-size: 1.3em;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 1.5em;
 }
 
-/* מדיה קווריז עבור מסכים קטנים */
+.hero-button {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 0.75em 1.5em;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-button:hover {
+    background-color: #1976D2;
+}
+
+/* אפקט כניסה */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* רספונסיביות */
 @media (max-width: 768px) {
-    .hero {
-        height: 25vh; /* גובה ההירו - רבע מגובה המסך */
-        min-height: auto;
-        max-height: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-    }
-
-    .hero img {
-        position: relative;
-        width: 100%;
-        height: 100%; /* התמונה תופסת את כל גובה ההירו (25vh) */
-        object-fit: cover; /* או object-fit: contain; */
-    }
-
-    .hero::before {
-        height: 25vh; /* גובה כיסוי תואם */
-    }
-
-    .hero::after {
-        border: none; /* הסרת המסגרת */
-        inset: 0;
-    }
-
-    .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        color: white;
-        z-index: 3;
-    }
-
     .hero-content h1 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-size: 2em;
     }
 
     .hero-content p {
-        font-size: 0.8rem;
-        margin-bottom: 1rem;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        font-size: 1.1em;
     }
 
-    @keyframes subtleZoom {
-        0% { transform: scale(1); }
-        100% { transform: scale(1.02); }
-    }
-}
-
-/* מדיה קוורי למסכים רחבים מאוד */
-@media (min-width: 1600px) {
-    .hero {
-        height: 70vh;
-        max-height: 900px;
+    .hero-button {
+        font-size: 0.95em;
+        padding: 0.6em 1.2em;
     }
 }
