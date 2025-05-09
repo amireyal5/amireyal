@@ -7,14 +7,55 @@
 
 html, body {
   height: 100%;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
+  background-color: #f5f5f5;
+}
+
+/* פרלקסה */
+.hero-parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/Hero3.webp');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  direction: rtl;
+}
+
+/* שכבת כהות */
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* כהות מספקת לניגוד */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+/* תוכן */
+.hero-content {
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5em;
 }
 
 /* כפתור */
 .hero-button {
-  display: inline-block;
-  margin-top: 1.5em;
   padding: 0.75em 2em;
   font-size: 1rem;
   background-color: #ffffffcc;
@@ -29,50 +70,7 @@ html, body {
   background-color: #ffffff;
 }
 
-/* אזור התמונה עם Gradient */
-.hero-gradient {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  direction: rtl;
-}
-
-.hero-gradient img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.hero-gradient-overlay {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, rgba(33, 150, 243, 0.6), rgba(0, 0, 0, 0.7));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2em;
-  text-align: center;
-}
-
-.hero-content {
-  color: #fff;
-  max-width: 800px;
-  animation: fadeInUp 1.2s ease forwards;
-  opacity: 0;
-}
-
+/* אפקט הופעה */
 @keyframes fadeInUp {
   from {
     transform: translateY(30px);
