@@ -65,7 +65,7 @@
 
 .hero-content p:last-of-type { /* פונה לפסקה השנייה (כרמיאל והסביבה | אונליין) */
   font-size: 1.5rem;
-  margin-bottom: 1.5em; /* יכול להיות שנרצה מרווח קצת יותר גדול לפני הכפתור */
+  margin-bottom: 2.5em; /* יכול להיות שנרצה מרווח קצת יותר גדול לפני הכפתור */
 }
 
 /* כפתור */
@@ -78,7 +78,7 @@
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  margin-top:7em;
+ 
 }
 
 .hero-button:hover {
