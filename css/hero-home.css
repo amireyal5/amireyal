@@ -9,8 +9,8 @@
   background-position: center;
 }
 
-/* תמונה ברקע */
-.hero-parallax img {
+/* תמונה ברקע - ברירת מחדל למחשב */
+.hero-parallax img.hero-desktop-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,6 +18,11 @@
   height: 100%;
   object-fit: cover;
   z-index: -1; /* תמונה מתחת */
+}
+
+/* הסתרת תמונת מובייל כברירת מחדל */
+.hero-parallax img.hero-mobile-img {
+  display: none;
 }
 
 /* שכבת כהות */
@@ -128,15 +133,23 @@
 
 /* הצגה רק במובייל (מסכים עם רוחב מקסימלי של 768 פיקסלים) */
 @media (max-width: 768px) {
-  .hero-parallax {
-    height: 80vh; /* פחות גובה – ייכנס יותר תוכן */
+  /* הסתרת תמונת מחשב במובייל */
+  .hero-parallax img.hero-desktop-img {
+    display: none;
   }
 
-  .hero-parallax img {
-    /* זה הסגנון המקורי במובייל - גורם לתמונה למלא ולעיתים לחתוך */
-    object-fit: cover;
+  /* הצגת תמונת מובייל במובייל */
+  .hero-parallax img.hero-mobile-img {
+    display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover; /* או contain אם תרצה לראות את כל התמונה עם שטחים ריקים */
+    z-index: -1; /* מוודא שהיא מתחת לשכבת הכהות והתוכן */
+  }
+
+  .hero-parallax {
+    height: 80vh; /* התאם גובה במובייל אם צריך */
+    background-image: none; /* הסרת תמונת הרקע אם הייתה */
   }
 
   .hero-overlay {
