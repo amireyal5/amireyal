@@ -260,3 +260,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+function scrollToWelcome() {
+  const target = document.querySelector('.welcome');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+}
