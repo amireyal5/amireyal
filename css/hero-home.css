@@ -108,32 +108,43 @@
     padding: 1em 1.5em; /* יותר padding */
     font-size: 1.0rem; /* יותר גדול */
   }
-.scroll-down-indicator {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  cursor: pointer;
-}
-
-.scroll-icon {
-  width: 36px;
-  height: 36px;
-  animation: bounce 2s infinite;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.scroll-icon:hover {
-  opacity: 1;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+/* החץ יוצג רק במובייל */
+@media (max-width: 768px) {
+  .scroll-down-indicator {
+    display: block;
   }
-  50% {
-    transform: translateY(10px);
+}
+
+/* עבור מסכים רחבים, הצג טקסט אלגנטי */
+@media (min-width: 769px) {
+  .scroll-down-indicator {
+    display: none;
+  }
+  
+  .scroll-down-text {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 0.7;
+    cursor: pointer;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .scroll-down-text:hover {
+    opacity: 1;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
