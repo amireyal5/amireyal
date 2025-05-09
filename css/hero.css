@@ -29,36 +29,45 @@ html, body {
   background-color: #ffffff;
 }
 
-/* אפקט פרלקסה */
-.hero-parallax {
+/* אזור התמונה עם Gradient */
+.hero-gradient {
   position: relative;
-  width: 100%;
   height: 100vh;
-  background-image: url('images/Hero3.webp');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   direction: rtl;
-  overflow: hidden;
 }
 
-.hero-parallax .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+.hero-gradient img {
+  position: absolute;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(33, 150, 243, 0.6), rgba(0, 0, 0, 0.7));
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2em;
-  z-index: 1;
+  text-align: center;
 }
 
 .hero-content {
   color: #fff;
-  text-align: center;
   max-width: 800px;
   animation: fadeInUp 1.2s ease forwards;
   opacity: 0;
