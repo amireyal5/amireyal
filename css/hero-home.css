@@ -130,12 +130,14 @@
 @media (max-width: 768px) {
   .hero-parallax {
     height: 80vh; /* פחות גובה – ייכנס יותר תוכן */
+    background-image: url('../images/home-hero.webp'); /* התאם את הנתיב במידת הצורך */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .hero-parallax img {
-    object-fit: contain; /* גורם לתמונה להיות מוכלת כולה */
-    width: 100%; /* מוודא שהרוחב נשאר 100% */
-    height: 100%; /* מוודא שהגובה נשאר 100% */
+    display: none; /* הסתר את תג ה-<img> במובייל */
   }
 
   .hero-overlay {
@@ -156,11 +158,6 @@
     font-size: 1.0rem; /* יותר גדול */
     margin-bottom: 15px; /* התאמת מרווח במובייל */
   }
-
-  /* אנחנו כבר מציגים את החץ גם במחשב, אז אין צורך לשנות את ה-display כאן */
-  /* .scroll-down-indicator {
-    display: block;
-  } */
 }
 
 /* אפקט הופעה */
