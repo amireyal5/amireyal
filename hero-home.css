@@ -1,0 +1,83 @@
+/* פרלקסה */
+.hero-parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  direction: rtl;
+  background-size: cover;
+  background-position: center;
+}
+
+/* תמונה ברקע */
+.hero-parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* תמונה מתחת */
+}
+
+/* שכבת כהות */
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.3); /* כהות מספקת לניגוד */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* שכבת overlay מעל התמונה */
+}
+
+/* תוכן */
+.hero-content {
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5em;
+}
+
+/* כפתור */
+.hero-button {
+  padding: 0.75em 2em;
+  font-size: 1rem;
+  background-color: #ffffffcc;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #ffffff;
+}
+
+/* אפקט הופעה */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
