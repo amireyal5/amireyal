@@ -6,6 +6,23 @@
     box-sizing: border-box;
 }
 
+/* כפתור */
+.hero-button {
+  padding: 0.75em 2em;
+  font-size: 1rem;
+  background-color: #ffffffcc;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #ffffff;
+}
+
+
 /* Hero - מעודכן עם גובה מותאם */
 .hero {
     --overlay-color: rgba(31, 98, 142, 0.15); /* צבע כיסוי עדין */
