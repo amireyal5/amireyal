@@ -74,8 +74,8 @@
 .hero-button {
   padding: 0.75em 2em;
   font-size: 1rem;
-  background-color: #ffffffcc;
-  color: #000;
+  background-color: #1976d2;
+  color: white;
   border: none;
   border-radius: 30px;
   text-decoration: none;
@@ -85,7 +85,7 @@
 }
 
 .hero-button:hover {
-  background-color: #ffffff;
+  background-color: #1976d2ab;
 }
 
 /* אפקט הופעה */
