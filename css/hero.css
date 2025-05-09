@@ -60,16 +60,6 @@
     100% { transform: scale(1.03) rotate(0.3deg); }
 }
 
-/* מסגרת עדינה */
-.hero::after {
-    content: '';
-    position: absolute;
-    inset: 20px;
-    border: 1px solid rgba(255,255,255,0.3);
-    z-index: 2;
-    pointer-events: none;
-}
-
 /* תוכן ה-Hero (ניתן להתאמה) */
 .hero-content {
     position: relative;
@@ -113,11 +103,6 @@
 
     .hero::before {
         height: 25vh; /* גובה כיסוי תואם */
-    }
-
-    .hero::after {
-        border: none; /* הסרת המסגרת */
-        inset: 0;
     }
 
     .hero-content {
