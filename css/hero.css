@@ -88,4 +88,8 @@ html, body {
     transform: translateY(0);
     opacity: 1;
   }
+  /* רקע ייחודי לדף הבית */
+.page-home .hero-parallax {
+  background-image: url('images/home-hero.webp');
 }
+  }
