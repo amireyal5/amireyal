@@ -108,26 +108,34 @@
     padding: 1em 1.5em; /* יותר padding */
     font-size: 1.0rem; /* יותר גדול */
   }
-/* החץ יוצג רק במובייל */
-@media (max-width: 768px) {
-  .scroll-down-indicator {
-    display: block;
-  }
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
 
-  /* התמקדות על החץ במובייל */
-  .scroll-down-indicator span {
-    font-size: 30px;
-    animation: bounce 2s infinite;
+.scroll-icon {
+  animation: bounce 2s infinite;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-icon:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }
 
-/* עבור מסכים רחבים, הצג טקסט "לגלול למטה" */
-@media (min-width: 769px) {
-  .scroll-down-indicator {
-    display: none; /* החץ לא יוצג במסכים רחבים */
-  }
-
-  .scroll-down-text {
     display: block;
     position: absolute;
     bottom: 30px;
