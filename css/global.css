@@ -96,7 +96,7 @@ nav {
 .hamburger {
     order: 3;
     display: none;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #364958; /* כלל 8: צבע אייקון המבורגר (כמו כותרת ראשית) */
     cursor: pointer;
     margin-left: auto;
