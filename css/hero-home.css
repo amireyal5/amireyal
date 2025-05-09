@@ -2,12 +2,22 @@
 .hero-parallax {
   position: relative;
   width: 100%;
-  height: 100vh; /* גובה מלא */
+  height: 100vh;
   overflow: hidden;
   direction: rtl;
-  background-image: url('your-image-url.jpg'); /* הכנס את כתובת התמונה */
-  background-size: cover; /* התמונה תכסה את כל הרקע */
-  background-position: center center; /* התמקדות במרכז התמונה */
+  background-size: cover;
+  background-position: center;
+}
+
+/* תמונה ברקע */
+.hero-parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* תמונה מתחת */
 }
 
 /* שכבת כהות */
@@ -75,16 +85,15 @@
 /* התאמה למובייל */
 @media (max-width: 768px) {
   .hero-parallax {
-    height: 100vh; /* עדיין גובה מלא */
-    background-position: center center; /* התמונה תישאר ממורכזת */
+    height: 80vh; /* פחות גובה – ייכנס יותר תוכן */
   }
 
   .hero-overlay {
-    padding: 1em; /* פחות רווח מסביב לטקסט */
+    padding: 1em; /* פחות רווח */
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* טקסט קטן יותר */
   }
 
   .hero-content p {
