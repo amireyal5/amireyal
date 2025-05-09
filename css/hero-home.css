@@ -53,6 +53,20 @@
   font-size: 1.5rem;
   margin-bottom: 1.5em;
 }
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2em; /* הקטנה של המרווח מתחת לכותרת */
+}
+
+.hero-content p:first-of-type { /* פונה לפסקה הראשונה (פסיכותרפיסט CBT) */
+  font-size: 3em;
+  margin-bottom: 0.1em; /* הקטנה של המרווח מתחת לפסקה הראשונה */
+}
+
+.hero-content p:last-of-type { /* פונה לפסקה השנייה (כרמיאל והסביבה | אונליין) */
+  font-size: 1.5rem;
+  margin-bottom: 1.5em; /* יכול להיות שנרצה מרווח קצת יותר גדול לפני הכפתור */
+}
 
 /* כפתור */
 .hero-button {
