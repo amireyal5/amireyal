@@ -1,6 +1,6 @@
 body {
-  font-family: 'Assistant', sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Heebo', sans-serif;
+  background-color: #f5fdfc;
   color: #2c3e50;
   line-height: 1.8;
 }
@@ -11,37 +11,44 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .main-section-title {
   text-align: center;
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 50px;
-  color: #2c3e50;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #009688; /* ירוק-טורקיז חיובי */
 }
 
 .treatment-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 40px;
 }
 
 .treatment-item {
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 20px;
+  background-color: #f0fdfa;
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  transition: transform 0.2s ease;
+}
+
+.treatment-item:hover {
+  transform: translateY(-4px);
 }
 
 .item-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 10px;
-  color: #34495e;
+  margin-bottom: 12px;
+  color: #00796b;
 }
 
 .item-text {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.05rem;
+  color: #4e5d6c;
 }
