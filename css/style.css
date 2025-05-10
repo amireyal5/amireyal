@@ -116,5 +116,410 @@
             .introduction-text p {
                 text-align: center;
             }
-        }
+        body {
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן כללי */
+    direction: rtl;
+    background-color: #FFFFFF; /* כלל 1: רקע לבן תמידי */
+    color: #514b4b; /* *** כלל 5: צבע טקסט רגיל - שונה ל-#514b4b *** */
+    /* כלל 5: גודל פונט (1.1em), משקל (200) ו-line height (2.0) לטקסט רגיל ייושם על אלמנטים מתאימים כמו <p> בקודים הבאים. */
+    font-size: 1rem; /* גודל בסיס ב-body, ניתן להתאים אם יש צורך לגודל טקסט רגיל */
+}
+
+/* הדר - Header styles */
+#main-header {
+    display: flex; /* תיקון תחביר */
+    align-items: center; /* תיקון תחביר - הנחתי ש-center התכוון ליישור אופקי בתוך פלקס עמודה */
+    padding: 0.5em 1em;
+    background-color: #FFFFFF; /* כלל 1: רקע לבן בהדר */
+    position: sticky;
+    top: 0;
+    transition: top 0.3s ease;
+    z-index: 100;
+}
+
+.logo {
+    order: 1;
+    max-width: 200px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 140px;
+    }
+}
+
+nav {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 1em;
+}
+
+.menu a {
+    /* כלל 10: צבע קישורי תפריט ראשי - נשאר מקורי */
+    color: #1f628e; /* נשאר מקורי */
+    text-decoration: none;
+    font-weight: 300; /* משקל פונט כפי שנקבע לקישורי תפריט */
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+    font-size: 0.9em; /* כלל 9: גודל פונט עצמאי לקישורי תפריט */
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+}
+
+.menu a:hover {
+    /* כלל 10: צבע ריחוף קישורי תפריט ראשי - נשאר מקורי */
+    color: #1565C0; /* נשאר מקורי */
+    transform: scale(1.05);
+}
+
+.hamburger {
+    order: 3;
+    display: none;
+    font-size: 1rem;
+    color: #364958; /* כלל 8: צבע אייקון המבורגר (כמו כותרת ראשית) */
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* תפריט עם תת-תפריט - Submenu styles */
+.has-submenu {
+    position: relative;
+}
+
+.has-submenu > a::after {
+    content: " ▼";
+    font-size: 0.7em;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    /* כלל 10: רקע תפריט משנה (דסקטופ) - נשאר מקורי */
+    background-color: #426575; /* נשאר מקורי */
+    list-style: none;
+    padding: 0.5em 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 180px;
+    transform-origin: top right;
+    animation: growDown 0.3s ease-in-out forwards;
+}
+
+.submenu li {
+    padding: 0.5em 1em;
+    text-align: right;
+}
+
+.submenu li a {
+    /* כלל 10: צבע טקסט קישורי תפריט משנה - נשאר מקורי */
+    color: #fff; /* נשאר מקורי */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li a:hover {
+    /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה - נשאר מקורי */
+    color: #f0f8ff; /* נשאר מקורי */
+    /* כלל 10: רקע ריחוף קישורי תפריט משנה - נשאר מקורי */
+    background-color: rgba(0, 0, 0, 0.1); /* נשאר מקורי */
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* כפתורים - Button styles */
+.fixed-consultation-button {
+    display: inline-block;
+    background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
+    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
+    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+    width: auto;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.fixed-consultation-button:hover {
+    background-color: #55828B; /* כלל 3: רקע כפתור בריחוף */
+}
+
+/* אייקונים מרחפים ליצירת קשר - Floating contact icons styles */
+.floating-contact-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floating-contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* כלל 10: רקע אייקונים מרחפים - נשאר מקורי */
+    background-color: rgba(255, 255, 255, 0.7); /* נשאר מקורי */
+    /* כלל 10: צבע אייקונים מרחפים - נשאר מקורי */
+    color: #457b9d; /* נשאר מקורי */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 24px; /* כלל 9: גודל פונט אייקונים מרחפים - לא משתנה */
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out,
+                color 0.2s ease-in-out;
+}
+
+.floating-contact-icons a:hover {
+    transform: scale(1.2);
+    /* כלל 10: צבע ריחוף אייקונים מרחפים - נשאר מקורי */
+    color: #a8dadc; /* נשאר מקורי */
+}
+
+/* רספונסיביות - חלקים גלובליים - Responsive global parts */
+@media (max-width: 768px) {
+    /* המבורגר - Hamburger in mobile */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        z-index: 101; /* כדי שיהיה מעל התפריט */
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .hamburger .line {
+        width: 100%;
+        height: 3px;
+        background-color: #364958; /* כלל 8: צבע קווי המבורגר (כמו כותרת ראשית) */
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .hamburger.active .line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* תפריט במובייל - Mobile menu */
+    .menu#mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* התאם לגובה ההדר שלך */
+        right: 0;
+        left: 0;
+        /* כלל 10: רקע תפריט במובייל - נשאר מקורי */
+        background-color: #426575; /* נשאר מקורי */
+        text-align: right;
+        padding: 0.5em 1em;
+        z-index: 999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu#mobile-menu.active {
+        display: flex;
+    }
+
+    .menu#mobile-menu li {
+        margin: 0.5em 0;
+        padding: 0.5em 0;
+        /* כלל 10: גבול תפריט במובייל - נשאר מקורי */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* נשאר מקורי */
+    }
+
+    .menu#mobile-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu#mobile-menu a {
+        /* כלל 10: צבע טקסט קישורי תפריט במובייל - נשאר מקורי */
+        color: #fff; /* נשאר מקורי */
+        font-size: 1rem; /* כלל 9: גודל פונט קישורי תפריט - כרגע 1rem במובייל, 0.9em בדסקטופ. יש לייחד או ליישר קו? כרגע נשאר מקורי */
+        font-weight: 300;
+        transition: background-color 0.3s ease;
+        padding: 0.5em;
+        display: block;
+        padding-right: 1em;
+        padding-left: 0.5em;
+    }
+
+    .menu#mobile-menu a:hover {
+        /* כלל 10: צבע ריחוף טקסט קישורי תפריט במובייל - נשאר מקורי */
+        color: #f0f8ff; /* נשאר מקורי */
+        /* כלל 10: רקע ריחוף קישורי תפריט במובייל - נשאר מקורי */
+        background-color: rgba(0, 0, 0, 0.1); /* נשאר מקורי */
+    }
+
+    /* הסרת חץ מפריטים רגילים במובייל */
+    .menu li:not(.has-submenu) > a::after {
+        content: none;
+    }
+
+    /* הוספת חץ רק לפריטים עם תת-תפריט במובייל */
+    .has-submenu > a::after {
+        content: " ◄";
+        font-size: 0.8em;
+        position: absolute;
+        left: 0.2em;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* עיצוב כללי לפריטים עם תת-תפריט במובייל */
+    .has-submenu > a {
+        position: relative;
+        padding-right: 1.8em;
+    }
+
+    /* תפריט משנה במובייל */
+    .submenu {
+        display: none;
+        position: static;
+        background: transparent !important; /* נשאר מקורי */
+        box-shadow: none !important;
+        padding: 0 0 0 1em;
+        animation: none;
+        margin-top: 0.5em;
+        /* כלל 10: גבול תפריט משנה במובייל - נשאר מקורי */
+        border-right: 3px solid rgba(255, 255, 255, 0.3); /* נשאר מקורי */
+        margin-right: 10px;
+    }
+
+    .submenu li {
+        padding: 0.5em 0;
+        border-bottom: none;
+    }
+
+    .submenu li a {
+        /* כלל 10: צבע טקסט קישורי תפריט משנה במובייל - נשאר מקורי */
+        color: rgba(255, 255, 255, 0.9); /* נשאר מקורי */
+        font-weight: 300;
+        padding-right: 0.5em;
+    }
+
+    .submenu li a:hover {
+        /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה במובייל - נשאר מקורי */
+        color: #f0f8ff; /* נשאר מקורי */
+    }
+
+    .has-submenu.active .submenu {
+        display: block;
+        animation: slideDown 0.3s ease-in-out forwards;
+    }
+
+    /* אייקונים מרחפים - רספונסיביות במובייל */
+    .floating-contact-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-contact-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px; /* כלל 9: גודל פונט אייקונים מרחפים במובייל - לא משתנה */
+    }
+}
+
+/* הצגה/הסתרה של תפריט משנה - Submenu display toggle */
+.submenu {
+    display: none;
+}
+
+.submenu.open {
+    display: block;
+}
+
+/* אנימציות - Animations */
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    80% {
+        transform: scaleY(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* כפתור ייעוץ קבוע - רספונסיביות - Fixed consultation button responsive */
+@media (max-width: 768px) {
+    .fixed-consultation-button {
+        display: block;
+        background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
+        color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
+        font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+        width: auto;
+        text-align: center;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        margin-left: auto;
 
