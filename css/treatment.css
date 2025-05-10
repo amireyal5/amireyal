@@ -32,14 +32,14 @@
   margin-bottom: var(--section-margin-bottom);
 }
 
-.treatment-section h2 { /* או כל אלמנט כותרת אחר שאתה משתמש בו */
+.treatment-section h2 {
   position: absolute;
-  top: -40px; /* מרחק הכותרת מהחלק העליון של הסקציה */
-  right: 1rem; /* התחלה מצד ימין עם ריווח קל */
-  font-size: 2rem; /* גודל גופן מותאם */
-  color: var(--main-color); /* שימוש במשתנה הצבע הראשי */
-  font-weight: bold; /* או כל סגנון רצוי אחר */
-  direction: rtl; /* יישור לימין */
+  top: -40px;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--main-color);
+  font-weight: bold;
+  direction: rtl;
 }
 
 .treatment-section .container {
@@ -50,24 +50,24 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem; /* מרווח כללי בין פריטים */
+  gap: 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
   min-height: auto;
-  border-radius: 8px; /* פינות מעוגלות קלות למ container */
+  border-radius: 8px;
 }
 
 .treatment-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* רספונסיביות טובה יותר */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--grid-column-gap);
-  width: 100%; /* גורם לגריד לתפוס את כל רוחב הקונטיינר */
+  width: 100%;
 }
 
 .treatment-item {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.05); /* רקע שקוף מעט לכל פריט */
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 6px;
   padding: 1.5rem;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
@@ -87,9 +87,8 @@
   background: linear-gradient(to right, var(--item-title-gradient-start), var(--item-title-gradient-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-    text-align: right;
+  text-align: right;
   direction: rtl;
-
 }
 
 .item-text {
@@ -97,39 +96,32 @@
   line-height: 1.6;
   text-align: right;
   direction: rtl;
-  flex-grow: 1; /* מאפשר לטקסט לתפוס את שארית הגובה */
+  flex-grow: 1;
 }
-
-/* קו מפריד עדין בין פריטים (אופציונלי - אם רוצים קו בין כל פריט) */
-/*.treatment-item:not(:last-child) {
-  border-bottom: 1px dashed var(--item-border-bottom-color);
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
-}*/
 
 /* --- התאמות למובייל --- */
 @media (max-width: 768px) {
   .treatment-section {
-    padding-top: 100px; /* התאמת ריווח עליון למובייל */
+    padding-top: 100px;
   }
 
-  .treatment-section h2 { /* או כל אלמנט כותרת אחר שאתה משתמש בו */
-    top: -60px; /* התאמת מיקום כותרת למובייל */
-    font-size: 1.75rem; /* גודל גופן מותאם למובייל */
+  .treatment-section h2 {
+    top: -60px;
+    font-size: 1.75rem;
     right: 1rem;
   }
 
   .treatment-section .container {
-    flex-direction: column; /* מעבר לעמודה במובייל */
+    flex-direction: column;
     align-items: stretch;
     padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
   }
 
   .treatment-grid {
-    grid-template-columns: 1fr; /* עמודה אחת במובייל */
+    grid-template-columns: 1fr;
   }
 
   .item-text {
-    text-align: right; /* יישור טקסט לימין במובייל */
+    text-align: right;
   }
 }
