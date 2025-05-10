@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }    
 /*כותרת מתחת לפוטר */
-.page-main frase {
+.page-main-frase {
   direction: center;
   text-align: right;
   margin-bottom: 30px;
