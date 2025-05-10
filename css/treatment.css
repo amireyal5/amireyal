@@ -42,11 +42,6 @@
     display: contents;
 }
 
-.item-title, .item-text {
-    padding: 20px;
-    /* צבע גופן - האם נשאר לבן על רקע צבעוני? */
-    color: white; /
-}
 
 .item-title {
     font-size: 1.3rem;
