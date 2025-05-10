@@ -18,7 +18,7 @@
 }
 
 .treatment-section .container {
-    background-color:var(--background-color)
+    background-color: var(--background-color);
     padding: 0 20px; /* שמור על הפדינג הפנימי */
     display: flex;
     flex-direction: row-reverse;
