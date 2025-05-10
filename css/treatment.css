@@ -75,6 +75,9 @@
   background: linear-gradient(to right, #e0f7fa, #b2ebf2); /* item-title-gradient-start: #e0f7fa, item-title-gradient-end: #b2ebf2 */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+   text-align: right;
+  direction: rtl;
+  
 }
 
 .item-text {
