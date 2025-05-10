@@ -1,44 +1,54 @@
+/* === Variables === */
+:root {
+  --main-color: #fff; /* כותרות - לבן */
+  --text-color: #fff;
+  --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --transition-speed: 0.3s;
+  --max-width: 1000px;
+  --background-gradient-start: #00527a; /* התחלת שיפוע רקע */
+  --background-gradient-end: #00a7c6; /* סיום שיפוע רקע */
+  --section-padding-vertical: 60px;
+  --section-margin-bottom: 40px;
+  --container-padding-horizontal-desktop: 20px;
+  --container-padding-vertical-mobile: 1.5rem;
+  --container-padding-horizontal-mobile: 1rem;
+  --grid-column-gap: 1.5rem; /* מרווח מעודכן בין עמודות */
+  --item-title-font-size: 1.3rem;
+  --item-title-font-weight: 400;
+  --item-title-margin-bottom: 1rem; /* מרווח מעודכן מתחת לכותרת */
+  --item-title-gradient-start: #e0f7fa; /* התחלת שיפוע כותרת */
+  --item-title-gradient-end: #b2ebf2; /* סיום שיפוע כותרת */
+  --item-border-bottom-color: rgba(255, 255, 255, 0.3); /* קו מקווקו שקוף */
+}
+
 /* --- Treatment Layout --- */
 .treatment-section {
-  padding: var(--section-padding-vertical) 0;
-  color: var(--text-color);
-  margin-bottom: var(--section-margin-bottom);
+  padding: 60px 0; /* section-padding-vertical: 60px */
+  color: #fff; /* text-color: #fff */
+  margin-bottom: 40px; /* section-margin-bottom: 40px */
 }
 
 .treatment-section .container {
-  background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
-  padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
+  background: linear-gradient(135deg, #00527a, #00a7c6); /* background-gradient-start: #00527a, background-gradient-end: #00a7c6 */
+  padding: 1.5rem 1rem; /* container-padding-vertical-mobile: 1.5rem, container-padding-horizontal-mobile: 1rem */
   display: flex;
-  flex-direction: column; /* שינוי לטור כדי שהכותרת תהיה מעל הגריד */
-  align-items: center; /* מרכוז אופקי של הכותרת (אופציונלי) */
-  justify-content: flex-start; /* יישור אנכי מלמעלה */
-  flex-wrap: wrap; /* עדיין שימושי עבור הגריד */
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 2rem; /* מרווח כללי בין פריטים */
-  max-width: var(--max-width);
+  max-width: 1000px; /* max-width: 1000px */
   margin: 0 auto;
   min-height: auto;
   border-radius: 8px; /* פינות מעוגלות קלות למ container */
 }
 
-.main-section-title {
-  font-size: 2.5rem; /* התאם את גודל הפונט לפי הצורך */
-  color: #000; /* התאם את הצבע לפי הצורך */
-  text-align: right; /* יישור למרכז (אופציונלי) */
-  margin-bottom: 2rem; /* מרווח בין הכותרת לגריד */
-  font-family: var(--font-family);
-  font-weight: bold; /* או כל משקל גופן אחר */
-  width: 100%; /* רוחב מלא של הקונטיינר */
-  padding: 0.5rem 0; /* ריפוד אנכי קל */
-  box-sizing: border-box; /* כדי שהריפוד לא ישפיע על הרוחב */
-  /* אם אתה רוצה רקע אחר לכותרת (לא חובה) */
-  /* background-color: rgba(255, 255, 255, 0.1); */
-  border-radius: 4px; /* פינות מעוגלות קלות לכותרת (אופציונלי) */
-}
-
 .treatment-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* רספונסיביות טובה יותר */
-  gap: var(--grid-column-gap);
+  gap: 1.5rem; /* grid-column-gap: 1.5rem */
   width: 100%; /* גורם לגריד לתפוס את כל רוחב הקונטיינר */
 }
 
@@ -48,39 +58,46 @@
   background-color: rgba(255, 255, 255, 0.05); /* רקע שקוף מעט לכל פריט */
   border-radius: 6px;
   padding: 1.5rem;
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  transition: transform 0.3s, box-shadow 0.3s; /* transition-speed: 0.3s */
 }
 
 .treatment-item:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15) */
 }
 
 .item-title {
-  font-size: var(--item-title-font-size);
-  color: var(--main-color);
-  margin-bottom: var(--item-title-margin-bottom);
-  font-weight: var(--item-title-font-weight);
-  font-family: var(--font-family);
-  background: linear-gradient(to right, var(--item-title-gradient-start), var(--item-title-gradient-end));
+  font-size: 1.3rem; /* item-title-font-size: 1.3rem */
+  color: #fff; /* main-color: #fff */
+  margin-bottom: 1rem; /* item-title-margin-bottom: 1rem */
+  font-weight: 400; /* item-title-font-weight: 400 */
+  font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif; /* font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif */
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2); /* item-title-gradient-start: #e0f7fa, item-title-gradient-end: #b2ebf2 */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .item-text {
-  font-family: var(--font-family);
+  font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif; /* font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif */
   line-height: 1.6;
   text-align: right;
   direction: rtl;
   flex-grow: 1; /* מאפשר לטקסט לתפוס את שארית הגובה */
 }
 
-/* התאמות למובייל */
+/* קו מפריד עדין בין פריטים (אופציונלי - אם רוצים קו בין כל פריט) */
+/*.treatment-item:not(:last-child) {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /* item-border-bottom-color: rgba(255, 255, 255, 0.3) */
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}*/
+
+/* --- התאמות למובייל --- */
 @media (max-width: 768px) {
   .treatment-section .container {
-    flex-direction: column; /* נשאר טור במובייל */
-    align-items: stretch; /* מתיחה במקום מרכוז במובייל */
-    padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
+    flex-direction: column; /* מעבר לעמודה במובייל */
+    align-items: stretch;
+    padding: 1.5rem 1rem; /* container-padding-vertical-mobile: 1.5rem, container-padding-horizontal-mobile: 1rem */
   }
 
   .treatment-grid {
@@ -89,10 +106,5 @@
 
   .item-text {
     text-align: right; /* יישור טקסט לימין במובייל */
-  }
-
-  .main-section-title {
-    font-size: 2rem; /* התאם גודל פונט במובייל */
-    margin-bottom: 1.5rem;
   }
 }
