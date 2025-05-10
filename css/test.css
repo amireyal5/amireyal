@@ -1,30 +1,45 @@
 /* כלליים - Global styles applied based on agreed rules */
- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
 /* כרמיאל ואונליין */
 .location-banner {
     text-align: center;
     font-family: 'Assistant', sans-serif;
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 1.2em; /* שימוש ב-em לגודל גמיש יותר */
     color: #000;
-    padding: 1em;
-    margin-top: 2vh;
+    padding: 0.75em; /* התאמת ריווח */
+    margin-top: 1.5vh; /* התאמת מרווח */
+}
+
+@media (min-width: 768px) {
+    .location-banner {
+        font-size: 1vw; /* חזרה ל-vw עבור מסכים גדולים יותר */
+        padding: 1em;
+        margin-top: 2vh;
+    }
 }
 
 /* כותרת מתחת לפוטר */
 .page-main-frase {
     direction: rtl;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 22px;
+    margin-bottom: 30px; /* התאמת מרווח */
+    font-size: 1.3em; /* שימוש ב-em לגודל גמיש יותר */
     color: #005f99;
     font-weight: 600;
     font-family: 'Assistant', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .page-main-frase {
+        margin-bottom: 40px;
+        font-size: 22px;
+    }
 }
 
 /* === Variables === */
@@ -45,10 +60,18 @@
     text-align: right; /* מיושר מימין לשמאל */
     direction: rtl; /* טקסט מימין לשמאל */
     font-family: var(--font-family); /* גופן שמתואם לשאר העיצוב */
-    font-size: 1.1rem; /* גודל טקסט רגיל */
+    font-size: 1rem; /* התאמת גודל פונט במובייל */
     color: var(--text-color); /* צבע טקסט רגיל */
-    margin-bottom: 1.5rem; /* מרווח תחתון */
-    padding-top: 2rem; /* מרווח עליון */
+    margin-bottom: 1rem; /* התאמת מרווח תחתון */
+    padding-top: 1.5rem; /* התאמת מרווח עליון */
+}
+
+@media (min-width: 768px) {
+    .additional-text {
+        font-size: 1.1rem; /* חזרה לגודל המקורי בדסקטופ */
+        margin-bottom: 1.5rem;
+        padding-top: 2rem;
+    }
 }
 
 .introduction-container {
@@ -57,35 +80,72 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem; /* התאמת מרווח */
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 2rem 1rem;
-    min-height: 400px;
+    padding: 1.5rem 1rem; /* התאמת ריווח במובייל */
+    min-height: auto; /* התאמת גובה מינימלי במובייל */
     border-bottom: 1px solid #e0e0e0;
 }
 
+@media (max-width: 600px) {
+    .introduction-container {
+        flex-direction: column-reverse; /* מעבר לטורה במובייל קטן */
+        align-items: center; /* מרכוז פריטים במובייל קטן */
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .introduction-container {
+        padding: 2rem 1rem;
+        min-height: 400px;
+        gap: 2rem;
+    }
+}
+
 .introduction-image {
-    flex: 1 1 45%;
+    flex: 1 1 100%; /* רוחב מלא במובייל כברירת מחדל */
     text-align: center;
 }
 
+@media (min-width: 768px) {
+    .introduction-image {
+        flex: 1 1 45%;
+        text-align: center;
+    }
+}
+
 .introduction-image h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem; /* התאמת גודל כותרת תמונה במובייל */
     color: var(--main-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem; /* התאמת מרווח */
     font-weight: 400;
     font-family: var(--font-family);
 }
 
+@media (min-width: 768px) {
+    .introduction-image h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
 .introduction-image img {
     width: 100%;
-    max-height: 400px;
+    max-height: 300px; /* התאמת גובה מקסימלי במובייל */
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow-default);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     will-change: transform, box-shadow;
+}
+
+@media (min-width: 768px) {
+    .introduction-image img {
+        max-height: 400px;
+    }
 }
 
 .introduction-image img:hover {
@@ -94,7 +154,7 @@
 }
 
 .introduction-text {
-    flex: 1 1 45%;
+    flex: 1 1 100%; /* רוחב מלא במובייל כברירת מחדל */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,44 +163,38 @@
     font-family: var(--font-family);
 }
 
+@media (min-width: 768px) {
+    .introduction-text {
+        flex: 1 1 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+        direction: rtl;
+    }
+}
+
 .introduction-text p {
-    font-size: 1.1rem;
+    font-size: 1rem; /* התאמת גודל פונט במובייל */
     color: var(--text-color);
-    line-height: 2;
-    margin-bottom: 1.5rem;
+    line-height: 1.8; /* התאמת גובה שורה במובייל */
+    margin-bottom: 1rem; /* התאמת מרווח */
     font-weight: 200;
     text-align: right;
     direction: rtl;
 }
 
+@media (min-width: 768px) {
+    .introduction-text p {
+        font-size: 1.1rem;
+        line-height: 2;
+        margin-bottom: 1.5rem;
+    }
+}
+
 .introduction-text p:last-child {
     margin-bottom: 0;
-
-}    
-/*כותרת מתחת לפוטר */
-.page-main-frase {
-  direction: rtl;
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 22px;
-  color: #005f99; /* גוון טיפה כהה יותר לנוכחות */
-  font-weight: 600; /* משקל בינוני-חזק */
-  font-family: 'Assistant', sans-serif;
-
-
 }
-
-
-.location-banner {
-  text-align: center; /* מרכז את הטקסט */
-  font-family: 'Assistant', sans-serif; /* גופן Assistant */
-  font-weight: bold; /* טקסט בולד */
-  font-size: 1vw; /* גודל טקסט דינמי שמתאים לפי רוחב המסך */
-  color: #000; /* צבע טקסט שחור, אפשר לשנות */
-  padding: 1em; /* ריווח פנימי מותאם */
-  margin-top: 2vh; /* רווח מהחלק העליון לפי גובה המסך */
-}
-
 
 body {
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן כללי */
@@ -165,15 +219,19 @@ body {
 
 .logo {
     order: 1;
-    max-width: 200px;
+    max-width: 150px; /* התאמת גודל לוגו במובייל */
+}
+
+@media (min-width: 480px) {
+    .logo {
+        max-width: 200px;
+    }
 }
 
 .logo img {
     width: 100%;
     height: auto;
-
 }
-
 
 @media (max-width: 768px) {
     .logo {
@@ -201,7 +259,13 @@ nav {
 }
 
 .menu li {
-    margin: 0 1em;
+    margin: 0 0.75em; /* התאמת מרווח במובייל */
+}
+
+@media (min-width: 768px) {
+    .menu li {
+        margin: 0 1em;
+    }
 }
 
 .menu a {
@@ -210,8 +274,14 @@ nav {
     text-decoration: none;
     font-weight: 300; /* משקל פונט כפי שנקבע לקישורי תפריט */
     transition: color 0.3s ease, transform 0.3s ease-in-out;
-    font-size: 0.9em; /* כלל 9: גודל פונט עצמאי לקישורי תפריט */
+    font-size: 0.85em; /* התאמת גודל פונט במובייל */
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+}
+
+@media (min-width: 768px) {
+    .menu a {
+        font-size: 0.9em; /* כלל 9: גודל פונט עצמאי לקישורי תפריט */
+    }
 }
 
 .menu a:hover {
@@ -250,9 +320,15 @@ nav {
     padding: 0.5em 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    min-width: 180px;
+    min-width: 150px; /* התאמת רוחב מינימלי במובייל */
     transform-origin: top right;
     animation: growDown 0.3s ease-in-out forwards;
+}
+
+@media (min-width: 768px) {
+    .submenu {
+        min-width: 180px;
+    }
 }
 
 .submenu li {
@@ -266,288 +342,14 @@ nav {
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
+    font-size: 0.9em; /* התאמת גודל פונט במובייל */
+}
+
+@media (min-width: 768px) {
+    .submenu li a {
+        font-size: inherit; /* חזרה לגודל ברירת מחדל */
+    }
 }
 
 .submenu li a:hover {
-    /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה - נשאר מקורי */
-    color: #f0f8ff; /* נשאר מקורי */
-    /* כלל 10: רקע ריחוף קישורי תפריט משנה - נשאר מקורי */
-    background-color: rgba(0, 0, 0, 0.1); /* נשאר מקורי */
-}
-
-.has-submenu:hover .submenu {
-    display: block;
-}
-
-/* כפתורים - Button styles */
-.fixed-consultation-button {
-    display: inline-block;
-    background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
-    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
-    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
-    width: auto;
-    text-align: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-
-.fixed-consultation-button:hover {
-    background-color: #55828B; /* כלל 3: רקע כפתור בריחוף */
-}
-
-/* אייקונים מרחפים ליצירת קשר - Floating contact icons styles */
-.floating-contact-icons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.floating-contact-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* כלל 10: רקע אייקונים מרחפים - נשאר מקורי */
-    background-color: rgba(255, 255, 255, 0.7); /* נשאר מקורי */
-    /* כלל 10: צבע אייקונים מרחפים - נשאר מקורי */
-    color: #457b9d; /* נשאר מקורי */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    font-size: 24px; /* כלל 9: גודל פונט אייקונים מרחפים - לא משתנה */
-    text-decoration: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out,
-                color 0.2s ease-in-out;
-}
-
-.floating-contact-icons a:hover {
-    transform: scale(1.2);
-    /* כלל 10: צבע ריחוף אייקונים מרחפים - נשאר מקורי */
-    color: #a8dadc; /* נשאר מקורי */
-}
-
-/* רספונסיביות - חלקים גלובליים - Responsive global parts */
-@media (max-width: 768px) {
-    /* המבורגר - Hamburger in mobile */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        cursor: pointer;
-        position: absolute;
-        left: 20px;
-        z-index: 101; /* כדי שיהיה מעל התפריט */
-        background: transparent;
-        border: none;
-        padding: 0;
-    }
-
-    .hamburger .line {
-        width: 100%;
-        height: 3px;
-        background-color: #364958; /* כלל 8: צבע קווי המבורגר (כמו כותרת ראשית) */
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-
-    .hamburger.active .line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-
-    .hamburger.active .line:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* תפריט במובייל - Mobile menu */
-    .menu#mobile-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* התאם לגובה ההדר שלך */
-        right: 0;
-        left: 0;
-        /* כלל 10: רקע תפריט במובייל - נשאר מקורי */
-        background-color: #426575; /* נשאר מקורי */
-        text-align: right;
-        padding: 0.5em 1em;
-        z-index: 999;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu#mobile-menu.active {
-        display: flex;
-    }
-
-    .menu#mobile-menu li {
-        margin: 0.5em 0;
-        padding: 0.5em 0;
-        /* כלל 10: גבול תפריט במובייל - נשאר מקורי */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* נשאר מקורי */
-    }
-
-    .menu#mobile-menu li:last-child {
-        border-bottom: none;
-    }
-
-    .menu#mobile-menu a {
-        /* כלל 10: צבע טקסט קישורי תפריט במובייל - נשאר מקורי */
-        color: #fff; /* נשאר מקורי */
-        font-size: 1rem; /* כלל 9: גודל פונט קישורי תפריט - כרגע 1rem במובייל, 0.9em בדסקטופ. יש לייחד או ליישר קו? כרגע נשאר מקורי */
-        font-weight: 300;
-        transition: background-color 0.3s ease;
-        padding: 0.5em;
-        display: block;
-        padding-right: 1em;
-        padding-left: 0.5em;
-    }
-
-    .menu#mobile-menu a:hover {
-        /* כלל 10: צבע ריחוף טקסט קישורי תפריט במובייל - נשאר מקורי */
-        color: #f0f8ff; /* נשאר מקורי */
-        /* כלל 10: רקע ריחוף קישורי תפריט במובייל - נשאר מקורי */
-        background-color: rgba(0, 0, 0, 0.1); /* נשאר מקורי */
-    }
-
-    /* הסרת חץ מפריטים רגילים במובייל */
-    .menu li:not(.has-submenu) > a::after {
-        content: none;
-    }
-
-    /* הוספת חץ רק לפריטים עם תת-תפריט במובייל */
-    .has-submenu > a::after {
-        content: " ◄";
-        font-size: 0.8em;
-        position: absolute;
-        left: 0.2em;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    /* עיצוב כללי לפריטים עם תת-תפריט במובייל */
-    .has-submenu > a {
-        position: relative;
-        padding-right: 1.8em;
-    }
-
-    /* תפריט משנה במובייל */
-    .submenu {
-        display: none;
-        position: static;
-        background: transparent !important; /* נשאר מקורי */
-        box-shadow: none !important;
-        padding: 0 0 0 1em;
-        animation: none;
-        margin-top: 0.5em;
-        /* כלל 10: גבול תפריט משנה במובייל - נשאר מקורי */
-        border-right: 3px solid rgba(255, 255, 255, 0.3); /* נשאר מקורי */
-        margin-right: 10px;
-    }
-
-    .submenu li {
-        padding: 0.5em 0;
-        border-bottom: none;
-    }
-
-    .submenu li a {
-        /* כלל 10: צבע טקסט קישורי תפריט משנה במובייל - נשאר מקורי */
-        color: rgba(255, 255, 255, 0.9); /* נשאר מקורי */
-        font-weight: 300;
-        padding-right: 0.5em;
-    }
-
-    .submenu li a:hover {
-        /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה במובייל - נשאר מקורי */
-        color: #f0f8ff; /* נשאר מקורי */
-    }
-
-    .has-submenu.active .submenu {
-        display: block;
-        animation: slideDown 0.3s ease-in-out forwards;
-    }
-
-    /* אייקונים מרחפים - רספונסיביות במובייל */
-    .floating-contact-icons {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .floating-contact-icons a {
-        width: 40px;
-        height: 40px;
-        font-size: 20px; /* כלל 9: גודל פונט אייקונים מרחפים במובייל - לא משתנה */
-    }
-}
-
-/* הצגה/הסתרה של תפריט משנה - Submenu display toggle */
-.submenu {
-    display: none;
-}
-
-.submenu.open {
-    display: block;
-}
-
-/* אנימציות - Animations */
-@keyframes growDown {
-    0% {
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    80% {
-        transform: scaleY(1.1);
-        opacity: 1;
-    }
-    100% {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* כפתור ייעוץ קבוע - רספונסיביות - Fixed consultation button responsive */
-@media (max-width: 768px) {
-    .fixed-consultation-button {
-        display: block;
-        background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
-        color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
-        padding: 12px 24px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-        font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
-        font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
-        width: auto;
-        text-align: center;
-        margin-top: 3em;
-        margin-bottom: 3em;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+    /* כלל 10: צבע ריחוף
