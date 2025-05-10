@@ -61,149 +61,172 @@ body {
     }
 }
 
-/* === Introduction Section === */
+/* === Introduction Section (BEM) === */
+
 /* === טקסט מעל הקונטיינר === */
-.additional-text {
-    width: 100%; /* יישום רוחב מלא */
-    text-align: right; /* מיושר מימין לשמאל */
-    direction: rtl; /* טקסט מימין לשמאל */
-    font-family: var(--font-family); /* גופן שמתואם לשאר העיצוב */
-    font-size: 1rem; /* התאמת גודל פונט במובייל */
-    color: var(--text-color); /* צבע טקסט רגיל */
-    margin-bottom: 1rem; /* התאמת מרווח תחתון */
-    padding-top: 1.5rem; /* התאמת מרווח עליון */
+.introduction__additional-text {
+  width: 100%; /* יישום רוחב מלא */
+  text-align: right; /* מיושר מימין לשמאל */
+  direction: rtl; /* טקסט מימין לשמאל */
+  font-family: var(--font-family); /* גופן שמתואם לשאר העיצוב */
+  font-size: 1rem; /* התאמת גודל פונט במובייל */
+  color: var(--text-color); /* צבע טקסט רגיל */
+  margin-bottom: 1rem; /* התאמת מרווח תחתון */
+  padding-top: 1.5rem; /* התאמת מרווח עליון */
 }
 
 @media (min-width: 768px) {
-    .additional-text {
-        font-size: 1.1rem; /* חזרה לגודל המקורי בדסקטופ */
-        margin-bottom: 1.5rem;
-        padding-top: 2rem;
-    }
+  .introduction__additional-text {
+    font-size: 1.1rem; /* חזרה לגודל המקורי בדסקטופ */
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
+  }
 }
 
-.introduction-container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem; /* התאמת מרווח */
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1.5rem 1rem; /* התאמת ריווח במובייל */
-    min-height: auto; /* התאמת גובה מינימלי במובייל */
-    border-bottom: 1px solid #e0e0e0;
+/* === קונטיינר ראשי של האינטרו === */
+.introduction {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* התאמת מרווח */
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1rem; /* התאמת ריווח במובייל */
+  min-height: auto; /* התאמת גובה מינימלי במובייל */
+  border-bottom: 1px solid #e0e0e0;
 }
 
 @media (max-width: 600px) {
-    .introduction-container {
-        flex-direction: column-reverse; /* מעבר לטורה במובייל קטן */
-        align-items: center; /* מרכוז פריטים במובייל קטן */
-        padding: 1rem;
-        gap: 1rem;
-    }
+  .introduction {
+    flex-direction: column-reverse; /* מעבר לטורה במובייל קטן */
+    align-items: center; /* מרכוז פריטים במובייל קטן */
+    padding: 1rem;
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
-    .introduction-container {
-        padding: 2rem 1rem;
-        min-height: 400px;
-        gap: 2rem;
-    }
+  .introduction {
+    padding: 2rem 1rem;
+    min-height: 400px;
+    gap: 2rem;
+  }
 }
 
-.introduction-image {
-    flex: 1 1 100%; /* רוחב מלא במובייל כברירת מחדל */
+/* === תמונת האינטרו === */
+.introduction__image {
+  flex: 1 1 100%; /* רוחב מלא במובייל כברירת מחדל */
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .introduction__image {
+    flex: 1 1 45%;
     text-align: center;
+  }
+}
+
+/* === כותרת בתוך תמונת האינטרו (אם קיימת) === */
+/* שימו לב: ב-HTML שסופק אין כותרת h3 בתוך introduction__image */
+/* אם תוסיפו כותרת כזו, זה הסגנון המתאים: */
+.introduction__image-title {
+  font-size: 1.1rem; /* התאמת גודל כותרת תמונה במובייל */
+  color: var(--main-color);
+  margin-bottom: 1rem; /* התאמת מרווח */
+  font-weight: 400;
+  font-family: var(--font-family);
 }
 
 @media (min-width: 768px) {
-    .introduction-image {
-        flex: 1 1 45%;
-        text-align: center;
-    }
+  .introduction__image-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.introduction-image h3 {
-    font-size: 1.1rem; /* התאמת גודל כותרת תמונה במובייל */
-    color: var(--main-color);
-    margin-bottom: 1rem; /* התאמת מרווח */
-    font-weight: 400;
-    font-family: var(--font-family);
-}
-
-@media (min-width: 768px) {
-    .introduction-image h3 {
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-    }
-}
-
-.introduction-image img {
-    width: 100%;
-    max-height: 300px; /* התאמת גובה מקסימלי במובייל */
-    height: auto;
-    border-radius: 12px;
-    box-shadow: var(--shadow-default);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    will-change: transform, box-shadow;
+.introduction__image img {
+  width: 100%;
+  max-height: 300px; /* התאמת גובה מקסימלי במובייל */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-default);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  will-change: transform, box-shadow;
 }
 
 @media (min-width: 768px) {
-    .introduction-image img {
-        max-height: 400px;
-    }
+  .introduction__image img {
+    max-height: 400px;
+  }
 }
 
-.introduction-image img:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+.introduction__image img:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
-.introduction-text {
-    flex: 1 1 100%; /* רוחב מלא במובייל כברירת מחדל */
+/* === טקסט ראשי של האינטרו === */
+.introduction__main-text {
+  flex: 1 1 100%; /* רוחב מלא במובייל כברירת מחדל */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  direction: rtl;
+  font-family: var(--font-family);
+}
+
+@media (min-width: 768px) {
+  .introduction__main-text {
+    flex: 1 1 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: right;
     direction: rtl;
-    font-family: var(--font-family);
+  }
+}
+
+/* === כותרת בתוך הטקסט הראשי === */
+.introduction__main-text-title {
+  font-size: 1.1rem; /* התאמת גודל כותרת במובייל */
+  color: var(--main-color);
+  margin-bottom: 1rem; /* התאמת מרווח */
+  font-weight: 400;
+  font-family: var(--font-family);
 }
 
 @media (min-width: 768px) {
-    .introduction-text {
-        flex: 1 1 45%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: right;
-        direction: rtl;
-    }
+  .introduction__main-text-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.introduction-text p {
-    font-size: 1rem; /* התאמת גודל פונט במובייל */
-    color: var(--text-color);
-    line-height: 1.8; /* התאמת גובה שורה במובייל */
-    margin-bottom: 1rem; /* התאמת מרווח */
-    font-weight: 200;
-    text-align: right;
-    direction: rtl;
+/* === פסקת טקסט בתוך הטקסט הראשי === */
+.introduction__main-text-paragraph {
+  font-size: 1rem; /* התאמת גודל פונט במובייל */
+  color: var(--text-color);
+  line-height: 1.8; /* התאמת גובה שורה במובייל */
+  margin-bottom: 1rem; /* התאמת מרווח */
+  font-weight: 200;
+  text-align: right;
+  direction: rtl;
 }
 
 @media (min-width: 768px) {
-    .introduction-text p {
-        font-size: 1.1rem;
-        line-height: 2;
-        margin-bottom: 1.5rem;
-    }
+  .introduction__main-text-paragraph {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.introduction-text p:last-child {
-    margin-bottom: 0;
+.introduction__main-text-paragraph:last-child {
+  margin-bottom: 0;
 }
-
 /* הדר - Header styles */
 #main-header {
     display: flex; /* תיקון תחביר */
