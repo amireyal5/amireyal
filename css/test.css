@@ -69,7 +69,7 @@ body {
     direction: rtl; /* טקסט מימין לשמאל */
     font-family: var(--font-family); /* גופן שמתואם לשאר העיצוב */
     font-size: 1rem; /* התאמת גודל פונט במובייל */
-    color: var(--text-color); /* צבע טקסט רגיל */
+    color:#000; /* צבע טקסט רגיל */
     margin-bottom: 1rem; /* התאמת מרווח תחתון */
     padding-top: 1.5rem; /* התאמת מרווח עליון */
 }
@@ -127,7 +127,7 @@ body {
 
 .introduction-image h3 {
     font-size: 1.1rem; /* התאמת גודל כותרת תמונה במובייל */
-      color: var(--text-color);
+      color: #000;
     margin-bottom: 1rem; /* התאמת מרווח */
     font-weight: 400;
     font-family: var(--font-family);
@@ -169,7 +169,7 @@ body {
     text-align: right;
     direction: rtl;
     font-family: var(--font-family);
-     color: var(--text-color);
+     color: #000;
 }
 
 @media (min-width: 768px) {
