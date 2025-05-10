@@ -25,21 +25,33 @@
 
 /* --- Treatment Layout --- */
 .treatment-section {
-  padding: 60px 0; /* section-padding-vertical: 60px */
-  color: #fff; /* text-color: #fff */
-  margin-bottom: 40px; /* section-margin-bottom: 40px */
+  position: relative; /* כדי לאפשר מיקום אבסולוטי של הכותרת */
+  padding-top: 80px; /* כדי לפנות מקום לכותרת שתוצב מעל */
+  padding-bottom: var(--section-padding-vertical);
+  color: var(--text-color);
+  margin-bottom: var(--section-margin-bottom);
+}
+
+.treatment-section h2 { /* או כל אלמנט כותרת אחר שאתה משתמש בו */
+  position: absolute;
+  top: -40px; /* מרחק הכותרת מהחלק העליון של הסקציה */
+  right: 1rem; /* התחלה מצד ימין עם ריווח קל */
+  font-size: 2rem; /* גודל גופן מותאם */
+  color: var(--main-color); /* שימוש במשתנה הצבע הראשי */
+  font-weight: bold; /* או כל סגנון רצוי אחר */
+  direction: rtl; /* יישור לימין */
 }
 
 .treatment-section .container {
-  background: linear-gradient(135deg, #00527a, #00a7c6); /* background-gradient-start: #00527a, background-gradient-end: #00a7c6 */
-  padding: 1.5rem 1rem; /* container-padding-vertical-mobile: 1.5rem, container-padding-horizontal-mobile: 1rem */
+  background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+  padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem; /* מרווח כללי בין פריטים */
-  max-width: 1000px; /* max-width: 1000px */
+  max-width: var(--max-width);
   margin: 0 auto;
   min-height: auto;
   border-radius: 8px; /* פינות מעוגלות קלות למ container */
@@ -48,7 +60,7 @@
 .treatment-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* רספונסיביות טובה יותר */
-  gap: 1.5rem; /* grid-column-gap: 1.5rem */
+  gap: var(--grid-column-gap);
   width: 100%; /* גורם לגריד לתפוס את כל רוחב הקונטיינר */
 }
 
@@ -58,30 +70,30 @@
   background-color: rgba(255, 255, 255, 0.05); /* רקע שקוף מעט לכל פריט */
   border-radius: 6px;
   padding: 1.5rem;
-  transition: transform 0.3s, box-shadow 0.3s; /* transition-speed: 0.3s */
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .treatment-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15) */
+  box-shadow: var(--shadow-hover);
 }
 
 .item-title {
-  font-size: 1.3rem; /* item-title-font-size: 1.3rem */
-  color: #fff; /* main-color: #fff */
-  margin-bottom: 1rem; /* item-title-margin-bottom: 1rem */
-  font-weight: 400; /* item-title-font-weight: 400 */
-  font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif; /* font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif */
-  background: linear-gradient(to right, #e0f7fa, #b2ebf2); /* item-title-gradient-start: #e0f7fa, item-title-gradient-end: #b2ebf2 */
+  font-size: var(--item-title-font-size);
+  color: var(--main-color);
+  margin-bottom: var(--item-title-margin-bottom);
+  font-weight: var(--item-title-font-weight);
+  font-family: var(--font-family);
+  background: linear-gradient(to right, var(--item-title-gradient-start), var(--item-title-gradient-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   text-align: right;
+    text-align: right;
   direction: rtl;
-  
+
 }
 
 .item-text {
-  font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif; /* font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif */
+  font-family: var(--font-family);
   line-height: 1.6;
   text-align: right;
   direction: rtl;
@@ -90,17 +102,27 @@
 
 /* קו מפריד עדין בין פריטים (אופציונלי - אם רוצים קו בין כל פריט) */
 /*.treatment-item:not(:last-child) {
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /* item-border-bottom-color: rgba(255, 255, 255, 0.3) */
+  border-bottom: 1px dashed var(--item-border-bottom-color);
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
 }*/
 
 /* --- התאמות למובייל --- */
 @media (max-width: 768px) {
+  .treatment-section {
+    padding-top: 100px; /* התאמת ריווח עליון למובייל */
+  }
+
+  .treatment-section h2 { /* או כל אלמנט כותרת אחר שאתה משתמש בו */
+    top: -60px; /* התאמת מיקום כותרת למובייל */
+    font-size: 1.75rem; /* גודל גופן מותאם למובייל */
+    right: 1rem;
+  }
+
   .treatment-section .container {
     flex-direction: column; /* מעבר לעמודה במובייל */
     align-items: stretch;
-    padding: 1.5rem 1rem; /* container-padding-vertical-mobile: 1.5rem, container-padding-horizontal-mobile: 1rem */
+    padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
   }
 
   .treatment-grid {
