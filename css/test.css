@@ -61,7 +61,7 @@ body {
     }
 }
 
-/* === Introduction Section (BEM) === */
+/* === Introduction Section (BEM - פריסת שני טורים) === */
 
 /* === טקסט מעל הקונטיינר === */
 .introduction__additional-text {
@@ -86,31 +86,22 @@ body {
 /* === קונטיינר ראשי של האינטרו === */
 .introduction {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column-reverse; /* ברירת מחדל - טור אחד במובייל */
+  align-items: center; /* מרכוז פריטים במובייל */
   gap: 1.5rem; /* התאמת מרווח */
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1.5rem 1rem; /* התאמת ריווח במובייל */
-  min-height: auto; /* התאמת גובה מינימלי במובייל */
   border-bottom: 1px solid #e0e0e0;
-}
-
-@media (max-width: 600px) {
-  .introduction {
-    flex-direction: column-reverse; /* מעבר לטורה במובייל קטן */
-    align-items: center; /* מרכוז פריטים במובייל קטן */
-    padding: 1rem;
-    gap: 1rem;
-  }
 }
 
 @media (min-width: 768px) {
   .introduction {
+    flex-direction: row-reverse; /* מעבר לשני טורים בדסקטופ */
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 2rem 1rem;
-    min-height: 400px;
     gap: 2rem;
   }
 }
@@ -123,26 +114,8 @@ body {
 
 @media (min-width: 768px) {
   .introduction__image {
-    flex: 1 1 45%;
+    flex: 1 1 45%; /* רוחב של כ-45% לטור התמונה בדסקטופ */
     text-align: center;
-  }
-}
-
-/* === כותרת בתוך תמונת האינטרו (אם קיימת) === */
-/* שימו לב: ב-HTML שסופק אין כותרת h3 בתוך introduction__image */
-/* אם תוסיפו כותרת כזו, זה הסגנון המתאים: */
-.introduction__image-title {
-  font-size: 1.1rem; /* התאמת גודל כותרת תמונה במובייל */
-  color: var(--main-color);
-  margin-bottom: 1rem; /* התאמת מרווח */
-  font-weight: 400;
-  font-family: var(--font-family);
-}
-
-@media (min-width: 768px) {
-  .introduction__image-title {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
   }
 }
 
@@ -175,12 +148,11 @@ body {
   justify-content: center;
   text-align: right;
   direction: rtl;
-  font-family: var(--font-family);
 }
 
 @media (min-width: 768px) {
   .introduction__main-text {
-    flex: 1 1 45%;
+    flex: 1 1 45%; /* רוחב של כ-45% לטור הטקסט בדסקטופ */
     display: flex;
     flex-direction: column;
     justify-content: center;
