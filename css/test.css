@@ -127,7 +127,7 @@ body {
 
 .introduction-image h3 {
     font-size: 1.1rem; /* התאמת גודל כותרת תמונה במובייל */
-    color: var(--main-color);
+      color: var(--text-color);
     margin-bottom: 1rem; /* התאמת מרווח */
     font-weight: 400;
     font-family: var(--font-family);
@@ -169,7 +169,7 @@ body {
     text-align: right;
     direction: rtl;
     font-family: var(--font-family);
-     color: var(--main-color);
+     color: var(--text-color);
 }
 
 @media (min-width: 768px) {
@@ -185,7 +185,7 @@ body {
 
 .introduction-text p {
     font-size: 1rem; /* התאמת גודל פונט במובייל */
-    color: var(--main-color);
+  color: var(--text-color);
     line-height: 1.8; /* התאמת גובה שורה במובייל */
     margin-bottom: 1rem; /* התאמת מרווח */
     font-weight: 200;
