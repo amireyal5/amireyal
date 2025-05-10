@@ -18,7 +18,7 @@
   text-align: center; /* מרכז את הטקסט */
   font-family: 'Assistant', sans-serif; /* גופן Assistant */
   font-weight: bold; /* טקסט בולד */
-  font-size: 2.5vw; /* גודל טקסט דינמי שמתאים לפי רוחב המסך */
+  font-size: 1vw; /* גודל טקסט דינמי שמתאים לפי רוחב המסך */
   color: #000; /* צבע טקסט שחור, אפשר לשנות */
   padding: 1em; /* ריווח פנימי מותאם */
   margin-top: 5vh; /* רווח מהחלק העליון לפי גובה המסך */
