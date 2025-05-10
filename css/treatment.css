@@ -1,127 +1,47 @@
-/* === Variables === */
-:root {
-  --main-color: #fff; /* כותרות - לבן */
-  --text-color: #fff;
-  --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
-  --transition-speed: 0.3s;
-  --max-width: 1000px;
-  --background-gradient-start: #00527a; /* התחלת שיפוע רקע */
-  --background-gradient-end: #00a7c6; /* סיום שיפוע רקע */
-  --section-padding-vertical: 60px;
-  --section-margin-bottom: 40px;
-  --container-padding-horizontal-desktop: 20px;
-  --container-padding-vertical-mobile: 1.5rem;
-  --container-padding-horizontal-mobile: 1rem;
-  --grid-column-gap: 1.5rem; /* מרווח מעודכן בין עמודות */
-  --item-title-font-size: 1.3rem;
-  --item-title-font-weight: 400;
-  --item-title-margin-bottom: 1rem; /* מרווח מעודכן מתחת לכותרת */
-  --item-title-gradient-start: #e0f7fa; /* התחלת שיפוע כותרת */
-  --item-title-gradient-end: #b2ebf2; /* סיום שיפוע כותרת */
-  --item-border-bottom-color: rgba(255, 255, 255, 0.3); /* קו מקווקו שקוף */
+body {
+  font-family: 'Assistant', sans-serif;
+  background-color: #f9f9f9;
+  color: #2c3e50;
+  line-height: 1.8;
 }
 
-/* --- Treatment Layout --- */
 .treatment-section {
-  position: relative; /* כדי לאפשר מיקום אבסולוטי של הכותרת */
-  padding-top: 80px; /* כדי לפנות מקום לכותרת שתוצב מעל */
-  padding-bottom: var(--section-padding-vertical);
-  color: var(--text-color);
-  margin-bottom: var(--section-margin-bottom);
+  padding: 80px 20px;
+  background-color: #ffffff;
 }
 
-.treatment-section h2 {
-  position: absolute;
-  top: -40px;
-  right: 1rem;
-  font-size: 2rem;
-  color: var(--main-color);
-  font-weight: bold;
-  direction: rtl;
-}
-
-.treatment-section .container {
-  background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
-  padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  max-width: var(--max-width);
+.container {
+  max-width: 900px;
   margin: 0 auto;
-  min-height: auto;
-  border-radius: 8px;
+}
+
+.main-section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #2c3e50;
 }
 
 .treatment-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--grid-column-gap);
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .treatment-item {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  padding: 1.5rem;
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-}
-
-.treatment-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
 }
 
 .item-title {
-  font-size: var(--item-title-font-size);
-  color: var(--main-color);
-  margin-bottom: var(--item-title-margin-bottom);
-  font-weight: var(--item-title-font-weight);
-  font-family: var(--font-family);
-  background: linear-gradient(to right, var(--item-title-gradient-start), var(--item-title-gradient-end));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: right;
-  direction: rtl;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #34495e;
 }
 
 .item-text {
-  font-family: var(--font-family);
-  line-height: 1.6;
-  text-align: right;
-  direction: rtl;
-  flex-grow: 1;
-}
-
-/* --- התאמות למובייל --- */
-@media (max-width: 768px) {
-  .treatment-section {
-    padding-top: 100px;
-  }
-
-  .treatment-section h2 {
-    top: -60px;
-    font-size: 1.75rem;
-    right: 1rem;
-  }
-
-  .treatment-section .container {
-    flex-direction: column;
-    align-items: stretch;
-    padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
-  }
-
-  .treatment-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .item-text {
-    text-align: right;
-  }
+  font-size: 1rem;
+  color: #555;
 }
