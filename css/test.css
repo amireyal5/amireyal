@@ -1,8 +1,121 @@
 /* כלליים - Global styles applied based on agreed rules */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    }
+
+/* כרמיאל ואונליין */
+.location-banner {
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: #000;
+    padding: 1em;
+    margin-top: 2vh;
+}
+
+/* כותרת מתחת לפוטר */
+.page-main-frase {
+    direction: rtl;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #005f99;
+    font-weight: 600;
+    font-family: 'Assistant', sans-serif;
+}
+
+/* === Variables === */
+:root {
+    --main-color: #55828B;
+    --text-color: #514b4b;
+    --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+    --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+    --max-width: 1000px;
+}
+
+/* === Introduction Section === */
+/* === טקסט מעל הקונטיינר === */
+.additional-text {
+    width: 100%; /* יישום רוחב מלא */
+    text-align: right; /* מיושר מימין לשמאל */
+    direction: rtl; /* טקסט מימין לשמאל */
+    font-family: var(--font-family); /* גופן שמתואם לשאר העיצוב */
+    font-size: 1.1rem; /* גודל טקסט רגיל */
+    color: var(--text-color); /* צבע טקסט רגיל */
+    margin-bottom: 1.5rem; /* מרווח תחתון */
+    padding-top: 2rem; /* מרווח עליון */
+}
+
+.introduction-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 400px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.introduction-image {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.introduction-image h3 {
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+
+.introduction-image img {
+    width: 100%;
+    max-height: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-default);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    will-change: transform, box-shadow;
+}
+
+.introduction-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.introduction-text {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    direction: rtl;
+    font-family: var(--font-family);
+}
+
+.introduction-text p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    font-weight: 200;
+    text-align: right;
+    direction: rtl;
+}
+
+.introduction-text p:last-child {
+    margin-bottom: 0;
+
 }    
 /*כותרת מתחת לפוטר */
 .page-main-frase {
@@ -16,16 +129,8 @@
 
 
 }
-/* עיצוב לכל הכותרות שמעל סקציות */
-.section-title {
-  direction: rtl;
-  text-align: right;
-  margin-bottom: 30px;
-  font-size: 1.2em;
-  color: #0077aa;        /* צבע תכלכל לדוגמה - שנה למה שתרצה */
-  font-weight: 300;      /* גופן דק יותר */
-  font-family: 'assistant', sans-serif; /* דוגמה לפונט עדכני שמתאים לעברית */
-}
+
+
 .location-banner {
   text-align: center; /* מרכז את הטקסט */
   font-family: 'Assistant', sans-serif; /* גופן Assistant */
