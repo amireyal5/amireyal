@@ -1,8 +1,18 @@
+/* === Variables === */
+:root {
+    --main-color: #55828B;
+    --text-color: white;
+    --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+    --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+    --max-width: 1000px;
+}
 /* --- Treatment Layout - Two-column grid with white separators --- */
 .treatment-section {
     padding: 60px 0;
     /* הסרנו את background-color מכאן */
-    color: white; /* צבע גופן כללי לסקציה - האם נשאר לבן על רקע צבעוני? */
+    color: white; /*
     margin-bottom: 40px;
 }
 
@@ -35,25 +45,25 @@
 .item-title, .item-text {
     padding: 20px;
     /* צבע גופן - האם נשאר לבן על רקע צבעוני? */
-    color: white; /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות (למשל צבע כהה מתאים) !!! */
+    color: white; /
 }
 
 .item-title {
-    font-weight: 600; /* משקל מקורי - האם להתאים למשקל H3? */
-    font-size: 1.2rem; /* גודל מקורי - האם להתאים לגודל H3? */
-    background-color: rgba(255, 255, 255, 0.05); /* רקע לבן שקוף - האם להישאר או לשנות לצבע מניפה שקוף? */
-    /* קו הפרדה - האם נשאר לבן על רקע צבעוני? */
-    border-right: 3px solid white; /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות !!! */
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון גם כאן */
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-family: var(--font-family);
 }
 
 .item-text {
-    font-size: 1.1em; /* כלל 5: גודל טקסט רגיל */
-    line-height: 2.0; /* כלל 5: Line height טקסט רגיל */
-    font-weight: 200; /* כלל 5: משקל טקסט רגיל */
-    /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
-    font-family: 'Assistant', sans-serif; /* לוודא שהפונט נכון גם כאן */
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    direction: rtl;
+    font-family: var(--font-family);
 }
 
 /* קו מפריד בין פריטים */
