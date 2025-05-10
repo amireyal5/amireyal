@@ -3,6 +3,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}    
+/* עיצוב לכל הכותרות שמעל סקציות */
+.page-main {
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  color: #0077aa;        /* צבע תכלכל לדוגמה - שנה למה שתרצה */
+  font-weight: 300;      /* גופן דק יותר */
+  font-family: 'assistant', sans-serif; /* דוגמה לפונט עדכני שמתאים לעברית */
+
+
 }
 /* עיצוב לכל הכותרות שמעל סקציות */
 .section-title {
@@ -12,7 +24,7 @@
   font-size: 1.2em;
   color: #0077aa;        /* צבע תכלכל לדוגמה - שנה למה שתרצה */
   font-weight: 300;      /* גופן דק יותר */
-  font-family: 'Heebo', sans-serif; /* דוגמה לפונט עדכני שמתאים לעברית */
+  font-family: 'assistant', sans-serif; /* דוגמה לפונט עדכני שמתאים לעברית */
 }
 .location-banner {
   text-align: center; /* מרכז את הטקסט */
