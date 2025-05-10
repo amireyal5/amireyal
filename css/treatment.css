@@ -1,54 +1,44 @@
 body {
-  font-family: 'Heebo', sans-serif;
-  background-color: #ffff;
-  color: #2c3e50;
-  line-height: 1.8;
-}
-
-.treatment-section {
-  padding: 80px 20px;
+  font-family: 'Heebo', sans-serif; /* או 'Assistant' אם תרצה */
   background-color: #ffffff;
+  color: #333;
+  line-height: 1.8;
+  direction: rtl;
+  text-align: right;
+  padding: 40px;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
+p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5em;
+  max-width: 720px;
 }
 
-.main-section-title {
+blockquote {
+  font-style: italic;
+  color: #5a7a9a;
+  background-color: #f4f8fb;
+  padding: 20px;
+  border-radius: 6px;
+  margin: 30px auto;
+  max-width: 700px;
   text-align: center;
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-  color: #009688; /* ירוק-טורקיז חיובי */
+  direction: rtl;
 }
 
-.treatment-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
+blockquote::after {
+  content: "– נורה אפרון";
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #888;
 }
 
-.treatment-item {
-  background-color: #f0fdfa;
-  border-radius: 16px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-  padding: 30px;
-  transition: transform 0.2s ease;
-}
-
-.treatment-item:hover {
-  transform: translateY(-4px);
-}
-
-.item-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #00796b;
-}
-
-.item-text {
-  font-size: 1.05rem;
-  color: #4e5d6c;
+h2 {
+  font-size: 2.2rem;
+  color: #607d8b;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 500;
 }
