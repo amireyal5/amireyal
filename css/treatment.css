@@ -1,6 +1,6 @@
 /* === Variables === */
 :root {
-  --main-color: #55828B;
+  --main-color: white; /* צבע הכותרות שונה ללבן */
   --text-color: white;
   --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
   --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
@@ -55,7 +55,7 @@
 
 .item-title {
   font-size: var(--item-title-font-size);
-  color: var(--main-color);
+  color: var(--main-color); /* כעת צבע הכותרת יהיה לבן */
   margin-bottom: var(--item-title-margin-bottom);
   font-weight: var(--item-title-font-weight);
   font-family: var(--font-family);
