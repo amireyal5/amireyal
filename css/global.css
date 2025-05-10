@@ -14,6 +14,16 @@
   font-weight: 300;      /* גופן דק יותר */
   font-family: 'Heebo', sans-serif; /* דוגמה לפונט עדכני שמתאים לעברית */
 }
+.location-banner {
+  text-align: center; /* מרכז את הטקסט */
+  font-family: 'Assistant', sans-serif; /* גופן Assistant */
+  font-weight: bold; /* טקסט בולד */
+  font-size: 2.5vw; /* גודל טקסט דינמי שמתאים לפי רוחב המסך */
+  color: #000; /* צבע טקסט שחור, אפשר לשנות */
+  padding: 1em; /* ריווח פנימי מותאם */
+  margin-top: 5vh; /* רווח מהחלק העליון לפי גובה המסך */
+}
+
 
 body {
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן כללי */
