@@ -353,3 +353,40 @@ nav {
 
 .submenu li a:hover {
     /* כלל 10: צבע ריחוף
+    }
+
+/* אייקונים מרחפים ליצירת קשר - Floating contact icons styles */
+.floating-contact-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floating-contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* כלל 10: רקע אייקונים מרחפים - נשאר מקורי */
+    background-color: rgba(255, 255, 255, 0.7); /* נשאר מקורי */
+    /* כלל 10: צבע אייקונים מרחפים - נשאר מקורי */
+    color: #457b9d; /* נשאר מקורי */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 24px; /* כלל 9: גודל פונט אייקונים מרחפים - לא משתנה */
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out,
+                color 0.2s ease-in-out;
+}
+
+.floating-contact-icons a:hover {
+    transform: scale(1.2);
+    /* כלל 10: צבע ריחוף אייקונים מרחפים - נשאר מקורי */
+    color: #a8dadc; /* נשאר מקורי */
+}
