@@ -22,8 +22,8 @@
 
 .main-section-title {
   font-size: 2.5rem; /* התאם את גודל הפונט לפי הצורך */
-  color: var(--main-color); /* התאם את הצבע לפי הצורך */
-  text-align: center; /* יישור למרכז (אופציונלי) */
+  color: #000; /* התאם את הצבע לפי הצורך */
+  text-align: right; /* יישור למרכז (אופציונלי) */
   margin-bottom: 2rem; /* מרווח בין הכותרת לגריד */
   font-family: var(--font-family);
   font-weight: bold; /* או כל משקל גופן אחר */
