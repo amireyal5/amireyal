@@ -185,7 +185,7 @@ body {
 
 .introduction-text p {
     font-size: 1rem; /* התאמת גודל פונט במובייל */
-  color: var(--text-color);
+  color: #000;
     line-height: 1.8; /* התאמת גובה שורה במובייל */
     margin-bottom: 1rem; /* התאמת מרווח */
     font-weight: 200;
