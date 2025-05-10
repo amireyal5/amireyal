@@ -47,6 +47,18 @@ body {
 }
 
 /* === Introduction Section === */
+/* === טקסט מעל הקונטיינר === */
+.additional-text {
+    width: 100%; /* יישום רוחב מלא */
+    text-align: right; /* מיושר מימין לשמאל */
+    direction: rtl; /* טקסט מימין לשמאל */
+    font-family: var(--font-family); /* גופן שמתואם לשאר העיצוב */
+    font-size: 1.1rem; /* גודל טקסט רגיל */
+    color: var(--text-color); /* צבע טקסט רגיל */
+    margin-bottom: 1.5rem; /* מרווח תחתון */
+    padding-top: 2rem; /* מרווח עליון */
+}
+
 .introduction-container {
     display: flex;
     flex-direction: row-reverse;
