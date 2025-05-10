@@ -1,0 +1,25 @@
+/* כלליים - Global styles applied based on agreed rules */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+  /*כרמיאל ואונליין */
+.location-banner {
+  text-align: center; /* מרכז את הטקסט */
+  font-family: 'Assistant', sans-serif; /* גופן Assistant */
+  font-weight: bold; /* טקסט בולד */
+  font-size: 1vw; /* גודל טקסט דינמי שמתאים לפי רוחב המסך */
+  color: #000; /* צבע טקסט שחור, אפשר לשנות */
+  padding: 1em; /* ריווח פנימי מותאם */
+  margin-top: 2vh; /* רווח מהחלק העליון לפי גובה המסך */
+}    
+/*כותרת מתחת לפוטר */
+.page-main-frase {
+  direction: rtl;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 22px;
+  color: #005f99; /* גוון טיפה כהה יותר לנוכחות */
+  font-weight: 600; /* משקל בינוני-חזק */
+  font-family: 'Assistant', sans-serif;
+}
