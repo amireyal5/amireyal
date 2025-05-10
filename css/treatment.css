@@ -1,27 +1,29 @@
 /* === Variables === */
 :root {
-  --main-color: white; /* צבע הכותרות שונה ללבן */
-  --text-color: white;
+  --main-color: #fff; /* כותרות - לבן */
+  --text-color: #fff;
   --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
   --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
   --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
   --transition-speed: 0.3s;
   --max-width: 1000px;
-  --background-color: #004869bd;
+  --background-gradient-start: #00527a; /* התחלת שיפוע רקע */
+  --background-gradient-end: #00a7c6; /* סיום שיפוע רקע */
   --section-padding-vertical: 60px;
   --section-margin-bottom: 40px;
   --container-padding-horizontal-desktop: 20px;
   --container-padding-vertical-mobile: 1.5rem;
   --container-padding-horizontal-mobile: 1rem;
-  --grid-column-gap: 0;
+  --grid-column-gap: 1.5rem; /* מרווח מעודכן בין עמודות */
   --item-title-font-size: 1.3rem;
   --item-title-font-weight: 400;
-  --item-title-margin-bottom: 1.5rem;
-  --item-text-border-bottom-color: rgba(255, 255, 255, 0.2); /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
-  --container-border-bottom-color: #e0e0e0;
+  --item-title-margin-bottom: 1rem; /* מרווח מעודכן מתחת לכותרת */
+  --item-title-gradient-start: #e0f7fa; /* התחלת שיפוע כותרת */
+  --item-title-gradient-end: #b2ebf2; /* סיום שיפוע כותרת */
+  --item-border-bottom-color: rgba(255, 255, 255, 0.3); /* קו מקווקו שקוף */
 }
 
-/* --- Treatment Layout - Two-column grid with white separators --- */
+/* --- Treatment Layout --- */
 .treatment-section {
   padding: var(--section-padding-vertical) 0;
   color: var(--text-color);
@@ -29,50 +31,80 @@
 }
 
 .treatment-section .container {
-  background-color: var(--background-color);
+  background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
   padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.5rem; /* התאמת מרווח - נשאר כערך קבוע כי הוא ספציפי לפלקס */
+  gap: 2rem; /* מרווח כללי בין פריטים */
   max-width: var(--max-width);
   margin: 0 auto;
-  min-height: auto; /* התאמת גובה מינימלי במובייל - נשאר כערך קבוע */
-  border-bottom: 1px solid var(--container-border-bottom-color);
+  min-height: auto;
+  border-radius: 8px; /* פינות מעוגלות קלות למ container */
 }
 
 .treatment-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* רספונסיביות טובה יותר */
   gap: var(--grid-column-gap);
+  width: 100%; /* גורם לגריד לתפוס את כל רוחב הקונטיינר */
 }
 
 .treatment-item {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.05); /* רקע שקוף מעט לכל פריט */
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.treatment-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .item-title {
   font-size: var(--item-title-font-size);
-  color: var(--main-color); /* כעת צבע הכותרת יהיה לבן */
+  color: var(--main-color);
   margin-bottom: var(--item-title-margin-bottom);
   font-weight: var(--item-title-font-weight);
   font-family: var(--font-family);
+  background: linear-gradient(to right, var(--item-title-gradient-start), var(--item-title-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .item-text {
-  flex: 1 1 45%; /* ערכי פלקס נשארו קבועים */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  font-family: var(--font-family);
+  line-height: 1.6;
   text-align: right;
   direction: rtl;
-  font-family: var(--font-family);
+  flex-grow: 1; /* מאפשר לטקסט לתפוס את שארית הגובה */
 }
 
-/* קו מפריד בין פריטים */
-.treatment-item:not(:last-child) .item-text {
-  /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
-  border-bottom: 1px solid var(--item-text-border-bottom-color);
+/* קו מפריד עדין בין פריטים (אופציונלי - אם רוצים קו בין כל פריט) */
+/*.treatment-item:not(:last-child) {
+  border-bottom: 1px dashed var(--item-border-bottom-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}*/
+
+/* --- התאמות למובייל --- */
+@media (max-width: 768px) {
+  .treatment-section .container {
+    flex-direction: column; /* מעבר לעמודה במובייל */
+    align-items: stretch;
+    padding: var(--container-padding-vertical-mobile) var(--container-padding-horizontal-mobile);
+  }
+
+  .treatment-grid {
+    grid-template-columns: 1fr; /* עמודה אחת במובייל */
+  }
+
+  .item-text {
+    text-align: right; /* יישור טקסט לימין במובייל */
+  }
 }
