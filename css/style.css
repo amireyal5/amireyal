@@ -8,13 +8,7 @@
     --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
     --transition-speed: 0.3s;
     --max-width: 1000px;
-}
 
-/* === Font Awesome Style Class === */
-.fa-text {
-    font: var(--font-awesome-style);
-    direction: rtl;
-    color: var(--main-color);
 }
 
 /* כלליים - Global styles */
