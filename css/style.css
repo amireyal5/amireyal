@@ -38,7 +38,7 @@ body {
 /* === Variables === */
 :root {
     --main-color: #55828B;
-    --text-color: #514b4b;
+    --text-color: #121212;
     --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
     --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
     --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
