@@ -169,6 +169,7 @@ body {
     text-align: right;
     direction: rtl;
     font-family: var(--font-family);
+     color: var(--main-color);
 }
 
 @media (min-width: 768px) {
@@ -184,7 +185,7 @@ body {
 
 .introduction-text p {
     font-size: 1rem; /* התאמת גודל פונט במובייל */
-    color: var(--text-color);
+    color: var(--main-color);
     line-height: 1.8; /* התאמת גובה שורה במובייל */
     margin-bottom: 1rem; /* התאמת מרווח */
     font-weight: 200;
