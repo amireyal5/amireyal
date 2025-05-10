@@ -4,15 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }    
-/* עיצוב לכל הכותרות שמעל סקציות */
-.page-main {
-  direction: rtl;
+/*כותרת מתחת לפוטר */
+.page-main frase {
+  direction: center;
   text-align: right;
   margin-bottom: 30px;
   font-size: 1.2em;
   color: #0077aa;        /* צבע תכלכל לדוגמה - שנה למה שתרצה */
   font-weight: 300;      /* גופן דק יותר */
-  font-family: 'assistant', sans-serif; /* דוגמה לפונט עדכני שמתאים לעברית */
+  font-family: 'assistant', sans-serif;
 
 
 }
