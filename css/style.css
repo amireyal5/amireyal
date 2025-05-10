@@ -10,6 +10,21 @@
     --max-width: 1000px;
 
 }
+/* כל הטקסטים יהיו בכתב דק ברירת מחדל */
+body, .additional-text, .introduction-text p {
+    font-weight: 300;
+}
+
+/* כותרות לא ישתנו ויישארו בעובי רגיל או מודגש */
+h1, h2, h3, h4, h5, h6, .location-banner, .page-main-frase {
+    font-weight: 600; /* או כל עובי שתרצה עבור כותרות */
+}
+
+/* אם יש צורך להחיל על אלמנטים נוספים */
+.introduction-image h3 {
+    font-weight: 400; /* לא דק מדי לכותרות */
+}
+
 
 /* כלליים - Global styles */
 * {
