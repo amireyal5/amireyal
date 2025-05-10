@@ -1,3 +1,22 @@
+/* === Variables === */
+:root {
+    --main-color: #55828B;
+    --text-color: #514b4b;
+    --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+    --font-awesome-style: normal 900 1em/1 "Font Awesome 6 Free";
+    --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+    --max-width: 1000px;
+}
+
+/* === Font Awesome Style Class === */
+.fa-text {
+    font: var(--font-awesome-style);
+    direction: rtl;
+    color: var(--main-color);
+}
+
 /* כלליים - Global styles */
 * {
     margin: 0;
@@ -6,17 +25,17 @@
 }  
 
 body {
-    font-family: 'Assistant', sans-serif;
+    font-family: var(--font-family);
     direction: rtl;
     background-color: #FFFFFF;
-    color: #514b4b;
+    color: var(--text-color);
     font-size: 1rem;
 }
 
 /* כרמיאל ואונליין */
 .location-banner {
     text-align: center;
-    font-family: 'Assistant', sans-serif;
+    font-family: var(--font-family);
     font-weight: bold;
     font-size: 1vw;
     color: #000;
@@ -32,31 +51,19 @@ body {
     font-size: 22px;
     color: #005f99;
     font-weight: 600;
-    font-family: 'Assistant', sans-serif;
+    font-family: var(--font-family);
 }
 
-/* === Variables === */
-:root {
-    --main-color: #55828B;
-    --text-color: #514b4b;
-    --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-    --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
-    --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
-    --transition-speed: 0.3s;
-    --max-width: 1000px;
-}
-
-/* === Introduction Section === */
-/* === טקסט מעל הקונטיינר === */
+/* טקסט מעל הקונטיינר */
 .additional-text {
-    width: 100%; /* יישום רוחב מלא */
-    text-align: right; /* מיושר מימין לשמאל */
-    direction: rtl; /* טקסט מימין לשמאל */
-    font-family: var(--font-family); /* גופן שמתואם לשאר העיצוב */
-    font-size: 1.1rem; /* גודל טקסט רגיל */
-    color: var(--text-color); /* צבע טקסט רגיל */
-    margin-bottom: 1.5rem; /* מרווח תחתון */
-    padding-top: 2rem; /* מרווח עליון */
+    width: 100%;
+    text-align: right;
+    direction: rtl;
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
 }
 
 .introduction-container {
@@ -125,7 +132,7 @@ body {
     margin-bottom: 0;
 }
 
-/* === Responsive Layout === */
+/* Responsive Layout */
 @media (max-width: 768px) {
     .introduction-container {
         flex-direction: column;
@@ -142,7 +149,7 @@ body {
     }
 }
 
-/* הדר - Header styles */
+/* Header styles */
 #main-header {
     display: flex;
     align-items: center;
@@ -199,7 +206,7 @@ nav {
     font-weight: 300;
     transition: color 0.3s ease, transform 0.3s ease-in-out;
     font-size: 0.9em;
-    font-family: 'Assistant', sans-serif;
+    font-family: var(--font-family);
 }
 
 .menu a:hover {
