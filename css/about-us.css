@@ -1,7 +1,7 @@
 /* ===== About Section ===== */
 .about-us {
     display: flex;
-    align-items:flex-start;
+    align-items:center;
     justify-content: center;
     padding: 3rem 2rem;
     background-color: #FFFFFF;
@@ -36,7 +36,7 @@
 .about-me-container {
     display: flex;
     flex-direction: row-reverse; /* תמונה מימין, טקסט משמאל */
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
     max-width: 1000px;
