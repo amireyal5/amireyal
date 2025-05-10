@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Open+Sans:wght@300;400&display=swap');
+
 .treatment-section {
-  font-family: 'assistsnt', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #ffffff;
   color: #333;
   direction: rtl;
@@ -13,11 +15,12 @@
 }
 
 .treatment-section .main-section-title {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 400;
   font-size: 2.4rem;
-  color: #2c3e50;
+  color: #55828B;
   text-align: center;
   margin-bottom: 40px;
-  font-weight: 500;
 }
 
 .treatment-grid {
@@ -27,14 +30,15 @@
 }
 
 .treatment-item .item-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #37474f;
-  font-weight: 600;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #55828B;
 }
 
 .treatment-item .item-text {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: #333;
 }
