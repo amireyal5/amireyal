@@ -4,6 +4,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+.main-title-section {
+  padding: 40px 20px;
+  text-align: right; /* יישור כללי לימין */
+  direction: rtl; /* חשוב ליישור נכון של טקסט מימין לשמאל */
+}
+
+.main-title-section__title {
+  font-size: 2.5rem;
+  color: var(--main-color); /* השתמש במשתנה הצבע הראשי שלך */
+  font-weight: bold;
+  margin-bottom: 0; /* הסרת מרווח תחתון אם אין תוכן נוסף מיד אחרי הכותרת */
+}
+
+/* סגנונות נוספים לתוכן הסקציה (אם יש) */
 
 body {
     font-family: 'Assistant', sans-serif; /* כלל 2: גופן כללי */
