@@ -9,6 +9,17 @@
 .treatment-section .container {
     background-color: #004869bd; /* רקע טורקיז לקונטיינר */
     padding: 0 20px; /* שמור על הפדינג הפנימי */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* התאמת מרווח */
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.5rem 1rem; /* התאמת ריווח במובייל */
+    min-height: auto; /* התאמת גובה מינימלי במובייל */
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .treatment-grid {
