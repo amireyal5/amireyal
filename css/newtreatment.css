@@ -3,6 +3,7 @@
   --color-primary: #55828B;
   --color-text: #000;
   --color-secondary: #fffff
+  --color-text-light: #fffff
   --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
   --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
   --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
@@ -57,7 +58,7 @@
 
 .treatment-section {
   padding: 60px var(--padding-banner);
-  color: var(--color-secondary);
+  color: var(--color-text-light);
   margin-bottom: 40px;
   text-align: center;
   background-color: var(--color-about-h2);
@@ -101,7 +102,7 @@
 .item-title,
 .item-text {
   padding: 20px;
-  color: var(--color-secondary);
+  color: var(--color-text-light);
   font-family: var(--font-family-base);
 }
 
@@ -109,7 +110,7 @@
   font-weight: 600;
   font-size: var(--font-size-h4);
   background-color: rgba(255, 255, 255, 0.05);
-  border-right: 3px solid var(--color-secondary);
+  border-right: 3px solid var(--color-text-light);
 }
 
 .item-text {
