@@ -1,675 +1,674 @@
-/* כלליים - Global styles applied based on agreed rules */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* כללי - Global styles applied based on agreed rules */
+:root {
+  --color-primary: #55828B;
+  --color-text: #000;
+  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --transition-speed-base: 0.3s;
+  --max-width-container: 1000px;
+  --font-size-base: 1rem;
+  --line-height-base: 1.8;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  direction: rtl;
+  background-color: #FFFFFF;
+  color: #514b4b;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
 .main-title-section {
   padding: 40px 20px;
-  text-align: right; /* יישור כללי לימין */
-  direction: rtl; /* חשוב ליישור נכון של טקסט מימין לשמאל */
+  text-align: right;
+  direction: rtl;
 }
 
 .main-title-section__title {
   font-size: 2.5rem;
-  color: #000; 
+  color: var(--color-text);
   font-weight: bold;
-  margin-bottom: 0; /* הסרת מרווח תחתון אם אין תוכן נוסף מיד אחרי הכותרת */
+  margin-bottom: 0;
 }
 
 /* סגנונות נוספים לתוכן הסקציה (אם יש) */
 
-body {
-    font-family: 'Assistant', sans-serif; /* כלל 2: גופן כללי */
-    direction: rtl;
-    background-color: #FFFFFF; /* כלל 1: רקע לבן תמידי */
-    color: #514b4b; /* *** כלל 5: צבע טקסט רגיל - שונה ל-#514b4b *** */
-    font-size: 1rem; /* גודל בסיס ב-body */
-}
-
 /* === Variables === */
-:root {
-    --main-color: #55828B;
-    --text-color: #000;
-    --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-    --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
-    --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
-    --transition-speed: 0.3s;
-    --max-width: 1000px;
-}
+/*:root {*/
+/* --main-color: #55828B;*/
+/* --text-color: #000;*/
+/* --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;*/
+/* --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);*/
+/* --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);*/
+/* --transition-speed: 0.3s;*/
+/* --max-width: 1000px;*/
+}*/
 
 /* כרמיאל ואונליין */
 .location-banner {
-    text-align: center;
-    font-family: 'Assistant', sans-serif;
-    font-weight: bold;
-    font-size: 1.2em; /* שימוש ב-em לגודל גמיש יותר */
-    color: #000;
-    padding: 0.75em; /* התאמת ריווח */
-    margin-top: 1.5vh; /* התאמת מרווח */
+  text-align: center;
+  font-family: var(--font-family-base);
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--color-text);
+  padding: 0.75em;
+  margin-top: 1.5vh;
 }
 
 @media (min-width: 768px) {
-    .location-banner {
-        font-size: 1vw; /* חזרה ל-vw עבור מסכים גדולים יותר */
-        padding: 1em;
-        margin-top: 2vh;
-    }
+  .location-banner {
+    font-size: 1vw;
+    padding: 1em;
+    margin-top: 2vh;
+  }
 }
 
 /* כותרת מתחת לפוטר */
 .page-main-frase {
-    direction: rtl;
-    text-align: center;
-    margin-bottom: 30px; /* התאמת מרווח */
-    font-size: 1.3em; /* שימוש ב-em לגודל גמיש יותר */
-    color: #005f99;
-    font-weight: 600;
-    font-family: 'Assistant', sans-serif;
+  direction: rtl;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.3em;
+  color: #005f99;
+  font-weight: 600;
+  font-family: var(--font-family-base);
 }
 
 @media (min-width: 768px) {
-    .page-main-frase {
-        margin-bottom: 40px;
-        font-size: 22px;
-    }
+  .page-main-frase {
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
 }
 
 /* === Introduction Section === */
 /* === טקסט מעל הקונטיינר === */
 .additional-text {
-    width: 100%; /* יישום רוחב מלא */
-    text-align: right; /* מיושר מימין לשמאל */
-    direction: rtl; /* טקסט מימין לשמאל */
-    font-family: var(--font-family); /* גופן שמתואם לשאר העיצוב */
-    font-size: 1rem; /* התאמת גודל פונט במובייל */
-    color:#000; /* צבע טקסט רגיל */
-    margin-bottom: 1rem; /* התאמת מרווח תחתון */
-    padding-top: 1.5rem; /* התאמת מרווח עליון */
+  width: 100%;
+  text-align: right;
+  direction: rtl;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
 }
 
 @media (min-width: 768px) {
-    .additional-text {
-        font-size: 1.1rem; /* חזרה לגודל המקורי בדסקטופ */
-        margin-bottom: 1.5rem;
-        padding-top: 2rem;
-    }
+  .additional-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
+  }
 }
 
 .introduction-container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem; /* התאמת מרווח */
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1.5rem 1rem; /* התאמת ריווח במובייל */
-    min-height: auto; /* התאמת גובה מינימלי במובייל */
-    border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  min-height: auto;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 @media (max-width: 600px) {
-    .introduction-container {
-        flex-direction: column-reverse; /* מעבר לטורה במובייל קטן */
-        align-items: center; /* מרכוז פריטים במובייל קטן */
-        padding: 1rem;
-        gap: 1rem;
-    }
+  .introduction-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
-    .introduction-container {
-        padding: 2rem 1rem;
-        min-height: 400px;
-        gap: 2rem;
-    }
+  .introduction-container {
+    padding: 2rem 1rem;
+    min-height: 400px;
+    gap: 2rem;
+  }
 }
 
 .introduction-image {
-    flex: 1 1 100%; /* רוחב מלא במובייל כברירת מחדל */
-    text-align: center;
+  flex: 1 1 100%;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
-    .introduction-image {
-        flex: 1 1 45%;
-        text-align: center;
-    }
+  .introduction-image {
+    flex: 1 1 45%;
+    text-align: center;
+  }
 }
 
 .introduction-image h3 {
-    font-size: 1.1rem; /* התאמת גודל כותרת תמונה במובייל */
-      color: #000;
-    margin-bottom: 1rem; /* התאמת מרווח */
-    font-weight: 400;
-    font-family: var(--font-family);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-family: var(--font-family-base);
 }
 
 @media (min-width: 768px) {
-    .introduction-image h3 {
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-    }
+  .introduction-image h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .introduction-image img {
-    width: 100%;
-    max-height: 300px; /* התאמת גובה מקסימלי במובייל */
-    height: auto;
-    border-radius: 12px;
-    box-shadow: var(--shadow-default);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    will-change: transform, box-shadow;
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-default);
+  transition: transform var(--transition-speed-base) ease, box-shadow var(--transition-speed-base) ease;
+  will-change: transform, box-shadow;
 }
 
 @media (min-width: 768px) {
-    .introduction-image img {
-        max-height: 400px;
-    }
+  .introduction-image img {
+    max-height: 400px;
+  }
 }
 
 .introduction-image img:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .introduction-text {
-    flex: 1 1 100%; /* רוחב מלא במובייל כברירת מחדל */
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  direction: rtl;
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+  .introduction-text {
+    flex: 1 1 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: right;
     direction: rtl;
-    font-family: var(--font-family);
-     color: #000;
-}
-
-@media (min-width: 768px) {
-    .introduction-text {
-        flex: 1 1 45%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: right;
-        direction: rtl;
-    }
+  }
 }
 
 .introduction-text p {
-    font-size: 1rem; /* התאמת גודל פונט במובייל */
-  color: #000;
-    line-height: 1.8; /* התאמת גובה שורה במובייל */
-    margin-bottom: 1rem; /* התאמת מרווח */
-    font-weight: 200;
-    text-align: right;
-    direction: rtl;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+  margin-bottom: 1rem;
+  font-weight: 200;
+  text-align: right;
+  direction: rtl;
 }
 
 @media (min-width: 768px) {
-    .introduction-text p {
-        font-size: 1.1rem;
-        line-height: 2;
-        margin-bottom: 1.5rem;
-    }
+  .introduction-text p {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .introduction-text p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
+
 /* הדר - Header styles */
 #main-header {
-    display: flex; /* תיקון תחביר */
-    align-items: center; /* תיקון תחביר - הנחתי ש-center התכוון ליישור אופקי בתוך פלקס עמודה */
-    padding: 0.5em 1em;
-    background-color: #FFFFFF; /* כלל 1: רקע לבן בהדר */
-    position: sticky;
-    top: 0;
-    transition: top 0.3s ease;
-    z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  transition: top 0.3s ease;
+  z-index: 100;
 }
 
 .logo {
-    order: 1;
-    max-width: 150px; /* התאמת גודל לוגו במובייל */
+  order: 1;
+  max-width: 150px;
 }
 
 @media (min-width: 480px) {
-    .logo {
-        max-width: 200px;
-    }
+  .logo {
+    max-width: 200px;
+  }
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
-    .logo {
-        max-width: 130px;
-    }
+  .logo {
+    max-width: 130px;
+  }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        max-width: 140px;
-    }
+  .logo {
+    max-width: 140px;
+  }
 }
 
 nav {
-    order: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .menu {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .menu li {
-    margin: 0 0.75em; /* התאמת מרווח במובייל */
+  margin: 0 0.75em;
 }
 
 @media (min-width: 768px) {
-    .menu li {
-        margin: 0 1em;
-    }
+  .menu li {
+    margin: 0 1em;
+  }
 }
 
 .menu a {
-    /* כלל 10: צבע קישורי תפריט ראשי - נשאר מקורי */
-    color: #1f628e; /* נשאר מקורי */
-    text-decoration: none;
-    font-weight: 300; /* משקל פונט כפי שנקבע לקישורי תפריט */
-    transition: color 0.3s ease, transform 0.3s ease-in-out;
-    font-size: 0.85em; /* התאמת גודל פונט במובייל */
-    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+  color: #1f628e;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color var(--transition-speed-base) ease, transform var(--transition-speed-base) ease-in-out;
+  font-size: 0.85em;
+  font-family: var(--font-family-base);
 }
 
 @media (min-width: 768px) {
-    .menu a {
-        font-size: 0.9em; /* כלל 9: גודל פונט עצמאי לקישורי תפריט */
-    }
+  .menu a {
+    font-size: 0.9em;
+  }
 }
 
 .menu a:hover {
-    /* כלל 10: צבע ריחוף קישורי תפריט ראשי - נשאר מקורי */
-    color: #1565C0; /* נשאר מקורי */
-    transform: scale(1.05);
+  color: #1565C0;
+  transform: scale(1.05);
 }
 
 .hamburger {
-    order: 3;
-    display: none;
-    font-size: 1rem;
-    color: #364958; /* כלל 8: צבע אייקון המבורגר (כמו כותרת ראשית) */
-    cursor: pointer;
-    margin-left: auto;
+  order: 3;
+  display: none;
+  font-size: 1rem;
+  color: #364958;
+  cursor: pointer;
+  margin-left: auto;
 }
 
 /* תפריט עם תת-תפריט - Submenu styles */
 .has-submenu {
-    position: relative;
+  position: relative;
 }
 
 .has-submenu > a::after {
-    content: " ▼";
-    font-size: 0.7em;
+  content: " ▼";
+  font-size: 0.7em;
 }
 
 .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    /* כלל 10: רקע תפריט משנה (דסקטופ) - נשאר מקורי */
-    background-color: #426575; /* נשאר מקורי */
-    list-style: none;
-    padding: 0.5em 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    min-width: 150px; /* התאמת רוחב מינימלי במובייל */
-    transform-origin: top right;
-    animation: growDown 0.3s ease-in-out forwards;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #426575;
+  list-style: none;
+  padding: 0.5em 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+  transform-origin: top right;
+  animation: growDown 0.3s ease-in-out forwards;
 }
 
 @media (min-width: 768px) {
-    .submenu {
-        min-width: 180px;
-    }
+  .submenu {
+    min-width: 180px;
+  }
 }
 
 .submenu li {
-    padding: 0.5em 1em;
-    text-align: right;
+  padding: 0.5em 1em;
+  text-align: right;
 }
 
 .submenu li a {
-    /* כלל 10: צבע טקסט קישורי תפריט משנה - נשאר מקורי */
-    color: #fff; /* נשאר מקורי */
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-    font-size: 0.9em; /* התאמת גודל פונט במובייל */
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em;
 }
 
 @media (min-width: 768px) {
-    .submenu li a {
-        font-size: inherit; /* חזרה לגודל ברירת מחדל */
-    }
+  .submenu li a {
+    font-size: inherit;
+  }
 }
 
 .submenu li a:hover {
-    /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה - נשאר מקורי */
-    color: #f0f8ff; /* נשאר מקורי */
-    /* כלל 10: רקע ריחוף קישורי תפריט משנה - נשאר מקורי */
-    background-color: rgba(0, 0, 0, 0.1); /* נשאר מקורי */
+  color: #f0f8ff;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .has-submenu:hover .submenu {
-    display: block;
+  display: block;
 }
 
 /* כפתורים - Button styles */
 .fixed-consultation-button {
-    display: inline-block;
-    background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
-    color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
+  display: inline-block;
+  background-color: #3B6064;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 0.95em;
+  font-family: var(--font-family-base);
+  width: auto;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 768px) {
+  .fixed-consultation-button {
+    font-size: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+}
+
+.fixed-consultation-button:hover {
+  background-color: #55828B;
+}
+
+/* אייקונים מרחפים ליצירת קשר - Floating contact icons styles */
+.floating-contact-icons {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.floating-contact-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #457b9d;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .floating-contact-icons {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .floating-contact-icons a {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.floating-contact-icons a:hover {
+  transform: scale(1.2);
+  color: #a8dadc;
+}
+
+/* רספונסיביות - חלקים גלובליים - Responsive global parts */
+@media (max-width: 768px) {
+  /* המבורגר - Hamburger in mobile */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    z-index: 101;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .hamburger .line {
+    width: 100%;
+    height: 3px;
+    background-color: #364958;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .hamburger.active .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* תפריט במובייל - Mobile menu */
+  .menu#mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background-color: #426575;
+    text-align: right;
+    padding: 0.5em 1em;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu#mobile-menu.active {
+    display: flex;
+  }
+
+  .menu#mobile-menu li {
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .menu#mobile-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .menu#mobile-menu a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: background-color 0.3s ease;
+    padding: 0.5em;
+    display: block;
+    padding-right: 1em;
+    padding-left: 0.5em;
+  }
+
+  .menu#mobile-menu a:hover {
+    color: #f0f8ff;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* הסרת חץ מפריטים רגילים במובייל */
+  .menu li:not(.has-submenu) > a::after {
+    content: none;
+  }
+
+  /* הוספת חץ רק לפריטים עם תת-תפריט במובייל */
+  .has-submenu > a::after {
+    content: " ◄";
+    font-size: 0.8em;
+    position: absolute;
+    left: 0.2em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* עיצוב כללי לפריטים עם תת-תפריט במובייל */
+  .has-submenu > a {
+    position: relative;
+    padding-right: 1.8em;
+  }
+
+  /* תפריט משנה במובייל */
+  .submenu {
+    display: none;
+    position: static;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 0 0 1em;
+    animation: none;
+    margin-top: 0.5em;
+    border-right: 3px solid rgba(255, 255, 255, 0.3);
+    margin-right: 10px;
+  }
+
+  .submenu li {
+    padding: 0.5em 0;
+    border-bottom: none;
+  }
+
+  .submenu li a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    padding-right: 0.5em;
+  }
+
+  .submenu li a:hover {
+    color: #f0f8ff;
+  }
+
+  .has-submenu.active .submenu {
+    display: block;
+    animation: slideDown 0.3s ease-in-out forwards;
+  }
+
+  /* אייקונים מרחפים - רספונסיביות במובייל */
+  .floating-contact-icons {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .floating-contact-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* הצגה/הסתרה של תפריט משנה - Submenu display toggle */
+.submenu {
+  display: none;
+}
+
+.submenu.open {
+  display: block;
+}
+
+/* אנימציות - Animations */
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scaleY(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* כפתור ייעוץ קבוע - רספונסיביות - Fixed consultation button responsive */
+@media (max-width: 768px) {
+  .fixed-consultation-button {
+    display: block;
+    background-color: #3B6064;
+    color: #FFFFFF;
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    font-size: 0.95em; /* התאמת גודל פונט במובייל */
-    font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
+    font-size: 1em;
+    font-family: var(--font-family-base);
     width: auto;
     text-align: center;
-    margin-top: 2em; /* התאמת מרווח */
-    margin-bottom: 2em; /* התאמת מרווח */
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-@media (min-width: 768px) {
-    .fixed-consultation-button {
-        font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
-        margin-top: 3em;
-        margin-bottom: 3em;
-    }
-}
-
-.fixed-consultation-button:hover {
-    background-color: #55828B; /* כלל 3: רקע כפתור בריחוף */
-}
-
-/* אייקונים מרחפים ליצירת קשר - Floating contact icons styles */
-.floating-contact-icons {
-    position: fixed;
-    bottom: 15px; /* התאמת מיקום במובייל */
-    right: 15px; /* התאמת מיקום במובייל */
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.floating-contact-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* כלל 10: רקע אייקונים מרחפים - נשאר מקורי */
-    background-color: rgba(255, 255, 255, 0.7); /* נשאר מקורי */
-    /* כלל 10: צבע אייקונים מרחפים - נשאר מקורי */
-    color: #457b9d; /* נשאר מקורי */
-    width: 40px; /* התאמת גודל במובייל
-    height: 40px; /* התאמת גודל במובייל */
-    border-radius: 50%;
-    margin-bottom: 8px; /* התאמת מרווח במובייל */
-    font-size: 20px; /* כלל 9: גודל פונט אייקונים מרחפים - לא משתנה */
-    text-decoration: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out,
-                color 0.2s ease-in-out;
-}
-
-@media (min-width: 768px) {
-    .floating-contact-icons {
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .floating-contact-icons a {
-        width: 50px;
-        height: 50px;
-        font-size: 24px; /* כלל 9: גודל פונט אייקונים מרחפים - לא משתנה */
-        margin-bottom: 10px;
-    }
-}
-
-.floating-contact-icons a:hover {
-    transform: scale(1.2);
-    /* כלל 10: צבע ריחוף אייקונים מרחפים - נשאר מקורי */
-    color: #a8dadc; /* נשאר מקורי */
-}
-
-/* רספונסיביות - חלקים גלובליים - Responsive global parts */
-@media (max-width: 768px) {
-    /* המבורגר - Hamburger in mobile */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        cursor: pointer;
-        position: absolute;
-        left: 20px;
-        z-index: 101; /* כדי שיהיה מעל התפריט */
-        background: transparent;
-        border: none;
-        padding: 0;
-    }
-
-    .hamburger .line {
-        width: 100%;
-        height: 3px;
-        background-color: #364958; /* כלל 8: צבע קווי המבורגר (כמו כותרת ראשית) */
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-
-    .hamburger.active .line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-
-    .hamburger.active .line:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* תפריט במובייל - Mobile menu */
-    .menu#mobile-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* התאם לגובה ההדר שלך */
-        right: 0;
-        left: 0;
-        /* כלל 10: רקע תפריט במובייל - נשאר מקורי */
-        background-color: #426575; /* נשאר מקורי */
-        text-align: right;
-        padding: 0.5em 1em;
-        z-index: 999;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu#mobile-menu.active {
-        display: flex;
-    }
-
-    .menu#mobile-menu li {
-        margin: 0.5em 0;
-        padding: 0.5em 0;
-        /* כלל 10: גבול תפריט במובייל - נשאר מקורי */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* נשאר מקורי */
-    }
-
-    .menu#mobile-menu li:last-child {
-        border-bottom: none;
-    }
-
-    .menu#mobile-menu a {
-        /* כלל 10: צבע טקסט קישורי תפריט במובייל - נשאר מקורי */
-        color: #fff; /* נשאר מקורי */
-        font-size: 1rem; /* כלל 9: גודל פונט קישורי תפריט - כרגע 1rem במובייל, 0.9em בדסקטופ. יש לייחד או ליישר קו? כרגע נשאר מקורי */
-        font-weight: 300;
-        transition: background-color 0.3s ease;
-        padding: 0.5em;
-        display: block;
-        padding-right: 1em;
-        padding-left: 0.5em;
-    }
-
-    .menu#mobile-menu a:hover {
-        /* כלל 10: צבע ריחוף טקסט קישורי תפריט במובייל - נשאר מקורי */
-        color: #f0f8ff; /* נשאר מקורי */
-        /* כלל 10: רקע ריחוף קישורי תפריט במובייל - נשאר מקורי */
-        background-color: rgba(0, 0, 0, 0.1); /* נשאר מקורי */
-    }
-
-    /* הסרת חץ מפריטים רגילים במובייל */
-    .menu li:not(.has-submenu) > a::after {
-        content: none;
-    }
-
-    /* הוספת חץ רק לפריטים עם תת-תפריט במובייל */
-    .has-submenu > a::after {
-        content: " ◄";
-        font-size: 0.8em;
-        position: absolute;
-        left: 0.2em;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    /* עיצוב כללי לפריטים עם תת-תפריט במובייל */
-    .has-submenu > a {
-        position: relative;
-        padding-right: 1.8em;
-    }
-
-    /* תפריט משנה במובייל */
-    .submenu {
-        display: none;
-        position: static;
-        background: transparent !important; /* נשאר מקורי */
-        box-shadow: none !important;
-        padding: 0 0 0 1em;
-        animation: none;
-        margin-top: 0.5em;
-        /* כלל 10: גבול תפריט משנה במובייל - נשאר מקורי */
-        border-right: 3px solid rgba(255, 255, 255, 0.3); /* נשאר מקורי */
-        margin-right: 10px;
-    }
-
-    .submenu li {
-        padding: 0.5em 0;
-        border-bottom: none;
-    }
-
-    .submenu li a {
-        /* כלל 10: צבע טקסט קישורי תפריט משנה במובייל - נשאר מקורי */
-        color: rgba(255, 255, 255, 0.9); /* נשאר מקורי */
-        font-weight: 300;
-        padding-right: 0.5em;
-    }
-
-    .submenu li a:hover {
-        /* כלל 10: צבע ריחוף טקסט קישורי תפריט משנה במובייל - נשאר מקורי */
-        color: #f0f8ff; /* נשאר מקורי */
-    }
-
-    .has-submenu.active .submenu {
-        display: block;
-        animation: slideDown 0.3s ease-in-out forwards;
-    }
-
-    /* אייקונים מרחפים - רספונסיביות במובייל */
-    .floating-contact-icons {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .floating-contact-icons a {
-        width: 40px;
-        height: 40px;
-        font-size: 20px; /* כלל 9: גודל פונט אייקונים מרחפים במובייל - לא משתנה */
-    }
-}
-
-/* הצגה/הסתרה של תפריט משנה - Submenu display toggle */
-.submenu {
-    display: none;
-}
-
-.submenu.open {
-    display: block;
-}
-
-/* אנימציות - Animations */
-@keyframes growDown {
-    0% {
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    80% {
-        transform: scaleY(1.1);
-        opacity: 1;
-    }
-    100% {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* כפתור ייעוץ קבוע - רספונסיביות - Fixed consultation button responsive */
-@media (max-width: 768px) {
-    .fixed-consultation-button {
-        display: block;
-        background-color: #3B6064; /* כלל 3: רקע כפתור רגיל */
-        color: #FFFFFF; /* כלל 3: צבע טקסט כפתור */
-        padding: 12px 24px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-        font-size: 1em; /* כלל 9: גודל פונט עצמאי לכפתור */
-        font-family: 'Assistant', sans-serif; /* כלל 2: גופן Assistant */
-        width: auto;
-        text-align: center;
-        margin-top: 2em;
-        margin-bottom: 2em;
-        margin-left: auto;
-        margin-right: auto;
-/* סקצייתtreatment*/
-}
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Open+Sans:wght@300;400&display=swap');
-
+/* סקציית treatment */
 .treatment-section {
   font-family: 'Open Sans', sans-serif;
   background-color: #ffffff;
@@ -685,10 +684,10 @@ nav {
 }
 
 .treatment-section .main-section-title {
-  font-family: 'Assistant', sans-serif;
+  font-family: var(--font-family-base);
   font-weight: 400;
   font-size: 2.4rem;
-  color: #55828B;
+  color: var(--color-primary);
   text-align: center;
   margin-bottom: 40px;
 }
@@ -700,15 +699,15 @@ nav {
 }
 
 .treatment-item .item-title {
-  font-family: 'Assistant', sans-serif;
+  font-family: var(--font-family-base);
   font-weight: 400;
   font-size: 1.4rem;
   margin-bottom: 10px;
-  color: #55828B;
+  color: var(--color-primary);
 }
 
 .treatment-item .item-text {
   font-size: 1.05rem;
-  line-height: 1.8;
+  line-height: var(--line-height-base);
   color: #333;
 }
