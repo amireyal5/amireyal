@@ -1,9 +1,8 @@
-/* === variables.css === */
+/* variables.css */
 :root {
   --color-primary: #55828B;
   --color-text: #000;
-  --color-secondary: #fffff
-  --color-text-light: #fffff
+  --color-text-light: #FFFFFF;
   --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
   --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
   --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
@@ -32,7 +31,6 @@
   --color-about-h3: #2196F3;
   --color-about-text: #444;
   --font-family-roboto: 'Roboto', sans-serif;
-  --font-family-open-sans: 'Open Sans', sans-serif;
   --color-services-h2: #2196F3;
   --color-services-text: #555;
   --color-box1: #E1F5FE;
@@ -54,10 +52,13 @@
   --color-border6: #CFD8DC;
   --border-radius-base: 5px;
   --border-radius-image: 6px;
+  --font-size-h2: 2rem;
 }
 
+/* css/treatment.css */
+/* --- Treatment Layout - Two-column grid with white separators --- */
 .treatment-section {
-  padding: 60px var(--padding-banner);
+  padding: 60px 0;
   color: var(--color-text-light);
   margin-bottom: 40px;
   text-align: center;
@@ -65,27 +66,14 @@
 }
 
 .treatment-section .container {
-  padding: 0;
+  padding: 0 20px;
+  max-width: 100%;
   margin: 0 auto;
-  width: 100%;
 }
 
 @media (min-width: 768px) {
   .treatment-section .container {
     max-width: var(--max-width-container);
-  }
-}
-
-@media (min-width: 1024px) {
-  .treatment-section .container {
-    max-width: 900px;
-    padding-left: var(--padding-banner);
-    padding-right: var(--padding-banner);
-  }
-
-  .treatment-section {
-    padding-left: calc(var(--padding-banner) * 2);
-    padding-right: calc(var(--padding-banner) * 2);
   }
 }
 
@@ -108,7 +96,7 @@
 
 .item-title {
   font-weight: 600;
-  font-size: var(--font-size-h4);
+  font-size: 1.2rem;
   background-color: rgba(255, 255, 255, 0.05);
   border-right: 3px solid var(--color-text-light);
 }
@@ -118,14 +106,15 @@
   line-height: var(--line-height-base);
   font-weight: var(--font-weight-base);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-family-base);
 }
 
-/* מפריד בין פריטים */
+/* קו מפריד בין פריטים */
 .treatment-item:not(:last-child) .item-text {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* אייקונים */
+/* סגנון לאייקונים (אם יש) */
 .treatment-section svg,
 .treatment-section img[src*="icon"] {
   filter: brightness(0) invert(1);
@@ -138,6 +127,7 @@
   margin-top: 30px;
 }
 
+/* הופך את הכרטיסיות לריבועיות */
 .technique-name {
   aspect-ratio: 1 / 1;
   display: flex;
@@ -154,7 +144,7 @@
 /* מובייל */
 @media (max-width: 768px) {
   .techniques-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .treatment-section {
@@ -164,14 +154,6 @@
   .treatment-section .container {
     padding: 0 15px;
     max-width: 100%;
-  }
-
-  .treatment-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .item-title {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
   }
 }
