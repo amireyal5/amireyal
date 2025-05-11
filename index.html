@@ -126,27 +126,21 @@
 במרחב בטוח, קשוב ולא שיפוטי – נמצא יחד את הדרך שנכונה לכם, בקצב שלכם.<br><br>
 
 <a href="#" class="read-more-button" id="read-more-button">קרא עוד</a>
-<<div class="about-me-container">
-  <div class="about-me-image">
-    <!-- כאן התמונה -->
-  </div>
-  <div class="about-me-text">
-    <!-- כאן הטקסט הקצר -->
-    <button class="read-more-button" onclick="toggleMore()">קרא עוד</button>
-  </div>
-
-  <!-- הטקסט שמתפרס על שני הטורים -->
-  <div id="additional-info" class="more-text">
-    <p>
-      עים להכיר, אני עמיר – פסיכותרפיסט מוסמך עם ניסיון קליני של מעל שני עשורים בליווי מבוגרים בהתמודדות עם חרדה, דיכאון, אתגרים רגשיים ושינוי הרגלים מזיקים.<br>
-      אני בעל תואר שני בעבודה סוציאלית קלינית, עם הכשרה מקיפה בשיטות טיפול שונות, ביניהן פסיכותרפיה קוגניטיבית-התנהגותית (CBT), טיפול בהתמכרויות וטיפול קבוצתי.<br>
-      לאורך השנים ליוויתי מאות תהליכים טיפוליים במסגרות טיפוליות ושיקומיות שונות ובקליניקה פרטית, והפכתי לאיש מקצוע שמבין את החשיבות של טיפול אישי ומותאם לכל אדם.<br>
-      הגישה הטיפולית שלי היא אינטגרטיבית, ומבוססת על שילוב בין טיפול רגשי דינמי, קוגניטיבי-התנהגותית (CBT) וטכניקות רוחניות (למי שמתחבר לכך). אני עובד עם כל מטופל באופן אישי, תוך שמירה על קצב אישי ומרחב בטוח לצמיחה ולריפוי.<br>
-      אם אתם מחפשים מקום שבו תוכלו למצוא תמיכה, הבנה אמיתית וכלים מוכחים להתמודדות עם אתגרי החיים, אני כאן ללוות אתכם בתהליך שנוגע בכל מישור – רגשית, מחשבתית ורוחנית.
+<div id="additional-info" style="display: none; width: 100%; margin-top: 20px;">
+    <p style="background-color: #f0f0f0; padding: 10px;">
+    עים להכיר, אני עמיר – פסיכותרפיסט מוסמך עם ניסיון קליני של מעל שני עשורים בליווי מבוגרים בהתמודדות עם חרדה, דיכאון, אתגרים רגשיים ושינוי הרגלים מזיקים.<br>
+    אני בעל תואר שני בעבודה סוציאלית קלינית, עם הכשרה מקיפה בשיטות טיפול שונות, ביניהן פסיכותרפיה קוגניטיבית-התנהגותית (CBT), טיפול בהתמכרויות וטיפול קבוצתי.<br>
+    לאורך השנים ליוויתי מאות תהליכים טיפוליים במסגרות טיפוליות ושיקומיות שונות ובקליניקה פרטית, והפכתי לאיש מקצוע שמבין את החשיבות של טיפול אישי ומותאם לכל אדם.<br>
+    הגישה הטיפולית שלי היא אינטגרטיבית, ומבוססת על שילוב בין טיפול רגשי דינמי, קוגניטיבי-התנהגותית (CBT) וטכניקות רוחניות (למי שמתחבר לכך). אני עובד עם כל מטופל באופן אישי, תוך שמירה על קצב אישי ומרחב בטוח לצמיחה ולריפוי.<br>
+    אם אתם מחפשים מקום שבו תוכלו למצוא תמיכה, הבנה אמיתית וכלים מוכחים להתמודדות עם אתגרי החיים, אני כאן ללוות אתכם בתהליך שנוגע בכל מישור – רגשית, מחשבתית ורוחנית.
     </p>
-  </div>
 </div>
+</p>
 
+                      </div>
+                  </div>
+
+          </div>
     </section>
     <section id="services" class="services">
     <div class="services-content">
@@ -263,23 +257,20 @@
         </a>
     </div>
 
- <script>
-  const readMoreButton = document.getElementById("read-more-button");
-  const additionalInfo = document.getElementById("additional-info");
+    <script>
+    const readMoreButton = document.getElementById("read-more-button");
+    const additionalInfo = document.getElementById("additional-info");
 
-  readMoreButton.addEventListener("click", function(event) {
-      event.preventDefault(); // מניעת מעבר אם זה בתוך <a>
-      const isVisible = additionalInfo.classList.contains("show");
-
-      if (!isVisible) {
-          additionalInfo.classList.add("show");
-          readMoreButton.textContent = "פחות";
-      } else {
-          additionalInfo.classList.remove("show");
-          readMoreButton.textContent = "קרא עוד";
-      }
-  });
-</script>
-
+    readMoreButton.addEventListener("click", function(event) {
+        event.preventDefault(); // מניעה מעבר לדף אחר
+        if (additionalInfo.style.display === "none") {
+            additionalInfo.style.display = "block";
+            readMoreButton.textContent = "פחות"; // שנה את הטקסט של הכפתור
+        } else {
+            additionalInfo.style.display = "none";
+            readMoreButton.textContent = "קרא עוד"; // שנה את הטקסט של הכפתור
+        }
+    });
+    </script>
 </body>
 </html>
