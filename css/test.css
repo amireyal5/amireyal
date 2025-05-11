@@ -1,4 +1,4 @@
-/* כללי - Global styles applied based on agreed rules */
+/* variables.css */
 :root {
   --color-primary: #55828B;
   --color-text: #000;
@@ -7,11 +7,15 @@
   --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
   --transition-speed-base: 0.3s;
   --max-width-container: 1000px;
-  --font-size-base: 1rem;  /* גודל פונט בסיסי - 1rem */
+  --font-size-base: 1rem;
   --line-height-base: 1.8;
-  --font-weight-base: 200; /* משקל פונט בסיסי - 200 */
+  --font-weight-base: 200;
+  --color-background: #FFFFFF;
+  --color-link: #1f628e;
+  --color-link-hover: #1565C0;
 }
 
+/* styles.css */
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +25,11 @@
 body {
   font-family: var(--font-family-base);
   direction: rtl;
-  background-color: #FFFFFF;
+  background-color: var(--color-background);
   color: #514b4b;
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  font-weight: var(--font-weight-base); /*הוספת משקל פונט אחיד*/
+  font-weight: var(--font-weight-base);
 }
 
 .main-title-section {
@@ -41,20 +45,6 @@ body {
   margin-bottom: 0;
 }
 
-/* סגנונות נוספים לתוכן הסקציה (אם יש) */
-
-/* === Variables === */
-/*:root {*/
-/* --main-color: #55828B;*/
-/* --text-color: #000;*/
-/* --font-family: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;*/
-/* --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);*/
-/* --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);*/
-/* --transition-speed: 0.3s;*/
-/* --max-width: 1000px;*/
-}*/
-
-/* כרמיאל ואונליין */
 .location-banner {
   text-align: center;
   font-family: var(--font-family-base);
@@ -73,7 +63,6 @@ body {
   }
 }
 
-/* כותרת מתחת לפוטר */
 .page-main-frase {
   direction: rtl;
   text-align: center;
@@ -91,8 +80,6 @@ body {
   }
 }
 
-/* === Introduction Section === */
-/* === טקסט מעל הקונטיינר === */
 .additional-text {
   width: 100%;
   text-align: right;
@@ -102,7 +89,7 @@ body {
   color: var(--color-text);
   margin-bottom: 1rem;
   padding-top: 1.5rem;
-  font-weight: var(--font-weight-base); /*הוספת משקל פונט אחיד*/
+  font-weight: var(--font-weight-base);
 }
 
 @media (min-width: 768px) {
@@ -219,7 +206,7 @@ body {
   color: var(--color-text);
   line-height: var(--line-height-base);
   margin-bottom: 1rem;
-  font-weight: var(--font-weight-base); /*הוספת משקל פונט אחיד*/
+  font-weight: var(--font-weight-base);
   text-align: right;
   direction: rtl;
 }
@@ -236,15 +223,14 @@ body {
   margin-bottom: 0;
 }
 
-/* הדר - Header styles */
 #main-header {
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
-  background-color: #FFFFFF;
+  background-color: var(--color-background);
   position: sticky;
   top: 0;
-  transition: top 0.3s ease;
+  transition: top var(--transition-speed-base) ease;
   z-index: 100;
 }
 
@@ -300,7 +286,7 @@ nav {
 }
 
 .menu a {
-  color: #1f628e;
+  color: var(--color-link);
   text-decoration: none;
   font-weight: 300;
   transition: color var(--transition-speed-base) ease, transform var(--transition-speed-base) ease-in-out;
@@ -315,7 +301,7 @@ nav {
 }
 
 .menu a:hover {
-  color: #1565C0;
+  color: var(--color-link-hover);
   transform: scale(1.05);
 }
 
@@ -328,7 +314,6 @@ nav {
   margin-left: auto;
 }
 
-/* תפריט עם תת-תפריט - Submenu styles */
 .has-submenu {
   position: relative;
 }
@@ -350,7 +335,7 @@ nav {
   z-index: 1000;
   min-width: 150px;
   transform-origin: top right;
-  animation: growDown 0.3s ease-in-out forwards;
+  animation: growDown var(--transition-speed-base) ease-in-out forwards;
 }
 
 @media (min-width: 768px) {
@@ -368,7 +353,7 @@ nav {
   color: #fff;
   text-decoration: none;
   display: block;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-speed-base) ease;
   font-size: 0.9em;
 }
 
@@ -387,16 +372,15 @@ nav {
   display: block;
 }
 
-/* כפתורים - Button styles */
 .fixed-consultation-button {
   display: inline-block;
-  background-color: #3B6064;
+  background-color: var(--color-button);
   color: #FFFFFF;
   padding: 12px 24px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius-base);
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-speed-base) ease;
   font-size: 0.95em;
   font-family: var(--font-family-base);
   width: auto;
@@ -414,10 +398,9 @@ nav {
 }
 
 .fixed-consultation-button:hover {
-  background-color: #55828B;
+  background-color: var(--color-button-hover);
 }
 
-/* אייקונים מרחפים ליצירת קשר - Floating contact icons styles */
 .floating-contact-icons {
   position: fixed;
   bottom: 15px;
@@ -433,7 +416,7 @@ nav {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.7);
-  color: #457b9d;
+  color: var(--color-icon);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -461,12 +444,10 @@ nav {
 
 .floating-contact-icons a:hover {
   transform: scale(1.2);
-  color: #a8dadc;
+  color: var(--color-icon-hover);
 }
 
-/* רספונסיביות - חלקים גלובליים - Responsive global parts */
 @media (max-width: 768px) {
-  /* המבורגר - Hamburger in mobile */
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -486,7 +467,7 @@ nav {
     width: 100%;
     height: 3px;
     background-color: #364958;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform var(--transition-speed-base) ease-in-out, opacity 0.3s ease-in-out;
   }
 
   .hamburger.active .line:nth-child(1) {
@@ -501,7 +482,6 @@ nav {
     transform: translateY(-9px) rotate(-45deg);
   }
 
-  /* תפריט במובייל - Mobile menu */
   .menu#mobile-menu {
     display: none;
     flex-direction: column;
@@ -534,7 +514,7 @@ nav {
     color: #fff;
     font-size: 1rem;
     font-weight: 300;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-speed-base) ease;
     padding: 0.5em;
     display: block;
     padding-right: 1em;
@@ -546,12 +526,10 @@ nav {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
-  /* הסרת חץ מפריטים רגילים במובייל */
   .menu li:not(.has-submenu) > a::after {
     content: none;
   }
 
-  /* הוספת חץ רק לפריטים עם תת-תפריט במובייל */
   .has-submenu > a::after {
     content: " ◄";
     font-size: 0.8em;
@@ -561,13 +539,11 @@ nav {
     transform: translateY(-50%);
   }
 
-  /* עיצוב כללי לפריטים עם תת-תפריט במובייל */
   .has-submenu > a {
     position: relative;
     padding-right: 1.8em;
   }
 
-  /* תפריט משנה במובייל */
   .submenu {
     display: none;
     position: static;
@@ -597,10 +573,9 @@ nav {
 
   .has-submenu.active .submenu {
     display: block;
-    animation: slideDown 0.3s ease-in-out forwards;
+    animation: slideDown var(--transition-speed-base) ease-in-out forwards;
   }
 
-  /* אייקונים מרחפים - רספונסיביות במובייל */
   .floating-contact-icons {
     bottom: 10px;
     right: 10px;
@@ -613,7 +588,6 @@ nav {
   }
 }
 
-/* הצגה/הסתרה של תפריט משנה - Submenu display toggle */
 .submenu {
   display: none;
 }
@@ -622,7 +596,6 @@ nav {
   display: block;
 }
 
-/* אנימציות - Animations */
 @keyframes growDown {
   0% {
     transform: scaleY(0);
@@ -649,17 +622,16 @@ nav {
   }
 }
 
-/* כפתור ייעוץ קבוע - רספונסיביות - Fixed consultation button responsive */
 @media (max-width: 768px) {
   .fixed-consultation-button {
     display: block;
-    background-color: #3B6064;
+    background-color: var(--color-button);
     color: #FFFFFF;
     padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius-base);
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-speed-base) ease;
     font-size: 1em;
     font-family: var(--font-family-base);
     width: auto;
@@ -671,10 +643,9 @@ nav {
   }
 }
 
-/* סקציית treatment */
 .treatment-section {
   font-family: 'Open Sans', sans-serif;
-  background-color: #ffffff;
+  background-color: var(--color-background);
   color: #333;
   direction: rtl;
   text-align: right;
@@ -713,5 +684,5 @@ nav {
   font-size: 1.05rem;
   line-height: var(--line-height-base);
   color: #333;
-  font-weight: var(--font-weight-base); /*הוספת משקל פונט אחיד*/
+  font-weight: var(--font-weight-base);
 }
