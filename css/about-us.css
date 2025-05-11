@@ -175,14 +175,21 @@
 }
 
 /* ===== Individual Card ===== */
+/* איפוס בסיסי */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 /* מכולת הגריד */
 .services-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* בדיוק 4 בעמודה במסכים גדולים */
-  width: 100%;
+  grid-template-columns: repeat(4, 1fr); /* 4 עמודות קבוע במסך גדול */
+  width: 100vw;
+  height: 100%;
   margin: 0;
   padding: 0;
-  gap: 0; /* ללא רווחים בין קוביות */
+  gap: 0; /* בלי רווחים בין כרטיסים */
 }
 
 /* כרטיס בודד */
@@ -192,16 +199,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #222; /* כהה יותר לאסתטיקה */
+  background-color: #222;
   color: #fff;
   text-align: center;
-  padding: 1rem;
-  border-radius: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: background-color 0.3s ease;
 }
 
-/* טקסט בהיר */
+/* טקסטים */
 .service-card h2,
 .service-card p,
 .service-card .highlight,
@@ -222,11 +227,10 @@
   background-color: #444;
 }
 
-/* רספונסיביות – מתחת ל-768 פיקסלים */
+/* רספונסיביות – במסכים קטנים (ניידים) הכרטיסים אחד מתחת לשני */
 @media (max-width: 768px) {
   .services-grid-container {
-    grid-template-columns: 1fr; /* אחד מתחת לשני במסכים קטנים */
+    grid-template-columns: 1fr;
   }
 }
-
 
