@@ -183,5 +183,75 @@
 
   .about-content h2 {
     font-size: 1.8rem;
-  }
+    .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+.service-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-family-base);
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-family-open-sans);
+}
+
+.service-card .highlight {
+    font-family: var(--font-family-base);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.service-card .learn-more {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: var(--border-radius-base);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    border: 2px solid transparent;
+}
+
+.service-card .learn-more:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.service-dark-gray {
+    background-color: #333333;
+}
+
+.service-dark-gray-green {
+    background-color: #4a5543;
+}
+
+.service-dark-gray-blue {
+    background-color: #434a55;
+}
+
+.service-dark-gray-purple {
+    background-color: #55434a;
+}
+
+/* Make cards take up full width on small screens */
+@media (max-width: 768px) {
+    .services-grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .service-card {
+        margin-bottom: 10px;
+    }
+}
+
