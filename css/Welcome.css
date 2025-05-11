@@ -150,6 +150,11 @@
   margin-top: 20px;
   direction: rtl; /* כיוון מימין לשמאל */
   text-align: right; /* יישור לימין */
+ line-height: var(--line-height-base);
+  font-family: var(--font-family-base);
+  font-size: 1.1em;
+  line-height: var(--line-height-base);
+  color: #514b4b;
 }
 
 #additional-info p {
