@@ -1,0 +1,55 @@
+E:root {
+  /* צבעים */
+  --color-primary: #55828B;        /* צבע ראשי (למשל, לכותרות, הדגשות) */
+  --color-secondary: #your_secondary_color; /* צבע משני (אם יש) */
+  --color-text: #000;             /* צבע טקסט רגיל */
+  --color-text-alt: #514b4b;       /* צבע טקסט משני (למשל, לגוף הטקסט) */
+  --color-background: #FFFFFF;       /* צבע רקע עמוד */
+  --color-background-alt: #f0f0f0;  /* צבע רקע משני (למשל, לאזורים שונים) */
+  --color-link: #1f628e;           /* צבע קישורים */
+  --color-link-hover: #1565C0;     /* צבע קישורים במעבר עכבר */
+  --color-button: #3B6064;         /* צבע כפתורים */
+  --color-button-hover: #55828B;   /* צבע כפתורים במעבר עכבר */
+  --color-menu-text: #1f628e;
+  --color-menu-text-hover: #1565C0;
+  --color-submenu: #426575;
+  --color-submenu-text: #fff;
+  --color-submenu-text-hover: #f0f8ff;
+  --color-icon: #457b9d;
+  --color-icon-hover: #a8dadc;
+
+  /* גופנים */
+  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;  /* גופן בסיסי */
+  --font-family-title: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif; /* גופן לכותרות (אם שונה) */
+
+  /* גדלים */
+  --font-size-base: 1rem;           /* גודל גופן בסיסי (16px) */
+  --font-size-h1: 2.5rem;         /* גודל כותרת H1 */
+  --font-size-h2: 2rem;           /* גודל כותרת H2 */
+  --font-size-h3: 1.3rem;         /* גודל כותרת H3 */
+  --font-size-h4: 1.1rem;
+  --line-height-base: 1.8;         /* גובה שורה בסיסי */
+  --font-weight-base: 200;
+  --max-width-container: 1000px;
+
+  /* ריווח */
+  --padding-base: 1rem;          /* ריווח בסיסי */
+  --padding-section: 40px 20px;    /* ריווח section */
+  --margin-bottom-base: 1rem;
+  --margin-top-base: 1.5vh;
+
+  /* מעברים */
+  --transition-speed-base: 0.3s;    /* מהירות מעבר בסיסית */
+
+  /* גבולות */
+  --border-radius-base: 5px;
+  --border-radius-image: 12px;
+
+  /* צלליות */
+  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+  /* אחר */
+  --header-height: 60px; /* גובה header */
+}
+nter file contents here
