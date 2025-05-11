@@ -1,7 +1,7 @@
 E:root {
   /* צבעים */
   --color-primary: #55828B;        /* צבע ראשי (למשל, לכותרות, הדגשות) */
-  --color-secondary: #your_secondary_color; /* צבע משני (אם יש) */
+  --color-secondary: #ffff; /* צבע משני (אם יש) */
   --color-text: #000;             /* צבע טקסט רגיל */
   --color-text-alt: #514b4b;       /* צבע טקסט משני (למשל, לגוף הטקסט) */
   --color-background: #FFFFFF;       /* צבע רקע עמוד */
