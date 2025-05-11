@@ -164,20 +164,42 @@
   margin-bottom: 0;
 }
 
-/* ===== Service Cards ===== */
+/* ===== Service Cards Grid ===== */
+.services-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: var(--max-width-container);
+}
+
+/* ===== Individual Card ===== */
 .service-card {
-  transition: all 0.3s ease;
+  background-color: #333; /* רקע כהה כללי – ניתן להחליף */
+  color: #fff; /* טקסט בהיר */
+  border-radius: var(--border-radius-base);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-default);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  aspect-ratio: 1 / 1; /* ריבוע */
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-hover);
 }
 
 .service-card h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   font-family: var(--font-family-base);
+  color: #ffffff;
 }
 
 .service-card p {
@@ -185,6 +207,7 @@
   line-height: 1.7;
   margin-bottom: 1.5rem;
   font-family: var(--font-family-roboto);
+  color: #ddd; /* טקסט בהיר */
 }
 
 .service-card .highlight {
@@ -196,7 +219,7 @@
 }
 
 .service-card .learn-more {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
   padding: 12px 26px;
   border-radius: var(--border-radius-base);
@@ -209,14 +232,14 @@
 }
 
 .service-card .learn-more:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* רקעים לשירותים – ייתכן שתצטרך להתאים לסלקטורים נכונים */
+/* ===== Background Variants ===== */
 .service-blue1 {
-  background-color: #333333;
+  background-color: #2b4a5b;
 }
 .service-blue2 {
   background-color: #4a5543;
@@ -228,32 +251,15 @@
   background-color: #55434a;
 }
 
-/* ===== Responsive Design ===== */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .about-us {
-    padding: 2rem 1rem;
-  }
-
-  .about-me-container {
-    flex-direction: column;
-  }
-
-  .about-image,
-  .about-text {
-    flex: 1 1 100%;
-  }
-
-  .about-content h2 {
-    font-size: 1.8rem;
-  }
-
   .services-grid-container {
     grid-template-columns: 1fr;
-    gap: 10px;
   }
 
   .service-card {
-    margin-bottom: 10px;
+    aspect-ratio: auto;
+    min-height: auto;
   }
 }
 
