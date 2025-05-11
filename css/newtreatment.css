@@ -1,8 +1,67 @@
-E/* --- Treatment Layout - Two-column grid with white separators --- */
+/* variables.css */
+:root {
+  --color-primary: #55828B;
+  --color-text: #000;
+  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --transition-speed-base: 0.3s;
+  --max-width-container: 1000px;
+  --font-size-base: 1rem;
+  --line-height-base: 1.8;
+  --font-weight-base: 200;
+  --color-background: #FFFFFF;
+  --color-link: #1f628e;
+  --color-link-hover: #1565C0;
+  --color-button: #3B6064;
+  --color-button-hover: #55828B;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.3rem;
+  --font-size-h4: 1.1rem;
+  --color-footer-text: #005f99;
+  --font-weight-footer-text: 600;
+  --color-section-title: #0077aa;
+  --font-weight-section-title: 300;
+  --font-size-banner: 1vw;
+  --padding-banner: 1em;
+  --margin-top-banner: 2vh;
+  --color-about-h2: #004869bd;
+  --color-about-h3: #2196F3;
+  --color-about-text: #444;
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-family-open-sans: 'Open Sans', sans-serif;
+  --color-services-h2: #2196F3;
+  --color-services-text: #555;
+  --color-box1: #E1F5FE;
+  --color-border1: #B3E5FC;
+  --color-text1: #1976D2;
+  --color-box2: #F0F8E0;
+  --color-border2: #DCEDC8;
+  --color-text2: #388E3C;
+  --color-box3: #FFFDE7;
+  --color-border3: #FFF9C4;
+  --color-text3: #FBC02D;
+  --color-box4: #FBE9E7;
+  --color-border4: #FFCCBC;
+  --color-text4: #E64A19;
+  --color-box5: #EDE7F6;
+  --color-border5: #D1C4E9;
+  --color-text5: #5E35B1;
+  --color-box6: #ECEFF1;
+  --color-border6: #CFD8DC;
+  --color-text6: #37474F;
+  --border-radius-base: 5px;
+  --border-radius-image: 6px;
+  --font-size-h2: 2rem;
+}
+
+/* css/treatment.css */
+/* --- Treatment Layout - Two-column grid with white separators --- */
 .treatment-section {
   padding: 60px 0;
   /* הסרנו את background-color מכאן */
-  color: white;
+  color: #FFFFFF;
   /* צבע גופן כללי לסקציה - האם נשאר לבן על רקע צבעוני? */
   margin-bottom: 40px;
 }
@@ -28,7 +87,7 @@ E/* --- Treatment Layout - Two-column grid with white separators --- */
 .item-text {
   padding: 20px;
   /* צבע גופן - האם נשאר לבן על רקע צבעוני? */
-  color: white;
+  color: #FFFFFF;
   /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות (למשל צבע כהה מתאים) !!! */
 }
 
@@ -40,18 +99,18 @@ E/* --- Treatment Layout - Two-column grid with white separators --- */
   background-color: rgba(255, 255, 255, 0.05);
   /* רקע לבן שקוף - האם להישאר או לשנות לצבע מניפה שקוף? */
   /* קו הפרדה - האם נשאר לבן על רקע צבעוני? */
-  border-right: 3px solid white;
+  border-right: 3px solid #FFFFFF;
   /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות !!! */
   font-family: var(--font-family-base);
   /* לוודא שהפונט נכון גם כאן */
 }
 
 .item-text {
-  font-size: 1.1em;
+  font-size: var(--font-size-base);
   /* כלל 5: גודל טקסט רגיל */
-  line-height: 2.0;
+  line-height: var(--line-height-base);
   /* כלל 5: Line height טקסט רגיל */
-  font-weight: 200;
+  font-weight: var(--font-weight-base);
   /* כלל 5: משקל טקסט רגיל */
   /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -102,4 +161,3 @@ E/* --- Treatment Layout - Two-column grid with white separators --- */
   /* צבע רקע - יש לבחור צבע מהמניפות? כרגע אין לו צבע רקע מוגדר */
   /* צבע טקסט - כרגע יירש מ-body (#514b4b). האם זה נכון? */
 }
-nter file contents here
