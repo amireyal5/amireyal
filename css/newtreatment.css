@@ -50,7 +50,6 @@
   --color-text5: #5E35B1;
   --color-box6: #ECEFF1;
   --color-border6: #CFD8DC;
-  --color-text6: #37474F;
   --border-radius-base: 5px;
   --border-radius-image: 6px;
   --font-size-h2: 2rem;
@@ -60,17 +59,22 @@
 /* --- Treatment Layout - Two-column grid with white separators --- */
 .treatment-section {
   padding: 60px 0;
-  /* הסרנו את background-color מכאן */
   color: #FFFFFF;
-  /* צבע גופן כללי לסקציה - האם נשאר לבן על רקע צבעוני? */
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .treatment-section .container {
   background-color: #004869bd;
-  /* רקע טורקיז לקונטיינר */
   padding: 0 20px;
-  /* שמור על הפדינג הפנימי */
+  max-width: 100%; /* רוחב מלא כברירת מחדל */
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .treatment-section .container {
+        max-width: var(--max-width-container);  /* הגבלת רוחב למסכים גדולים */
+    }
 }
 
 .treatment-grid {
@@ -86,80 +90,55 @@
 .item-title,
 .item-text {
   padding: 20px;
-  /* צבע גופן - האם נשאר לבן על רקע צבעוני? */
   color: #FFFFFF;
-  /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות (למשל צבע כהה מתאים) !!! */
 }
 
 .item-title {
   font-weight: 600;
-  /* משקל מקורי - האם להתאים למשקל H3? */
   font-size: 1.2rem;
-  /* גודל מקורי - האם להתאים לגודל H3? */
   background-color: rgba(255, 255, 255, 0.05);
-  /* רקע לבן שקוף - האם להישאר או לשנות לצבע מניפה שקוף? */
-  /* קו הפרדה - האם נשאר לבן על רקע צבעוני? */
   border-right: 3px solid #FFFFFF;
-  /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות !!! */
   font-family: var(--font-family-base);
-  /* לוודא שהפונט נכון גם כאן */
 }
 
 .item-text {
   font-size: var(--font-size-base);
-  /* כלל 5: גודל טקסט רגיל */
   line-height: var(--line-height-base);
-  /* כלל 5: Line height טקסט רגיל */
   font-weight: var(--font-weight-base);
-  /* כלל 5: משקל טקסט רגיל */
-  /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
   font-family: var(--font-family-base);
-  /* לוודא שהפונט נכון גם כאן */
 }
 
 /* קו מפריד בין פריטים */
 .treatment-item:not(:last-child) .item-text {
-  /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
 }
 
 /* סגנון לאייקונים (אם יש) */
 .treatment-section svg,
 .treatment-section img[src*="icon"] {
   filter: brightness(0) invert(1);
-  /* הופך לשחור ואז הופך ללבן */
-  /* צבע אייקון - האם נשאר לבן על רקע צבעוני? */
-  /* color: white; - ניתן להגדיר גם כאן אם צריך */
 }
 
 .techniques-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* 3 עמודות שוות */
-  gap: 20px;
-  /* רווח בין הכרטיסיות */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
   margin-top: 30px;
 }
 
 /* הופך את הכרטיסיות לריבועיות */
 .technique-name {
   aspect-ratio: 1 / 1;
-  /* יחס רוחב/גובה 1:1 */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-base);
   transition: all 0.3s ease;
   font-family: var(--font-family-base);
-  /* לוודא שהפונט נכון גם כאן */
-  /* צבע רקע - יש לבחור צבע מהמניפות? כרגע אין לו צבע רקע מוגדר */
-  /* צבע טקסט - כרגע יירש מ-body (#514b4b). האם זה נכון? */
 }
 
 /* --- Responsive --- */
@@ -170,7 +149,9 @@
   .treatment-section {
     padding: 30px 15px;
   }
-  .treatment-section .container{
+  .treatment-section .container {
     padding: 0 15px;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
