@@ -144,6 +144,18 @@
   display: block;
 }
 
+#additional-info {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+  direction: rtl; /* כיוון מימין לשמאל */
+  text-align: right; /* יישור לימין */
+}
+
+#additional-info p {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
 
 /* רספונסיביות */
 @media (max-width: 768px) {
