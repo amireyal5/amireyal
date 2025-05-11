@@ -72,15 +72,26 @@
 }
 
 @media (min-width: 768px) {
+  .treatment-section {
+    padding: 80px 0; /* Increase padding for larger screens */
+  }
+  
   .treatment-section .container {
     max-width: var(--max-width-container);
   }
+  
 }
 
 .treatment-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0;
+}
+
+@media (max-width: 768px){
+    .treatment-grid{
+        grid-template-columns: 1fr;
+    }
 }
 
 .treatment-item {
@@ -100,13 +111,17 @@
   background-color: rgba(255, 255, 255, 0.05);
   border-right: 3px solid var(--color-text-light);
 }
+@media (max-width: 768px){
+    .item-title{
+        border-right: none;
+    }
+}
 
 .item-text {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   font-weight: var(--font-weight-base);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-family: var(--font-family-base);
 }
 
 /* קו מפריד בין פריטים */
