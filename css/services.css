@@ -1,94 +1,155 @@
+/* variables.css */
+:root {
+  --color-primary: #55828B;
+  --color-text: #000;
+  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --transition-speed-base: 0.3s;
+  --max-width-container: 1000px;
+  --font-size-base: 1rem;
+  --line-height-base: 1.8;
+  --font-weight-base: 200;
+  --color-background: #FFFFFF;
+  --color-link: #1f628e;
+  --color-link-hover: #1565C0;
+  --color-button: #3B6064;
+  --color-button-hover: #55828B;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.3rem;
+  --font-size-h4: 1.1rem;
+  --color-footer-text: #005f99;
+  --font-weight-footer-text: 600;
+  --color-section-title: #0077aa;
+  --font-weight-section-title: 300;
+  --font-size-banner: 1vw;
+  --padding-banner: 1em;
+  --margin-top-banner: 2vh;
+  --color-about-h2: #004869bd;
+  --color-about-h3: #2196F3;
+  --color-about-text: #444;
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-family-open-sans: 'Open Sans', sans-serif;
+  --color-services-h2: #2196F3;
+  --color-services-text: #555;
+  --color-box1: #E1F5FE;
+  --color-border1: #B3E5FC;
+  --color-text1: #1976D2;
+  --color-box2: #F0F8E0;
+  --color-border2: #DCEDC8;
+  --color-text2: #388E3C;
+  --color-box3: #FFFDE7;
+  --color-border3: #FFF9C4;
+  --color-text3: #FBC02D;
+  --color-box4: #FBE9E7;
+  --color-border4: #FFCCBC;
+  --color-text4: #E64A19;
+  --color-box5: #EDE7F6;
+  --color-border5: #D1C4E9;
+  --color-text5: #5E35B1;
+  --color-box6: #ECEFF1;
+  --color-border6: #CFD8DC;
+  --color-text6: #37474F;
+  --border-radius-base: 5px;
+  --border-radius-image: 6px;
+  --background-light: #FFFFFF;
+}
+
+/* styles.css */
 /* סקציית שירותים */
 .services {
-    padding: 2em;
-    text-align: center;
-    background-color: #ffff;
-    border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-base);
 }
 
 .services-content {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
 }
+
 .no-underline {
   text-decoration: none;
 }
+
 .services-content h2 {
-    font-size: 2em;
-    color: #1f628e;
-    margin-bottom: 0.5em;
-    font-family: 'Assistant', sans-serif;
+  font-size: 2em;
+  color: var(--color-link);
+  margin-bottom: 0.5em;
+  font-family: var(--font-family-base);
 }
 
 .services-subtitle {
-    font-size: 1.1em;
-    color: #666;
-    margin-bottom: 2em;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 2em;
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
 }
 
 .service-box {
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    color: white;
-    text-decoration: none; /* הסרת קו תחתון */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+  padding: 1.5em;
+  border-radius: var(--border-radius-image);
+  box-shadow: var(--shadow-default);
+  transition: transform var(--transition-speed-base) ease;
+  color: white;
+  text-decoration: none;
+  /* הסרת קו תחתון */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .service-box:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /* צבעים אינדיבידואליים לכל קופסה */
 .service-box:nth-child(1) {
-    background-color: #293462;
+  background-color: #293462;
 }
 
 .service-box:nth-child(2) {
-    background-color: #80B8BD;
+  background-color: #80B8BD;
 }
 
 .service-box:nth-child(3) {
-    background-color: #68A2B9;
+  background-color: #68A2B9;
 }
 
 .service-box:nth-child(4) {
-    background-color: #6189B0;
+  background-color: #6189B0;
 }
 
 .service-box:nth-child(5) {
-    background-color: #696E9D;
+  background-color: #696E9D;
 }
 
 .service-box:nth-child(6) {
-    background-color: #735280;
+  background-color: #735280;
 }
 
 .service-box i {
-    font-size: 2em;
-    color: white;
-    margin-bottom: 0.5em;
+  font-size: 2em;
+  color: white;
+  margin-bottom: 0.5em;
 }
 
 .service-box h3 {
-    font-size: 1.3em;
-    margin-bottom: 0.5em;
-    font-family: 'Assistant', sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  font-family: var(--font-family-base);
 }
 
 .service-box p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: white;
+  font-size: 1em;
+  line-height: var(--line-height-base);
+  color: white;
 }
-
