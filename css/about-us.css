@@ -228,19 +228,19 @@
     border-color: rgba(255, 255, 255, 0.3);
 }
 
-.service-dark-gray {
+.service-card service-blue1 {
     background-color: #333333;
 }
 
-.service-dark-gray-green {
+.service-card service-blue2 {
     background-color: #4a5543;
 }
 
-.service-dark-gray-blue {
+.service-dark-gray-blue3 {
     background-color: #434a55;
 }
 
-.service-dark-gray-purple {
+.service-card service-blue4 {
     background-color: #55434a;
 }
 
