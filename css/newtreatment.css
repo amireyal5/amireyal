@@ -1,0 +1,105 @@
+E/* --- Treatment Layout - Two-column grid with white separators --- */
+.treatment-section {
+  padding: 60px 0;
+  /* הסרנו את background-color מכאן */
+  color: white;
+  /* צבע גופן כללי לסקציה - האם נשאר לבן על רקע צבעוני? */
+  margin-bottom: 40px;
+}
+
+.treatment-section .container {
+  background-color: #004869bd;
+  /* רקע טורקיז לקונטיינר */
+  padding: 0 20px;
+  /* שמור על הפדינג הפנימי */
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0;
+}
+
+.treatment-item {
+  display: contents;
+}
+
+.item-title,
+.item-text {
+  padding: 20px;
+  /* צבע גופן - האם נשאר לבן על רקע צבעוני? */
+  color: white;
+  /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות (למשל צבע כהה מתאים) !!! */
+}
+
+.item-title {
+  font-weight: 600;
+  /* משקל מקורי - האם להתאים למשקל H3? */
+  font-size: 1.2rem;
+  /* גודל מקורי - האם להתאים לגודל H3? */
+  background-color: rgba(255, 255, 255, 0.05);
+  /* רקע לבן שקוף - האם להישאר או לשנות לצבע מניפה שקוף? */
+  /* קו הפרדה - האם נשאר לבן על רקע צבעוני? */
+  border-right: 3px solid white;
+  /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות !!! */
+  font-family: var(--font-family-base);
+  /* לוודא שהפונט נכון גם כאן */
+}
+
+.item-text {
+  font-size: 1.1em;
+  /* כלל 5: גודל טקסט רגיל */
+  line-height: 2.0;
+  /* כלל 5: Line height טקסט רגיל */
+  font-weight: 200;
+  /* כלל 5: משקל טקסט רגיל */
+  /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
+  font-family: var(--font-family-base);
+  /* לוודא שהפונט נכון גם כאן */
+}
+
+/* קו מפריד בין פריטים */
+.treatment-item:not(:last-child) .item-text {
+  /* קו תחתון - האם נשאר לבן שקוף על רקע צבעוני? */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* !!! נא לאשר צבע זה או לבחור אחר מהמניפות ושקיפות !!! */
+}
+
+/* סגנון לאייקונים (אם יש) */
+.treatment-section svg,
+.treatment-section img[src*="icon"] {
+  filter: brightness(0) invert(1);
+  /* הופך לשחור ואז הופך ללבן */
+  /* צבע אייקון - האם נשאר לבן על רקע צבעוני? */
+  /* color: white; - ניתן להגדיר גם כאן אם צריך */
+}
+
+.techniques-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 עמודות שוות */
+  gap: 20px;
+  /* רווח בין הכרטיסיות */
+  margin-top: 30px;
+}
+
+/* הופך את הכרטיסיות לריבועיות */
+.technique-name {
+  aspect-ratio: 1 / 1;
+  /* יחס רוחב/גובה 1:1 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: var(--font-family-base);
+  /* לוודא שהפונט נכון גם כאן */
+  /* צבע רקע - יש לבחור צבע מהמניפות? כרגע אין לו צבע רקע מוגדר */
+  /* צבע טקסט - כרגע יירש מ-body (#514b4b). האם זה נכון? */
+}
+nter file contents here
