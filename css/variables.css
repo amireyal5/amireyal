@@ -3,6 +3,8 @@ E:root {
   --color-primary: #55828B;        /* צבע ראשי (למשל, לכותרות, הדגשות) */
   --color-secondary: #ffffff; /* צבע משני (אם יש) */
   --color-text: #000;             /* צבע טקסט רגיל */
+ --color-text-light: #FFFFFF; /* צבע טקסט בהיר (לבן) */
+
   --color-text-alt: #514b4b;       /* צבע טקסט משני (למשל, לגוף הטקסט) */
   --color-background: #FFFFFF;       /* צבע רקע עמוד */
   --color-background-alt: #f0f0f0;  /* צבע רקע משני (למשל, לאזורים שונים) */
