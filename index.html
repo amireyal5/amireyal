@@ -257,4 +257,20 @@
 
     <script src="script.js"></script>
 </body>
+   <script>
+    const readMoreButton = document.getElementById("read-more-button");
+    const additionalInfo = document.getElementById("additional-info");
+
+    readMoreButton.addEventListener("click", function(event) {
+        event.preventDefault(); // מניעה מעבר לדף אחר
+        if (additionalInfo.style.display === "none") {
+            additionalInfo.style.display = "block";
+            readMoreButton.textContent = "פחות"; // שנה את הטקסט של הכפתור
+        } else {
+            additionalInfo.style.display = "none";
+            readMoreButton.textContent = "קרא עוד"; // שנה את הטקסט של הכפתור
+        }
+    });
+    </script>
+</body>
 </html>
