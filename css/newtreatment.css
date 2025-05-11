@@ -54,28 +54,43 @@
   --border-radius-image: 6px;
 }
 
-/* === treatment.css === */
 .treatment-section {
-  padding: 60px 20px;
-  color: #FFFFFF;
+  padding: 60px var(--padding-banner);
+  color: var(--color-text);
   margin-bottom: 40px;
   text-align: center;
-  background-color: #004869bd;
+  background-color: var(--color-about-h2);
 }
 
 .treatment-section .container {
-  max-width: var(--max-width-container);
-  margin: 0 auto;
   padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .treatment-section .container {
+    max-width: var(--max-width-container);
+  }
+}
+
+@media (min-width: 1024px) {
+  .treatment-section .container {
+    max-width: 900px;
+    padding-left: var(--padding-banner);
+    padding-right: var(--padding-banner);
+  }
+
+  .treatment-section {
+    padding-left: calc(var(--padding-banner) * 2);
+    padding-right: calc(var(--padding-banner) * 2);
+  }
 }
 
 .treatment-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0;
-  border-radius: var(--border-radius-base);
-  overflow: hidden;
-  background-color: transparent;
 }
 
 .treatment-item {
@@ -85,16 +100,15 @@
 .item-title,
 .item-text {
   padding: 20px;
-  color: #FFFFFF;
+  color: var(--color-text);
   font-family: var(--font-family-base);
 }
 
 .item-title {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: var(--font-size-h4);
   background-color: rgba(255, 255, 255, 0.05);
-  border-right: 3px solid #FFFFFF;
-  text-align: start;
+  border-right: 3px solid var(--color-text);
 }
 
 .item-text {
@@ -102,24 +116,22 @@
   line-height: var(--line-height-base);
   font-weight: var(--font-weight-base);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: start;
 }
 
-/* קו מפריד בין פריטים */
+/* מפריד בין פריטים */
 .treatment-item:not(:last-child) .item-text {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* סגנון לאייקונים */
+/* אייקונים */
 .treatment-section svg,
 .treatment-section img[src*="icon"] {
   filter: brightness(0) invert(1);
 }
 
-/* --- טכניקות --- */
 .techniques-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5em;
   margin-top: 30px;
 }
@@ -135,18 +147,23 @@
   border-radius: var(--border-radius-base);
   transition: all var(--transition-speed-base) ease;
   font-family: var(--font-family-base);
-  background-color: #fff;
-  color: var(--color-text);
-  box-shadow: var(--shadow-default);
 }
 
-.technique-name:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-4px);
-}
-
-/* --- Responsive --- */
+/* מובייל */
 @media (max-width: 768px) {
+  .techniques-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-section {
+    padding: 30px 15px;
+  }
+
+  .treatment-section .container {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+
   .treatment-grid {
     grid-template-columns: 1fr;
   }
@@ -154,13 +171,5 @@
   .item-title {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .treatment-section {
-    padding: 30px 15px;
-  }
-
-  .techniques-grid {
-    grid-template-columns: 1fr;
   }
 }
