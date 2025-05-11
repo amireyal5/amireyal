@@ -261,22 +261,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 function scrollToWelcome() {
-  const target = document.querySelector('.welcome');
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth' });
-  }
+    const target = document.querySelector('.welcome');
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+    }
 
     const readMoreButton = document.getElementById("read-more-button");
     const additionalInfo = document.getElementById("additional-info");
 
-    readMoreButton.addEventListener("click", function(event) {
-        event.preventDefault(); // מניעה מעבר לדף אחר
-        if (additionalInfo.style.display === "none") {
-            additionalInfo.style.display = "block";
-            readMoreButton.textContent = "פחות"; // שנה את הטקסט של הכפתור
-        } else {
-            additionalInfo.style.display = "none";
-            readMoreButton.textContent = "קרא עוד"; // שנה את הטקסט של הכפתור
-        }
-    });
-  
+    if (readMoreButton && additionalInfo) {
+        readMoreButton.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (additionalInfo.style.display === "none" || additionalInfo.style.display === "") {
+                additionalInfo.style.display = "block";
+                readMoreButton.textContent = "פחות";
+            } else {
+                additionalInfo.style.display = "none";
+                readMoreButton.textContent = "קרא עוד";
+            }
+        });
+    }
+}
