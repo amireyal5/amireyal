@@ -125,6 +125,25 @@
 .welcome .read-more-button:hover {
   background-color: var(--color-button-hover);
 }
+.more-text {
+  grid-column: 1 / -1; /* תופס את כל רוחב הגריד */
+  direction: rtl;
+  text-align: right;
+  display: none;
+  margin-top: 1.5em;
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 8px;
+  font-family: var(--font-family-base);
+  font-size: 1.1em;
+  line-height: var(--line-height-base);
+  color: #514b4b;
+}
+
+.more-text.show {
+  display: block;
+}
+
 
 /* רספונסיביות */
 @media (max-width: 768px) {
