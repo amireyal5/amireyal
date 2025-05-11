@@ -2,6 +2,7 @@
 :root {
   --color-primary: #55828B;
   --color-text: #000;
+  --color-text-light: #ffff;
   --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
   --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
   --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
@@ -56,7 +57,7 @@
 
 .treatment-section {
   padding: 60px var(--padding-banner);
-  color: var(--color-text);
+  color: var(--color-text-light);
   margin-bottom: 40px;
   text-align: center;
   background-color: var(--color-about-h2);
@@ -100,7 +101,7 @@
 .item-title,
 .item-text {
   padding: 20px;
-  color: var(--color-text);
+  color: var(--color-text-light);
   font-family: var(--font-family-base);
 }
 
