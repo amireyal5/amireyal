@@ -175,91 +175,58 @@
 }
 
 /* ===== Individual Card ===== */
+/* מכולת הגריד */
+.services-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* בדיוק 4 בעמודה במסכים גדולים */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0; /* ללא רווחים בין קוביות */
+}
+
+/* כרטיס בודד */
 .service-card {
-  background-color: #333; /* רקע כהה כללי – ניתן להחליף */
-  color: #fff; /* טקסט בהיר */
-  border-radius: var(--border-radius-base);
-  padding: 2rem;
-  text-align: center;
-  box-shadow: var(--shadow-default);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 1 / 1; /* ריבוע */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 300px;
-  aspect-ratio: 1 / 1; /* ריבוע */
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-}
-
-.service-card h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  font-family: var(--font-family-base);
-  color: #ffffff;
-}
-
-.service-card p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-family: var(--font-family-roboto);
-  color: #ddd; /* טקסט בהיר */
-}
-
-.service-card .highlight {
-  font-family: var(--font-family-base);
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
-}
-
-.service-card .learn-more {
-  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+  background-color: #222; /* כהה יותר לאסתטיקה */
   color: #fff;
-  padding: 12px 26px;
-  border-radius: var(--border-radius-base);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-  border: 2px solid transparent;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease;
 }
 
-.service-card .learn-more:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.2);
+/* טקסט בהיר */
+.service-card h2,
+.service-card p,
+.service-card .highlight,
+.service-card .learn-more {
+  color: #fff;
+  margin: 0.5rem 0;
 }
 
-/* ===== Background Variants ===== */
-.service-blue1 {
-  background-color: #2b4a5b;
-}
-.service-blue2 {
-  background-color: #4a5543;
-}
-.service-dark-gray-blue3 {
-  background-color: #434a55;
-}
-.service-blue4 {
-  background-color: #55434a;
+/* קישורים */
+.service-card .learn-more {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* ===== Responsive ===== */
+/* אפקט מעבר */
+.service-card:hover {
+  background-color: #444;
+}
+
+/* רספונסיביות – מתחת ל-768 פיקסלים */
 @media (max-width: 768px) {
   .services-grid-container {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card {
-    aspect-ratio: auto;
-    min-height: auto;
+    grid-template-columns: 1fr; /* אחד מתחת לשני במסכים קטנים */
   }
 }
+
 
