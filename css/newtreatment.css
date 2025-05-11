@@ -161,3 +161,16 @@
   /* צבע רקע - יש לבחור צבע מהמניפות? כרגע אין לו צבע רקע מוגדר */
   /* צבע טקסט - כרגע יירש מ-body (#514b4b). האם זה נכון? */
 }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .techniques-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .treatment-section {
+    padding: 30px 15px;
+  }
+  .treatment-section .container{
+    padding: 0 15px;
+  }
+}
