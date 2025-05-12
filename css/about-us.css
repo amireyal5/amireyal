@@ -186,105 +186,112 @@ h3 {
 
 /* Services Grid Container */
 
-/* כותרת כללית לסקשן - במידה ותוסיף h2 חיצוני */
-#services-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin: 2rem 0 1rem;
-  color: #1f3c88;
+/* בסיס כללי */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  direction: rtl; /* לעברית */
 }
 
-/* עיצוב הסקשן של השירותים */
+/* קונטיינר של הכרטיסיות */
 #services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: auto;
+  padding: 4rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* כרטיס שירות בודד */
+/* כרטיסייה בודדת */
 .service-card {
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* כותרת בכרטיס */
+/* כותרות */
 .service-card h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #1f3c88;
+  color: #1a237e;
 }
 
-/* כותרת משנה מודגשת */
+/* הדגשה */
 .highlight {
-  font-size: 1.25rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #2196f3;
+  color: #0d47a1;
   margin-bottom: 1rem;
 }
 
-/* טקסט גוף */
+/* טקסט רגיל */
 .service-card p {
   font-size: 1rem;
+  line-height: 1.6;
   color: #555;
   margin-bottom: 1.5rem;
 }
 
-/* כפתור למידע נוסף */
+/* כפתור קישור */
 .learn-more {
-  align-self: flex-start;
-  background-color: #1f3c88;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0d47a1;
+  color: #fff;
   text-decoration: none;
+  border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .learn-more:hover {
-  background-color: #163074;
+  background-color: #1565c0;
 }
 
-/* צבעים ייחודיים לכל כרטיס */
-.service-blue1 .highlight { color: #1976d2; }
-.service-blue2 .highlight { color: #388e3c; }
-.service-blue3 .highlight { color: #f57c00; }
-.service-blue4 .highlight { color: #d32f2f; }
+/* צבעים שונים לכרטיסיות */
+.service-blue1 {
+  border-top: 6px solid #2196f3;
+}
+.service-blue2 {
+  border-top: 6px solid #3f51b5;
+}
+.service-blue3 {
+  border-top: 6px solid #00bcd4;
+}
+.service-blue4 {
+  border-top: 6px solid #673ab7;
+}
 
-/* רספונסיביות מקסימלית */
+/* רספונסיביות */
+
+/* טאבלטים - 2 כרטיסיות בשורה */
+@media (max-width: 1024px) {
+  #services {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* מובייל - כרטיסיה אחת בשורה */
 @media (max-width: 600px) {
   #services {
+    grid-template-columns: 1fr;
     padding: 2rem 1rem;
   }
 
   .service-card {
     padding: 1.5rem;
-  }
-
-  .service-card h2 {
-    font-size: 1.25rem;
-  }
-
-  .highlight {
-    font-size: 1.1rem;
-  }
-
-  .learn-more {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
   }
 }
