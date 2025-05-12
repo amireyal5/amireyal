@@ -1,9 +1,12 @@
+/* General Body Styles */
 body {
   font-family: var(--font-family-base);
   background-color: var(--color-background);
   color: var(--color-text);
   margin: 0;
   padding: 0;
+  direction: rtl;
+  unicode-bidi: embed;
 }
 
 /* ===== About Section ===== */
@@ -59,7 +62,8 @@ body {
   margin: 2rem auto;
 }
 
-.about-image, .about-text {
+.about-image,
+.about-text {
   flex: 1 1 400px;
 }
 
@@ -85,6 +89,7 @@ body {
   line-height: var(--line-height-base);
 }
 
+/* About Page */
 .about-page {
   background-color: var(--color-surface);
   color: var(--color-text);
@@ -117,7 +122,7 @@ body {
   margin: auto;
 }
 
-/* ===== Individual Card ===== */
+/* ===== Individual Service Card ===== */
 .service-card {
   background-color: var(--color-surface-light);
   color: var(--color-text);
@@ -173,7 +178,7 @@ body {
   color: var(--color-surface-light);
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive Styles ===== */
 @media (max-width: 768px) {
   .about-me-container {
     flex-direction: column;
