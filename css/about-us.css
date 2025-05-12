@@ -312,14 +312,14 @@ h3 {
     font-size: 0.95rem;
   }
 
-.about-image {
+.centered-image {
     display: flex;
     justify-content: center;  /* ממורכזת אופקית */
     align-items: center;      /* ממורכזת אנכית */
     width: 100%;              /* גודל המיכל */
 }
 
-.about-image img { 
+.centered-image img { 
     width: 50%;               /* חצי מהגודל המקורי */
     height: auto;
     border-radius: 8px;       /* עיגול פינות */
@@ -327,7 +327,7 @@ h3 {
 }
 
 @media (max-width: 600px) {
-    .about-image img {
+    .centered-image img {
         width: 90%; /* גודל מותאם למסכים קטנים */
     }
 }
