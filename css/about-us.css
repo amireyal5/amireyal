@@ -103,68 +103,147 @@
 }
 
 /* === About Me Section === */
+.about-us {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+}
+
+.location-banner {
+  background-color: #f8f8f8;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.location-banner p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-me-container {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: var(--max-width-container);
-  margin: 0 auto;
-  min-height: 400px;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 960px;
+  margin-top: 20px;
 }
 
 .about-image {
-  flex: 1 1 45%;
+  flex: 1 0 300px;
+  margin: 15px;
   text-align: center;
 }
 
 .about-image h3 {
-  font-size: var(--font-size-h3);
-  color: var(--color-primary);
-  margin-bottom: 1.5rem;
-  font-weight: normal;
-  font-family: var(--font-family-base);
+  font-size: 1.5em;
+  color: #337ab7;
+  margin-bottom: 10px;
 }
 
 .about-image img {
-  width: 100%;
-  max-height: 400px;
+  max-width: 100%;
   height: auto;
-  border-radius: var(--border-radius-image);
-  box-shadow: var(--shadow-default);
-  transition: transform var(--transition-speed-base) ease, box-shadow var(--transition-speed-base) ease;
-}
-
-.about-image img:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
-  flex: 1 1 45%;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 1 0 500px;
+  margin: 15px;
 }
 
-.about-text p {
-  font-size: var(--font-size-base);
-  color: #514b4b;
-  line-height: var(--line-height-base);
-  margin-bottom: 1.5rem;
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-base);
-  text-align: right;
+.about-page {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.about-text p:last-child {
-  margin-bottom: 0;
+.about-page h1 {
+  font-size: 2em;
+  color: #337ab7;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
 }
 
-/* ===== Service Cards Grid ===== */
+.about-page h2 {
+  font-size: 1.8em;
+  color: #555;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.about-page p {
+  margin-bottom: 1em;
+}
+
+.about-page strong {
+  font-weight: bold;
+}
+
+.about-page ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+.about-page li {
+  margin-bottom: 0.5em;
+}
+
+.call-to-action {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.call-to-action ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+.call-to-action li {
+  margin-bottom: 0.5em;
+}
+
+/* התאמה למסכים קטנים יותר (עד 768 פיקסלים רוחב) */
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column; /* מעביר את התמונה והטקסט אחד מתחת לשני */
+    align-items: stretch; /* גורם להם לתפוס את כל הרוחב */
+  }
+
+  .about-image, .about-text {
+    margin: 15px 0; /* מוסיף מרווח אנכי ביניהם */
+  }
+
+  .about-page h1 {
+    font-size: 1.7em; /* מקטין מעט את גודל הכותרת */
+  }
+
+  .about-page h2 {
+    font-size: 1.5em; /* מקטין מעט את גודל הכותרת המשנית */
+  }
+}
 /* ===== Service Cards Grid ===== */
 .services-grid-container {
   display: grid;
