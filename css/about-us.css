@@ -265,4 +265,56 @@ h3 {
   h3 {
     font-size: 1.2rem;
   }
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .about-text, .experience, .approach, .call-to-action {
+    padding: 0.75rem;
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Devices like iPhone SE */
+@media (max-width: 375px) {
+  .about-text, .experience, .approach, .call-to-action {
+    padding: 0.5rem;
+  }
+
+  .services-grid-container {
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
 }
