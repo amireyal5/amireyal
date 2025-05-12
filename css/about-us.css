@@ -201,7 +201,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   padding: 4rem 2rem;
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
   box-sizing: border-box;
 }
