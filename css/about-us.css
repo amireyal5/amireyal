@@ -26,6 +26,7 @@
   --font-size-banner: 2em;
   --padding-banner: 1em;
   --margin-top-banner: 2vh;
+  --color-about-h1: #fff;
   --color-about-h2: #004869bd;
   --color-about-h3: #2196F3;
   --color-about-text: #444;
@@ -72,7 +73,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: var(--font-size-h1);
-  color: var(--color-about-h2);
+  color: var(--color-about-h1);
 }
 
 h2 {
