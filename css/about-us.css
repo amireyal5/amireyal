@@ -192,7 +192,7 @@ h3 {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 1rem;
-
+}
 .service-card {
   background-color: var(--color-box1);
   padding: 2rem;
