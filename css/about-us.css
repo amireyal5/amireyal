@@ -185,77 +185,106 @@ h3 {
 }
 
 /* Services Grid Container */
-.services-grid-container {
-  width: 100% !important;
-  max-width: 100% !important; /* לוודא שהקונטיינר תופס את כל הרוחב */
-  margin: 0 auto !important;
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important; /* 4 כרטיסיות בשורה אחת */
-  gap: 1.5rem !important;
-  padding: 1rem !important;
+
+/* כותרת כללית לסקשן - במידה ותוסיף h2 חיצוני */
+#services-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 2rem 0 1rem;
+  color: #1f3c88;
 }
 
-/* Service Card Styles */
+/* עיצוב הסקשן של השירותים */
+#services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* כרטיס שירות בודד */
 .service-card {
-  background-color: var(--color-box1) !important;
-  padding: 2rem !important;
-  border-radius: var(--border-radius-base) !important;
-  box-shadow: var(--shadow-default) !important;
-  text-align: center !important;
-  transition: box-shadow var(--transition-speed-base) !important;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  box-shadow: var(--shadow-hover) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
+/* כותרת בכרטיס */
 .service-card h2 {
-  font-size: var(--font-size-h3) !important;
-  color: var(--color-text1) !important;
-  margin-bottom: 1rem !important;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1f3c88;
 }
 
-.service-card .highlight {
-  color: var(--color-text1) !important;
-  font-weight: bold !important;
+/* כותרת משנה מודגשת */
+.highlight {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2196f3;
+  margin-bottom: 1rem;
 }
 
+/* טקסט גוף */
 .service-card p {
-  font-size: var(--font-size-base) !important;
-  color: var(--color-services-text) !important;
-  margin-bottom: 1rem !important;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
-.service-card .learn-more {
-  color: var(--color-link) !important;
-  text-decoration: none !important;
-  font-weight: bold !important;
+/* כפתור למידע נוסף */
+.learn-more {
+  align-self: flex-start;
+  background-color: #1f3c88;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.service-card .learn-more:hover {
-  color: var(--color-link-hover) !important;
+.learn-more:hover {
+  background-color: #163074;
 }
 
-/* Media Queries */
+/* צבעים ייחודיים לכל כרטיס */
+.service-blue1 .highlight { color: #1976d2; }
+.service-blue2 .highlight { color: #388e3c; }
+.service-blue3 .highlight { color: #f57c00; }
+.service-blue4 .highlight { color: #d32f2f; }
 
-/* Tablets and smaller */
-@media (max-width: 768px) {
-  .services-grid-container {
-    grid-template-columns: repeat(2, 1fr) !important; /* 2 כרטיסיות בשורה אחת עבור טאבלטים */
+/* רספונסיביות מקסימלית */
+@media (max-width: 600px) {
+  #services {
+    padding: 2rem 1rem;
   }
 
   .service-card {
-    padding: 1.5rem !important;
-  }
-}
-
-/* Small Mobile Devices */
-@media (max-width: 480px) {
-  .services-grid-container {
-    grid-template-columns: 1fr !important; /* כרטיסיה אחת בשורה למוביילים קטנים */
+    padding: 1.5rem;
   }
 
-  .service-card {
-    padding: 1rem !important;
+  .service-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .highlight {
+    font-size: 1.1rem;
+  }
+
+  .learn-more {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
 }
