@@ -124,19 +124,14 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.experience p {
+.experience p,
+.experience ul li {
   font-size: var(--font-size-base);
   color: var(--color-services-text);
 }
 
 .experience ul {
   margin-top: 1rem;
-}
-
-.experience ul li {
-  font-size: var(--font-size-base);
-  color: var(--color-services-text);
-  margin-bottom: 1rem;
 }
 
 /* Approach Section */
@@ -181,16 +176,11 @@ h3 {
   padding-left: 0;
 }
 
-.call-to-action ul li {
-  font-size: var(--font-size-base);
-  color: var(--color-services-text);
-  margin-bottom: 1rem;
-}
-
+.call-to-action ul li,
 .call-to-action p {
   font-size: var(--font-size-base);
   color: var(--color-services-text);
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Services Grid */
@@ -240,7 +230,9 @@ h3 {
   color: var(--color-link-hover);
 }
 
-/* Mobile Responsive */
+/* Media Queries */
+
+/* Tablets and smaller */
 @media (max-width: 768px) {
   .about-text, .experience, .approach, .call-to-action {
     padding: 1rem;
@@ -265,6 +257,8 @@ h3 {
   h3 {
     font-size: 1.2rem;
   }
+}
+
 /* Small Mobile Devices */
 @media (max-width: 480px) {
   body {
