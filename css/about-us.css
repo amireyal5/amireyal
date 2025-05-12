@@ -67,7 +67,7 @@
 .about-location {
   text-align: center;
   font-weight: bold;
-  color: #333;
+  color: var(--color-text); /* שימוש במשתנה */
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -104,23 +104,23 @@
 
 /* === About Me Section === */
 .about-us {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  font-family: var(--font-family-base); /* שימוש במשתנה גופן ברירת מחדל */
+  line-height: var(--line-height-base); /* שימוש במשתנה ריווח שורות ברירת מחדל */
+  color: var(--color-text); /* שימוש במשתנה צבע טקסט ברירת מחדל */
   padding: 20px;
 }
 
 .location-banner {
-  background-color: #f8f8f8;
-  padding: 15px;
+  background-color: #f8f8f8; /* אין משתנה מתאים */
+  padding: var(--padding-banner); /* שימוש במשתנה */
   text-align: center;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* אין משתנה מתאים */
+  margin-bottom: var(--margin-top-banner); /* שימוש במשתנה */
 }
 
 .location-banner p {
-  font-size: 1.1em;
-  color: #555;
+  font-size: var(--font-size-base); /* שימוש במשתנה גודל גופן ברירת מחדל */
+  color: #555; /* אין משתנה מתאים */
 }
 
 .about-content {
@@ -133,7 +133,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 960px;
+  max-width: var(--max-width-container);
   margin-top: 20px;
 }
 
@@ -144,16 +144,16 @@
 }
 
 .about-image h3 {
-  font-size: 1.5em;
-  color: #337ab7;
+  font-size: var(--font-size-h3); /* שימוש במשתנה */
+  color: var(--color-link); /* שימוש במשתנה */
   margin-bottom: 10px;
 }
 
 .about-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-image); /* שימוש במשתנה */
+  box-shadow: var(--shadow-default); /* שימוש במשתנה */
 }
 
 .about-text {
@@ -163,38 +163,46 @@
 
 .about-page {
   padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-background); /* שימוש במשתנה */
+  border-radius: var(--border-radius-base); /* שימוש במשתנה */
+  box-shadow: var(--shadow-default); /* שימוש במשתנה */
 }
 
 .about-page h1 {
-  font-size: 2em;
-  color: #337ab7;
+  font-size: var(--font-size-h1); /* שימוש במשתנה */
+  color: var(--color-link); /* שימוש במשתנה */
   margin-bottom: 15px;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #eee; /* אין משתנה מתאים */
   padding-bottom: 10px;
 }
 
 .about-page h2 {
-  font-size: 1.8em;
-  color: #555;
+  font-size: var(--font-size-h2); /* שימוש במשתנה */
+  color: var(--color-about-h2); /* שימוש במשתנה */
   margin-top: 25px;
   margin-bottom: 15px;
 }
 
 .about-page p {
   margin-bottom: 1em;
+  color: var(--color-about-text); /* שימוש במשתנה */
+  font-family: var(--font-family-base); /* שימוש במשתנה */
+  line-height: var(--line-height-base); /* שימוש במשתנה */
+  font-weight: var(--font-weight-base); /* שימוש במשתנה */
 }
 
 .about-page strong {
-  font-weight: bold;
+  font-weight: bold; /* אין משתנה מתאים */
 }
 
 .about-page ul {
   list-style: disc;
   padding-left: 20px;
   margin-bottom: 1em;
+  color: var(--color-about-text); /* שימוש במשתנה */
+  font-family: var(--font-family-base); /* שימוש במשתנה */
+  line-height: var(--line-height-base); /* שימוש במשתנה */
+  font-weight: var(--font-weight-base); /* שימוש במשתנה */
 }
 
 .about-page li {
@@ -204,14 +212,14 @@
 .call-to-action {
   margin-top: 30px;
   padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2; /* אין משתנה מתאים */
+  border-radius: var(--border-radius-base); /* שימוש במשתנה */
+  box-shadow: var(--shadow-default); /* שימוש במשתנה */
 }
 
 .call-to-action h2 {
-  font-size: 1.8em;
-  color: #333;
+  font-size: var(--font-size-h2); /* שימוש במשתנה */
+  color: var(--color-text); /* שימוש במשתנה */
   margin-bottom: 15px;
 }
 
@@ -219,6 +227,10 @@
   list-style: disc;
   padding-left: 20px;
   margin-bottom: 1em;
+  color: var(--color-text); /* שימוש במשתנה */
+  font-family: var(--font-family-base); /* שימוש במשתנה */
+  line-height: var(--line-height-base); /* שימוש במשתנה */
+  font-weight: var(--font-weight-base); /* שימוש במשתנה */
 }
 
 .call-to-action li {
@@ -237,11 +249,11 @@
   }
 
   .about-page h1 {
-    font-size: 1.7em; /* מקטין מעט את גודל הכותרת */
+    font-size: 1.7em; /* אין משתנה מתאים */
   }
 
   .about-page h2 {
-    font-size: 1.5em; /* מקטין מעט את גודל הכותרת המשנית */
+    font-size: 1.5em; /* אין משתנה מתאים */
   }
 }
 /* ===== Service Cards Grid ===== */
@@ -256,13 +268,13 @@
 
 /* ===== Individual Card ===== */
 .service-card {
-  background-color: #333; /* רקע כהה כללי – ניתן להחליף */
-  color: #fff; /* טקסט בהיר */
+  background-color: #333; /* אין משתנה מתאים - אם יש צבע אחיד לכל הכרטיסים אפשר להוסיף משתנה */
+  color: var(--color-text-light); /* שימוש במשתנה */
   border-radius: var(--border-radius-base);
   padding: 2rem;
   text-align: center;
   box-shadow: var(--shadow-default);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-speed-base) ease, box-shadow var(--transition-speed-base) ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -276,59 +288,71 @@
 }
 
 .service-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* אין משתנה מתאים */
   margin-bottom: 1rem;
   font-family: var(--font-family-base);
-  color: #ffffff;
+  color: var(--color-text-light);
 }
 
 .service-card p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: var(--font-size-base); /* שימוש במשתנה */
+  line-height: var(--line-height-base); /* שימוש במשתנה */
   margin-bottom: 1.5rem;
   font-family: var(--font-family-roboto);
-  color: #ddd; /* טקסט בהיר */
+  color: #ddd; /* אין משתנה מתאים */
 }
 
 .service-card .highlight {
   font-family: var(--font-family-base);
-  font-weight: bold;
-  font-size: 2.5rem;
+  font-weight: bold; /* אין משתנה מתאים */
+  font-size: 2.5rem; /* אין משתנה מתאים */
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: var(--color-text-light);
 }
 
 .service-card .learn-more {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* אין משתנה מתאים */
+  color: var(--color-text-light);
   padding: 12px 26px;
   border-radius: var(--border-radius-base);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  font-weight: 600; /* אין משתנה מתאים */
+  font-size: var(--font-size-base); /* שימוש במשתנה */
+  transition: all var(--transition-speed-base) ease;
   letter-spacing: 0.5px;
   border: 2px solid transparent;
 }
 
 .service-card .learn-more:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2); /* אין משתנה מתאים */
   transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2); /* אין משתנה מתאים */
 }
 
 /* ===== Background Variants ===== */
 .service-blue1 {
-  background-color: #2b4a5b;
+  background-color: var(--color-box1); /* שימוש במשתנה */
+  color: var(--color-text1); /* התאמת צבע הטקסט */
 }
 .service-blue2 {
-  background-color: #4a5543;
+  background-color: var(--color-box2); /* שימוש במשתנה */
+  color: var(--color-text2); /* התאמת צבע הטקסט */
 }
 .service-dark-gray-blue3 {
-  background-color: #434a55;
+  background-color: var(--color-box3); /* שימוש במשתנה */
+  color: var(--color-text3); /* התאמת צבע הטקסט */
 }
 .service-blue4 {
-  background-color: #55434a;
+  background-color: var(--color-box4); /* שימוש במשתנה */
+  color: var(--color-text4); /* התאמת צבע הטקסט */
+}
+.service-blue5 {
+  background-color: var(--color-box5); /* שימוש במשתנה */
+  color: var(--color-text5); /* התאמת צבע הטקסט */
+}
+.service-blue6 {
+  background-color: var(--color-box6); /* שימוש במשתנה */
+  color: var(--color-text6); /* אם קיים משתנה מתאים */
 }
 
 /* ===== Responsive ===== */
@@ -342,4 +366,3 @@
     min-height: auto;
   }
 }
-
