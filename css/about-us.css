@@ -197,6 +197,7 @@ h3 {
   border-radius: var(--border-radius-base);
   box-shadow: var(--shadow-default);
   transition: box-shadow var(--transition-speed-base);
+  text-align: center;
 }
 
 .service-card:hover {
