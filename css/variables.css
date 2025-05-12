@@ -72,3 +72,70 @@
   /* === פריסה כללית === */
   --header-height: 60px;
 }
+:root {
+  /* === צבעים === */
+  --color-primary: #55828B;          /* צבע ראשי (כותרות, הדגשות) */
+  --color-secondary: #ffffff;        /* צבע משני */
+  --color-text: #000000;             /* טקסט רגיל */
+  --color-text-light: #FFFFFF;       /* טקסט בהיר */
+  --color-text-alt: #514b4b;         /* טקסט משני */
+  --color-background: #FFFFFF;       /* רקע עמוד */
+  --color-background-alt: #f0f0f0;   /* רקע משני */
+  --color-link: #1f628e;             /* קישורים */
+  --color-link-hover: #1565C0;       /* קישורים בהובר */
+  --color-button: #3B6064;           /* כפתורים */
+  --color-button-hover: #55828B;     /* כפתורים בהובר */
+
+  /* === כרטיסיות === */
+  --color-card-background: #ffffff;
+  --color-card-border: #e0e0e0;
+  --color-card-hover: #f7fafa;
+  --color-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --color-card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  /* === תפריט עליון ותפריטים === */
+  --color-menu-text: #1f628e;
+  --color-menu-text-hover: #1565C0;
+  --color-submenu: #426575;
+  --color-submenu-text: #ffffff;
+  --color-submenu-text-hover: #f0f8ff;
+
+  /* === אייקונים === */
+  --color-icon: #457b9d;
+  --color-icon-hover: #a8dadc;
+
+  /* === גופנים === */
+  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --font-family-title: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+
+  /* === גדלים === */
+  --font-size-base: 1rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.3rem;
+  --font-size-h4: 1.1rem;
+  --line-height-base: 1.8;
+  --font-weight-base: 200;
+  --max-width-container: 1000px;
+
+  /* === ריווחים === */
+  --padding-base: 1rem;
+  --padding-section: 40px 20px;
+  --margin-bottom-base: 1rem;
+  --margin-top-base: 1.5vh;
+
+  /* === מעברים === */
+  --transition-speed-base: 0.3s;
+
+  /* === גבולות === */
+  --border-radius-base: 5px;
+  --border-radius-image: 12px;
+
+  /* === צלליות === */
+  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+  /* === אחר === */
+  --header-height: 60px;
+}
+
