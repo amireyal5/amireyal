@@ -1,57 +1,74 @@
-E:root {
-  /* צבעים */
-  --color-primary: #55828B;        /* צבע ראשי (למשל, לכותרות, הדגשות) */
-  --color-secondary: #ffffff; /* צבע משני (אם יש) */
-  --color-text: #000;             /* צבע טקסט רגיל */
- --color-text-light: #FFFFFF; /* צבע טקסט בהיר (לבן) */
+:root {
+  /* === צבעים ראשיים === */
+  --color-primary: #55828B;
+  --color-secondary: #ffffff;
 
-  --color-text-alt: #514b4b;       /* צבע טקסט משני (למשל, לגוף הטקסט) */
-  --color-background: #FFFFFF;       /* צבע רקע עמוד */
-  --color-background-alt: #f0f0f0;  /* צבע רקע משני (למשל, לאזורים שונים) */
-  --color-link: #1f628e;           /* צבע קישורים */
-  --color-link-hover: #1565C0;     /* צבע קישורים במעבר עכבר */
-  --color-button: #3B6064;         /* צבע כפתורים */
-  --color-button-hover: #55828B;   /* צבע כפתורים במעבר עכבר */
+  /* === טקסטים === */
+  --color-text: #000000;
+  --color-text-light: #ffffff;
+  --color-text-alt: #514b4b;
+
+  /* === רקעים === */
+  --color-background: #ffffff;
+  --color-background-alt: #f0f0f0;
+  --color-background-light: #f9f9f9;
+
+  /* === גבולות === */
+  --color-border: #e0e0e0;
+
+  /* === קישורים === */
+  --color-link: #1f628e;
+  --color-link-hover: #1565C0;
+
+  /* === כפתורים === */
+  --color-button: #3B6064;
+  --color-button-hover: #55828B;
+
+  /* === תפריטים ותתי-תפריטים === */
   --color-menu-text: #1f628e;
   --color-menu-text-hover: #1565C0;
   --color-submenu: #426575;
-  --color-submenu-text: #fff;
+  --color-submenu-text: #ffffff;
   --color-submenu-text-hover: #f0f8ff;
+
+  /* === אייקונים === */
   --color-icon: #457b9d;
   --color-icon-hover: #a8dadc;
 
-  /* גופנים */
-  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;  /* גופן בסיסי */
-  --font-family-title: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif; /* גופן לכותרות (אם שונה) */
-
-  /* גדלים */
-  --font-size-base: 1rem;           /* גודל גופן בסיסי (16px) */
-  --font-size-h1: 2.5rem;         /* גודל כותרת H1 */
-  --font-size-h2: 2rem;           /* גודל כותרת H2 */
-  --font-size-h3: 1.3rem;         /* גודל כותרת H3 */
+  /* === טיפוגרפיה === */
+  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --font-family-title: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.3rem;
   --font-size-h4: 1.1rem;
-  --line-height-base: 1.8;         /* גובה שורה בסיסי */
+  --line-height-base: 1.8;
   --font-weight-base: 200;
-  --max-width-container: 1000px;
 
-  /* ריווח */
-  --padding-base: 1rem;          /* ריווח בסיסי */
-  --padding-section: 40px 20px;    /* ריווח section */
+  /* === גדלים כלליים === */
+  --max-width-container: 1000px;
+  --container-width: 1200px;
+  --gutter: 16px;
+
+  /* === ריווחים === */
+  --padding-base: 1rem;
+  --padding-section: 40px 20px;
   --margin-bottom-base: 1rem;
   --margin-top-base: 1.5vh;
 
-  /* מעברים */
-  --transition-speed-base: 0.3s;    /* מהירות מעבר בסיסית */
+  /* === מעברים === */
+  --transition-speed-base: 0.3s;
+  --transition-fast: 0.2s;
+  --transition-medium: 0.3s;
+  --transition-slow: 0.5s;
 
-  /* גבולות */
+  /* === גבולות וצללים === */
   --border-radius-base: 5px;
   --border-radius-image: 12px;
-
-  /* צלליות */
   --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
   --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
 
-  /* אחר */
-  --header-height: 60px; /* גובה header */
+  /* === פריסה כללית === */
+  --header-height: 60px;
 }
-nter file contents here
