@@ -1,73 +1,21 @@
-/* === variables.css === */
-:root {
-  --color-primary: #55828B;
-  --color-text: #000;
-  --color-text-light: #FFFFFF;
-  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-  --font-family-roboto: 'Roboto', sans-serif;
-  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
-  --transition-speed-base: 0.3s;
-  --max-width-container: 1000px;
-  --font-size-base: 1rem;
-  --line-height-base: 1.8;
-  --font-weight-base: 200;
-  --color-background: #FFFFFF;
-  --color-link: #1f628e;
-  --color-link-hover: #1565C0;
-  --color-button: #3B6064;
-  --color-button-hover: #55828B;
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.3rem;
-  --font-size-h4: 1.1rem;
-  --color-footer-text: #005f99;
-  --font-weight-footer-text: 600;
-  --color-section-title: #0077aa;
-  --font-weight-section-title: 300;
-  --font-size-banner: 1vw;
-  --padding-banner: 1em;
-  --margin-top-banner: 2vh;
-  --color-about-h2: #004869bd;
-  --color-about-h3: #2196F3;
-  --color-about-text: #444;
-  --color-services-h2: #2196F3;
-  --color-services-text: #555;
-  --color-box1: #93A29B;
-  --color-border1: #B3E5FC;
-  --color-text1: #1976D2;
-  --color-box2: #F0F8E0;
-  --color-border2: #DCEDC8;
-  --color-text2: #388E3C;
-  --color-box3: #FFFDE7;
-  --color-border3: #FFF9C4;
-  --color-text3: #FBC02D;
-  --color-box4: #FBE9E7;
-  --color-border4: #FFCCBC;
-  --color-text4: #E64A19;
-  --color-box5: #EDE7F6;
-  --color-border5: #D1C4E9;
-  --color-text5: #5E35B1;
-  --color-box6: #ECEFF1;
-  --color-border6: #DCBF85;
-  --border-radius-base: 5px;
-  --border-radius-image: 6px;
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
 }
-/* === styles.css === */
+
 /* ===== About Section ===== */
 .about-us {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 3rem 2rem;
   background-color: var(--color-background);
   text-align: center;
 }
 
 .about-location {
-  text-align: center;
-  font-weight: bold;
-  color: var(--color-text); /* שימוש במשתנה */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -75,19 +23,18 @@
 .about-content {
   max-width: var(--max-width-container);
   margin: 0 auto;
-  padding-block: 2rem;
+  padding: 2rem;
   text-align: center;
 }
 
 .about-content h2 {
   font-size: var(--font-size-h2);
   color: var(--color-primary);
-  margin-bottom: 1.5rem;
   font-family: var(--font-family-base);
-  font-weight: 400;
-  text-align: right;
-  display: inline-block;
+  font-weight: var(--font-weight-normal);
   position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
 }
 
 .about-content h2::after {
@@ -97,272 +44,147 @@
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
-  height: 1px;
-  background-color: transparent;
+  height: 2px;
+  background-color: var(--color-primary);
   border-radius: 1px;
 }
 
-/* === About Me Section === */
-.about-us {
-  font-family: var(--font-family-base); /* שימוש במשתנה גופן ברירת מחדל */
-  line-height: var(--line-height-base); /* שימוש במשתנה ריווח שורות ברירת מחדל */
-  color: var(--color-text); /* שימוש במשתנה צבע טקסט ברירת מחדל */
-  padding: 20px;
-}
-
-.location-banner {
-  background-color: #f8f8f8; /* אין משתנה מתאים */
-  padding: var(--padding-banner); /* שימוש במשתנה */
-  text-align: center;
-  border-bottom: 1px solid #ddd; /* אין משתנה מתאים */
-  margin-bottom: var(--margin-top-banner); /* שימוש במשתנה */
-}
-
-.location-banner p {
-  font-size: var(--font-size-base); /* שימוש במשתנה גודל גופן ברירת מחדל */
-  color: #555; /* אין משתנה מתאים */
-}
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* ===== About Me Section ===== */
 .about-me-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
   max-width: var(--max-width-container);
-  margin-top: 20px;
+  margin: 2rem auto;
+}
+
+.about-image, .about-text {
+  flex: 1 1 400px;
 }
 
 .about-image {
-  flex: 1 0 300px;
-  margin: 15px;
   text-align: center;
-}
-
-.about-image h3 {
-  font-size: var(--font-size-h3); /* שימוש במשתנה */
-  color: var(--color-link); /* שימוש במשתנה */
-  margin-bottom: 10px;
 }
 
 .about-image img {
   max-width: 100%;
-  height: auto;
-  border-radius: var(--border-radius-image); /* שימוש במשתנה */
-  box-shadow: var(--shadow-default); /* שימוש במשתנה */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-default);
+}
+
+.about-image h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-accent);
+  margin-top: 1rem;
 }
 
 .about-text {
-  flex: 1 0 500px;
-  margin: 15px;
+  font-size: var(--font-size-base);
+  color: var(--color-surface-light);
+  line-height: var(--line-height-base);
 }
 
 .about-page {
-  padding: 20px;
-  background-color: var(--color-background); /* שימוש במשתנה */
-  border-radius: var(--border-radius-base); /* שימוש במשתנה */
-  box-shadow: var(--shadow-default); /* שימוש במשתנה */
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-default);
 }
 
 .about-page h1 {
-  font-size: var(--font-size-h1); /* שימוש במשתנה */
-  color: var(--color-link); /* שימוש במשתנה */
-  margin-bottom: 15px;
-  border-bottom: 2px solid #eee; /* אין משתנה מתאים */
-  padding-bottom: 10px;
+  font-size: var(--font-size-h1);
+  font-family: var(--font-family-heading);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-accent-dark);
+  padding-bottom: 0.5rem;
 }
 
 .about-page h2 {
-  font-size: var(--font-size-h2); /* שימוש במשתנה */
-  color: var(--color-about-h2); /* שימוש במשתנה */
-  margin-top: 25px;
-  margin-bottom: 15px;
+  font-size: var(--font-size-h2);
+  color: var(--color-text-muted);
+  margin-top: 2rem;
 }
 
-.about-page p {
-  margin-bottom: 1em;
-  color: var(--color-about-text); /* שימוש במשתנה */
-  font-family: var(--font-family-base); /* שימוש במשתנה */
-  line-height: var(--line-height-base); /* שימוש במשתנה */
-  font-weight: var(--font-weight-base); /* שימוש במשתנה */
-}
-
-.about-page strong {
-  font-weight: bold; /* אין משתנה מתאים */
-}
-
-.about-page ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 1em;
-  color: var(--color-about-text); /* שימוש במשתנה */
-  font-family: var(--font-family-base); /* שימוש במשתנה */
-  line-height: var(--line-height-base); /* שימוש במשתנה */
-  font-weight: var(--font-weight-base); /* שימוש במשתנה */
-}
-
-.about-page li {
-  margin-bottom: 0.5em;
-}
-
-.call-to-action {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #f2f2f2; /* אין משתנה מתאים */
-  border-radius: var(--border-radius-base); /* שימוש במשתנה */
-  box-shadow: var(--shadow-default); /* שימוש במשתנה */
-}
-
-.call-to-action h2 {
-  font-size: var(--font-size-h2); /* שימוש במשתנה */
-  color: var(--color-text); /* שימוש במשתנה */
-  margin-bottom: 15px;
-}
-
-.call-to-action ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 1em;
-  color: var(--color-text); /* שימוש במשתנה */
-  font-family: var(--font-family-base); /* שימוש במשתנה */
-  line-height: var(--line-height-base); /* שימוש במשתנה */
-  font-weight: var(--font-weight-base); /* שימוש במשתנה */
-}
-
-.call-to-action li {
-  margin-bottom: 0.5em;
-}
-
-/* התאמה למסכים קטנים יותר (עד 768 פיקסלים רוחב) */
-@media (max-width: 768px) {
-  .about-me-container {
-    flex-direction: column; /* מעביר את התמונה והטקסט אחד מתחת לשני */
-    align-items: stretch; /* גורם להם לתפוס את כל הרוחב */
-  }
-
-  .about-image, .about-text {
-    margin: 15px 0; /* מוסיף מרווח אנכי ביניהם */
-  }
-
-  .about-page h1 {
-    font-size: 1.7em; /* אין משתנה מתאים */
-  }
-
-  .about-page h2 {
-    font-size: 1.5em; /* אין משתנה מתאים */
-  }
-}
-/* ===== Service Cards Grid ===== */
+/* ===== Services Cards Grid ===== */
 .services-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin: 0 auto;
   padding: 2rem;
   max-width: var(--max-width-container);
+  margin: auto;
 }
 
 /* ===== Individual Card ===== */
 .service-card {
-  background-color: #333; /* אין משתנה מתאים - אם יש צבע אחיד לכל הכרטיסים אפשר להוסיף משתנה */
-  color: var(--color-text-light); /* שימוש במשתנה */
-  border-radius: var(--border-radius-base);
+  background-color: var(--color-surface-light);
+  color: var(--color-text);
   padding: 2rem;
-  text-align: center;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow-default);
-  transition: transform var(--transition-speed-base) ease, box-shadow var(--transition-speed-base) ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 300px;
-  aspect-ratio: 1 / 1; /* ריבוע */
+  transition: var(--transition-base);
+  min-height: 320px;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
 }
 
 .service-card h2 {
-  font-size: 1.8rem; /* אין משתנה מתאים */
-  margin-bottom: 1rem;
+  font-size: var(--font-size-h3);
   font-family: var(--font-family-base);
-  color: var(--color-text-light);
+  margin-bottom: 1rem;
 }
 
 .service-card p {
-  font-size: var(--font-size-base); /* שימוש במשתנה */
-  line-height: var(--line-height-base); /* שימוש במשתנה */
+  font-size: 1rem;
+  line-height: var(--line-height-base);
   margin-bottom: 1.5rem;
-  font-family: var(--font-family-roboto);
-  color: #ddd; /* אין משתנה מתאים */
+  color: var(--color-text-muted);
 }
 
 .service-card .highlight {
-  font-family: var(--font-family-base);
-  font-weight: bold; /* אין משתנה מתאים */
-  font-size: 2.5rem; /* אין משתנה מתאים */
-  margin-bottom: 1.5rem;
-  color: var(--color-text-light);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  margin-bottom: 1rem;
 }
 
 .service-card .learn-more {
-  background-color: rgba(255, 255, 255, 0.1); /* אין משתנה מתאים */
-  color: var(--color-text-light);
-  padding: 12px 26px;
-  border-radius: var(--border-radius-base);
+  align-self: center;
+  background-color: transparent;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  padding: 0.6em 1.2em;
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
-  font-weight: 600; /* אין משתנה מתאים */
-  font-size: var(--font-size-base); /* שימוש במשתנה */
-  transition: all var(--transition-speed-base) ease;
-  letter-spacing: 0.5px;
-  border: 2px solid transparent;
+  transition: var(--transition-base);
 }
 
 .service-card .learn-more:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* אין משתנה מתאים */
-  transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.2); /* אין משתנה מתאים */
-}
-
-/* ===== Background Variants ===== */
-.service-blue1 {
-  background-color: var(--color-box1); /* שימוש במשתנה */
-  color: var(--color-text1); /* התאמת צבע הטקסט */
-}
-.service-blue2 {
-  background-color: var(--color-box2); /* שימוש במשתנה */
-  color: var(--color-text2); /* התאמת צבע הטקסט */
-}
-.service-dark-gray-blue3 {
-  background-color: var(--color-box3); /* שימוש במשתנה */
-  color: var(--color-text3); /* התאמת צבע הטקסט */
-}
-.service-blue4 {
-  background-color: var(--color-box4); /* שימוש במשתנה */
-  color: var(--color-text4); /* התאמת צבע הטקסט */
-}
-.service-blue5 {
-  background-color: var(--color-box5); /* שימוש במשתנה */
-  color: var(--color-text5); /* התאמת צבע הטקסט */
-}
-.service-blue6 {
-  background-color: var(--color-box6); /* שימוש במשתנה */
-  color: var(--color-text6); /* אם קיים משתנה מתאים */
+  background-color: var(--color-text);
+  color: var(--color-surface-light);
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .services-grid-container {
-    grid-template-columns: 1fr;
+  .about-me-container {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .service-card {
-    aspect-ratio: auto;
-    min-height: auto;
+  .about-page h1 {
+    font-size: 2rem;
+  }
+
+  .about-page h2 {
+    font-size: 1.5rem;
   }
 }
