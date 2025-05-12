@@ -120,11 +120,84 @@
         </section>
     </main>
 
-    <footer>
-        <!-- תוכן פוטר לדוגמה -->
-        <p>&copy; 2025 עמיר אייל. כל הזכויות שמורות.</p>
+<footer class="therapy-footer">
+        <div class="footer-header">
+            <div class="footer-logo">
+    <a href="index.html" aria-label="מעבר לדף הבית">
+        <img src="images/logobig.png" alt="לוגו עמיר אייל פסיכותרפיה - מעבר לדף הבית">
+    </a>
+</div>
+            <div class="footer-title-main">עמיר אייל, פסיכותרפיה</div>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">מידע נוסף</h3>
+                <ul class="footer-list">
+                    <li><a href="faq.html">שאלות נפוצות</a></li>
+                    <li><a href="#">פרטים</a></li>
+                    <li><a href="privacy-policy.html">מדיניות פרטיות</a></li>
+                </ul>
+            </div>
+
+    <div class="footer-section">
+    <h3 class="footer-title">צרו קשר</h3>
+    <div class="contact-info">
+        <a href="tel:0547509962"><i class="fas fa-phone"></i> 054-7509962</a>
+    </div>
+    <div class="contact-info">
+        <a href="mailto:amir@amireyal.co.il"><i class="fas fa-envelope"></i> amir@amireyal.co.il</a>
+    </div>
+    <div class="contact-info">
+        <i class="fas fa-map-marker-alt"></i> כרמיאל והסביבה | אונליין
+    </div>
+</div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">שירותי טיפול</h3>
+                <ul class="footer-list">
+                    <li><a href="crisis.html">טיפול פרטני בעת משבר</a></li>
+                    <li><a href="parenting.html">הדרכת הורים</a></li>
+                    <li><a href="anxiety.html">חרדה ודיכאון</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+                    <div class="footer-bottom">
+                © עמיר אייל פסיכותרפיה, 2023. כל הזכויות שמורות.
+            </div>
     </footer>
 
-    <script src="js/menu.js"></script>
+
+    <div class="floating-contact-icons">
+        <a href="tel:+972547509962" title="התקשר אלי">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:amir@amireyal.co.il" title="שלח מייל">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/972547509962" title="שלח לי הודעה בוואטסאפ">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+
+   <script>
+    const readMoreButton = document.getElementById("read-more-button");
+    const additionalInfo = document.getElementById("additional-info");
+
+    readMoreButton.addEventListener("click", function(event) {
+        event.preventDefault(); // מניעה מעבר לדף אחר
+        if (additionalInfo.style.display === "none") {
+            additionalInfo.style.display = "block";
+            readMoreButton.textContent = "פחות"; // שנה את הטקסט של הכפתור
+        } else {
+            additionalInfo.style.display = "none";
+            readMoreButton.textContent = "קרא עוד"; // שנה את הטקסט של הכפתור
+        }
+    });
+    </script>
 </body>
 </html>
