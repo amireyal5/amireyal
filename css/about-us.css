@@ -1,3 +1,4 @@
+/* variables.css */
 :root {
   --color-primary: #55828B;
   --color-text: #000;
@@ -22,7 +23,7 @@
   --font-weight-footer-text: 600;
   --color-section-title: #0077aa;
   --font-weight-section-title: 300;
-  --font-size-banner: 1vw;
+  --font-size-banner: 2em;
   --padding-banner: 1em;
   --margin-top-banner: 2vh;
   --color-about-h2: #004869bd;
@@ -32,16 +33,16 @@
   --font-family-open-sans: 'Open Sans', sans-serif;
   --color-services-h2: #2196F3;
   --color-services-text: #555;
-  --color-box1:#2c5b7d;
+  --color-box1: #E1F5FE;
   --color-border1: #B3E5FC;
   --color-text1: #1976D2;
-  --color-box2: #165248;
+  --color-box2: #F0F8E0;
   --color-border2: #DCEDC8;
   --color-text2: #388E3C;
-  --color-box3: #4b859c;
+  --color-box3: #FFFDE7;
   --color-border3: #FFF9C4;
   --color-text3: #FBC02D;
-  --color-box4: #43254d;
+  --color-box4: #FBE9E7;
   --color-border4: #FFCCBC;
   --color-text4: #E64A19;
   --color-box5: #EDE7F6;
@@ -52,184 +53,216 @@
   --color-text6: #37474F;
   --border-radius-base: 5px;
   --border-radius-image: 6px;
+  --background-light: #FFFFFF;
 }
-/* General Body Styles */
+
+/* General Styles */
 body {
   font-family: var(--font-family-base);
+  line-height: var(--line-height-base);
   background-color: var(--color-background);
-  color: var(--color-text);
   margin: 0;
   padding: 0;
-  direction: rtl;
-  unicode-bidi: embed;
+  color: var(--color-text);
 }
 
-/* ===== About Section ===== */
-.about-us {
-  padding: 3rem 2rem;
-  background-color: var(--color-background);
-  text-align: center;
+h1, h2, h3, h4 {
+  font-weight: var(--font-weight-base);
 }
 
-.about-location {
-  font-weight: var(--font-weight-bold);
-  color: var(--color-accent);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+h1 {
+  font-size: var(--font-size-h1);
+  color: var(--color-about-h2);
 }
 
-.about-content {
+h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-section-title);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-about-h3);
+}
+
+/* About Section */
+.about-text {
   max-width: var(--max-width-container);
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
-.about-content h2 {
-  font-size: var(--font-size-h2);
-  color: var(--color-primary);
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-normal);
-  position: relative;
-  display: inline-block;
+.about-text h1 {
+  font-size: var(--font-size-h1);
+  color: var(--color-about-h2);
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: var(--color-about-text);
+  font-size: var(--font-size-base);
   margin-bottom: 1.5rem;
 }
 
-.about-content h2::after {
-  content: '';
-  position: absolute;
-  bottom: -0.2em;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 2px;
-  background-color: var(--color-primary);
-  border-radius: 1px;
+.about-text strong {
+  font-weight: bold;
+  color: var(--color-link);
 }
 
-/* ===== About Me Section ===== */
-.about-me-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: var(--max-width-container);
-  margin: 2rem auto;
-}
-
-.about-image,
-.about-text {
-  flex: 1 1 400px;
-}
-
-.about-image {
-  text-align: center;
-}
-
-.about-image img {
-  max-width: 100%;
-  border-radius: var(--border-radius);
+/* Experience Section */
+.experience {
+  background-color: var(--color-box1);
+  padding: 2rem;
+  margin-bottom: 2rem;
   box-shadow: var(--shadow-default);
+  border-radius: var(--border-radius-base);
 }
 
-.about-image h3 {
-  font-size: var(--font-size-h3);
-  color: var(--color-accent);
+.experience h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-services-h2);
+  margin-bottom: 1rem;
+}
+
+.experience p {
+  font-size: var(--font-size-base);
+  color: var(--color-services-text);
+}
+
+.experience ul {
   margin-top: 1rem;
 }
 
-.about-text {
+.experience ul li {
   font-size: var(--font-size-base);
-  color: var(--color-surface-light);
-  line-height: var(--line-height-base);
-}
-
-/* About Page */
-.about-page {
-  background-color: var(--color-surface);
-  color: var(--color-text);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-default);
-}
-
-.about-page h1 {
-  font-size: var(--font-size-h1);
-  font-family: var(--font-family-heading);
+  color: var(--color-services-text);
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--color-accent-dark);
-  padding-bottom: 0.5rem;
 }
 
-.about-page h2 {
+/* Approach Section */
+.approach {
+  padding: 2rem;
+}
+
+.approach h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-text-muted);
-  margin-top: 2rem;
+  color: var(--color-about-h2);
+  margin-bottom: 1rem;
 }
 
-/* ===== General Styles ===== */
-:root {
-  --max-width-container: 1200px; /* רוחב מקסימלי לתוכן */
+.approach p {
+  font-size: var(--font-size-base);
+  color: var(--color-about-text);
+  margin-bottom: 1.5rem;
 }
 
-/* ===== Services Grid Container ===== */
+.approach strong {
+  color: var(--color-link);
+}
+
+/* Call to Action Section */
+.call-to-action {
+  padding: 2rem;
+  background-color: var(--color-box2);
+  border: 1px solid var(--color-border2);
+  box-shadow: var(--shadow-default);
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius-base);
+}
+
+.call-to-action h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-services-h2);
+  margin-bottom: 1rem;
+}
+
+.call-to-action ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.call-to-action ul li {
+  font-size: var(--font-size-base);
+  color: var(--color-services-text);
+  margin-bottom: 1rem;
+}
+
+.call-to-action p {
+  font-size: var(--font-size-base);
+  color: var(--color-services-text);
+  margin-top: 1rem;
+}
+
+/* Services Grid */
 .services-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 כרטיסיות בשורה אחת במסך רחב */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  max-width: var(--max-width-container);
-  margin: auto;
 }
 
-/* ===== Service Card Styles ===== */
 .service-card {
-  background: #fff; /* רקע לבן לכרטיסים */
-  padding: 1.5rem;
-  border-radius: 8px; /* פינות מעוגלות */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* צללים עדינים */
-  transition: transform 0.3s ease; /* אנימציה על hover */
+  background-color: var(--color-box1);
+  padding: 2rem;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--shadow-default);
+  transition: box-shadow var(--transition-speed-base);
 }
 
 .service-card:hover {
-  transform: translateY(-10px); /* הרמת כרטיס בעת hover */
+  box-shadow: var(--shadow-hover);
 }
 
-.service-card h3 {
-  font-size: 1.5rem;
+.service-card h2 {
+  font-size: var(--font-size-h3);
+  color: var(--color-text1);
   margin-bottom: 1rem;
 }
 
-.service-card p {
-  font-size: 1rem;
-  color: #555;
+.service-card .highlight {
+  color: var(--color-text1);
+  font-weight: bold;
 }
 
-/* ===== Responsive Styles for Mobile ===== */
+.service-card p {
+  font-size: var(--font-size-base);
+  color: var(--color-services-text);
+  margin-bottom: 1rem;
+}
+
+.service-card .learn-more {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-card .learn-more:hover {
+  color: var(--color-link-hover);
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .services-grid-container {
-    grid-template-columns: 1fr; /* כרטיס אחד מתחת לשני במובייל */
-    padding: 1rem; /* צמצום הריווח במובייל */
+  .about-text, .experience, .approach, .call-to-action {
+    padding: 1rem;
   }
 
   .service-card {
-    padding: 1rem; /* הפחתת הריווח בתוך הכרטיס במובייל */
+    padding: 1.5rem;
   }
 
-
-
-/* ===== Responsive Styles ===== */
-@media (max-width: 768px) {
-  .about-me-container {
-    flex-direction: column;
-    align-items: stretch;
+  .services-grid-container {
+    grid-template-columns: 1fr;
   }
 
-  .about-page h1 {
-    font-size: 2rem;
+  h1 {
+    font-size: 1.8rem;
   }
 
-  .about-page h2 {
-    font-size: 1.5rem;
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
   }
 }
