@@ -311,4 +311,22 @@ h3 {
   h3 {
     font-size: 0.95rem;
   }
+
+.about-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* ברירת מחדל לגודל בינוני */
+    border-radius: 8px; /* אופציונלי לעיגול פינות */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה קלה */
+}
+
+@media (max-width: 600px) {
+    .about-image img {
+        width: 90%; /* גודל מותאם למסכים קטנים */
+    }
 }
