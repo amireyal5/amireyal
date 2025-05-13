@@ -1,14 +1,15 @@
+/* Why Us Section */
 .why-us {
   padding: 2em;
   text-align: center;
-  background-color: var(--color-background);
+  background-color: var(--color-background); /* משתמש במשתנה הקיים */
 }
 
 .why-us h2 {
-  font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  font-size: var(--font-size-h2); /* משתמש במשתנה הקיים */
+  color: var(--color-primary); /* משתמש במשתנה הקיים */
   margin-bottom: 1.5em;
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base); /* משתמש במשתנה הקיים */
   font-weight: normal;
 }
 
@@ -16,40 +17,41 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
-  max-width: var(--max-width-container);
+  max-width: var(--max-width-container); /* משתמש במשתנה הקיים */
   margin: 0 auto;
+  background-color: #E0FFFF; /* רקע תכלת בהיר לגריד */
 }
 
 .why-us .feature {
-  background-color: #E0FFFF;
+  background-color: #f9f9f9;
   padding: 1.5em;
   border-radius: 8px;
-  box-shadow: var(--shadow-default);
+  box-shadow: var(--shadow-default); /* משתמש במשתנה הקיים */
   text-align: center;
-  transition: box-shadow var(--transition-speed-base) ease;
+  transition: box-shadow var(--transition-speed-base) ease; /* משתמש במשתנה הקיים */
 }
 
 .why-us .feature:hover {
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-hover); /* משתמש במשתנה הקיים */
 }
 
 .why-us .feature h3 {
   font-size: 1.5em;
-  color: var(--color-text);
+  color: var(--color-text); /* משתמש במשתנה הקיים */
   margin-bottom: 0.5em;
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base); /* משתמש במשתנה הקיים */
   font-weight: normal;
 }
 
 .why-us .feature p {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-base); /* משתמש במשתנה הקיים */
   color: #555;
-  line-height: var(--line-height-base);
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-base); /* משתמש במשתנה הקיים */
+  font-family: var(--font-family-base); /* משתמש במשתנה הקיים */
+  font-weight: var(--font-weight-base); /* משתמש במשתנה הקיים */
 }
 
-/* רספונסיביות עבור מסכים קטנים יותר */
+/* רספונסיביות עבור Why Us בלבד */
 @media (max-width: 768px) {
   .why-us {
     padding: 1em;
