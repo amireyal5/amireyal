@@ -62,10 +62,11 @@
 
 .service-text a::before {
     content: '»';
-    margin-left: -5px;
-    margin-right: 5px;
+    margin-left: 5px; /* העברתי את ה margin-left */
+    margin-right: 10px; /* הגדלתי את ה margin-right */
     color: #70a1af;
 }
+
 
 /* רספונסיביות למובייל */
 @media screen and (max-width: 768px) {
