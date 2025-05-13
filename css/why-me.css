@@ -1,11 +1,13 @@
 .services-section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 10px;
+  max-width: 800px; /* מיכל מצומצם */
+  margin: 0 auto;
 }
 
 .section-title {
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .services-grid {
@@ -18,27 +20,33 @@
 }
 
 .service-img img {
-  width: 150px;
-  height: 150px;
+  width: 225px; /* פי 1.5 מה-150px הקודם */
+  height: 225px;
   border-radius: 50%;
   object-fit: cover;
+  margin: 0;
+  padding: 0;
 }
 
 .service-text {
-  padding: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 .service-text h3 {
-  font-size: 1.2rem;
-  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  margin: 5px 0;
 }
 
 .service-text p {
-  font-size: 1rem;
-  margin: 0 0 10px;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .service-text a {
+  display: block;
+  margin-top: 6px;
   text-decoration: none;
   color: #007BFF;
   font-weight: bold;
