@@ -23,26 +23,20 @@
     box-shadow: 0 0 0 transparent; /* הסרת קווי מתאר (shadow) */
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* מרכז אופקית את כל התוכן בכרטיס */
+    flex-direction: column; /* סידור התוכן בעמודה */
+    align-items: center; /* מרכז אופקית את כל התוכן */
+    padding: 20px; /* הוספת ריווח פנימי לכרטיסיה */
 }
 
 .service-img-container {
-    width: 100%;
-    height: auto; /* מאפשר גובה אוטומטי */
-    overflow: hidden;
-    border-bottom: none; /* הסרת קו מתחת לתמונה */
-    display: flex;
-    justify-content: center; /* מרכז אופקית את התמונה */
-    align-items: center; /* מרכז אנכית את התמונה */
-    padding: 20px 0; /* מוסיף קצת ריווח מלמעלה ומלמטה */
-}
-
-.rounded-image {
-    border-radius: 50%; /* הופך את הקונטיינר של התמונה לעגול */
-    overflow: hidden; /* חותך את התמונה בתוך העיגול */
     width: 150px; /* גודל קבוע לעיגול */
     height: 150px; /* גודל קבוע לעיגול */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px; /* ריווח בין התמונה לטקסט */
+    display: flex;
+    justify-content: center; /* מרכז אופקית את התמונה בתוך העיגול */
+    align-items: center; /* מרכז אנכית את התמונה בתוך העיגול */
 }
 
 .service-img-container img {
@@ -52,11 +46,9 @@
 }
 
 .service-content {
-    padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* מאפשר לתוכן לגדול ולמלא את השטח הנותר בכרטיס */
     align-items: center; /* מרכז אופקית את הטקסט */
 }
 
@@ -89,12 +81,13 @@
     .services-grid {
         grid-template-columns: 1fr; /* עמודה אחת במובייל */
     }
-    .service-img-container {
-        padding: 15px 0;
+    .service-card {
+        padding: 15px;
     }
-    .rounded-image {
+    .service-img-container {
         width: 120px;
         height: 120px;
+        margin-bottom: 10px;
     }
     .section-title {
         font-size: 2em;
