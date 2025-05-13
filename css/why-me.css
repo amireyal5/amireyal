@@ -30,7 +30,7 @@
 
 .service-img-container {
     width: 150px; /* גודל קבוע לעיגול */
-    height: 150px; /* גודל קבוע לעיגול */
+    height: 150px; /* גודל קבוע לעיגול - חייב להיות זהה לרוחב עבור עיגול מושלם */
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 15px; /* ריווח בין התמונה לטקסט */
@@ -42,7 +42,7 @@
 .service-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח בלי עיוות */
+    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח בלי עיוות ושומרת על הפרופורציות */
 }
 
 .service-content {
@@ -86,7 +86,7 @@
     }
     .service-img-container {
         width: 120px;
-        height: 120px;
+        height: 120px; /* גובה חייב להיות זהה לרוחב */
         margin-bottom: 10px;
     }
     .section-title {
