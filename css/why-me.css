@@ -47,7 +47,7 @@
 }
 
 .service-text p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
     line-height: 1.4;
 }
@@ -88,7 +88,7 @@
     }
     
      .service-text a {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         margin-top: 15px;
     }
 }
@@ -121,6 +121,6 @@
     }
 
     .service-text a {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 }
