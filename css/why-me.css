@@ -16,7 +16,7 @@
     grid-template-columns: repeat(3, 1fr); /* תמיד 3 כרטיסיות בשורה */
     gap: 0px; /* כמעט בלי רווח בכלל */
     margin: 0 auto;
-    max-width: 96%;
+    max-width: 80%;
 }
 
 .service-card {
@@ -34,8 +34,8 @@
 }
 
 .service-img-container {
-    width: 382px;  /* 450px פחות 15% */
-    height: 382px;
+    width: 340px;  /*
+    height: 340px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 10px;
