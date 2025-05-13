@@ -11,12 +11,13 @@
 }
 
 .services-grid {
-    display: grid;
-    gap: 40px;
+    display: flex; /* שימוש ב-Flexbox לשורה אחת */
+    justify-content: space-around; /* פיזור אחיד של הכרטיסיות */
+    align-items: flex-start; /* יישור אחיד מלמעלה */
     margin-top: 30px;
-    margin-left: 33.33%;
-    margin-right: 33.33%;
-    max-width: 66.66%;
+    margin-left: 10%; /* הקטנת הדחיפה משמאל */
+    margin-right: 10%; /* הקטנת הדחיפה מימין */
+    max-width: 80%; /* הגדלת הרוחב המקסימלי */
 }
 
 .service-card {
@@ -28,16 +29,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
-    min-height: 500px; /* הארכת גובה מינימלי */
+    padding: 30px;
+    text-align: center; /* מרכוז הטקסט בתוך הכרטיסיה */
+    width: 30%; /* בערך שליש מהרוחב כדי להתאים 3 בשורה */
+    min-width: 250px; /* רוחב מינימלי לכרטיסיה */
 }
 
 .service-img-container {
-    width: 240px;
-    height: 240px;
+    width: 180px; /* גודל התמונה */
+    height: 180px; /* גודל התמונה */
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,24 +52,17 @@
     object-fit: cover;
 }
 
-.service-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .service-content h3 {
-    font-size: 2.4em;
+    font-size: 1.8em;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .service-content p {
-    font-size: 1.6em;
+    font-size: 1.2em;
     color: #777;
-    line-height: 2;
-    margin-bottom: 30px;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .service-link {
@@ -74,8 +70,8 @@
     color: #007bff;
     text-decoration: none;
     margin-top: auto;
-    font-size: 1.3em;
-    padding: 10px 20px;
+    font-size: 1.1em;
+    padding: 8px 16px;
     border-radius: 5px;
     border: 1px solid #007bff;
 }
@@ -89,38 +85,51 @@
 /* התאמה למובייל (עד 768px רוחב) */
 @media (max-width: 768px) {
     .services-grid {
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
-        grid-template-columns: 1fr; /* כרטיסיה אחת בשורה במובייל */
-        gap: 60px;
+        flex-direction: column; /* אחת מתחת לשנייה במובייל */
+        align-items: center; /* מרכוז אופקי במובייל */
+        margin-left: 10%;
+        margin-right: 10%;
+        max-width: 80%;
     }
     .service-card {
-        padding: 60px;
-        min-height: auto;
+        width: 80%; /* תופסות יותר רוחב במובייל */
+        margin-bottom: 30px;
     }
     .service-img-container {
-        width: 280px;
-        height: 280px;
-        margin-bottom: 40px;
-    }
-    .service-content h3 {
-        font-size: 2.8em;
+        width: 220px;
+        height: 220px;
         margin-bottom: 25px;
     }
+    .service-content h3 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
     .service-content p {
-        font-size: 1.8em;
-        margin-bottom: 35px;
+        font-size: 1.4em;
+        margin-bottom: 25px;
     }
     .service-link {
-        font-size: 1.5em;
-        padding: 15px 30px;
+        font-size: 1.3em;
+        padding: 10px 20px;
     }
 }
 
 /* עבור מסכים גדולים (מעל 768px רוחב) */
 @media (min-width: 769px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr); /* שמירה על 3 כרטיסיות בטור */
+        display: flex; /* שימוש ב-Flexbox לשורה אחת */
+        justify-content: space-around; /* פיזור אחיד */
+        align-items: flex-start;
+        margin-left: 10%;
+        margin-right: 10%;
+        max-width: 80%;
+    }
+    .service-card {
+        width: 30%; /* בערך שליש מהרוחב */
+        min-width: 250px;
+    }
+    .service-img-container {
+        width: 200px; /* גודל תמונה גדול יותר במחשב */
+        height: 200px; /* גודל תמונה גדול יותר במחשב */
     }
 }
