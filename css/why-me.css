@@ -20,7 +20,8 @@
 .service-card {
     background-color: #fff; /* רקע לבן */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* הוספת צל עדין יותר */
+    box-shadow: none; /* הסרת אפקט הצל */
+    border: none; /* הסרת גבולות (border) אם קיימים */
     overflow: hidden;
     display: flex;
     flex-direction: column; /* סידור התוכן בעמודה */
