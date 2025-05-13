@@ -1,84 +1,100 @@
-/* גרסה מעודנת לסקשן "למה אנחנו" */
+/* Why Us Section - רקע אפור בהיר לרוחב כל המסך, מרווח מצומצם וללא רקע/הצללות לכרטיסים */
 .why-us {
-  padding: 1em 1.5em;
+  padding: 1.5em 2em;
   text-align: center;
-  background-color: #f7f7f7;
-  width: 100%;
+  background-color: #f0f0f0; /* רקע אפור בהיר */
+  width: 100%; /* רוחב מלא */
 }
 
 .why-us h2 {
-  font-size: 1.5em;
+  font-size: var(--font-size-h2);
   color: var(--color-primary);
-  margin-bottom: 0.8em;
+  margin-bottom: 1em;
   font-family: var(--font-family-base);
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .why-us .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.75em;
+  display: flex; /* שימוש ב-Flexbox לפריסה אופקית */
+  flex-direction: row; /* סידור בשורה */
+  justify-content: space-around; /* פיזור הפיצ'רים באופן אחיד */
+  align-items: stretch; /* מתיחת הפיצ'רים לגובה אחיד */
   max-width: var(--max-width-container);
   margin: 0 auto;
+  background-color: transparent; /* הסרת רקע הגריד */
+  gap: 1em; /* מרווח בין הפיצ'רים */
 }
 
 .why-us .feature {
-  flex: 1 1 30%;
-  padding: 0.75em;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  background-color: transparent;
+  background-color: transparent; /* הסרת רקע הכרטיסים */
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: none; /* הסרת הצללים */
+  text-align: center;
+  transition: none;
+  border: 1px solid #ddd; /* הוספת גבול עדין */
+}
+
+.why-us .feature:hover {
   box-shadow: none;
-  text-align: left;
+  border-color: #ccc;
 }
 
 .why-us .feature h3 {
-  font-size: 1.05em;
-  margin-bottom: 0.25em;
-  font-weight: 500;
+  font-size: 1.2em; /* הקטנה נוספת של גודל הפונט */
   color: var(--color-text);
+  margin-bottom: 0.3em;
+  font-family: var(--font-family-base);
+  font-weight: normal;
 }
 
 .why-us .feature p {
-  font-size: 0.9em;
+  font-size: var(--font-size-base);
   color: #555;
-  line-height: 1.35;
-  margin: 0;
+  line-height: 1.3; /* ריווח שורות הדוק יותר */
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-base);
 }
 
-/* רספונסיביות */
+/* רספונסיביות עבור Why Us */
 @media (max-width: 768px) {
   .why-us {
-    padding: 0.8em 1em;
+    padding: 1em;
   }
 
   .why-us h2 {
-    font-size: 1.35em;
-    margin-bottom: 0.6em;
+    font-size: 1.6em;
+    margin-bottom: 0.8em;
   }
 
   .why-us .features {
-    flex-direction: column;
-    gap: 0.5em;
+    display: grid; /* חזרה לפריסת גריד במסכים קטנים */
+    grid-template-columns: 1fr;
+    gap: 0.75em;
+    flex-direction: column; /* לוודא כיוון אנכי */
   }
 
   .why-us .feature {
-    flex: none;
-    padding: 0.7em 0.8em;
+    padding: 0.8em;
+    border-bottom: 1px solid #eee; /* גבול הפרדה אנכי */
     border-left: none;
     border-right: none;
-    border-radius: 0;
+    border-top: none;
+    margin-bottom: 0.75em;
+  }
+
+  .why-us .features .feature:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
   }
 
   .why-us .feature h3 {
-    font-size: 1em;
-    margin-bottom: 0.15em;
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
   }
 
   .why-us .feature p {
     font-size: 0.85em;
-    line-height: 1.4;
+    line-height: 1.4; /* קצת יותר ריווח בקטן */
   }
 }
