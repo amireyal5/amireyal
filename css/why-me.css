@@ -6,7 +6,7 @@
 }
 
 .section-title {
-  font-size: 2.5rem; /* הגדלתי את הפונט */
+  font-size: 3rem; /* הגדלתי ב-20% את גודל הכותרת */
   margin-bottom: 20px;
 }
 
@@ -20,8 +20,8 @@
 }
 
 .service-img img {
-  width: 247.5px; /* הגדלתי ב-10% */
-  height: 247.5px;
+  width: 297px; /* הגדלתי ב-20% את גודל התמונות */
+  height: 297px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0;
@@ -34,12 +34,12 @@
 }
 
 .service-text h3 {
-  font-size: 1.4rem; /* הגדלתי את הפונט */
+  font-size: 1.68rem; /* הגדלתי ב-20% את גודל הכותרות בתוך כל קוביה */
   margin: 5px 0;
 }
 
 .service-text p {
-  font-size: 1.1rem; /* הגדלתי את הפונט */
+  font-size: 1.32rem; /* הגדלתי ב-20% את גודל הטקסט */
   margin: 0;
   line-height: 1.4;
 }
@@ -78,14 +78,14 @@
   }
 
   .service-text h3 {
-    font-size: 1.3rem; /* את הפונט נקטין מעט */
+    font-size: 1.56rem; /* הגדלתי את הפונט במובייל ב-20% */
   }
 
   .service-text p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* הגדלתי את הפונט במובייל ב-20% */
   }
 
   .service-text a {
-    font-size: 1.1rem;
+    font-size: 1.3rem; /* הגדלתי את הפונט במובייל ב-20% */
   }
 }
