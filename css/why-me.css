@@ -1,48 +1,94 @@
-/* Services Grid Styles */
 .services-section {
-    width: 100%;
-    margin: 60px auto;
-    padding: 0 20px;
-    direction: rtl;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Assistant', sans-serif; /* דוגמה לגופן עברי נקי - יש לוודא שהגופן קיים או מיובא */
 }
 
 .section-title {
-    text-align: center;
-    color: #2c3e50;
-    font-size: 2.2em;
-    margin-bottom: 40px;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: translateX(50%);
-    width: 80px;
-    height: 3px;
-    background: #2980b9;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .service-card {
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    background: white;
+    display: flex;
+    flex-direction: column;
 }
 
-/* שאר הקוד CSS נשאר זהה לקוד הקודם ששלחתי */
+.service-img-container {
+    width: 100%;
+    height: 200px; /* גובה קבוע לתמונות */
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח בלי עיוות */
+}
+
+.service-content {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* מאפשר לתוכן לגדול ולמלא את השטח הנותר בכרטיס */
+}
+
+.service-content h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.service-link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: auto; /* דוחף את הקישור לתחתית ה-content */
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* עמודה אחת במובייל */
+    }
+    .service-img-container {
+        height: 150px; /* גובה קטן יותר לתמונות במובייל */
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .service-content h3 {
+        font-size: 1.3em;
+    }
+    .service-content p {
+        font-size: 0.9em;
+    }
+}
