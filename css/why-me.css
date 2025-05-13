@@ -1,7 +1,9 @@
-/* Why Us Section - ללא רקע והצללות, עם מרווח מצומצם */
+/* Why Us Section - רקע אפור בהיר לרוחב כל המסך, מרווח מצומצם וללא רקע/הצללות לכרטיסים */
 .why-us {
   padding: 2em;
   text-align: center;
+  background-color: #f0f0f0; /* רקע אפור בהיר */
+  width: 100%; /* רוחב מלא */
 }
 
 .why-us h2 {
@@ -15,7 +17,7 @@
 .why-us .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1em; /* מרווח מצומצם יותר בין הכרטיסים */
+  gap: 1em; /* מרווח מצומצם */
   max-width: var(--max-width-container);
   margin: 0 auto;
   background-color: transparent; /* הסרת רקע הגריד */
@@ -24,14 +26,14 @@
 .why-us .feature {
   background-color: transparent; /* הסרת רקע הכרטיסים */
   padding: 1.5em;
-  border-radius: 8px; /* אם אתה רוצה לשמור על פינות מעוגלות */
+  border-radius: 8px;
   box-shadow: none; /* הסרת הצללים */
   text-align: center;
-  transition: none; /* הסרת המעבר בהhover אם היה */
+  transition: none;
 }
 
 .why-us .feature:hover {
-  box-shadow: none; /* מוודא שאין הצללה גם במצב ריחוף */
+  box-shadow: none;
 }
 
 .why-us .feature h3 {
@@ -50,7 +52,7 @@
   font-weight: var(--font-weight-base);
 }
 
-/* רספונסיביות עבור Why Us - מרווח מצומצם */
+/* רספונסיביות עבור Why Us */
 @media (max-width: 768px) {
   .why-us {
     padding: 1em;
