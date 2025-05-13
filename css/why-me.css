@@ -1,21 +1,21 @@
 .services-section {
   text-align: center;
-  padding: 30px 10px; /* עדכון רווח כללי */
-  max-width: 1200px; /* הגדלת המיכל הכללי */
+  padding: 30px 10px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 3.2rem; /* הגדלת הפונט של הכותרת */
+  font-size: 3.2rem;
   margin-bottom: 20px;
-  font-weight: bold; /* עיצוב חדש לכותרת */
+  font-weight: bold;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  gap: 25px; /* הוספת רווח אסתטי בין התמונות */
+  gap: 25px;
   justify-items: center;
   align-items: start;
 }
@@ -25,7 +25,7 @@
 }
 
 .service-img img {
-  width: 360px; /* הגדלת התמונות */
+  width: 360px;
   height: 360px;
   border-radius: 50%;
   object-fit: cover;
@@ -38,23 +38,31 @@
 }
 
 .service-text h3 {
-  font-size: 1.85rem; /* הגדלה של כותרות הטקסט */
+  font-size: 1.85rem;
   margin: 5px 0;
 }
 
 .service-text p {
-  font-size: 1.5rem; /* הגדלה של הטקסט עצמו */
+  font-size: 1.5rem;
   margin: 0;
   line-height: 1.4;
 }
 
 .service-text a {
   display: block;
-  margin-top: 10px; /* הגדלתי את המרחק */
+  margin-top: 10px;
   text-decoration: none;
-  color: #007BFF;
+  color: #70a1af; /* צבע הקישור החדש */
   font-weight: bold;
 }
+
+.service-text a::before {
+  content: '»'; /* האייקון לפני הקישור */
+  margin-left: -5px;
+  margin-right: 5px;
+  color: #70a1af;
+}
+
 
 /* רווח נוסף של 10px בין התמונות בפריסת גריד רגילה */
 .services-grid .service-item {
@@ -64,22 +72,22 @@
 /* רספונסיביות למובייל */
 @media screen and (max-width: 768px) {
   .services-grid {
-    display: flex; /* מעבר לפלקס כדי לסדר את ה-service-item אחד מתחת לשני */
+    display: flex;
     flex-direction: column;
   }
 
   .service-item {
-    width: 100%; /* כל פריט יתפוס את כל הרוחב */
-    margin-bottom: 20px; /* הוספת רווח בין כל יחידה של תמונה וטקסט */
-    text-align: center; /* מרכוז הטקסט בתוך כל יחידה */
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .service-img img {
-    width: 70vw; /* רוחב התמונה יהיה 70% מרוחב המסך */
-    height: 70vw; /* גובה התמונה יהיה זהה לרוחב כדי ליצור עיגול */
-    border-radius: 50%; /* יוצר עיגול מושלם */
-    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח העגול */
-    margin: 0 auto 10px auto; /* מרכוז אופקי של התמונה והוספת מרווח מתחת */
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 10px auto;
   }
 
   .service-text {
@@ -87,17 +95,17 @@
   }
 
   .service-text h3 {
-    font-size: 1.6rem; /* הקטנה של גודל הפונט של הכותרת */
+    font-size: 1.6rem;
     margin-top: 10px;
   }
 
   .service-text p {
-    font-size: 1.3rem; /* הקטנה של גודל הפונט של הטקסט */
+    font-size: 1.3rem;
     line-height: 1.4;
   }
 
   .service-text a {
-    font-size: 1.4rem; /* הקטנה של גודל הפונט של הקישור */
+    font-size: 1.4rem;
     margin-top: 15px;
   }
 }
