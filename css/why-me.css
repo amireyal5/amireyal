@@ -59,7 +59,7 @@
 .service-text a::before {
   content: '»'; /* האייקון לפני הקישור */
   margin-left: -5px;
-  margin-right: 5px;
+  margin-right: 5px; /* הוספת רווח מימין לאייקון */
   color: #70a1af;
 }
 
