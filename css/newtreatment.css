@@ -1,127 +1,58 @@
-/* === קובץ: css/treatment.css === */
+/* css/treatment.css */
 
 /* משתנים עיצוביים */
 :root {
-    --color-primary: #6A8E7F;
-    --color-secondary: #e3f2fd;
-    --color-accent: #ffe082;
-    --color-text: #2c3e50;
-    --color-background: #fdfdfd;
-    --color-border: #dfe6e9;
-    --font-family-headings: 'Playfair Display', serif;
-    --font-family-base: 'Open Sans', sans-serif;
-    --font-weight-headings: 700;
-    --font-weight-base: 400;
-    --font-size-base: 1rem;
-    --line-height-base: 1.8;
-    --border-radius-base: 16px;
-    --transition-speed-base: 0.3s;
-    --shadow-md: 0 6px 14px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-    --max-width-container: 1100px;
+  --color-primary: #a9746e; /* ורוד-חמרה רגוע */
+  --color-accent: #e7d7c9;  /* בז’-חול רך */
+  --color-background: #fffaf6; /* לבן חמים */
+  --color-text: #4b3e3e;
+  --font-family-base: 'Assistant', sans-serif;
+  --font-size-base: 1.15rem;
+  --line-height-base: 1.9;
+  --spacing-section: 4em;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
 }
 
 /* אזור טיפולים */
 .treatment-section {
-    padding: 80px 0;
-    background: linear-gradient(to bottom, #f7f9fb, #ffffff);
-    color: var(--color-text);
-    text-align: center;
+  padding: var(--spacing-section) 1.5em;
+  background-color: var(--color-background);
+  text-align: start;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-.treatment-section .container {
-    max-width: var(--max-width-container);
-    margin: 0 auto;
-    padding: 0 24px;
+.treatment-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+  color: var(--color-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.3em;
 }
 
-/* גריד טיפולים */
-.treatment-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
-    margin-top: 40px;
+.treatment-section p {
+  margin-bottom: 1.4em;
+  color: var(--color-text);
 }
 
-/* כרטיס טיפול */
-.treatment-item {
-    background-color: #ffffff;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-base);
-    box-shadow: var(--shadow-md);
-    transition: transform var(--transition-speed-base) ease, box-shadow var(--transition-speed-base) ease;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.treatment-item:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-}
-
-.item-title {
-    font-family: var(--font-family-headings);
-    font-size: 1.4rem;
-    font-weight: var(--font-weight-headings);
-    padding: 20px;
-    background-color: var(--color-secondary);
-    border-bottom: 1px solid var(--color-border);
-    color: var(--color-text);
-}
-
-.item-text {
-    font-family: var(--font-family-base);
-    padding: 20px;
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
-    color: #4b4b4b;
-}
-
-/* אייקונים */
-.treatment-section svg,
-.treatment-section img[src*="icon"] {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 16px;
-    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.1));
-    color: var(--color-primary);
-}
-
-/* טכניקות */
-.techniques-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
-    margin-top: 60px;
-}
-
-.technique-name {
-    background-color: #ffffff;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-base);
-    padding: 24px;
-    text-align: center;
-    font-family: var(--font-family-headings);
-    font-weight: var(--font-weight-headings);
-    font-size: 1.2rem;
-    box-shadow: var(--shadow-md);
-    transition: transform var(--transition-speed-base), box-shadow var(--transition-speed-base);
-}
-
-.technique-name:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
+.treatment-section img,
+.treatment-section svg {
+  display: none; /* בלי אייקונים בשלב זה */
 }
 
 /* מובייל */
 @media (max-width: 768px) {
-    .treatment-section {
-        padding: 50px 16px;
-    }
-
-    .treatment-grid,
-    .techniques-grid {
-        grid-template-columns: 1fr;
-    }
+  .treatment-section {
+    padding: 3em 1em;
+  }
 }
