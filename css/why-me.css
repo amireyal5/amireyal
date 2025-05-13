@@ -14,14 +14,18 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: auto;
   gap: 25px; /* הוספת רווח אסתטי בין התמונות */
   justify-items: center;
   align-items: start;
 }
 
+.service-item {
+  /* סגנונות כלליים (יכולים להיות ריקים בשלב זה) */
+}
+
 .service-img img {
-  width: 360px; /* הגדלת התמונות ב-10% (327px * 1.1) */
+  width: 360px; /* הגדלת התמונות */
   height: 360px;
   border-radius: 50%;
   object-fit: cover;
@@ -52,38 +56,48 @@
   font-weight: bold;
 }
 
-/* רווח נוסף של 10px בין התמונות */
-.services-grid .service-img {
+/* רווח נוסף של 10px בין התמונות בפריסת גריד רגילה */
+.services-grid .service-item {
   margin-bottom: 10px;
 }
 
 /* רספונסיביות למובייל */
 @media screen and (max-width: 768px) {
   .services-grid {
-    grid-template-columns: 1fr; /* כל עמודה בשורה נפרדת */
-    grid-template-rows: auto;
+    display: flex; /* מעבר לפלקס כדי לסדר את ה-service-item אחד מתחת לשני */
+    flex-direction: column;
+  }
+
+  .service-item {
+    width: 100%; /* כל פריט יתפוס את כל הרוחב */
+    margin-bottom: 20px; /* הוספת רווח בין כל יחידה של תמונה וטקסט */
+    text-align: center; /* מרכוז הטקסט בתוך כל יחידה */
   }
 
   .service-img img {
-    width: 100%; /* התמונות יתפוסו את כל הרוחב */
+    width: 80%; /* התאמת רוחב התמונה בתוך הפריט */
     height: auto;
-    margin-bottom: 20px; /* רווח נוסף */
+    border-radius: 50%; /* שמירה על הצורה האובלית */
+    object-fit: cover;
+    margin: 0 auto 10px auto; /* מרכוז אופקי של התמונה והוספת מרווח מתחת */
   }
 
   .service-text {
-    text-align: center; /* טקסט ממורכז */
     margin: 0;
   }
 
   .service-text h3 {
-    font-size: 1.7rem; /* הגדלתי את הפונט במובייל */
+    font-size: 1.7rem;
+    margin-top: 10px;
   }
 
   .service-text p {
-    font-size: 1.4rem; /* הגדלתי את הפונט במובייל */
+    font-size: 1.4rem;
+    line-height: 1.4;
   }
 
   .service-text a {
-    font-size: 1.5rem; /* הגדלתי את הפונט במובייל */
+    font-size: 1.5rem;
+    margin-top: 15px;
   }
 }
