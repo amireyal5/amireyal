@@ -1,111 +1,125 @@
 .services-section {
-  text-align: center;
-  padding: 30px 10px;
-  max-width: 1200px;
-  margin: 0 auto;
+    text-align: center;
+    padding: 30px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .section-title {
-  font-size: 3.2rem;
-  margin-bottom: 20px;
-  font-weight: bold;
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 25px;
-  justify-items: center;
-  align-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 25px;
+    justify-items: center;
+    align-items: start;
 }
 
 .service-item {
-  /* סגנונות כלליים (יכולים להיות ריקים בשלב זה) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .service-img img {
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 0 10px 0;
 }
 
 .service-text {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .service-text h3 {
-  font-size: 1.85rem;
-  margin: 5px 0;
+    font-size: 1.85rem;
+    margin: 5px 0;
 }
 
 .service-text p {
-  font-size: 1.5rem;
-  margin: 0;
-  line-height: 1.4;
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .service-text a {
-  display: block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #70a1af; /* צבע הקישור החדש */
-  font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #70a1af;
+    font-weight: bold;
 }
 
 .service-text a::before {
-  content: '»'; /* האייקון לפני הקישור */
-  margin-left: -5px;
-  margin-right: 5px; /* הוספת רווח מימין לאייקון */
-  color: #70a1af;
-}
-
-
-/* רווח נוסף של 10px בין התמונות בפריסת גריד רגילה */
-.services-grid .service-item {
-  margin-bottom: 10px;
+    content: '»';
+    margin-left: -5px;
+    margin-right: 5px;
+    color: #70a1af;
 }
 
 /* רספונסיביות למובייל */
 @media screen and (max-width: 768px) {
-  .services-grid {
-    display: flex;
-    flex-direction: column;
-  }
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .service-item {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+    .service-item {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
-  .service-img img {
-    width: 70vw;
-    height: 70vw;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 10px auto;
-  }
+    .service-img img {
+        width: 90vw;
+        height: 90vw;
+        margin: 0 auto 10px auto;
+    }
+    
+     .service-text a {
+        font-size: 1.4rem;
+        margin-top: 15px;
+    }
+}
 
-  .service-text {
-    margin: 0;
-  }
+/* נקודת מעבר נוספת עבור טאבלטים */
+@media screen and (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 עמודות בטאבלט */
+    }
 
-  .service-text h3 {
-    font-size: 1.6rem;
-    margin-top: 10px;
-  }
+    .service-img img {
+        width: 80vw; /* רוחב תמונה יחסי */
+        height: 80vw;
+    }
+}
 
-  .service-text p {
-    font-size: 1.3rem;
-    line-height: 1.4;
-  }
+/* מסכים גדולים מאוד */
+@media screen and (min-width: 1200px) {
+    .service-img img {
+        width: 400px;
+        height: 400px;
+    }
 
-  .service-text a {
-    font-size: 1.4rem;
-    margin-top: 15px;
-  }
+    .service-text h3 {
+        font-size: 2rem;
+    }
+
+    .service-text p {
+        font-size: 1.7rem;
+    }
+
+    .service-text a {
+        font-size: 1.6rem;
+    }
 }
