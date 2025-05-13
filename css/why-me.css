@@ -1,12 +1,12 @@
 .services-section {
   text-align: center;
   padding: 20px 10px;
-  max-width: 800px; /* מיכל מצומצם */
+  max-width: 900px; /* מיכל מצומצם */
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.5rem; /* הגדלתי את הפונט */
   margin-bottom: 20px;
 }
 
@@ -20,8 +20,8 @@
 }
 
 .service-img img {
-  width: 225px; /* פי 1.5 מה-150px הקודם */
-  height: 225px;
+  width: 247.5px; /* הגדלתי ב-10% */
+  height: 247.5px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0;
@@ -34,12 +34,12 @@
 }
 
 .service-text h3 {
-  font-size: 1.1rem;
+  font-size: 1.4rem; /* הגדלתי את הפונט */
   margin: 5px 0;
 }
 
 .service-text p {
-  font-size: 0.95rem;
+  font-size: 1.1rem; /* הגדלתי את הפונט */
   margin: 0;
   line-height: 1.4;
 }
@@ -50,4 +50,42 @@
   text-decoration: none;
   color: #007BFF;
   font-weight: bold;
+}
+
+/* רווח של 3em בין שורות 2 ו-3 */
+.service-text:nth-child(3),
+.service-text:nth-child(4),
+.service-text:nth-child(5) {
+  margin-top: 3em;
+}
+
+/* רספונסיביות למובייל */
+@media screen and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* כל עמודה תהיה בשורה נפרדת */
+    grid-template-rows: auto;
+  }
+
+  .service-img img {
+    width: 100%; /* התמונות יתפוסו את כל הרוחב */
+    height: auto;
+    margin-bottom: 20px; /* רווח בין התמונה לטקסט */
+  }
+
+  .service-text {
+    text-align: center; /* טקסט יהיה ממורכז */
+    margin: 0;
+  }
+
+  .service-text h3 {
+    font-size: 1.3rem; /* את הפונט נקטין מעט */
+  }
+
+  .service-text p {
+    font-size: 1rem;
+  }
+
+  .service-text a {
+    font-size: 1.1rem;
+  }
 }
