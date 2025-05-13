@@ -1,22 +1,24 @@
 /* css/treatment.css */
 .treatment-section {
-    padding: 60px 0; /* Reduced vertical padding */
+    padding: 60px 0;
     color: var(--color-text);
-    margin-bottom: 40px; /* Reduced margin */
+    margin-bottom: 40px;
     text-align: center;
     background-color: var(--color-background);
+    /* Add a subtle background gradient */
+    background: linear-gradient(to bottom, #f8f8f8, #ffffff);
 }
 
 .treatment-section .container {
-    padding: 0 20px; /* Reduced horizontal padding */
-    max-width: var(--max-width-container); /* Keep max-width if defined */
+    padding: 0 20px;
+    max-width: var(--max-width-container);
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .treatment-section {
         padding: 30px 15px;
-        margin-bottom: 30px; /* Reduced margin on mobile */
+        margin-bottom: 30px;
     }
 
     .treatment-section .container {
@@ -26,14 +28,14 @@
 
 .treatment-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Stack items vertically on all screen sizes */
-    gap: 20px; /*保持 ריווח*/
+    grid-template-columns: 1fr;
+    gap: 20px;
     align-items: center;
 }
 
 @media (max-width: 768px) {
     .treatment-grid {
-        grid-template-columns: 1fr; /* Ensure single column on small screens */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 }
@@ -41,18 +43,18 @@
 .treatment-item {
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    /* width: 80%;  Remove fixed width, allow to expand within container */
-    margin: 0 auto; /* Center the items */
-    max-width: 600px; /* Limit the maximum width of each item */
+    background-color: #ffffff; /* White background for items */
+    border-radius: 12px; /* Increased border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Refined shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition */
+    margin: 0 auto;
+    max-width: 600px;
+    border: 1px solid #ededed; /* Added border */
 }
 
 .treatment-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px); /* Increased lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
 }
 
 .item-title,
@@ -64,26 +66,29 @@
 
 .item-title {
     font-weight: var(--font-weight-headings);
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* Increased font size */
     background-color: transparent;
-    border-bottom: 1px solid var(--color-border-light);
+    border-bottom: 2px solid #e0e0e0; /* Stronger border */
     border-right: none;
-    padding-bottom: 15px;
+    padding-bottom: 18px; /* Increased padding */
     margin-bottom: 0;
+    /* Add a subtle text shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
     .item-title {
-        border-bottom: 1px solid var(--color-border-light);
+        border-bottom: 1px solid #e0e0e0;
     }
 }
 
 .item-text {
     font-size: var(--font-size-base);
-    line-height: 1.7;
+    line-height: 1.8; /* Improved line height */
     font-weight: var(--font-weight-base);
-    padding-top: 15px;
+    padding-top: 18px; /* Increased padding */
     border-bottom: none;
+    color: #555; /* Slightly darker text for better readability */
 }
 
 .treatment-item:last-child .item-text {
@@ -93,17 +98,19 @@
 .treatment-section svg,
 .treatment-section img[src*="icon"] {
     filter: none;
-    width: 32px;
-    height: 32px;
-    margin-bottom: 15px;
+    width: 40px; /* Increased icon size */
+    height: 40px;
+    margin-bottom: 20px; /* Increased margin */
     color: var(--color-primary);
+    /* Add a subtle shadow to the icons */
+    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.1));
 }
 
 .techniques-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2em;
-    margin-top: 40px; /* Reduced margin-top to bring techniques closer */
+    margin-top: 50px; /* Adjusted margin */
 }
 
 .technique-name {
@@ -113,19 +120,20 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    border-radius: var(--border-radius-base);
-    transition: box-shadow var(--transition-speed-base) ease, transform 0.2s ease-in-out;
+    padding: 25px; /* Increased padding */
+    border-radius: 12px; /* Increased border-radius */
+    transition: box-shadow var(--transition-speed-base) ease, transform 0.3s ease-in-out; /* Added transform */
     font-family: var(--font-family-headings);
     font-weight: var(--font-weight-headings);
-    font-size: 1.1rem;
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border-light);
+    font-size: 1.2rem; /* Increased font size */
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Added border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Added shadow */
 }
 
 .technique-name:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow */
+    transform: translateY(-4px); /* Increased lift */
 }
 
 @media (max-width: 768px) {
