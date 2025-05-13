@@ -1,24 +1,44 @@
 /* css/treatment.css */
+
+/* משתנים עיצוביים (ניתן להתאים) */
+:root {
+    --color-primary: #4CAF50; /* ירוק מנטה / צבע акцент */
+    --color-secondary: #f0f4c3; /* צהוב בהיר מאוד / צבע משני */
+    --color-text: #333; /* טקסט כהה יותר */
+    --color-background: #fafafa; /* רקע אפור בהיר מאוד */
+    --color-border-light: #e0e0e0;
+    --font-family-headings: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-base: 'Open Sans', sans-serif;
+    --font-weight-headings: 600; /* חצי מודגש */
+    --font-weight-base: 400;
+    --font-size-base: 1rem; /* 16px */
+    --line-height-base: 1.7;
+    --border-radius-base: 12px;
+    --transition-speed-base: 0.3s;
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12); /* צל בינוני */
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15); /* צל גדול */
+}
+
 .treatment-section {
-    padding: 60px 0;
+    padding: 80px 0;
     color: var(--color-text);
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     text-align: center;
     background-color: var(--color-background);
-    /* Add a subtle background gradient */
+    /* רקע עם שיפוע עדין */
     background: linear-gradient(to bottom, #f8f8f8, #ffffff);
 }
 
 .treatment-section .container {
     padding: 0 20px;
-    max-width: var(--max-width-container);
+    max-width: var(--max-width-container); /* שמור על מקסימום רוחב אם מוגדר */
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .treatment-section {
-        padding: 30px 15px;
-        margin-bottom: 30px;
+        padding: 40px 15px;
+        margin-bottom: 40px;
     }
 
     .treatment-section .container {
@@ -28,8 +48,8 @@
 
 .treatment-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr; /* עמודה אחת בלבד */
+    gap: 30px; /* הגדלנו את המרווח */
     align-items: center;
 }
 
@@ -43,52 +63,52 @@
 .treatment-item {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff; /* White background for items */
-    border-radius: 12px; /* Increased border-radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Refined shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition */
+    background-color: #ffffff;
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-speed-base) ease, box-shadow var(--transition-speed-base) ease;
     margin: 0 auto;
-    max-width: 600px;
-    border: 1px solid #ededed; /* Added border */
+    max-width: 600px; /* רוחב מקסימלי לפריט */
+    border: 1px solid var(--color-border-light);
 }
 
 .treatment-item:hover {
-    transform: translateY(-6px); /* Increased lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+    transform: translateY(-8px); /* הגדלנו את האפקט */
+    box-shadow: var(--shadow-lg); /* צל גדול יותר */
 }
 
 .item-title,
 .item-text {
-    padding: 25px;
+    padding: 30px; /* הגדלנו ריפוד */
     color: var(--color-text);
     font-family: var(--font-family-headings);
 }
 
 .item-title {
     font-weight: var(--font-weight-headings);
-    font-size: 1.3rem; /* Increased font size */
+    font-size: 1.5rem; /* הגדלנו גודל פונט */
     background-color: transparent;
-    border-bottom: 2px solid #e0e0e0; /* Stronger border */
+    border-bottom: 2px solid var(--color-border-light);
     border-right: none;
-    padding-bottom: 18px; /* Increased padding */
+    padding-bottom: 20px;
     margin-bottom: 0;
-    /* Add a subtle text shadow */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    letter-spacing: -0.02em; /* שיפור קל של ריווח אותיות */
 }
 
 @media (max-width: 768px) {
     .item-title {
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid var(--color-border-light);
     }
 }
 
 .item-text {
     font-size: var(--font-size-base);
-    line-height: 1.8; /* Improved line height */
+    line-height: 1.8;
     font-weight: var(--font-weight-base);
-    padding-top: 18px; /* Increased padding */
+    padding-top: 20px;
     border-bottom: none;
-    color: #555; /* Slightly darker text for better readability */
+    color: #444; /* גוון טקסט מעט כהה יותר */
 }
 
 .treatment-item:last-child .item-text {
@@ -98,19 +118,18 @@
 .treatment-section svg,
 .treatment-section img[src*="icon"] {
     filter: none;
-    width: 40px; /* Increased icon size */
-    height: 40px;
-    margin-bottom: 20px; /* Increased margin */
+    width: 48px; /* הגדלנו גודל אייקון */
+    height: 48px;
+    margin-bottom: 25px; /* הגדלנו מרווח */
     color: var(--color-primary);
-    /* Add a subtle shadow to the icons */
     filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.1));
 }
 
 .techniques-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* רוחב מינימלי מוגדל */
     gap: 2em;
-    margin-top: 50px; /* Adjusted margin */
+    margin-top: 60px;
 }
 
 .technique-name {
@@ -120,20 +139,20 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 25px; /* Increased padding */
-    border-radius: 12px; /* Increased border-radius */
-    transition: box-shadow var(--transition-speed-base) ease, transform 0.3s ease-in-out; /* Added transform */
+    padding: 30px;
+    border-radius: var(--border-radius-base);
+    transition: box-shadow var(--transition-speed-base) ease, transform var(--transition-speed-base) ease;
     font-family: var(--font-family-headings);
     font-weight: var(--font-weight-headings);
-    font-size: 1.2rem; /* Increased font size */
-    background-color: #ffffff; /* White background */
-    border: 1px solid #e0e0e0; /* Added border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Added shadow */
+    font-size: 1.3rem; /* הגדלנו גודל פונט */
+    background-color: #ffffff;
+    border: 1px solid var(--color-border-light);
+    box-shadow: var(--shadow-md);
 }
 
 .technique-name:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow */
-    transform: translateY(-4px); /* Increased lift */
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
 }
 
 @media (max-width: 768px) {
