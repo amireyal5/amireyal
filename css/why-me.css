@@ -1,15 +1,20 @@
 /* Why Us Section - רקע אפור בהיר לרוחב כל המסך, מרווח מצומצם וללא רקע/הצללות לכרטיסים */
 .why-us {
-  padding: 2em;
+  display: flex; /* שימוש ב-Flexbox */
+  flex-direction: column; /* סידור אנכי של האלמנטים */
+  justify-content: center; /* יישור אנכי למרכז */
+  align-items: center; /* יישור אופקי למרכז (אם צריך) */
+  padding: 1.5em 2em; /* צמצום ה-padding האנכי */
   text-align: center;
   background-color: #f0f0f0; /* רקע אפור בהיר */
   width: 100%; /* רוחב מלא */
+  min-height: auto; /* מאפשר התכווצות לגובה התוכן */
 }
 
 .why-us h2 {
   font-size: var(--font-size-h2);
   color: var(--color-primary);
-  margin-bottom: 1.5em;
+  margin-bottom: 1em; /* צמצום המרווח מתחת לכותרת */
   font-family: var(--font-family-base);
   font-weight: normal;
 }
@@ -17,7 +22,7 @@
 .why-us .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1em; /* מרווח מצומצם */
+  gap: 0.75em; /* צמצום המרווח בין הפיצ'רים */
   max-width: var(--max-width-container);
   margin: 0 auto;
   background-color: transparent; /* הסרת רקע הגריד */
@@ -25,20 +30,18 @@
 
 .why-us .feature {
   background-color: transparent; /* הסרת רקע הכרטיסים */
-  padding: 1.5em;
+  padding: 1em; /* צמצום ה-padding הפנימי */
   border-radius: 8px;
   box-shadow: none; /* הסרת הצללים */
   text-align: center;
   transition: none;
   border-bottom: 1px solid #eee; /* הוספת גבול תחתון דק */
-  padding-bottom: 1em; /* פיצוי על הגבול */
-  margin-bottom: 1em; /* פיצוי על הגבול */
+  margin-bottom: 0.75em; /* צמצום המרווח מתחת לפיצ'ר */
 }
 
 .why-us .features .feature:last-child {
   border-bottom: none;
   margin-bottom: 0;
-  padding-bottom: 1.5em; /* החזרה ל-padding המקורי */
 }
 
 .why-us .feature:hover {
@@ -46,9 +49,9 @@
 }
 
 .why-us .feature h3 {
-  font-size: 1.5em;
+  font-size: 1.3em; /* הקטנת גודל הפונט של הכותרת */
   color: var(--color-text);
-  margin-bottom: 0.3em; /* הקטנת המרווח */
+  margin-bottom: 0.2em; /* צמצום המרווח מתחת לכותרת הפיצ'ר */
   font-family: var(--font-family-base);
   font-weight: normal;
 }
@@ -56,7 +59,7 @@
 .why-us .feature p {
   font-size: var(--font-size-base);
   color: #555;
-  line-height: 1.4; /* הקטנת ריווח השורות */
+  line-height: 1.3; /* הידוק נוסף של ריווח השורות */
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-base);
 }
@@ -68,35 +71,33 @@
   }
 
   .why-us h2 {
-    font-size: 1.8em;
-    margin-bottom: 1em;
+    font-size: 1.6em;
+    margin-bottom: 0.8em;
   }
 
   .why-us .features {
     grid-template-columns: 1fr;
-    gap: 1em; /* מרווח מצומצם גם במסכים קטנים */
+    gap: 0.5em; /* צמצום המרווח בין הפיצ'רים */
   }
 
   .why-us .feature {
-    padding: 1em;
-    border-bottom: 1px solid #eee; /* הוספת גבול תחתון דק */
-    padding-bottom: 1em; /* פיצוי על הגבול */
-    margin-bottom: 1em; /* פיצוי על הגבול */
+    padding: 0.8em; /* צמצום ה-padding הפנימי */
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0.5em; /* צמצום המרווח מתחת לפיצ'ר */
   }
 
   .why-us .features .feature:last-child {
     border-bottom: none;
     margin-bottom: 0;
-    padding-bottom: 1em; /* החזרה ל-padding המקורי */
   }
 
   .why-us .feature h3 {
-    font-size: 1.3em;
-    margin-bottom: 0.3em; /* הקטנת המרווח */
+    font-size: 1.2em;
+    margin-bottom: 0.15em; /* צמצום נוסף */
   }
 
   .why-us .feature p {
-    font-size: 0.9em;
-    line-height: 1.4; /* הקטנת ריווח השורות */
+    font-size: 0.85em;
+    line-height: 1.3; /* הידוק נוסף */
   }
 }
