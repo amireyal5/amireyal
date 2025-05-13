@@ -1,12 +1,12 @@
 .services-section {
   text-align: center;
   padding: 20px 10px;
-  max-width: 900px; /* מיכל מצומצם */
+  max-width: 1000px; /* הגדלת המיכל הכללי */
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 3rem; /* הגדלתי ב-20% את גודל הכותרת */
+  font-size: 3rem; /* כותרת גדולה */
   margin-bottom: 20px;
 }
 
@@ -14,14 +14,14 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
-  gap: 0;
+  gap: 15px; /* רווח אסתטי בין התמונות */
   justify-items: center;
   align-items: start;
 }
 
 .service-img img {
-  width: 297px; /* הגדלתי ב-20% את גודל התמונות */
-  height: 297px;
+  width: 327px; /* הגדלת התמונות ב-10% (297px * 1.1) */
+  height: 327px; /* הגדלה מתאימה לגובה */
   border-radius: 50%;
   object-fit: cover;
   margin: 0;
@@ -34,12 +34,12 @@
 }
 
 .service-text h3 {
-  font-size: 1.68rem; /* הגדלתי ב-20% את גודל הכותרות בתוך כל קוביה */
+  font-size: 1.68rem; /* כותרת בגודל מוגדל */
   margin: 5px 0;
 }
 
 .service-text p {
-  font-size: 1.32rem; /* הגדלתי ב-20% את גודל הטקסט */
+  font-size: 1.32rem; /* טקסט בגודל מוגדל */
   margin: 0;
   line-height: 1.4;
 }
@@ -62,7 +62,7 @@
 /* רספונסיביות למובייל */
 @media screen and (max-width: 768px) {
   .services-grid {
-    grid-template-columns: 1fr; /* כל עמודה תהיה בשורה נפרדת */
+    grid-template-columns: 1fr; /* כל עמודה בשורה נפרדת */
     grid-template-rows: auto;
   }
 
@@ -73,7 +73,7 @@
   }
 
   .service-text {
-    text-align: center; /* טקסט יהיה ממורכז */
+    text-align: center; /* טקסט ממורכז */
     margin: 0;
   }
 
