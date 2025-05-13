@@ -40,10 +40,6 @@
     border-right: 2px solid #ddd;
   }
 
-  .why-us .feature:last-child {
-    border-right: none;
-  }
-
   .why-us .feature:hover {
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -78,7 +74,7 @@
 
     .why-us .features {
       flex-direction: column;
-      gap: 1.5em;
+      gap: 1em; /* שינוי: הקטנת המרווח ל-1em */
       flex-wrap: wrap;
     }
 
@@ -91,8 +87,8 @@
       border-bottom: 1px solid #eee;
     }
 
-    .why-us .features .feature:last-child {
-      border-bottom: none;
+    .why-us .features .feature:not(:last-child) {
+      border-bottom: 1px solid #eee;
     }
 
     .why-us .feature h3 {
