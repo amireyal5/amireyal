@@ -30,6 +30,15 @@
   box-shadow: none; /* הסרת הצללים */
   text-align: center;
   transition: none;
+  border-bottom: 1px solid #eee; /* הוספת גבול תחתון דק */
+  padding-bottom: 1em; /* פיצוי על הגבול */
+  margin-bottom: 1em; /* פיצוי על הגבול */
+}
+
+.why-us .features .feature:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 1.5em; /* החזרה ל-padding המקורי */
 }
 
 .why-us .feature:hover {
@@ -39,7 +48,7 @@
 .why-us .feature h3 {
   font-size: 1.5em;
   color: var(--color-text);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em; /* הקטנת המרווח */
   font-family: var(--font-family-base);
   font-weight: normal;
 }
@@ -47,7 +56,7 @@
 .why-us .feature p {
   font-size: var(--font-size-base);
   color: #555;
-  line-height: var(--line-height-base);
+  line-height: 1.4; /* הקטנת ריווח השורות */
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-base);
 }
@@ -70,13 +79,24 @@
 
   .why-us .feature {
     padding: 1em;
+    border-bottom: 1px solid #eee; /* הוספת גבול תחתון דק */
+    padding-bottom: 1em; /* פיצוי על הגבול */
+    margin-bottom: 1em; /* פיצוי על הגבול */
+  }
+
+  .why-us .features .feature:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 1em; /* החזרה ל-padding המקורי */
   }
 
   .why-us .feature h3 {
     font-size: 1.3em;
+    margin-bottom: 0.3em; /* הקטנת המרווח */
   }
 
   .why-us .feature p {
     font-size: 0.9em;
+    line-height: 1.4; /* הקטנת ריווח השורות */
   }
 }
