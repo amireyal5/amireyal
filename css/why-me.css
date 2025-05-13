@@ -18,9 +18,9 @@
 }
 
 .service-card {
-    background-color: #f9f9f9;
+    background-color: #fff; /* רקע לבן */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 transparent; /* הסרת קווי מתאר (shadow) */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
     width: 100%;
     height: 200px; /* גובה קבוע לתמונות */
     overflow: hidden;
-    border-bottom: 1px solid #eee;
+    border-bottom: none; /* הסרת קו מתחת לתמונה */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,6 +39,8 @@
 .rounded-image {
     border-radius: 50%; /* הופך את הקונטיינר של התמונה לעגול */
     overflow: hidden; /* חותך את התמונה בתוך העיגול */
+    width: 150px; /* גודל קבוע לעיגול */
+    height: 150px; /* גודל קבוע לעיגול */
 }
 
 .service-img-container img {
@@ -85,7 +87,11 @@
         grid-template-columns: 1fr; /* עמודה אחת במובייל */
     }
     .service-img-container {
-        height: 150px; /* גובה קטן יותר לתמונות במובייל */
+        height: auto; /* מאפשר גובה אוטומטי במובייל */
+    }
+    .rounded-image {
+        width: 120px;
+        height: 120px;
     }
     .section-title {
         font-size: 2em;
