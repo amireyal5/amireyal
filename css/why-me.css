@@ -24,16 +24,18 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center; /* מרכז אופקית את כל התוכן בכרטיס */
 }
 
 .service-img-container {
     width: 100%;
-    height: 200px; /* גובה קבוע לתמונות */
+    height: auto; /* מאפשר גובה אוטומטי */
     overflow: hidden;
     border-bottom: none; /* הסרת קו מתחת לתמונה */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* מרכז אופקית את התמונה */
+    align-items: center; /* מרכז אנכית את התמונה */
+    padding: 20px 0; /* מוסיף קצת ריווח מלמעלה ומלמטה */
 }
 
 .rounded-image {
@@ -55,6 +57,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1; /* מאפשר לתוכן לגדול ולמלא את השטח הנותר בכרטיס */
+    align-items: center; /* מרכז אופקית את הטקסט */
 }
 
 .service-content h3 {
@@ -87,7 +90,7 @@
         grid-template-columns: 1fr; /* עמודה אחת במובייל */
     }
     .service-img-container {
-        height: auto; /* מאפשר גובה אוטומטי במובייל */
+        padding: 15px 0;
     }
     .rounded-image {
         width: 120px;
