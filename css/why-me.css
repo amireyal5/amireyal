@@ -13,10 +13,10 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* תמיד 3 כרטיסיות בשורה */
-    gap: 0px; /* כמעט בלי רווח בכלל */
+    grid-template-columns: repeat(3, 1fr); /* תמיד 3 בשורה */
+    gap: 0px; /* בלי רווח */
     margin: 0 auto;
-    max-width: 96%;
+    max-width: 76.8%; /* 20% פחות מ-96% */
 }
 
 .service-card {
@@ -80,7 +80,7 @@
     text-decoration: underline;
 }
 
-/* מסכים צרים - מובייל */
+/* מובייל - כרטיסיה אחת בכל שורה */
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
