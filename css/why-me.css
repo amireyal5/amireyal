@@ -2,6 +2,7 @@
     padding: 60px 20px;
     text-align: center;
     font-family: 'Assistant', sans-serif;
+    box-sizing: border-box;
 }
 
 .section-title {
@@ -12,31 +13,29 @@
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* תמיד 3 */
-    gap: 15px; /* רווח מינימלי בין כרטיסים */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    max-width: 76.8%; /* קונטיינר מצומצם */
+    max-width: 1000px; /* שומר את הכל ממורכז */
 }
 
 .service-card {
+    width: 33.3333%; /* שליש בדיוק מכל שורה */
+    box-sizing: border-box;
     background-color: #fff;
-    border-radius: 8px;
     border: none;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px; /* פחות רווח פנימי */
+    padding: 20px;
     text-align: center;
     min-height: 550px;
-    max-width: 340px; /* הגבלה ברורה על רוחב הכרטיס */
 }
 
 .service-img-container {
-    width: 320px;
-    height: 320px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 10px;
@@ -52,21 +51,21 @@
 }
 
 .service-content {
-    max-width: 280px; /* מגביל את הטקסט שלא יתפרש לרוחב */
+    max-width: 260px;
 }
 
 .service-content h3 {
-    font-size: 1.8em;
+    font-size: 1.7em;
     color: #444;
     margin-bottom: 10px;
     word-break: break-word;
 }
 
 .service-content p {
-    font-size: 1.1em;
+    font-size: 1.05em;
     color: #666;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
     word-break: break-word;
 }
 
@@ -83,22 +82,17 @@
     text-decoration: underline;
 }
 
-/* מובייל - כרטיסיה אחת בכל שורה */
+/* מובייל - שורה אחת בלבד */
 @media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-        max-width: 95%;
+    .service-card {
+        width: 100%;
+        padding: 25px;
+        min-height: auto;
     }
 
     .service-img-container {
         width: 230px;
         height: 230px;
-    }
-
-    .service-card {
-        padding: 25px;
-        min-height: auto;
-        max-width: 100%;
     }
 
     .service-content {
