@@ -75,10 +75,10 @@
   }
 
   .service-img img {
-    width: 80%; /* התאמת רוחב התמונה בתוך הפריט */
-    height: auto;
-    border-radius: 50%; /* שמירה על הצורה האובלית */
-    object-fit: cover;
+    width: 70vw; /* רוחב התמונה יהיה 70% מרוחב המסך */
+    height: 70vw; /* גובה התמונה יהיה זהה לרוחב כדי ליצור עיגול */
+    border-radius: 50%; /* יוצר עיגול מושלם */
+    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח העגול */
     margin: 0 auto 10px auto; /* מרכוז אופקי של התמונה והוספת מרווח מתחת */
   }
 
@@ -87,17 +87,17 @@
   }
 
   .service-text h3 {
-    font-size: 1.7rem;
+    font-size: 1.6rem; /* הקטנה של גודל הפונט של הכותרת */
     margin-top: 10px;
   }
 
   .service-text p {
-    font-size: 1.4rem;
+    font-size: 1.3rem; /* הקטנה של גודל הפונט של הטקסט */
     line-height: 1.4;
   }
 
   .service-text a {
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* הקטנה של גודל הפונט של הקישור */
     margin-top: 15px;
   }
 }
