@@ -12,28 +12,28 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* בסיס ל-3 כרטיסיות ומעלה */
+    gap: 30px; /* הגדלת המרווח בין הכרטיסיות */
     margin-top: 20px;
 }
 
 .service-card {
     background-color: #fff; /* רקע לבן */
     border-radius: 8px;
-    box-shadow: 0 0 0 transparent; /* הסרת קווי מתאר (shadow) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* הוספת צל עדין יותר */
     overflow: hidden;
     display: flex;
     flex-direction: column; /* סידור התוכן בעמודה */
     align-items: center; /* מרכז אופקית את כל התוכן */
-    padding: 20px; /* הוספת ריווח פנימי לכרטיסיה */
+    padding: 30px; /* הגדלת הריווח הפנימי */
 }
 
 .service-img-container {
-    width: 150px; /* גודל קבוע לעיגול */
-    height: 150px; /* גודל קבוע לעיגול - חייב להיות זהה לרוחב עבור עיגול מושלם */
+    width: 180px; /* הגדלת גודל העיגול */
+    height: 180px; /* הגדלת גודל העיגול */
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 15px; /* ריווח בין התמונה לטקסט */
+    margin-bottom: 25px; /* הגדלת הריווח בין התמונה לטקסט */
     display: flex;
     justify-content: center; /* מרכז אופקית את התמונה בתוך העיגול */
     align-items: center; /* מרכז אנכית את התמונה בתוך העיגול */
@@ -42,7 +42,7 @@
 .service-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח בלי עיוות ושומרת על הפרופורציות */
+    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח בלי עיוות */
 }
 
 .service-content {
@@ -53,16 +53,16 @@
 }
 
 .service-content h3 {
-    font-size: 1.5em;
+    font-size: 1.8em; /* הגדלת גודל הכותרת */
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .service-content p {
-    font-size: 1em;
+    font-size: 1.2em; /* הגדלת גודל הפסקה */
     color: #777;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.8; /* שיפור קריאות */
+    margin-bottom: 20px;
 }
 
 .service-link {
@@ -70,6 +70,7 @@
     color: #007bff;
     text-decoration: none;
     margin-top: auto; /* דוחף את הקישור לתחתית ה-content */
+    font-size: 1.1em; /* הגדלת גודל הקישור */
 }
 
 .service-link:hover {
@@ -79,23 +80,53 @@
 /* התאמה למובייל */
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: 1fr; /* עמודה אחת במובייל */
+        grid-template-columns: 1fr; /* כל כרטיסיה תופסת שורה שלמה */
+        gap: 40px; /* הגדלת המרווח במובייל */
     }
     .service-card {
-        padding: 15px;
+        padding: 40px; /* הגדלת הריווח הפנימי במובייל */
     }
     .service-img-container {
-        width: 120px;
-        height: 120px; /* גובה חייב להיות זהה לרוחב */
-        margin-bottom: 10px;
-    }
-    .section-title {
-        font-size: 2em;
+        width: 220px; /* הגדלת גודל העיגול במובייל */
+        height: 220px; /* הגדלת גודל העיגול במובייל */
+        margin-bottom: 30px;
     }
     .service-content h3 {
-        font-size: 1.3em;
+        font-size: 2.2em; /* הגדלת גודל הכותרת במובייל */
+        margin-bottom: 20px;
     }
     .service-content p {
-        font-size: 0.9em;
+        font-size: 1.4em; /* הגדלת גודל הפסקה במובייל */
+        margin-bottom: 25px;
+    }
+    .service-link {
+        font-size: 1.3em; /* הגדלת גודל הקישור במובייל */
+    }
+}
+
+/* עבור מסכים גדולים (מחשב) */
+@media (min-width: 769px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr); /* שמירה על 3 כרטיסיות בטור */
+    }
+    .service-card {
+        min-height: 400px; /* דוגמה להארכת גובה הכרטיסיות - התאם לפי הצורך */
+        padding: 40px; /* הגדלת הריווח הפנימי במחשב */
+    }
+    .service-img-container {
+        width: 200px; /* הגדלת גודל העיגול במחשב */
+        height: 200px; /* הגדלת גודל העיגול במחשב */
+        margin-bottom: 30px;
+    }
+    .service-content h3 {
+        font-size: 2em; /* הגדלת גודל הכותרת במחשב */
+        margin-bottom: 20px;
+    }
+    .service-content p {
+        font-size: 1.3em; /* הגדלת גודל הפסקה במחשב */
+        margin-bottom: 25px;
+    }
+    .service-link {
+        font-size: 1.2em; /* הגדלת גודל הקישור במחשב */
     }
 }
