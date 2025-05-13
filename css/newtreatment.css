@@ -1,57 +1,59 @@
 /* css/treatment.css */
 .treatment-section {
-    padding: 80px 0;
+    padding: 60px 0; /* Reduced vertical padding */
     color: var(--color-text);
-    margin-bottom: 60px;
+    margin-bottom: 40px; /* Reduced margin */
     text-align: center;
-    background-color: var(--color-background); /* Consistent background */
+    background-color: var(--color-background);
 }
 
 .treatment-section .container {
-    padding: 0 40px;
-    max-width: var(--max-width-container);
+    padding: 0 20px; /* Reduced horizontal padding */
+    max-width: var(--max-width-container); /* Keep max-width if defined */
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .treatment-section {
-        padding: 40px 20px;
-        margin-bottom: 40px;
+        padding: 30px 15px;
+        margin-bottom: 30px; /* Reduced margin on mobile */
     }
 
     .treatment-section .container {
-        padding: 0 20px;
+        padding: 0 15px;
     }
 }
 
 .treatment-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Maintain 1:2 ratio */
-    gap: 30px; /* Increased gap for better spacing */
-    align-items: center; /* Vertically align items in the grid */
+    grid-template-columns: 1fr; /* Stack items vertically on all screen sizes */
+    gap: 20px; /*保持 ריווח*/
+    align-items: center;
 }
 
 @media (max-width: 768px) {
     .treatment-grid {
-        grid-template-columns: 1fr;
-        gap: 20px; /* Increased gap for mobile as well */
+        grid-template-columns: 1fr; /* Ensure single column on small screens */
+        gap: 20px;
     }
 }
 
 .treatment-item {
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9; /* Slightly off-white background for items */
-    border-radius: 8px; /* Add border-radius for a softer look */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* width: 80%;  Remove fixed width, allow to expand within container */
+    margin: 0 auto; /* Center the items */
+    max-width: 600px; /* Limit the maximum width of each item */
 }
 
 .treatment-item:hover {
-    transform: translateY(-4px); /* Slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased shadow on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
-
 
 .item-title,
 .item-text {
@@ -62,12 +64,12 @@
 
 .item-title {
     font-weight: var(--font-weight-headings);
-    font-size: 1.2rem; /* Slightly larger title */
-    background-color: transparent; /* Remove the light background */
+    font-size: 1.2rem;
+    background-color: transparent;
     border-bottom: 1px solid var(--color-border-light);
     border-right: none;
     padding-bottom: 15px;
-    margin-bottom: 0; /* Remove extra bottom margin */
+    margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
@@ -78,10 +80,10 @@
 
 .item-text {
     font-size: var(--font-size-base);
-    line-height: 1.7; /* Improved line height for readability */
+    line-height: 1.7;
     font-weight: var(--font-weight-base);
     padding-top: 15px;
-    border-bottom: none; /* Removed bottom border. */
+    border-bottom: none;
 }
 
 .treatment-item:last-child .item-text {
@@ -91,17 +93,17 @@
 .treatment-section svg,
 .treatment-section img[src*="icon"] {
     filter: none;
-    width: 32px; /* Increased icon size */
+    width: 32px;
     height: 32px;
-    margin-bottom: 15px; /* Increased margin */
-    color: var(--color-primary); /* Apply primary color to icons, if defined */
+    margin-bottom: 15px;
+    color: var(--color-primary);
 }
 
 .techniques-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider min width */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2em;
-    margin-top: 60px; /* Increased margin */
+    margin-top: 40px; /* Reduced margin-top to bring techniques closer */
 }
 
 .technique-name {
@@ -113,17 +115,17 @@
     text-align: center;
     padding: 20px;
     border-radius: var(--border-radius-base);
-    transition: box-shadow var(--transition-speed-base) ease, transform 0.2s ease-in-out; /* Added transform */
+    transition: box-shadow var(--transition-speed-base) ease, transform 0.2s ease-in-out;
     font-family: var(--font-family-headings);
     font-weight: var(--font-weight-headings);
-    font-size: 1.1rem; /* Slightly larger font */
+    font-size: 1.1rem;
     background-color: var(--color-background);
     border: 1px solid var(--color-border-light);
 }
 
 .technique-name:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtler shadow */
-    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
