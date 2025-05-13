@@ -13,10 +13,11 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* תמיד 3 בשורה */
-    gap: 0px; /* בלי רווח */
+    grid-template-columns: repeat(3, 1fr); /* תמיד 3 */
+    gap: 15px; /* רווח מינימלי בין כרטיסים */
+    justify-content: center;
     margin: 0 auto;
-    max-width: 76.8%; /* 20% פחות מ-96% */
+    max-width: 76.8%; /* קונטיינר מצומצם */
 }
 
 .service-card {
@@ -27,15 +28,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 20px; /* פחות רווח פנימי */
     text-align: center;
-    min-height: 620px;
-    word-break: break-word;
+    min-height: 550px;
+    max-width: 340px; /* הגבלה ברורה על רוחב הכרטיס */
 }
 
 .service-img-container {
-    width: 382px;  /* 450px פחות 15% */
-    height: 382px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 10px;
@@ -50,21 +51,23 @@
     object-fit: cover;
 }
 
+.service-content {
+    max-width: 280px; /* מגביל את הטקסט שלא יתפרש לרוחב */
+}
+
 .service-content h3 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #444;
     margin-bottom: 10px;
     word-break: break-word;
-    white-space: normal;
 }
 
 .service-content p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: #666;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
     word-break: break-word;
-    white-space: normal;
 }
 
 .service-link {
@@ -72,8 +75,8 @@
     color: #70a1af;
     text-decoration: none;
     margin-top: auto;
-    font-size: 1.1em;
-    padding: 8px 12px;
+    font-size: 1em;
+    padding: 6px 10px;
 }
 
 .service-link:hover {
@@ -93,16 +96,21 @@
     }
 
     .service-card {
-        min-height: auto;
         padding: 25px;
+        min-height: auto;
+        max-width: 100%;
+    }
+
+    .service-content {
+        max-width: 100%;
     }
 
     .service-content h3 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     .service-content p {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .service-link {
