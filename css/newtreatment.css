@@ -1,58 +1,93 @@
 /* css/treatment.css */
 
-/* משתנים עיצוביים */
 :root {
-  --color-primary: #a9746e; /* ורוד-חמרה רגוע */
-  --color-accent: #e7d7c9;  /* בז’-חול רך */
-  --color-background: #fffaf6; /* לבן חמים */
-  --color-text: #4b3e3e;
+  --color-primary: #a06c5a;          /* חום־חמרה רך */
+  --color-accent: #f2e9e4;           /* בז’־ורוד בהיר */
+  --color-background: #fffdfc;       /* רקע כמעט לבן עם חמימות */
+  --color-heading: #5e423c;          /* חום כהה יותר לכותרות */
+  --color-text: #403633;
   --font-family-base: 'Assistant', sans-serif;
-  --font-size-base: 1.15rem;
-  --line-height-base: 1.9;
-  --spacing-section: 4em;
+  --font-family-headings: 'Heebo', sans-serif;
+  --font-size-base: 1.1rem;
+  --font-size-heading: 1.8rem;
+  --line-height-base: 1.8;
+  --radius: 12px;
+  --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 body {
   font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
   background-color: var(--color-background);
   color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   margin: 0;
   padding: 0;
 }
 
-/* אזור טיפולים */
 .treatment-section {
-  padding: var(--spacing-section) 1.5em;
-  background-color: var(--color-background);
-  text-align: start;
-  max-width: 720px;
+  padding: 5em 2em;
+  max-width: 860px;
   margin: 0 auto;
+  background-color: var(--color-background);
 }
 
 .treatment-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1em;
-  color: var(--color-primary);
-  font-weight: 600;
-  border-bottom: 2px solid var(--color-accent);
-  padding-bottom: 0.3em;
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-heading);
+  color: var(--color-heading);
+  margin-bottom: 1.2em;
+  position: relative;
+  display: inline-block;
 }
 
-.treatment-section p {
-  margin-bottom: 1.4em;
+.treatment-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40%;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.treatment-paragraph {
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2em;
+  transition: box-shadow 0.3s ease;
+}
+
+.treatment-paragraph:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.treatment-paragraph h3 {
+  font-family: var(--font-family-headings);
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 0.6em;
+}
+
+.treatment-paragraph p {
+  margin-bottom: 1em;
   color: var(--color-text);
 }
 
-.treatment-section img,
-.treatment-section svg {
-  display: none; /* בלי אייקונים בשלב זה */
-}
-
-/* מובייל */
 @media (max-width: 768px) {
   .treatment-section {
-    padding: 3em 1em;
+    padding: 3em 1.2em;
+  }
+
+  .treatment-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .treatment-paragraph {
+    padding: 1.5em;
   }
 }
