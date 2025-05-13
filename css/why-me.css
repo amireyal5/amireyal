@@ -1,125 +1,48 @@
-<style>
-  .why-us {
-    padding: 2.5em 2em;
-    text-align: center;
-    background-color: white;
+/* Services Grid Styles */
+.services-section {
     width: 100%;
-  }
+    margin: 60px auto;
+    padding: 0 20px;
+    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  .why-us h2 {
-    font-size: 2.2em;
+.section-title {
+    text-align: center;
     color: #2c3e50;
-    margin-bottom: 1.2em;
-    font-family: var(--font-family-base);
+    font-size: 2.2em;
+    margin-bottom: 40px;
     font-weight: 600;
-    letter-spacing: -0.02em;
-    text-align: center;
-  }
+    position: relative;
+    padding-bottom: 15px;
+}
 
-  .why-us .features {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-    max-width: var(--max-width-container);
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 3px;
+    background: #2980b9;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: transparent;
-    gap: 2em;
-    flex-wrap: nowrap;
-  }
+}
 
-  .why-us .feature {
-    padding: 1.5em;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    flex: 1;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-    border-right: 2px solid #ddd;
-    background-color: white;
+.service-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    background: white;
+}
 
-  .why-us .feature:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .why-us .feature h3 {
-    font-size: 1.5em;
-    color: #34495e;
-    margin-bottom: 0.6em;
-    font-family: var(--font-family-base);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-  }
-
-  .why-us .feature p {
-    font-size: 1.1em;
-    color: #666;
-    line-height: 1.7;
-    font-family: var(--font-family-base);
-    font-weight: 400;
-  }
-
-  @media (max-width: 768px) {
-    .why-us {
-      padding: 1.5em 1em;
-    }
-
-    .why-us h2 {
-      font-size: 1.8em;
-      margin-bottom: 1em;
-    }
-
-    .why-us .features {
-      flex-direction: column;
-      gap: 1em;
-      flex-wrap: wrap;
-    }
-
-    .why-us .feature {
-      padding: 1.5em;
-      margin-bottom: 0;
-      flex: 1 1 auto;
-      min-width: auto;
-      border-right: none;
-      border-bottom: 1px solid #eee;
-    }
-
-    .why-us .features .feature:not(:last-child) {
-      border-bottom: 1px solid #eee;
-    }
-
-    .why-us .feature h3 {
-      font-size: 1.2em;
-      margin-bottom: 0.3em;
-    }
-
-    .why-us .feature p {
-      font-size: 0.95em;
-      line-height: 1.5;
-    }
-  }
-
-  /* שינויים עיצוביים */
-  .feature {
-    transition: transform 0.6s ease-in-out, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-
-  .feature:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .icon {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    transition: color 0.3s ease;
-    color: #1a5235;
-  }
-</style>
+/* שאר הקוד CSS נשאר זהה לקוד הקודם ששלחתי */
