@@ -1,57 +1,49 @@
 /* Why Us Section - רקע אפור בהיר לרוחב כל המסך, מרווח מצומצם וללא רקע/הצללות לכרטיסים */
 .why-us {
-  display: flex; /* שימוש ב-Flexbox */
-  flex-direction: column; /* סידור אנכי של האלמנטים */
-  justify-content: center; /* יישור אנכי למרכז */
-  align-items: center; /* יישור אופקי למרכז (אם צריך) */
-  padding: 1.5em 2em; /* צמצום ה-padding האנכי */
+  padding: 1.5em 2em;
   text-align: center;
   background-color: #f0f0f0; /* רקע אפור בהיר */
   width: 100%; /* רוחב מלא */
-  min-height: auto; /* מאפשר התכווצות לגובה התוכן */
 }
 
 .why-us h2 {
   font-size: var(--font-size-h2);
   color: var(--color-primary);
-  margin-bottom: 1em; /* צמצום המרווח מתחת לכותרת */
+  margin-bottom: 1em;
   font-family: var(--font-family-base);
   font-weight: normal;
 }
 
 .why-us .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 0.75em; /* צמצום המרווח בין הפיצ'רים */
+  display: flex; /* שימוש ב-Flexbox לפריסה אופקית */
+  flex-direction: row; /* סידור בשורה */
+  justify-content: space-around; /* פיזור הפיצ'רים באופן אחיד */
+  align-items: stretch; /* מתיחת הפיצ'רים לגובה אחיד */
   max-width: var(--max-width-container);
   margin: 0 auto;
   background-color: transparent; /* הסרת רקע הגריד */
+  gap: 1em; /* מרווח בין הפיצ'רים */
 }
 
 .why-us .feature {
   background-color: transparent; /* הסרת רקע הכרטיסים */
-  padding: 1em; /* צמצום ה-padding הפנימי */
+  padding: 1em;
   border-radius: 8px;
   box-shadow: none; /* הסרת הצללים */
   text-align: center;
   transition: none;
-  border-bottom: 1px solid #eee; /* הוספת גבול תחתון דק */
-  margin-bottom: 0.75em; /* צמצום המרווח מתחת לפיצ'ר */
-}
-
-.why-us .features .feature:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
+  border: 1px solid #ddd; /* הוספת גבול עדין */
 }
 
 .why-us .feature:hover {
   box-shadow: none;
+  border-color: #ccc;
 }
 
 .why-us .feature h3 {
-  font-size: 1.3em; /* הקטנת גודל הפונט של הכותרת */
+  font-size: 1.2em; /* הקטנה נוספת של גודל הפונט */
   color: var(--color-text);
-  margin-bottom: 0.2em; /* צמצום המרווח מתחת לכותרת הפיצ'ר */
+  margin-bottom: 0.3em;
   font-family: var(--font-family-base);
   font-weight: normal;
 }
@@ -59,7 +51,7 @@
 .why-us .feature p {
   font-size: var(--font-size-base);
   color: #555;
-  line-height: 1.3; /* הידוק נוסף של ריווח השורות */
+  line-height: 1.3; /* ריווח שורות הדוק יותר */
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-base);
 }
@@ -76,14 +68,19 @@
   }
 
   .why-us .features {
+    display: grid; /* חזרה לפריסת גריד במסכים קטנים */
     grid-template-columns: 1fr;
-    gap: 0.5em; /* צמצום המרווח בין הפיצ'רים */
+    gap: 0.75em;
+    flex-direction: column; /* לוודא כיוון אנכי */
   }
 
   .why-us .feature {
-    padding: 0.8em; /* צמצום ה-padding הפנימי */
-    border-bottom: 1px solid #eee;
-    margin-bottom: 0.5em; /* צמצום המרווח מתחת לפיצ'ר */
+    padding: 0.8em;
+    border-bottom: 1px solid #eee; /* גבול הפרדה אנכי */
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin-bottom: 0.75em;
   }
 
   .why-us .features .feature:last-child {
@@ -92,12 +89,12 @@
   }
 
   .why-us .feature h3 {
-    font-size: 1.2em;
-    margin-bottom: 0.15em; /* צמצום נוסף */
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
   }
 
   .why-us .feature p {
     font-size: 0.85em;
-    line-height: 1.3; /* הידוק נוסף */
+    line-height: 1.4; /* קצת יותר ריווח בקטן */
   }
 }
