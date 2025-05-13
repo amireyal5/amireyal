@@ -21,7 +21,7 @@
   --color-link-hover: #1565C0;
 
   /* === כפתורים === */
-  --color-button: #3B6064;
+  --color-button: #4bbddd;
   --color-button-hover: #55828B;
 
   /* === תפריטים ותתי-תפריטים === */
@@ -32,7 +32,7 @@
   --color-submenu-text-hover: #f0f8ff;
 
   /* === אייקונים === */
-  --color-icon: #457b9d;
+  --color-icon:#4bbddd;
   --color-icon-hover: #a8dadc;
 
   /* === טיפוגרפיה === */
@@ -74,7 +74,7 @@
 }
 :root {
   /* === צבעים === */
-  --color-primary: #55828B;          /* צבע ראשי (כותרות, הדגשות) */
+  --color-primary: #4bbddd;          /* צבע ראשי (כותרות, הדגשות) */
   --color-secondary: #ffffff;        /* צבע משני */
   --color-text: #000000;             /* טקסט רגיל */
   --color-text-light: #FFFFFF;       /* טקסט בהיר */
@@ -101,7 +101,7 @@
   --color-submenu-text-hover: #f0f8ff;
 
   /* === אייקונים === */
-  --color-icon: #457b9d;
+  --color-icon: #4bbddd;
   --color-icon-hover: #a8dadc;
 
   /* === גופנים === */
