@@ -1,31 +1,31 @@
 .services-section {
   text-align: center;
-  padding: 20px 10px;
-  max-width: 1000px; /* הגדלת המיכל הכללי */
+  padding: 30px 10px; /* עדכון רווח כללי */
+  max-width: 1200px; /* הגדלת המיכל הכללי */
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 3rem; /* כותרת גדולה */
+  font-size: 3.2rem; /* הגדלת הפונט של הכותרת */
   margin-bottom: 20px;
+  font-weight: bold; /* עיצוב חדש לכותרת */
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
-  gap: 15px; /* רווח אסתטי בין התמונות */
+  gap: 25px; /* הוספת רווח אסתטי בין התמונות */
   justify-items: center;
   align-items: start;
 }
 
 .service-img img {
-  width: 327px; /* הגדלת התמונות ב-10% (297px * 1.1) */
-  height: 327px; /* הגדלה מתאימה לגובה */
+  width: 360px; /* הגדלת התמונות ב-10% (327px * 1.1) */
+  height: 360px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0;
-  padding: 0;
 }
 
 .service-text {
@@ -34,29 +34,27 @@
 }
 
 .service-text h3 {
-  font-size: 1.68rem; /* כותרת בגודל מוגדל */
+  font-size: 1.85rem; /* הגדלה של כותרות הטקסט */
   margin: 5px 0;
 }
 
 .service-text p {
-  font-size: 1.32rem; /* טקסט בגודל מוגדל */
+  font-size: 1.5rem; /* הגדלה של הטקסט עצמו */
   margin: 0;
   line-height: 1.4;
 }
 
 .service-text a {
   display: block;
-  margin-top: 6px;
+  margin-top: 10px; /* הגדלתי את המרחק */
   text-decoration: none;
   color: #007BFF;
   font-weight: bold;
 }
 
-/* רווח של 3em בין שורות 2 ו-3 */
-.service-text:nth-child(3),
-.service-text:nth-child(4),
-.service-text:nth-child(5) {
-  margin-top: 3em;
+/* רווח נוסף של 10px בין התמונות */
+.services-grid .service-img {
+  margin-bottom: 10px;
 }
 
 /* רספונסיביות למובייל */
@@ -69,7 +67,7 @@
   .service-img img {
     width: 100%; /* התמונות יתפוסו את כל הרוחב */
     height: auto;
-    margin-bottom: 20px; /* רווח בין התמונה לטקסט */
+    margin-bottom: 20px; /* רווח נוסף */
   }
 
   .service-text {
@@ -78,14 +76,14 @@
   }
 
   .service-text h3 {
-    font-size: 1.56rem; /* הגדלתי את הפונט במובייל ב-20% */
+    font-size: 1.7rem; /* הגדלתי את הפונט במובייל */
   }
 
   .service-text p {
-    font-size: 1.2rem; /* הגדלתי את הפונט במובייל ב-20% */
+    font-size: 1.4rem; /* הגדלתי את הפונט במובייל */
   }
 
   .service-text a {
-    font-size: 1.3rem; /* הגדלתי את הפונט במובייל ב-20% */
+    font-size: 1.5rem; /* הגדלתי את הפונט במובייל */
   }
 }
