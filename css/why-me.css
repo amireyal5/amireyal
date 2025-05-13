@@ -1,41 +1,44 @@
 .services-section {
-    padding: 40px 20px;
+    padding: 60px 20px; /* הגדלת הריווח העליון והתחתון */
     text-align: center;
-    font-family: 'Assistant', sans-serif; /* דוגמה לגופן עברי נקי - יש לוודא שהגופן קיים או מיובא */
+    font-family: 'Assistant', sans-serif; /* דוגמה לגופן עברי נקי */
 }
 
 .section-title {
-    font-size: 2.5em;
+    font-size: 3em; /* הגדלת גודל כותרת הסקציה */
     color: #333;
-    margin-bottom: 30px;
-   text-align: center;
+    margin-bottom: 40px;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* בסיס ל-3 כרטיסיות ומעלה */
-    gap: 30px; /* הגדלת המרווח בין הכרטיסיות */
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* הגדלת הרוחב המינימלי לכרטיסיה */
+    gap: 40px; /* הגדלת המרווח בין הכרטיסיות */
+    margin-top: 30px;
+    margin-left: 33.33%; /* דחיפה משמאל כדי ליצור שליש ריק */
+    margin-right: 33.33%; /* דחיפה מימין כדי ליצור שליש ריק */
+    max-width: 66.66%; /* הגבלת הרוחב המקסימלי לשני שליש מהמסך */
 }
 
 .service-card {
     background-color: #fff; /* רקע לבן */
-    border-radius: 8px;
-    box-shadow: none; /* הסרת אפקט הצל */
-    border: none; /* הסרת גבולות (border) אם קיימים */
+    border-radius: 12px; /* הגדלת עיגול הפינות */
+    box-shadow: none; /* הסרת צל */
+    border: none; /* הסרת גבולות */
     overflow: hidden;
     display: flex;
     flex-direction: column; /* סידור התוכן בעמודה */
     align-items: center; /* מרכז אופקית את כל התוכן */
-    padding: 30px; /* הגדלת הריווח הפנימי */
+    padding: 40px; /* הגדלת הריווח הפנימי */
+    min-height: 500px; /* הארכת גובה מינימלי - התאם לפי הצורך */
 }
 
 .service-img-container {
-    width: 180px; /* הגדלת גודל העיגול */
-    height: 180px; /* הגדלת גודל העיגול */
+    width: 240px; /* הגדלת גודל העיגול */
+    height: 240px; /* הגדלת גודל העיגול */
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 25px; /* הגדלת הריווח בין התמונה לטקסט */
+    margin-bottom: 35px; /* הגדלת הריווח בין התמונה לטקסט */
     display: flex;
     justify-content: center; /* מרכז אופקית את התמונה בתוך העיגול */
     align-items: center; /* מרכז אנכית את התמונה בתוך העיגול */
@@ -44,7 +47,7 @@
 .service-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח בלי עיוות */
+    object-fit: cover; /* כיסוי מלא של העיגול */
 }
 
 .service-content {
@@ -55,80 +58,52 @@
 }
 
 .service-content h3 {
-    font-size: 1.8em; /* הגדלת גודל הכותרת */
+    font-size: 2.4em; /* הגדלת גודל הכותרת */
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .service-content p {
-    font-size: 1.2em; /* הגדלת גודל הפסקה */
+    font-size: 1.6em; /* הגדלת גודל הפסקה */
     color: #777;
-    line-height: 1.8; /* שיפור קריאות */
-    margin-bottom: 20px;
+    line-height: 2; /* שיפור קריאות */
+    margin-bottom: 30px;
 }
 
 .service-link {
     display: inline-block;
     color: #007bff;
     text-decoration: none;
-    margin-top: auto; /* דוחף את הקישור לתחתית ה-content */
-    font-size: 1.1em; /* הגדלת גודל הקישור */
+    margin-top: auto; /* דחיפה לbottom */
+    font-size: 1.3em; /* הגדלת גודל הקישור */
+    padding: 10px 20px; /* הוספת ריווח לקישור */
+    border-radius: 5px; /* עיגול קל לקישור */
+    border: 1px solid #007bff; /* הוספת גבול לקישור */
 }
 
 .service-link:hover {
-    text-decoration: underline;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
 }
 
-/* התאמה למובייל */
+/* התאמה למובייל (עד 768px רוחב) */
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: 1fr; /* כל כרטיסיה תופסת שורה שלמה */
-        gap: 40px; /* הגדלת המרווח במובייל */
+        margin-left: 0; /* איפוס הדחיפה משמאל */
+        margin-right: 0; /* איפוס הדחיפה מימין */
+        max-width: 100%; /* תפיסת רוחב מסך מלא */
+        grid-template-columns: 1fr; /* כרטיסיה אחת בשורה */
+        gap: 60px; /* הגדלת המרווח במובייל */
     }
     .service-card {
-        padding: 40px; /* הגדלת הריווח הפנימי במובייל */
+        padding: 60px; /* הגדלת הריווח הפנימי במובייל */
+        min-height: auto; /* גובה אוטומטי במובייל */
     }
     .service-img-container {
-        width: 220px; /* הגדלת גודל העיגול במובייל */
-        height: 220px; /* הגדלת גודל העיגול במובייל */
-        margin-bottom: 30px;
+        width: 280px; /* הגדלת גודל העיגול במובייל */
+        height: 280px; /* הגדלת גודל העיגול במובייל */
+        margin-bottom: 40px;
     }
     .service-content h3 {
-        font-size: 2.2em; /* הגדלת גודל הכותרת במובייל */
-        margin-bottom: 20px;
-    }
-    .service-content p {
-        font-size: 1.4em; /* הגדלת גודל הפסקה במובייל */
-        margin-bottom: 25px;
-    }
-    .service-link {
-        font-size: 1.3em; /* הגדלת גודל הקישור במובייל */
-    }
-}
-
-/* עבור מסכים גדולים (מחשב) */
-@media (min-width: 769px) {
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr); /* שמירה על 3 כרטיסיות בטור */
-    }
-    .service-card {
-        min-height: 400px; /* דוגמה להארכת גובה הכרטיסיות - התאם לפי הצורך */
-        padding: 40px; /* הגדלת הריווח הפנימי במחשב */
-    }
-    .service-img-container {
-        width: 200px; /* הגדלת גודל העיגול במחשב */
-        height: 200px; /* הגדלת גודל העיגול במחשב */
-        margin-bottom: 30px;
-    }
-    .service-content h3 {
-        font-size: 2em; /* הגדלת גודל הכותרת במחשב */
-        margin-bottom: 20px;
-    }
-    .service-content p {
-        font-size: 1.3em; /* הגדלת גודל הפסקה במחשב */
-        margin-bottom: 25px;
-    }
-    .service-link {
-        font-size: 1.2em; /* הגדלת גודל הקישור במחשב */
-    }
-}
+        font-size: 2.8em; /* הג
