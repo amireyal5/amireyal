@@ -2,43 +2,42 @@
 
 /* משתנים עיצוביים (ניתן להתאים) */
 :root {
-    --color-primary: #4CAF50; /* ירוק מנטה / צבע акцент */
-    --color-secondary: #f0f4c3; /* צהוב בהיר מאוד / צבע משני */
-    --color-text: #333; /* טקסט כהה יותר */
-    --color-background: #fafafa; /* רקע אפור בהיר מאוד */
+    --color-primary: #4CAF50;
+    --color-secondary: #f0f4c3;
+    --color-text: #333;
+    --color-background: #fafafa;
     --color-border-light: #e0e0e0;
     --font-family-headings: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-family-base: 'Open Sans', sans-serif;
-    --font-weight-headings: 600; /* חצי מודגש */
+    --font-weight-headings: 600;
     --font-weight-base: 400;
-    --font-size-base: 1rem; /* 16px */
+    --font-size-base: 1rem;
     --line-height-base: 1.7;
     --border-radius-base: 12px;
     --transition-speed-base: 0.3s;
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12); /* צל בינוני */
-    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15); /* צל גדול */
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .treatment-section {
-    padding: 80px 0;
+    padding: 60px 0; /* פחות ריפוד אנכי */
     color: var(--color-text);
-    margin-bottom: 60px;
+    margin-bottom: 40px; /* פחות מרווח תחתון */
     text-align: center;
     background-color: var(--color-background);
-    /* רקע עם שיפוע עדין */
     background: linear-gradient(to bottom, #f8f8f8, #ffffff);
 }
 
 .treatment-section .container {
     padding: 0 20px;
-    max-width: var(--max-width-container); /* שמור על מקסימום רוחב אם מוגדר */
+    max-width: var(--max-width-container);
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .treatment-section {
-        padding: 40px 15px;
-        margin-bottom: 40px;
+        padding: 30px 15px;
+        margin-bottom: 30px;
     }
 
     .treatment-section .container {
@@ -48,10 +47,11 @@
 
 .treatment-grid {
     display: grid;
-    grid-template-columns: 1fr; /* עמודה אחת בלבד */
-    gap: 30px; /* הגדלנו את המרווח */
-    align-items: center;
+    grid-template-columns: 1fr; /* עדיין עמודה אחת */
+    gap: 20px; /* מרווח קטן יותר */
+    align-items: start; /* выравнивание к началу */
 }
+
 
 @media (max-width: 768px) {
     .treatment-grid {
@@ -68,32 +68,33 @@
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-speed-base) ease, box-shadow var(--transition-speed-base) ease;
     margin: 0 auto;
-    max-width: 600px; /* רוחב מקסימלי לפריט */
+    max-width: 600px; /* רוחב מקסימלי */
     border: 1px solid var(--color-border-light);
 }
 
 .treatment-item:hover {
-    transform: translateY(-8px); /* הגדלנו את האפקט */
-    box-shadow: var(--shadow-lg); /* צל גדול יותר */
+    transform: translateY(-4px); /* עדין יותר */
+    box-shadow: var(--shadow-lg);
 }
+
 
 .item-title,
 .item-text {
-    padding: 30px; /* הגדלנו ריפוד */
+    padding: 20px; /* פחות ריפוד */
     color: var(--color-text);
     font-family: var(--font-family-headings);
 }
 
 .item-title {
     font-weight: var(--font-weight-headings);
-    font-size: 1.5rem; /* הגדלנו גודל פונט */
+    font-size: 1.2rem; /* גודל פונט קטן יותר */
     background-color: transparent;
-    border-bottom: 2px solid var(--color-border-light);
+    border-bottom: 1px solid var(--color-border-light);
     border-right: none;
-    padding-bottom: 20px;
+    padding-bottom: 15px; /* פחות ריפוד */
     margin-bottom: 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-    letter-spacing: -0.02em; /* שיפור קל של ריווח אותיות */
+    letter-spacing: -0.02em;
 }
 
 @media (max-width: 768px) {
@@ -104,11 +105,11 @@
 
 .item-text {
     font-size: var(--font-size-base);
-    line-height: 1.8;
+    line-height: 1.6; /* קצת פחות מרווח שורות */
     font-weight: var(--font-weight-base);
-    padding-top: 20px;
+    padding-top: 15px; /* פחות ריפוד */
     border-bottom: none;
-    color: #444; /* גוון טקסט מעט כהה יותר */
+    color: #444;
 }
 
 .treatment-item:last-child .item-text {
@@ -118,18 +119,18 @@
 .treatment-section svg,
 .treatment-section img[src*="icon"] {
     filter: none;
-    width: 48px; /* הגדלנו גודל אייקון */
-    height: 48px;
-    margin-bottom: 25px; /* הגדלנו מרווח */
+    width: 36px; /* גודל אייקון קטן יותר */
+    height: 36px;
+    margin-bottom: 20px; /* פחות מרווח */
     color: var(--color-primary);
     filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.1));
 }
 
 .techniques-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* רוחב מינימלי מוגדל */
-    gap: 2em;
-    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em; /* מרווח קטן יותר */
+    margin-top: 40px; /* פחות מרווח */
 }
 
 .technique-name {
@@ -139,12 +140,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px;
+    padding: 20px; /* פחות ריפוד */
     border-radius: var(--border-radius-base);
     transition: box-shadow var(--transition-speed-base) ease, transform var(--transition-speed-base) ease;
     font-family: var(--font-family-headings);
     font-weight: var(--font-weight-headings);
-    font-size: 1.3rem; /* הגדלנו גודל פונט */
+    font-size: 1.1rem; /* גודל פונט קטן יותר */
     background-color: #ffffff;
     border: 1px solid var(--color-border-light);
     box-shadow: var(--shadow-md);
@@ -152,7 +153,7 @@
 
 .technique-name:hover {
     box-shadow: var(--shadow-lg);
-    transform: translateY(-6px);
+    transform: translateY(-4px);
 }
 
 @media (max-width: 768px) {
