@@ -1,57 +1,56 @@
-/* Why Us Section */
+/* Why Us Section - ללא רקע והצללות, עם מרווח מצומצם */
 .why-us {
   padding: 2em;
   text-align: center;
-  background-color: var(--color-background); /* משתמש במשתנה הקיים */
 }
 
 .why-us h2 {
-  font-size: var(--font-size-h2); /* משתמש במשתנה הקיים */
-  color: var(--color-primary); /* משתמש במשתנה הקיים */
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
   margin-bottom: 1.5em;
-  font-family: var(--font-family-base); /* משתמש במשתנה הקיים */
+  font-family: var(--font-family-base);
   font-weight: normal;
 }
 
 .why-us .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
-  max-width: var(--max-width-container); /* משתמש במשתנה הקיים */
+  gap: 1em; /* מרווח מצומצם יותר בין הכרטיסים */
+  max-width: var(--max-width-container);
   margin: 0 auto;
-  background-color: #E0FFFF; /* רקע תכלת בהיר לגריד */
+  background-color: transparent; /* הסרת רקע הגריד */
 }
 
 .why-us .feature {
-  background-color: #f9f9f9;
+  background-color: transparent; /* הסרת רקע הכרטיסים */
   padding: 1.5em;
-  border-radius: 8px;
-  box-shadow: var(--shadow-default); /* משתמש במשתנה הקיים */
+  border-radius: 8px; /* אם אתה רוצה לשמור על פינות מעוגלות */
+  box-shadow: none; /* הסרת הצללים */
   text-align: center;
-  transition: box-shadow var(--transition-speed-base) ease; /* משתמש במשתנה הקיים */
+  transition: none; /* הסרת המעבר בהhover אם היה */
 }
 
 .why-us .feature:hover {
-  box-shadow: var(--shadow-hover); /* משתמש במשתנה הקיים */
+  box-shadow: none; /* מוודא שאין הצללה גם במצב ריחוף */
 }
 
 .why-us .feature h3 {
   font-size: 1.5em;
-  color: var(--color-text); /* משתמש במשתנה הקיים */
+  color: var(--color-text);
   margin-bottom: 0.5em;
-  font-family: var(--font-family-base); /* משתמש במשתנה הקיים */
+  font-family: var(--font-family-base);
   font-weight: normal;
 }
 
 .why-us .feature p {
-  font-size: var(--font-size-base); /* משתמש במשתנה הקיים */
+  font-size: var(--font-size-base);
   color: #555;
-  line-height: var(--line-height-base); /* משתמש במשתנה הקיים */
-  font-family: var(--font-family-base); /* משתמש במשתנה הקיים */
-  font-weight: var(--font-weight-base); /* משתמש במשתנה הקיים */
+  line-height: var(--line-height-base);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-base);
 }
 
-/* רספונסיביות עבור Why Us בלבד */
+/* רספונסיביות עבור Why Us - מרווח מצומצם */
 @media (max-width: 768px) {
   .why-us {
     padding: 1em;
@@ -64,7 +63,7 @@
 
   .why-us .features {
     grid-template-columns: 1fr;
-    gap: 1.5em;
+    gap: 1em; /* מרווח מצומצם גם במסכים קטנים */
   }
 
   .why-us .feature {
