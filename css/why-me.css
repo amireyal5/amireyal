@@ -12,16 +12,15 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* בדיוק 3 כרטיסיות בשורה */
-    gap: 8px; /* רווח מינימלי בין הכרטיסיות */
+    grid-template-columns: repeat(3, 1fr); /* תמיד 3 בשורה במסכים רחבים */
+    gap: 6px; /* מרווח מינימלי בין כרטיסיות */
     margin: 0 auto;
-    max-width: 95%; /* לא כל רוחב המסך */
+    max-width: 95%;
 }
 
 .service-card {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: none;
     border: none;
     overflow: hidden;
     display: flex;
@@ -29,15 +28,15 @@
     align-items: center;
     padding: 30px;
     text-align: center;
-    min-height: 500px; /* הארכת הכרטיסיות */
+    min-height: 600px; /* ארוך */
 }
 
 .service-img-container {
-    width: 200px; /* תמונות גדולות */
-    height: 200px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 10px; /* מרחק קטן מהכותרת */
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,23 +74,16 @@
     text-decoration: underline;
 }
 
-/* רספונסיביות – מעבר ל-1 או 2 כרטיסיות בשורה במסכים קטנים */
-@media (max-width: 992px) {
+/* מסכים צרים - מובייל */
+@media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* שתי כרטיסיות בשורה */
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 600px) {
-    .services-grid {
-        grid-template-columns: 1fr; /* כרטיסיה אחת בשורה */
+        grid-template-columns: 1fr; /* תמיד 1 בשורה במובייל */
         max-width: 95%;
     }
 
     .service-img-container {
-        width: 180px;
-        height: 180px;
+        width: 250px;
+        height: 250px;
     }
 
     .service-card {
