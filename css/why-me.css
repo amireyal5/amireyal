@@ -58,7 +58,7 @@
     font-size: clamp(1rem, 1.4vw, 1.2rem);
 }
 
-.service-text a::before {
+.service-text a::after {
     content: '»';
     margin-left: 5px;
     margin-right: 10px;
