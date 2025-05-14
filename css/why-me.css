@@ -23,11 +23,39 @@
     align-items: start;
 }
 
+/* אנימציה חלקה לכל פריט שירות */
 .service-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* דיליי הדרגתי לכל פריט */
+.service-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.service-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.service-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.service-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.service-item:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .service-img img {
