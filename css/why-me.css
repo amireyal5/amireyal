@@ -4,15 +4,17 @@
 
 .services-section {
     text-align: center;
-    padding: 30px 10px;
-    max-width: 1200px;
+    padding: var(--padding-section);
+    max-width: var(--container-width);
     margin: 0 auto;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: var(--font-size-h1);
+    margin-bottom: var(--margin-bottom-base);
     font-weight: bold;
+    font-family: var(--font-family-title);
+    color: var(--color-primary);
 }
 
 .services-grid {
@@ -28,6 +30,17 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: var(--color-card-background);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--color-card-shadow);
+    padding: var(--padding-base);
+    transition: box-shadow var(--transition-medium), background-color var(--transition-medium);
+}
+
+.service-item:hover {
+    background-color: var(--color-card-hover);
+    box-shadow: var(--color-card-shadow-hover);
 }
 
 .service-img img {
@@ -36,33 +49,43 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+    box-shadow: var(--shadow-default);
 }
 
 .service-text h3 {
-    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    font-size: var(--font-size-h3);
     margin: 5px 0;
+    font-family: var(--font-family-title);
+    color: var(--color-primary);
 }
 
 .service-text p {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    line-height: 1.4;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
     margin: 0;
+    color: var(--color-text-alt);
+    font-family: var(--font-family-base);
 }
 
 .service-text a {
     display: block;
     margin-top: 10px;
     text-decoration: none;
-    color: #6cbec1;
+    color: var(--color-link);
     font-weight: bold;
-    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    font-size: var(--font-size-base);
+    transition: color var(--transition-fast);
+}
+
+.service-text a:hover {
+    color: var(--color-link-hover);
 }
 
 .service-text a::before {
     content: '»';
     margin-left: 5px;
     margin-right: 10px;
-    color: #6cbec1;
+    color: var(--color-link);
 }
 
 /* מעבר ל-2 עמודות מוקדם יותר */
