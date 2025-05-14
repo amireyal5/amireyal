@@ -1,28 +1,65 @@
 :root {
   /* === צבעים ראשיים === */
   --color-primary: #a7cfcf;            /* טורקיז בהיר - צבע הדגשה ראשי */
-  --color-secondary: #ffffff;
+  --color-text: #2f2f2f;
+  --font-family-base: 'Lato', 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --shadow-default: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --transition-speed-base: 0.3s;
+  --max-width-container: 1080px;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+  --font-weight-base: 300;
+  --color-background: #f5f5f2;
+  --color-link: #4a8a8a;
+  --color-link-hover: #2e6f6f;
+  --color-button: #a7cfcf;
+  --color-button-hover: #8bbbbb;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.3rem;
+  --font-size-h4: 1.1rem;
+  --color-footer-text: #4a8a8a;
+  --font-weight-footer-text: 500;
+  --color-section-title: #4a8a8a;
+  --font-weight-section-title: 300;
+  --font-size-banner: 1vw;
+  --padding-banner: 1em;
+  --margin-top-banner: 2vh;
+  --color-about-h2: #4a8a8a;
+  --color-about-h3: #2e6f6f;
+  --color-about-text: #444;
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-family-open-sans: 'Open Sans', sans-serif;
+  --color-services-h2: #4a8a8a;
+  --color-services-text: #555;
 
-  /* === טקסטים === */
-  --color-text: #2f2f2f;               /* טקסט כהה, לא שחור מוחלט */
+  /* === קופסאות תוכן === */
+  --color-box1: #E1F5FE;
+  --color-border1: #B3E5FC;
+  --color-text1: #1976D2;
+  --color-box2: #F0F8E0;
+  --color-border2: #DCEDC8;
+  --color-text2: #388E3C;
+  --color-box3: #FFFDE7;
+  --color-border3: #FFF9C4;
+  --color-text3: #FBC02D;
+  --color-box4: #FBE9E7;
+  --color-border4: #FFCCBC;
+  --color-text4: #E64A19;
+  --color-box5: #EDE7F6;
+  --color-border5: #D1C4E9;
+  --color-text5: #5E35B1;
+  --color-box6: #ECEFF1;
+  --color-border6: #CFD8DC;
+  --color-text6: #37474F;
+
+  /* === טיפוגרפיה נוספת === */
   --color-text-light: #ffffff;
   --color-text-alt: #555555;
 
-  /* === רקעים === */
-  --color-background: #f5f5f2;         /* רקע דף כללי */
-  --color-background-alt: #ebf2f2;     /* למשל רקע של אזור פנימי */
-  --color-background-light: #ffffff;
-
   /* === גבולות === */
   --color-border: #d0d0d0;
-
-  /* === קישורים === */
-  --color-link: #4a8a8a;
-  --color-link-hover: #2e6f6f;
-
-  /* === כפתורים === */
-  --color-button: #a7cfcf;
-  --color-button-hover: #8bbbbb;
 
   /* === תפריטים ותתי-תפריטים === */
   --color-menu-text: #4a8a8a;
@@ -30,6 +67,10 @@
   --color-submenu: #6b9d9d;
   --color-submenu-text: #ffffff;
   --color-submenu-text-hover: #dff6f6;
+
+  /* === רקעים נוספים === */
+  --color-background-alt: #ebf2f2;
+  --color-background-light: #ffffff;
 
   /* === אייקונים === */
   --color-icon: #4a8a8a;
@@ -42,21 +83,14 @@
   --color-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   --color-card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.07);
 
-  /* === טיפוגרפיה === */
-  --font-family-base: 'Lato', 'Assistant', sans-serif;
-  --font-family-title: 'Lato', 'Assistant', sans-serif;
-  --font-size-base: 1rem;
-  --font-size-h1: 2.4rem;
-  --font-size-h2: 1.8rem;
-  --font-size-h3: 1.3rem;
-  --font-size-h4: 1.1rem;
-  --line-height-base: 1.6;
-  --font-weight-base: 300;
+  /* === גבולות וצללים === */
+  --border-radius-base: 8px;
+  --border-radius-image: 12px;
 
-  /* === גדלים כלליים === */
-  --max-width-container: 1080px;
-  --container-width: 1200px;
-  --gutter: 16px;
+  /* === מעברים === */
+  --transition-fast: 0.2s;
+  --transition-medium: 0.3s;
+  --transition-slow: 0.5s;
 
   /* === ריווחים === */
   --padding-base: 1rem;
@@ -64,18 +98,8 @@
   --margin-bottom-base: 1rem;
   --margin-top-base: 1.5vh;
 
-  /* === מעברים === */
-  --transition-speed-base: 0.3s;
-  --transition-fast: 0.2s;
-  --transition-medium: 0.3s;
-  --transition-slow: 0.5s;
-
-  /* === גבולות וצללים === */
-  --border-radius-base: 8px;
-  --border-radius-image: 12px;
-  --shadow-default: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.1);
-
   /* === פריסה כללית === */
+  --container-width: 1200px;
+  --gutter: 16px;
   --header-height: 60px;
 }
