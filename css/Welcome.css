@@ -82,12 +82,13 @@
 }
 
 .welcome .about-me-image img {
-  max-width: 400px;
-  max-height: 400px;
-  height: auto;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: var(--shadow-default);
 }
+
 
 .welcome .about-me-text {
   order: 2;
