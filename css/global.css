@@ -55,7 +55,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
-  background-color: var(--color-background);
+  background-color: #fff;
   position: sticky;
   top: 0;
   transition: top var(--transition-speed-base) ease;
