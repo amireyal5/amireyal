@@ -1,53 +1,60 @@
 :root {
   /* === צבעים ראשיים === */
-  --color-primary: #55828B;
+  --color-primary: #a7cfcf;            /* טורקיז בהיר - צבע הדגשה ראשי */
   --color-secondary: #ffffff;
 
   /* === טקסטים === */
-  --color-text: #000000;
+  --color-text: #2f2f2f;               /* טקסט כהה, לא שחור מוחלט */
   --color-text-light: #ffffff;
-  --color-text-alt: #514b4b;
+  --color-text-alt: #555555;
 
   /* === רקעים === */
-  --color-background: #ffffff;
-  --color-background-alt: #f0f0f0;
-  --color-background-light: #f9f9f9;
+  --color-background: #f5f5f2;         /* רקע דף כללי */
+  --color-background-alt: #ebf2f2;     /* למשל רקע של אזור פנימי */
+  --color-background-light: #ffffff;
 
   /* === גבולות === */
-  --color-border: #e0e0e0;
+  --color-border: #d0d0d0;
 
   /* === קישורים === */
-  --color-link: #1f628e;
-  --color-link-hover: #1565C0;
+  --color-link: #4a8a8a;
+  --color-link-hover: #2e6f6f;
 
   /* === כפתורים === */
-  --color-button: #4bbddd;
-  --color-button-hover: #55828B;
+  --color-button: #a7cfcf;
+  --color-button-hover: #8bbbbb;
 
   /* === תפריטים ותתי-תפריטים === */
-  --color-menu-text: #1f628e;
-  --color-menu-text-hover: #1565C0;
-  --color-submenu: #426575;
+  --color-menu-text: #4a8a8a;
+  --color-menu-text-hover: #2e6f6f;
+  --color-submenu: #6b9d9d;
   --color-submenu-text: #ffffff;
-  --color-submenu-text-hover: #f0f8ff;
+  --color-submenu-text-hover: #dff6f6;
 
   /* === אייקונים === */
-  --color-icon:#4bbddd;
-  --color-icon-hover: #a8dadc;
+  --color-icon: #4a8a8a;
+  --color-icon-hover: #88c7c7;
+
+  /* === כרטיסיות === */
+  --color-card-background: #ffffff;
+  --color-card-border: #e0e0e0;
+  --color-card-hover: #f1f7f7;
+  --color-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --color-card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.07);
 
   /* === טיפוגרפיה === */
-  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-  --font-family-title: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --font-family-base: 'Lato', 'Assistant', sans-serif;
+  --font-family-title: 'Lato', 'Assistant', sans-serif;
   --font-size-base: 1rem;
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
+  --font-size-h1: 2.4rem;
+  --font-size-h2: 1.8rem;
   --font-size-h3: 1.3rem;
   --font-size-h4: 1.1rem;
-  --line-height-base: 1.8;
-  --font-weight-base: 200;
+  --line-height-base: 1.6;
+  --font-weight-base: 300;
 
   /* === גדלים כלליים === */
-  --max-width-container: 1000px;
+  --max-width-container: 1080px;
   --container-width: 1200px;
   --gutter: 16px;
 
@@ -64,78 +71,11 @@
   --transition-slow: 0.5s;
 
   /* === גבולות וצללים === */
-  --border-radius-base: 5px;
+  --border-radius-base: 8px;
   --border-radius-image: 12px;
-  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --shadow-default: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.1);
 
   /* === פריסה כללית === */
   --header-height: 60px;
 }
-:root {
-  /* === צבעים === */
-  --color-primary: #4bbddd;          /* צבע ראשי (כותרות, הדגשות) */
-  --color-secondary: #ffffff;        /* צבע משני */
-  --color-text: #000000;             /* טקסט רגיל */
-  --color-text-light: #FFFFFF;       /* טקסט בהיר */
-  --color-text-alt: #514b4b;         /* טקסט משני */
-  --color-background: #FFFFFF;       /* רקע עמוד */
-  --color-background-alt: #f0f0f0;   /* רקע משני */
-  --color-link: #1f628e;             /* קישורים */
-  --color-link-hover: #1565C0;       /* קישורים בהובר */
-  --color-button: #3B6064;           /* כפתורים */
-  --color-button-hover: #55828B;     /* כפתורים בהובר */
-
-  /* === כרטיסיות === */
-  --color-card-background: #ffffff;
-  --color-card-border: #e0e0e0;
-  --color-card-hover: #f7fafa;
-  --color-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  --color-card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
-
-  /* === תפריט עליון ותפריטים === */
-  --color-menu-text: #1f628e;
-  --color-menu-text-hover: #1565C0;
-  --color-submenu: #426575;
-  --color-submenu-text: #ffffff;
-  --color-submenu-text-hover: #f0f8ff;
-
-  /* === אייקונים === */
-  --color-icon: #4bbddd;
-  --color-icon-hover: #a8dadc;
-
-  /* === גופנים === */
-  --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-  --font-family-title: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-
-  /* === גדלים === */
-  --font-size-base: 1rem;
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.3rem;
-  --font-size-h4: 1.1rem;
-  --line-height-base: 1.8;
-  --font-weight-base: 200;
-  --max-width-container: 1000px;
-
-  /* === ריווחים === */
-  --padding-base: 1rem;
-  --padding-section: 40px 20px;
-  --margin-bottom-base: 1rem;
-  --margin-top-base: 1.5vh;
-
-  /* === מעברים === */
-  --transition-speed-base: 0.3s;
-
-  /* === גבולות === */
-  --border-radius-base: 5px;
-  --border-radius-image: 12px;
-
-  /* === צלליות === */
-  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
-
-  /* === אחר === */
-  --header-height: 60px;
-}
-
