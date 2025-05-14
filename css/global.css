@@ -1,5 +1,3 @@
-
-
 /* global.css */
 /* כלליים - Global styles applied based on agreed rules */
 * {
@@ -48,7 +46,7 @@ body {
   background-color: var(--color-background);
   color: #514b4b;
   font-size: 1rem;
- 
+
 }
 /* הדר - Header styles */
 #main-header {
@@ -362,6 +360,7 @@ nav {
     opacity: 1;
   }
 }
+
 /* כפתור ייעוץ קבוע - רספונסיביות - Fixed consultation button responsive */
 @media (max-width: 768px) {
   .fixed-consultation-button {
@@ -382,4 +381,28 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* סגנונות עבור קישורים בולטים - prominent-link styles */
+.prominent-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #6cbec1; /* צבע הטקסט התכלת */
+  font-weight: bold;
+  font-size: clamp(1rem, 1.4vw, 1.2rem); /* גודל גופן מותאם */
+}
+
+.prominent-link::after {
+  content: '«'; /* הסימן "גרש שמאלי" */
+  margin-left: 0; /* הסרת המרווח משמאל */
+  margin-right: 10px; /* הוספת מרווח מימין */
+  color: #6cbec1; /* צבע הסימן התכלת */
+  transform: scaleX(-1); /* הפיכת הסימן אופקית */
+  display: inline-block; /* כדי לאפשר את הטרנספורמציה */
+font-size: 1.5em;
+}
+
+.prominent-link:hover {
+  /* אתה יכול להוסיף כאן שינויים במעבר עכבר אם תרצה, למשל: */
+  /* text-decoration: underline; */
 }
