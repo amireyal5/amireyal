@@ -1,29 +1,13 @@
-* {
-    box-sizing: border-box;
+/* שירותים כלליים */
+.service-img img {
+    width: clamp(200px, 28vw, 360px); /* אם המסך קטן יותר, התמונות יהיו קטנות יותר */
+    height: clamp(200px, 28vw, 360px);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-.services-section {
-    text-align: center;
-    padding: 30px 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    justify-items: center;
-    align-items: start;
-}
-
-/* אנימציה חלקה לכל פריט שירות */
+/* אנימציה גלילה */
 .service-item {
     display: flex;
     flex-direction: column;
@@ -34,21 +18,12 @@
     animation: fadeInUp 0.8s ease forwards;
 }
 
-/* דיליי הדרגתי לכל פריט */
 .service-item:nth-child(2) {
     animation-delay: 0.1s;
 }
+
 .service-item:nth-child(3) {
     animation-delay: 0.2s;
-}
-.service-item:nth-child(4) {
-    animation-delay: 0.3s;
-}
-.service-item:nth-child(5) {
-    animation-delay: 0.4s;
-}
-.service-item:nth-child(6) {
-    animation-delay: 0.5s;
 }
 
 @keyframes fadeInUp {
@@ -58,14 +33,24 @@
     }
 }
 
-.service-img img {
-    width: clamp(200px, 28vw, 360px);
-    height: clamp(200px, 28vw, 360px);
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+/* אנימציה שמבוססת על גלילה */
+@media (prefers-reduced-motion: no-preference) {
+    .service-item {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: scrollFadeIn 0.6s ease-out forwards;
+    }
+
+    /* הוספת אנימציה כל פעם שיש גלילה */
+    @keyframes scrollFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
 
+/* ברירת מחדל לשירותים */
 .service-text h3 {
     font-size: clamp(1.3rem, 2vw, 1.8rem);
     margin: 5px 0;
@@ -86,26 +71,7 @@
     font-size: clamp(1rem, 1.4vw, 1.2rem);
 }
 
-.service-text a::before {
-    content: '»';
-    margin-left: 5px;
-    margin-right: 10px;
-    color: #6cbec1;
-}
-
-/* מעבר ל-2 עמודות מוקדם יותר */
-@media screen and (max-width: 1100px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .service-img img {
-        width: clamp(180px, 45vw, 300px);
-        height: clamp(180px, 45vw, 300px);
-    }
-}
-
-/* מובייל — טור אחד */
+/* במובייל — שמירה על גודל קטן יותר של תמונות */
 @media screen and (max-width: 768px) {
     .services-grid {
         display: flex;
@@ -113,12 +79,24 @@
     }
 
     .service-img img {
-        width: 90vw;
-        height: 90vw;
+        width: 70vw; /* כאן התמונות יקטנו */
+        height: 70vw;
         margin: 0 auto 10px auto;
     }
 
     .service-text a {
         margin-top: 15px;
+    }
+}
+
+/* במעבר לטאבלטים */
+@media screen and (max-width: 1100px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-img img {
+        width: 80vw;
+        height: 80vw;
     }
 }
