@@ -85,7 +85,7 @@
   max-width: 100%;
   max-height: 720px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 50%;
   box-shadow: var(--shadow-default);
 }
 
