@@ -62,7 +62,7 @@
 }
 
 .therapy-footer {
-  background-color: var(--background-light);
+  background-color: #909ca5;
   padding: 40px 20px;
   border-top: 1px solid var(--background-light);
   display: flex;
