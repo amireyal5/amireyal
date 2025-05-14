@@ -159,7 +159,7 @@ h3 {
 /* Call to Action Section */
 .call-to-action {
   padding: 2rem;
-  background-color: var(--color-box2);
+  background-color: var(--color-box1);
   border: 1px solid var(--color-border2);
   box-shadow: var(--shadow-default);
   margin-bottom: 2rem;
