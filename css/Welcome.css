@@ -16,7 +16,7 @@
   --color-button: #3B6064;
   --color-button-hover: #55828B;
   --font-size-h2: 2em;
-  --color-inspiration-text: #133C55;
+  --color-inspiration-text: #5b6e6f;
 }
 
 /* Welcome Section */
@@ -58,7 +58,7 @@
   line-height: var(--line-height-base);
   max-width: var(--max-width-container);
   margin: 0 auto 1em;
-  text-align: center;
+      text-align: -webkit-right;
   font-weight: normal;
   letter-spacing: normal;
   font-family: var(--font-family-base);
@@ -99,7 +99,7 @@
 }
 
 .welcome .about-me-text p {
-  font-size: 1.1em;
+  font-size: 1.4em;
   color: #514b4b;
   line-height: var(--line-height-base);
   margin-bottom: 1em;
@@ -217,9 +217,3 @@
     margin: 0 auto;
   }
 
-  .welcome .read-more-button {
-    align-self: center;
-    margin-top: 3ex;
-    font-family: var(--font-family-base);
-    min-width: 200px;
-  }
