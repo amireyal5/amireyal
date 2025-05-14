@@ -62,11 +62,10 @@
 
 .service-text a::before {
     content: '»';
-    margin-left: 5px; /* העברתי את ה margin-left */
-    margin-right: 10px; /* הגדלתי את ה margin-right */
+    margin-left: 5px;
+    margin-right: 10px;
     color: #6cbec1;
 }
-
 
 /* רספונסיביות למובייל */
 @media screen and (max-width: 768px) {
@@ -86,22 +85,22 @@
         height: 90vw;
         margin: 0 auto 10px auto;
     }
-    
-     .service-text a {
+
+    .service-text a {
         font-size: 1.1rem;
         margin-top: 15px;
     }
 }
 
-/* נקודת מעבר נוספת עבור טאבלטים */
+/* נקודת מעבר לטאבלטים */
 @media screen and (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 עמודות בטאבלט */
     }
 
     .service-img img {
-        width: 80vw; /* רוחב תמונה יחסי */
-        height: 80vw;
+        width: 60vw;
+        height: 60vw;
     }
 }
 
