@@ -2,6 +2,8 @@
   --color-primary: #55828B;
   --color-text: #000;
   --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
+  --shadow-default: none; /* ביטול הצללות */
+  --shadow-hover: none;
   --transition-speed-base: 0.3s;
   --max-width-container: 1000px;
   --font-size-base: 1rem;
@@ -14,6 +16,7 @@
   --color-button-hover: #55828B;
   --font-size-h2: 2em;
   --color-inspiration-text: #5b6e6f;
+  --border-radius-base: 0; /* ביטול עיגולי פינות */
 }
 
 /* בסיס כללי */
@@ -60,14 +63,8 @@ section,
   direction: rtl;
   text-align: right;
   box-sizing: border-box;
-}
-
-/* רקע מיוחד לאיזורים About ו- Approach */
-.about-text,
-.approach {
-  background-color: #f4f4f2;
-  padding: 2rem;
-  /* ללא עיגול פינות */
+  border-radius: 0;       /* ביטול עיגולי פינות */
+  box-shadow: none;       /* ביטול הצללות */
 }
 
 /* About Section */
@@ -92,7 +89,8 @@ section,
 .experience {
   background-color: var(--color-box1);
   margin-bottom: 2rem;
-  /* ללא הצללות וללא עיגול פינות */
+  box-shadow: none;           /* ביטול הצללות */
+  border-radius: 0;           /* ביטול עיגולי פינות */
 }
 
 .experience h2 {
@@ -113,6 +111,12 @@ section,
 }
 
 /* Approach Section */
+.approach {
+  background-color: #ffffff;  /* רקע לבן */
+  border-radius: 0;           /* ביטול עיגולי פינות */
+  box-shadow: none;           /* ביטול הצללות */
+}
+
 .approach h2 {
   font-size: var(--font-size-h2);
   color: var(--color-about-h2);
@@ -133,8 +137,9 @@ section,
 .call-to-action {
   background-color: var(--color-box1);
   border: 1px solid var(--color-border2);
+  box-shadow: none;          /* ביטול הצללות */
   margin-bottom: 2rem;
-  /* ללא הצללות וללא עיגול פינות */
+  border-radius: 0;          /* ביטול עיגולי פינות */
 }
 
 .call-to-action h2 {
@@ -171,14 +176,16 @@ section,
 /* כרטיסייה בודדת */
 .service-card {
   background-color: #fff;
-  /* ללא עיגול פינות */
+  border-radius: 0;               /* ביטול עיגולי פינות */
+  box-shadow: none;              /* ביטול הצללות */
   padding: 2rem;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
+  box-shadow: none;              /* ביטול הצללות */
 }
 
 .service-card h2 {
@@ -208,7 +215,7 @@ section,
   background-color: #0d47a1;
   color: #fff;
   text-decoration: none;
-  border-radius: 0; /* ללא עיגול פינות */
+  border-radius: 0;           /* ביטול עיגולי פינות */
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
@@ -258,5 +265,7 @@ section,
     padding: 1.5rem;
     direction: rtl;
     text-align: right;
+    border-radius: 0;       /* ביטול עיגולי פינות */
+    box-shadow: none;       /* ביטול הצללות */
   }
 }
