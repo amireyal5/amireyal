@@ -2,8 +2,8 @@
   --color-primary: #55828B;
   --color-text: #000;
   --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --shadow-default: none;
+  --shadow-hover: none;
   --transition-speed-base: 0.3s;
   --max-width-container: 1000px;
   --font-size-base: 1rem;
@@ -16,7 +16,9 @@
   --color-button-hover: #55828B;
   --font-size-h2: 2em;
   --color-inspiration-text: #5b6e6f;
+  --border-radius-base: 0;
 }
+
 /* בסיס כללי */
 body {
   font-family: var(--font-family-base);
@@ -85,8 +87,8 @@ section,
 .experience {
   background-color: var(--color-box1);
   margin-bottom: 2rem;
-  box-shadow: var(--shadow-default);
-  border-radius: var(--border-radius-base);
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .experience h2 {
@@ -127,9 +129,9 @@ section,
 .call-to-action {
   background-color: var(--color-box1);
   border: 1px solid var(--color-border2);
-  box-shadow: var(--shadow-default);
+  box-shadow: none;
   margin-bottom: 2rem;
-  border-radius: var(--border-radius-base);
+  border-radius: 0;
 }
 
 .call-to-action h2 {
@@ -166,16 +168,16 @@ section,
 /* כרטיסייה בודדת */
 .service-card {
   background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  box-shadow: none;
   padding: 2rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .service-card h2 {
