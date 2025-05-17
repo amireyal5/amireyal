@@ -136,7 +136,7 @@ margin-bottom: 20px;
 /* כפתור מרובע */
 .btn {
 background: var(--color-button);
-color: white;
+color: 40E0D0;
 border: none;
 padding: 12px 20px;
 cursor: pointer;
