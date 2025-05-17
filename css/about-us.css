@@ -2,8 +2,8 @@
   --color-primary: #55828B;
   --color-text: #000;
   --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-  --shadow-default: none;
-  --shadow-hover: none;
+  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
   --transition-speed-base: 0.3s;
   --max-width-container: 1000px;
   --font-size-base: 1rem;
@@ -16,7 +16,6 @@
   --color-button-hover: #55828B;
   --font-size-h2: 2em;
   --color-inspiration-text: #5b6e6f;
-  --border-radius-base: 0;
 }
 
 /* בסיס כללי */
@@ -65,6 +64,14 @@ section,
   box-sizing: border-box;
 }
 
+/* רקע מיוחד לאיזורים About ו- Approach */
+.about-text,
+.approach {
+  background-color: #f4f4f2;
+  padding: 2rem;
+  /* אין עיגול פינות */
+}
+
 /* About Section */
 .about-text h1 {
   font-size: var(--font-size-h1);
@@ -87,8 +94,8 @@ section,
 .experience {
   background-color: var(--color-box1);
   margin-bottom: 2rem;
-  box-shadow: none;
-  border-radius: 0;
+  box-shadow: var(--shadow-default);
+  /* ללא עיגול פינות */
 }
 
 .experience h2 {
@@ -129,9 +136,9 @@ section,
 .call-to-action {
   background-color: var(--color-box1);
   border: 1px solid var(--color-border2);
-  box-shadow: none;
+  box-shadow: var(--shadow-default);
   margin-bottom: 2rem;
-  border-radius: 0;
+  /* ללא עיגול פינות */
 }
 
 .call-to-action h2 {
@@ -168,16 +175,16 @@ section,
 /* כרטיסייה בודדת */
 .service-card {
   background-color: #fff;
-  border-radius: 0;
-  box-shadow: none;
+  /* ללא עיגול פינות */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(0);
-  box-shadow: none;
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .service-card h2 {
@@ -207,7 +214,7 @@ section,
   background-color: #0d47a1;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 0; /* ללא עיגול פינות */
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
