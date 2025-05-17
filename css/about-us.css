@@ -67,6 +67,26 @@ section,
   box-shadow: none;       /* ביטול הצללות */
 }
 
+/* רקעים קבועים לפי קטע */
+.about-text {
+  background-color: #ffffff; /* לבן */
+}
+
+.experience {
+  background-color: #f4f4f2; /* רקע בהיר שונה */
+  margin-bottom: 2rem;
+  box-shadow: none;           /* ביטול הצללות */
+  border-radius: 0;           /* ביטול עיגולי פינות */
+}
+
+.approach {
+  background-color: #ffffff; /* לבן */
+  border-radius: 0;           /* ביטול עיגולי פינות */
+  box-shadow: none;           /* ביטול הצללות */
+}
+
+/* המשך שאר הקוד ללא שינוי */
+
 /* About Section */
 .about-text h1 {
   font-size: var(--font-size-h1);
@@ -86,13 +106,6 @@ section,
 }
 
 /* Experience Section */
-.experience {
-  background-color: var(--color-box1);
-  margin-bottom: 2rem;
-  box-shadow: none;           /* ביטול הצללות */
-  border-radius: 0;           /* ביטול עיגולי פינות */
-}
-
 .experience h2 {
   font-size: var(--font-size-h2);
   color: var(--color-services-h2);
@@ -111,12 +124,6 @@ section,
 }
 
 /* Approach Section */
-.approach {
-  background-color: #ffffff;  /* רקע לבן */
-  border-radius: 0;           /* ביטול עיגולי פינות */
-  box-shadow: none;           /* ביטול הצללות */
-}
-
 .approach h2 {
   font-size: var(--font-size-h2);
   color: var(--color-about-h2);
