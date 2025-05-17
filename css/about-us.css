@@ -2,8 +2,6 @@
   --color-primary: #55828B;
   --color-text: #000;
   --font-family-base: 'Assistant', 'Segoe UI', 'Tahoma', sans-serif;
-  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
   --transition-speed-base: 0.3s;
   --max-width-container: 1000px;
   --font-size-base: 1rem;
@@ -69,7 +67,7 @@ section,
 .approach {
   background-color: #f4f4f2;
   padding: 2rem;
-  /* אין עיגול פינות */
+  /* ללא עיגול פינות */
 }
 
 /* About Section */
@@ -94,8 +92,7 @@ section,
 .experience {
   background-color: var(--color-box1);
   margin-bottom: 2rem;
-  box-shadow: var(--shadow-default);
-  /* ללא עיגול פינות */
+  /* ללא הצללות וללא עיגול פינות */
 }
 
 .experience h2 {
@@ -136,9 +133,8 @@ section,
 .call-to-action {
   background-color: var(--color-box1);
   border: 1px solid var(--color-border2);
-  box-shadow: var(--shadow-default);
   margin-bottom: 2rem;
-  /* ללא עיגול פינות */
+  /* ללא הצללות וללא עיגול פינות */
 }
 
 .call-to-action h2 {
@@ -176,15 +172,13 @@ section,
 .service-card {
   background-color: #fff;
   /* ללא עיגול פינות */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .service-card h2 {
