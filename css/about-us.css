@@ -143,7 +143,7 @@ p {
 /* כפתור מרובע */
 .btn {
   background: var(--color-button);
-  color: 40E0D0;
+  color: #40E0D0;  /* תיקון הצבע כאן, הוספתי # */
   border: none;
   padding: 12px 20px;
   cursor: pointer;
