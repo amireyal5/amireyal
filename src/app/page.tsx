@@ -117,15 +117,15 @@ export default function HomePage() {
                 <h3 className="text-2xl md:text-4xl font-bold text-slate-900">סיפורי מטופלים</h3>
                 <p className="text-slate-500 text-sm md:text-lg">תוצאות של תהליכי עומק ושינוי.</p>
             </div>
-            {/* Remove horizontal scroll on desktop, use grid */}
-            <div className="grid md:grid-cols-2 gap-8 px-6">
+            {/* Horizontal scroll on mobile, grid on desktop */}
+            <div className="flex gap-4 overflow-x-auto hide-scrollbar px-6 pb-4 md:grid md:grid-cols-2 md:gap-8 md:p-0">
                 {/* Testimonial 1 */}
-                <div className="bg-white p-8 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5">
+                <div className="flex-shrink-0 w-[85vw] md:w-full bg-white p-8 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5">
                     <p className="text-slate-600 italic mb-6 text-lg">"עמיר עזר לי להבין איך הלחץ שלי מתבטא פיזית. אני מרגישה בשליטה יותר מאי פעם."</p>
                     <p className="font-bold text-primary">— שרה מ.</p>
                 </div>
                 {/* Testimonial 2 */}
-                <div className="bg-white p-8 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5">
+                <div className="flex-shrink-0 w-[85vw] md:w-full bg-white p-8 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5">
                     <p className="text-slate-600 italic mb-6 text-lg">"מרחב בטוח ומכיל באמת. הגישה של גוף-נפש הייתה החלק החסר במסע הטיפולי שלי."</p>
                     <p className="font-bold text-primary">— דוד ר.</p>
                 </div>
