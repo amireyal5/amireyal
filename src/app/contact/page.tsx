@@ -27,14 +27,14 @@ export default function ContactPage() {
           </p>
 
           <div className="flex gap-4 mb-8">
-            <button className="flex-1 bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+            <a href="tel:054-7509962" className="flex-1 bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform hover:scale-105">
               <Phone size={18} />
               התקשרו עכשיו
-            </button>
-            <button className="flex-1 bg-white text-slate-900 border border-slate-200 font-bold py-4 rounded-xl flex items-center justify-center gap-2">
+            </a>
+            <a href="mailto:amir@amireyal.co.il" className="flex-1 bg-white text-slate-900 border border-slate-200 font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-transform hover:scale-105">
               <Mail size={18} />
               אימייל
-            </button>
+            </a>
           </div>
 
           <div className="bg-primary/5 border border-primary/10 rounded-2xl p-5 flex gap-4">
@@ -89,7 +89,7 @@ export default function ContactPage() {
               <label className="block text-sm font-bold text-slate-700 mb-2">כתובת אימייל</label>
               <input
                 type="email"
-                placeholder="example@email.com"
+                placeholder="amir@amireyal.co.il"
                 className="w-full bg-white border border-slate-200 rounded-xl py-4 px-5 focus:ring-2 focus:ring-primary/50 outline-none transition-all"
               />
             </div>

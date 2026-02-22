@@ -141,27 +141,27 @@ export default function HomePage() {
                 <p className="text-slate-400 max-w-xs md:max-w-md mx-auto md:text-lg">זמין למפגשים פרונטליים בכרמיאל וטיפול אונליין ברחבי העולם.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                <a href="mailto:amir@amireyal.co.il" className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 transition-colors hover:bg-white/10">
                     <Mail className="text-primary" size={24} />
                     <div>
                         <p className="text-xs text-slate-400 uppercase tracking-widest">אימייל</p>
-                        <p className="font-medium">amir@eyal.com</p>
+                        <p className="font-medium">amir@amireyal.co.il</p>
                     </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                </a>
+                <a href="tel:054-7509962" className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 transition-colors hover:bg-white/10">
                     <Phone className="text-primary" size={24} />
                     <div>
                         <p className="text-xs text-slate-400 uppercase tracking-widest">טלפון</p>
                         <p className="font-medium">054-7509962</p>
                     </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=חטיבת+יפתח+151,+כרמיאל" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 transition-colors hover:bg-white/10">
                     <MapPin className="text-primary" size={24} />
                     <div>
                         <p className="text-xs text-slate-400 uppercase tracking-widest">מיקום</p>
                         <p className="font-medium">חטיבת יפתח 151, כרמיאל</p>
                     </div>
-                </div>
+                </a>
             </div>
             <div className="text-center text-xs text-slate-500 border-t border-white/10 pt-8">
                 <p>© {new Date().getFullYear()} עמיר אייל - פסיכותרפיה סומטית. כל הזכויות שמורות.</p>
