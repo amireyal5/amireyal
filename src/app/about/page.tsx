@@ -53,7 +53,7 @@ export default function AboutPage() {
         </section>
 
         {/* Stats Row */}
-        <section className="flex justify-center gap-4 md:gap-8 px-4 py-8 md:py-16 overflow-x-auto hide-scrollbar">
+        <section className="flex justify-start md:justify-center gap-4 md:gap-8 px-4 py-8 md:py-16 overflow-x-auto hide-scrollbar">
           <div className="flex-shrink-0 w-32 md:w-40 bg-cream-warm p-4 rounded-xl border border-primary/5 text-center">
             <Verified size={24} className="text-primary mx-auto mb-2" />
             <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">ניסיון</p>
@@ -135,9 +135,8 @@ export default function AboutPage() {
                 </div>
                 <button className="text-primary text-sm font-bold">צפה בהכל</button>
             </div>
-            {/* Changed from scroll to grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
-                <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden">
+            <div className="flex gap-4 overflow-x-auto hide-scrollbar px-4 pb-4 md:grid md:grid-cols-2 md:gap-4 md:p-0">
+                <div className="flex-shrink-0 w-[85vw] md:w-full h-64 md:h-80 rounded-xl overflow-hidden">
                     <img
                     alt="אזור קבלה בקליניקה"
                     className="w-full h-full object-cover"
@@ -145,7 +144,7 @@ export default function AboutPage() {
                     referrerPolicy="no-referrer"
                     />
                 </div>
-                <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden">
+                <div className="flex-shrink-0 w-[85vw] md:w-full h-64 md:h-80 rounded-xl overflow-hidden">
                     <img
                     alt="חדר ייעוץ"
                     className="w-full h-full object-cover"
