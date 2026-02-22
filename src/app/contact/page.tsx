@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'motion/react';
-import { ArrowRight, Phone, Mail, Info, Send, MapPin } from 'lucide-react';
+import { ArrowRight, Phone, Mail, Info, Send } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -116,21 +116,16 @@ export default function ContactPage() {
           </form>
         </section>
         
-        <section className="relative rounded-2xl overflow-hidden h-64 md:h-96 border border-slate-200 md:col-span-2">
-          <img
-            src="https://picsum.photos/seed/carmiel/800/600"
-            alt="מפת כרמיאל"
-            className="w-full h-full object-cover grayscale opacity-50"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-primary p-3 rounded-full shadow-xl shadow-primary/40 ring-4 ring-white">
-              <MapPin size={24} className="text-white" />
-            </div>
-          </div>
-          <button className="absolute bottom-4 right-4 bg-white text-slate-900 text-xs font-bold px-4 py-2 rounded-lg shadow-md border border-slate-200">
-            צפייה במפות
-          </button>
+        <section className="rounded-2xl overflow-hidden border border-slate-200 md:col-span-2">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.825843176758!2d35.27856492385922!3d32.90277257754795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c34743aa9ccb5%3A0xd15da3a98027b529!2z15fXmNeZ15HXqiDXmdek16rXlyAxNTEsINeb16jXnteZ15DXnCwgMjE5OTI3MQ!5e0!3m2!1siw!2sil!4v1771754538907!5m2!1siw!2sil" 
+                width="100%"
+                height="450" 
+                style={{ border: 0 }}
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade">
+            </iframe>
         </section>
       </main>
     </motion.div>
