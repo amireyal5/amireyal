@@ -164,7 +164,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="text-center text-xs text-slate-500 border-t border-white/10 pt-8">
-                <p>© 2024 עמיר אייל - פסיכותרפיה סומטית. כל הזכויות שמורות.</p>
+                <p>© {new Date().getFullYear()} עמיר אייל - פסיכותרפיה סומטית. כל הזכויות שמורות.</p>
             </div>
         </div>
       </section>
